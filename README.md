@@ -1,2 +1,2 @@
 # WeGo_Mobile
-WeGo mobile application for Mobile UI/UX Coursework 2021
+WeGo mobile application for Mobile UI/UX Coursework 2021/2022
