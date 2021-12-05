@@ -18,10 +18,11 @@ include_once("jquery-theme/themes/home_header_styles.css");
             </div>
         </legend>
         <div class="header-search">
-            <div id="mb-header-search-box" ><input type="search" data-clear-btn="false" name="mb-header-search-box">
+            <div id="mb-header-search-box" >
+                <input type="search" data-clear-btn="false" name="mb-header-search-box">
             </div>
             <div>
-            <button class="ui-btn" id="mb-header-search-button" onclick="headerSearchButtonFunction()">Search</button>
+                <button id="mb-header-search-button" onclick="headerSearchButtonFunction()">Search</button>
             </div>
         </div>
     </div>   
