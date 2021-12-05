@@ -1,0 +1,48 @@
+#pageHeader {
+	background-color: #ffffff !important;
+	margin-top: -8px;
+	height: 60px;
+	width: 100%;
+}
+
+#pageHeader > div{
+	float: left
+}
+
+#headerLogo {
+	margin-top: 24px;
+	width: 50%
+	
+}
+
+#profileIcon {
+	margin-top: 20px;
+	width: 25%
+}
+
+#backButton {
+	margin-top: 20px;
+	width: 25%
+}
+
+#logoImage {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#profileImage{
+	float:right;
+	display: block;
+	margin-right: 14px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+#backImage {
+	float:left;
+	display: block;
+	margin-left: 14px;
+	margin-top: auto;
+	margin-bottom: auto;
+}

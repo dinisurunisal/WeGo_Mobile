@@ -1,41 +1,19 @@
-<html>
 <style>
-body {
-  margin: 0;
-}
-
-.one{
-	height: 70%;
-}
-#human{
-	margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
+<?php include_once("jquery-theme/themes/mb_styles_set_1.css");
+include_once("jquery-theme/themes/header_styles.css");
+?>
 </style>
 
-<body>
+<script src="js/header_script.js"></script>
 
-	<div data-role="page" id="foo">
-		<div id="one" style="display:block;">
-			<div class="one">
-				<img id="human" src="images/Group.png" alt="human" style="width:978; height:1456">
-				<!--<img id="back" src="images/landingBackground.png" alt="back" style="width:400; height:580">-->
-			</div>
-			<center>
-				<h1 style="font-family: Noto Sans; font-weight: 900; font-size: 70px; line-height: 50px; letter-spacing: 0.01em; color: #404040;">
-					Find Best Destinations
-				</h1>
-				<p style="font-family: Noto Sans; font-weight: normal; font-size: 39.6px; line-height: 60px; letter-spacing: 0.01em; color: #404040;">
-					You can find the best destinations in London to West England
-				</p>
-				
-				<button data-role="none" id="next0" style="margin:50px; height:100px; width:500px; box-shadow: 4px 3px #DCDCDC; font-family: Noto Sans; font-size: 40px; font-color:white; border-radius:45px; color:white; background-color:#0174CF; border:none;">Get Started</button>
-			</center>
-		</div>
-	</div>
-
-</body>
-</html
-
+<div id="pageHeader">
+    <div id="backButton">
+        <img id="backImage" src="images/backButton.png" alt="back"/>
+    </div>
+    <div id="headerLogo">
+        <img id="logoImage" src="images/HeaderLogo.png" alt="WeGo logo"/>
+    </div>
+    <div id="profileIcon">
+        <img id="profileImage" src="images/user.png" alt="profile"/>
+    </div>
+</div>

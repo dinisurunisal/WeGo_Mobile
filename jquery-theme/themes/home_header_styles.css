@@ -1,0 +1,167 @@
+#headerContent {
+	width: 100%;
+}
+
+#headerContent > div {
+	float:right;
+}
+
+#headerLogo {
+	margin-left:25%;
+	width:50%;
+}
+
+#profileIcon {
+	float:right;
+	width:25%;
+}
+
+#logoImage {
+	margin-top: 8px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#profileImage{
+	float:right;
+	display: block;
+	margin-right: 14px;
+}
+
+#mb-header-collapsible {
+	margin-top: 0px;
+	background-color: #ffffff;
+}
+
+#mb-header-collapsible .ui-collapsible-heading-toggle {
+	background-color: #ffffff;
+}
+
+#mb-header-collapsible .ui-collapsible-heading-toggle:hover {
+	background-color: #ffffff;
+}
+
+#mb-header-collapsible .ui-collapsible-heading-toggle:active {
+	background-color: #ffffff;
+}
+
+#mb-header-collapsible .ui-collapsible-heading .ui-btn {
+	background-color: #ffffff;
+	text-align: center;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#mb-header-collapsible .ui-collapsible-content {
+	//border-color: #dfdfdf !important;
+	//background-color: #ffffff !important;
+}
+
+#mb-header-collapsible .ui-input-search {
+	//border-color: #dfdfdf !important;
+}
+
+.header-search {
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box;
+	width: 100%;
+	height: 56px;
+}
+
+.header-search > div{
+	float: left
+}
+
+#mb-header-search-box {
+	width: 72%;
+}
+
+#mb-header-search-button {
+	//margin-top: 25px;
+	margin-left: 8px;
+	//width: 28%;
+	height: 45px;
+	//float: right;
+	border-radius: 12px !important;
+	background-color: #0174CF !important;
+	color: #ffffff !important;
+	font-weight: normal;
+	text-shadow: none !important;
+}
+
+#mb-header-search-button:hover {
+	//margin-top: 25px;
+	//width: 28%;
+	margin-left: 8px;
+	height: 45px;
+	//float: right;
+	border-radius: 12px !important;
+	background-color: #0174CF !important;
+	color: #ffffff !important;
+	font-weight: normal;
+	text-shadow: none !important;
+}
+
+#mb-header-search-button:active {
+	//width: 28%;
+	height: 45px;
+	margin-left: 8px;
+	//float: right;
+	border-radius: 12px !important;
+	background-color: #0174CF !important;
+	color: #ffffff !important;
+	font-weight: normal;
+	text-shadow: none !important;
+}
+
+#mb-header-back-button {
+	height: 37px;
+	width: 83px;
+	border-radius: 50px;
+	background-color: #00a99d !important;
+	color: #ffffff !important;
+	font-weight: bold;
+	text-shadow: none !important;
+	float: left;
+	font-size: 0.9em;
+	margin-left: 10px;
+	padding: 0px !important;
+}
+
+#mb-header-back-button:hover {
+	height: 37px;
+	width: 83px;
+	border-radius: 50px;
+	background-color: #005c56 !important;
+	color: #ffffff !important;
+	font-weight: bold;
+	text-shadow: none !important;
+	float: left;
+	font-size: 0.9em;
+	margin-left: 10px;
+	padding: 0px !important;
+}
+
+#mb-header-back-button:active {
+	height: 37px;
+	width: 83px;
+	border-radius: 50px;
+	background-color: #004b46 !important;
+	color: #ffffff !important;
+	font-weight: bold;
+	text-shadow: none !important;
+	float: left;
+	font-size: 0.9em;
+	margin-left: 10px;
+	padding: 0px !important;
+}
+
+#mb-back-button-header-icon {
+	margin-top: 3.5px !important;
+	margin-right: 93px !important;
+	max-width: 80px !important;
+	max-height: 80px !important;
+}
+

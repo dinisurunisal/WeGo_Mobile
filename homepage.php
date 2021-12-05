@@ -1,41 +1,24 @@
 <html>
-<style>
-body {
-  margin: 0;
-}
-
-.one{
-	height: 70%;
-}
-#human{
-	margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-</style>
+<head>
+    <title>WeGo</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/themes/my-custom-theme.css" />
+    <link rel="stylesheet" href="css/themes/common_themes.css" />
+    <link rel="stylesheet" href="css/themes/search_screen.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/search_screen.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
 <body>
-
-	<div data-role="page" id="foo">
-		<div id="one" style="display:block;">
-			<div class="one">
-				<img id="human" src="images/Group.png" alt="human" style="width:978; height:1456">
-				<!--<img id="back" src="images/landingBackground.png" alt="back" style="width:400; height:580">-->
-			</div>
-			<center>
-				<h1 style="font-family: Noto Sans; font-weight: 900; font-size: 70px; line-height: 50px; letter-spacing: 0.01em; color: #404040;">
-					Find Best Destinations
-				</h1>
-				<p style="font-family: Noto Sans; font-weight: normal; font-size: 39.6px; line-height: 60px; letter-spacing: 0.01em; color: #404040;">
-					You can find the best destinations in London to West England
-				</p>
-				
-				<button data-role="none" id="next0" style="margin:50px; height:100px; width:500px; box-shadow: 4px 3px #DCDCDC; font-family: Noto Sans; font-size: 40px; font-color:white; border-radius:45px; color:white; background-color:#0174CF; border:none;">Get Started</button>
-			</center>
-		</div>
+	<div data-role="page" id="homePage">
+		<?php include("homepage_header.php"); ?>
+        <?php include("footer.php"); ?>
 	</div>
-
 </body>
 </html
 

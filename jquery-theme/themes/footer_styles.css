@@ -1,0 +1,34 @@
+#pageFooter {
+	background-color: #404040 !important;
+	margin-top: 24px;
+	height: 280px;
+}
+
+#toTopButton {
+	float: right;
+	margin-right: 24px;
+	cursor: pointer;
+}
+
+#toTopButton:hover {
+  filter: brightness(150%);
+}
+
+.footerContent {
+	width: 100%;
+	padding: 8px;
+	color: #ffffff;
+	text-align: center;
+}
+
+.socialMediaIcon {
+	padding: 8px;	
+}
+
+.footerLinks {
+	color: white;
+	font-family: 'Noto Sans';
+}
+
+
+
