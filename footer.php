@@ -1,6 +1,7 @@
 <style>
 <?php
 include_once("jquery-theme/themes/footer_styles.css");
+    include_once("jquery-theme/themes/theme.css");
 ?>
 </style>
 

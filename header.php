@@ -1,5 +1,5 @@
 <style>
-<?php include_once("jquery-theme/themes/mb_styles_set_1.css");
+<?php include_once("jquery-theme/themes/theme.css");
 include_once("jquery-theme/themes/header_styles.css");
 ?>
 </style>
