@@ -17,6 +17,7 @@
 <body>
 	<div data-role="page" id="homePage">
 		<?php include("homepage_header.php"); ?>
+        <?php include("navigation_bar.php"); ?>
         <?php include("footer.php"); ?>
 	</div>
 </body>
