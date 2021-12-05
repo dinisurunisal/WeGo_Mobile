@@ -10,7 +10,7 @@ include_once("jquery-theme/themes/footer_styles.css");
 <div id="pageFooter">
     <div class="footerContent">
         <div onclick="topFunction()" title="Go to top" id="toTopButton">
-            <img src="images/toTop.png"/ alt="scrollUp">
+            <img src="images/icons/toTop.png"/ alt="scrollUp">
         </div>
     </div>
     <br>
@@ -21,9 +21,9 @@ include_once("jquery-theme/themes/footer_styles.css");
         <div><a class="footerLinks">FAQ</a></div>
         <br>
         <div id="socialMedia">
-            <img class="socialMediaIcon" src="images/facebook.png" alt="facebook"/>
-            <img class="socialMediaIcon" src="images/instagram.png" alt="instagram"/>
-            <img class="socialMediaIcon" src="images/twitter.png" alt="twitter"/>
+            <img class="socialMediaIcon" src="images/icons/facebook.png" alt="facebook"/>
+            <img class="socialMediaIcon" src="images/icons/instagram.png" alt="instagram"/>
+            <img class="socialMediaIcon" src="images/icons/twitter.png" alt="twitter"/>
         </div>
         <p>Copyright WeGo Inc. All Rights Reserved</p>
     </div>

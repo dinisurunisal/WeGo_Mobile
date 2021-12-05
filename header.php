@@ -8,7 +8,7 @@ include_once("jquery-theme/themes/header_styles.css");
 
 <div id="pageHeader">
     <div id="backButton">
-        <img id="backImage" src="images/backButton.png" alt="back"/>
+        <img id="backImage" src="images/icons/backButton.png" alt="back"/>
     </div>
     <div id="headerLogo">
         <img id="logoImage" src="images/HeaderLogo.png" alt="WeGo logo"/>
