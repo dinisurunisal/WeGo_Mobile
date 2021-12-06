@@ -7,7 +7,7 @@ include_once("jquery-theme/themes/header_styles.css");
 <script src="js/header_script.js"></script>
 
 <div id="pageHeader">
-    <div id="backButton">
+    <div onclick="history.back()" id="backButton">
         <img id="backImage" src="images/icons/backButton.png" alt="back"/>
     </div>
     <div id="headerLogo">

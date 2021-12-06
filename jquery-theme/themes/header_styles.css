@@ -1,52 +1,52 @@
 #pageHeader {
 	background-color: #ffffff !important;
-	margin-top: 0px;
 	height: 36px;
-	padding-top: 12;
-	padding-bottom: 12;
-	width: 100%;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 86px;
+	padding-left: 86px;
+	width: -webkit-fill-available;
 	z-index: 100;
 	position: fixed;
-}
-
-#pageHeader > div{
-	float: left
+	text-align: center;
 }
 
 #headerLogo {
-	margin-top: 10px;
-	width: 50%
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	
 }
 
 #profileIcon {
-	margin-top: 3px;
-	width: 25%
+	margin-right: -62px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	display: inline-block;
+	float: right;
 }
 
 #backButton {
-	margin-top: 6px;
-	width: 25%
+	margin-left: -62px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	float: left;
+	cursor: pointer;
+}
+
+#backButton:hover {
+	filter: brightness(50%);
+}
+
+#backButton:onclick {
+	filter: brightness(100%);
 }
 
 #logoImage {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 #profileImage{
-	float:right;
-	display: block;
-	margin-right: 16px;
-	margin-top: auto;
-	margin-bottom: auto;
 }
 
 #backImage {
-	float:left;
-	display: block;
-	margin-left: 16px;
-	margin-top: auto;
-	margin-bottom: auto;
 }
