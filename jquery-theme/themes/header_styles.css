@@ -5,6 +5,8 @@
 	padding-top: 12;
 	padding-bottom: 12;
 	width: 100%;
+	z-index: 100;
+	position: fixed;
 }
 
 #pageHeader > div{
