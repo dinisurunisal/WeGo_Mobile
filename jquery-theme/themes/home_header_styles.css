@@ -1,30 +1,38 @@
 .ui-collapsible-heading-toggle {
-	box-sizing: border-box;
-	height: 60px;
-	padding-top: 12;
-	padding-bottom: 12;
+	height: 36px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 0px;
+	padding-left: 38px;
+	border: none;
+	text-align: center;
 }
 
-.ui-collapsible-heading-toggle > div {
-	float:left;
+.ui-collapsible-heading{
+	padding-right: 16px;
+	padding-left: 16px;
 }
 
 #headerLogo {
-	margin-top: 8px;
-	margin-left:6px;
-	width: 88.6%;
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom:10px;
+	//margin-left:6px;
+	//width: 88.6%;
 }
 
 #profileIcon {
-	
+	display: inline-block;
+	float: right;
+	margin-right: 8px;
+	margin-top: 3px;
+	margin-bottom: 3px;
 }
 
 #logoImage {
 }
 
 #profileImage{
-	//display: block;
-	//float: right;
 }
 
 #mb-header-collapsible {
@@ -54,17 +62,22 @@
 }
 
 .header-search {
-	box-sizing: border-box;
 	width: 100%;
-	height: 48;
+	height: 46;
+	text-align: center;
 }
 
-.header-search > div{
-	float: left;
-}
 
 #mb-header-search-box {
-	width: 74%;
+	display: inline-block;
+	width: 72%;
+	//float: left;
+}
+
+.header-search-button {
+	display: inline-block;
+	width: auto;
+	//float: right;
 }
 
 #mb-header-search-button {
