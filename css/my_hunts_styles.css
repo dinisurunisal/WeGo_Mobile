@@ -1,0 +1,14 @@
+.toggle {
+	border-radius: 12px !important;
+	background-color: #ffffff !important;
+	margin: 16px;
+	padding: 5px 8px 5px 4px;
+	box-shadow: 2px 4px 6px #c4c4c4;
+}
+
+.toggle-buttons {
+	margin-left: none !important;
+	margin-right: none !important;
+	border-radius: 8px !important;
+	/* box-shadow: 2px 4px 6px #c4c4c4; */
+}

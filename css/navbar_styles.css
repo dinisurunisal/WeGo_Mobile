@@ -1,0 +1,18 @@
+#navbar {
+	background-color: #ffffff !important;
+	position: fixed;
+    bottom: 0;
+	
+	width: 100%;
+}
+
+.navBarIcon {
+	padding: 4px;
+}
+
+.nav-bar-item-option {
+	margin: 2px;
+	padding: 0px;
+	color: #c4c4c4;
+}
+

@@ -1,0 +1,52 @@
+#pageHeader {
+	background-color: #ffffff !important;
+	height: 36px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 86px;
+	padding-left: 86px;
+	width: -webkit-fill-available;
+	z-index: 100;
+	position: fixed;
+	text-align: center;
+}
+
+#headerLogo {
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+}
+
+#profileIcon {
+	margin-right: -62px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	display: inline-block;
+	float: right;
+}
+
+#backButton {
+	margin-left: -62px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	float: left;
+	cursor: pointer;
+}
+
+#backButton:hover {
+	filter: brightness(50%);
+}
+
+#backButton:onclick {
+	filter: brightness(100%);
+}
+
+#logoImage {
+}
+
+#profileImage{
+}
+
+#backImage {
+}
