@@ -1,6 +1,6 @@
 <style>
 <?php
-include_once("jquery-theme/themes/navbar_styles.css");
+include_once("css/navbar_styles.css");
     include_once("jquery-theme/themes/theme.css");
 ?>
 </style>

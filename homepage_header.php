@@ -1,6 +1,6 @@
 <style>
 <?php include_once("jquery-theme/themes/theme.css");
-include_once("jquery-theme/themes/home_header_styles.css");
+include_once("css/home_header_styles.css");
 ?>
 </style>
 
