@@ -23,7 +23,7 @@
 	</head>
 
 	<body>
-		<div data-role="page" id="destination_page" data-theme="d">
+		<div data-role="page" id="destination_page">
 			<!-- Header -->
 			<?php include("header.php"); ?>
 
@@ -34,7 +34,8 @@
 				</div>
 			</div>
 
-
+			<?php include("footer.php"); ?>
+			<?php include("navigation_bar.php"); ?>
 		</div>
 	</body>
 </html>

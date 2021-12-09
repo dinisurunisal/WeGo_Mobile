@@ -23,15 +23,12 @@
 	</head>
 
 	<body>
-		<div data-role="page" id="destination_page" data-theme="d">
+		<div data-role="page" id="destination_page">
 			<!-- Header -->
 			<?php include("header.php"); ?>
 
 			<div role="main" class="ui-content">
 
-				<div class="col-md-6 col-sm-6 col-xs-12 fill" style="float:left; background-color: #2c2e3c; padding:0px 0px;">
-					<img src="images/background_find.jpg">
-				</div>
 			</div>
 
 			<?php include("footer.php"); ?>
