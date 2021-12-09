@@ -2,11 +2,12 @@
 	background-color: #404040 !important;
 	margin-top: 24px;
 	height: 280px;
+	padding-bottom: 60px;
 }
 
 #toTopButton {
 	float: right;
-	margin-right: 24px;
+	margin-right: 16px;
 	cursor: pointer;
 }
 
@@ -14,8 +15,12 @@
   filter: brightness(150%);
 }
 
+#toTopButton:onclick {
+  filter: brightness(100%);
+}
+
 .footerContent {
-	width: 100%;
+	width: -webkit-fill-available;
 	padding: 8px;
 	color: #ffffff;
 	text-align: center;
