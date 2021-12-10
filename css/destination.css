@@ -1,0 +1,37 @@
+.content_container{
+    padding: 0px;
+    margin: 0px; 
+}
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px) {
+
+    .background_image img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 850px) {
+
+    .background_image img{
+        height: 380px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 1280px) {
+
+    .background_image img{
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+}

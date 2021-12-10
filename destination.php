@@ -8,8 +8,8 @@
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-		<!-- <link rel="stylesheet" href="css/themes/my-custom-theme.css" />
-		<link rel="stylesheet" href="css/themes/common_themes.css" /> -->
+		<!-- <link rel="stylesheet" href="css/themes/my-custom-theme.css" /> -->
+		<link rel="stylesheet" href="css/destination.css" /> 
 		<link rel="stylesheet" href="themes/theme.min.css" />
 		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
 
@@ -28,10 +28,19 @@
 			<!-- Header -->
 			<?php include("header.php"); ?>
 
-			<div role="main" class="ui-content">
+			<div style="margin-top: 50px;">
+				<div class="background_image">
+					<img src="images/background_find.jpg" id="london_bg" alt="london_bg" width="100%">
+				</div>
 
-				<div class="col-md-6 col-sm-6 col-xs-12 fill" style="float:left; background-color: #2c2e3c; padding:0px 0px;">
-					<img src="images/background_find.jpg">
+				
+			</div>
+
+
+			<div class="content_container" data-role="content" style="padding: 0;">
+
+				<div class="background_image" style="float:left; padding:0px 0px;">
+					
 				</div>
 			</div>
 
