@@ -23,24 +23,23 @@
 		.formDiv{
 			height: 500px;
 			width: 300px;
-			margin-top: 12%;
+			margin-top: 15%;
 			margin-left: 10%;
 		}
-		input{
+		.ui-page-theme-a .ui-body-inherit{
 			color: white;
 			min-height: 2.2em;
 			text-align: left;
 			border-color: white;
 			border-radius: 5px;
 			background: rgba(0, 0, 0, 0.2);
-			padding: 0.4em;
 			line-height: 1.4em;
 			box-sizing: border-box;
 			margin-top: 2px;
 			margin-bottom: 15px;
 			width: -webkit-fill-available;
 		}
-		
+		A {text-decoration: none;} 
 		.anchorH4{
 			font-family: Noto Sans;
 			font-size: 15px; 
@@ -98,7 +97,7 @@
 	<body>
 		<div data-role="page" id="signup">
 			<div role="main">
-				<a href="forgot_password.php" data-transition="slide" data-ajax="false" id="flat-btn">
+				<a href="login.php" data-transition="slide" data-ajax="false" id="flat-btn">
 					<h4 class="anchorH4">Back</h4>
                 </a>
 				<h1>
