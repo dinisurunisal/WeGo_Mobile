@@ -40,6 +40,13 @@
 			width: -webkit-fill-available;
 		}
 		A {text-decoration: none;} 
+		.anchorButton{
+			height: 26px;
+			width: 58px;
+			margin-top: 10%;
+			margin-left: 5%;
+			margin-bottom: 10%;
+		}
 		.anchorH4{
 			font-family: Noto Sans;
 			font-size: 15px; 
@@ -97,8 +104,9 @@
 	<body>
 		<div data-role="page" id="signup">
 			<div role="main">
-				<a href="login.php" data-transition="slide" data-ajax="false" id="flat-btn">
-					<h4 class="anchorH4">Back</h4>
+				<a href="login.php" data-transition="slide" data-ajax="false" id="flat-btn" >
+					<!--<h4 class="anchorH4">Back</h4>-->
+					<img src="images/icons/backButtonWhite.png"/ class="anchorButton">
                 </a>
 				<h1>
 					Create Account
