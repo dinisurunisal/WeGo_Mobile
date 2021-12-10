@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <style>
 body {
@@ -20,14 +21,14 @@ body {
 	<div data-role="page" id="foo">
 		<div id="one" style="display:block;">
 			<div class="one">
-				<img id="human" src="images/Group.png" alt="human" style="width:978; height:1456">
+				<img id="human" src="images/Group.png" alt="human" width="978" height="1456">
 				<!--<img id="back" src="images/landingBackground.png" alt="back" style="width:400; height:580">-->
 			</div>
 			<center>
 				<h1 style="font-family: Noto Sans; font-weight: 900; font-size: 70px; line-height: 50px; letter-spacing: 0.01em; color: #404040;">
 					Find Best Destinations
 				</h1>
-				<p style="font-family: Noto Sans; font-weight: normal; font-size: 39.6px; line-height: 60px; letter-spacing: 0.01em; color: #404040;">
+				<p style="font-family: Noto Sans; font-weight: normal; font-size: px; line-height: 60px; letter-spacing: 0.01em; color: #404040;">
 					You can find the best destinations in London to West England
 				</p>
 				
@@ -37,5 +38,5 @@ body {
 	</div>
 
 </body>
-</html
+</html>
 
