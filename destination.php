@@ -10,8 +10,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<!-- <link rel="stylesheet" href="css/themes/my-custom-theme.css" /> -->
 		<link rel="stylesheet" href="css/destination.css" /> 
-		<link rel="stylesheet" href="themes/theme.min.css" />
-		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
+		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
 
 		<!-- The three things that jQuery Mobile needs to work -->
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -33,7 +33,13 @@
 					<img src="images/background_find.jpg" id="london_bg" alt="london_bg" width="100%">
 				</div>
 
-				
+				<div class="card">
+				<img src="images/destinations/Big Ben.jpg" alt="Avatar" style="width:70%">
+				<div class="container">
+					<h4><b>John Doe</b></h4> 
+					<p>Architect & Engineer</p> 
+				</div>
+				</div>
 			</div>
 
 
