@@ -5,7 +5,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Login</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- The three things that jQuery Mobile needs to work -->
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		
 		<!-- The three things that jQuery Mobile needs to work -->
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
