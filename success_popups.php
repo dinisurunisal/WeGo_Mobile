@@ -9,8 +9,8 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
-		<link rel="stylesheet" href="css/themes/common_themes.css" />
-		<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
+		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
 
 		<!-- The three things that jQuery Mobile needs to work -->
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
