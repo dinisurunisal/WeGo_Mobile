@@ -2,7 +2,7 @@
 <html>
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 	<script>
 	$(document).ready(function(){
 		$("#next0").click(function(){
@@ -84,7 +84,7 @@ p{
 <body>
 
 	<div data-role="page" id="foo">
-		<div id="landing">
+		<div id="landing" style="display:block;">
 			<div class="one">
 				<img id="human" src="images/Group.png" alt="human" width="978" height="1456">
 				<!--<img id="back" src="images/landingBackground.png" alt="back" style="width:400; height:580">-->
@@ -104,7 +104,7 @@ p{
 	</div>
 	
 	
-	<div id="intro1">
+	<div id="intro1" style="display:none;">
 		<div class="two">
 			<img id="human" src="images/Group2.png" alt="human" width="978" height="1456">
 			<!--<img id="back" src="images/landingBackground.png" alt="back" style="width:400; height:580">-->
@@ -125,7 +125,7 @@ p{
 	
 	
 	
-	<div id="intro2">
+	<div id="intro2" style="display:none;">
 		<div class="three">
 			<img id="human" src="images/Group3.png" alt="human" width="978" height="1456">
 			<!--<img id="back" src="images/landingBackground.png" alt="back" style="width:400; height:580">-->
