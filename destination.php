@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href="css/destination.css" /> 
 		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
 		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
+
+		<!-- font awesome link -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		<!-- The three things that jQuery Mobile needs to work -->
@@ -25,7 +27,8 @@
 	</head>
 
 	<body>
-		<div data-role="page" id="destination_page">
+
+		<div data-role="page" id="destination_page" class="destination_page">
 			<!-- Header -->
 			<?php include("header.php"); ?>
 
@@ -34,26 +37,38 @@
 					<img src="images/background_find.jpg" id="london_bg" alt="london_bg" width="100%">
 				</div>
 
-				<div class="dest_card">
-					<div style="position: relative;">
-						<img src="images/destinations/Big Ben.jpg" id="card_image" style="width:100%">
-						<div class="dest_content">
-							<h4 class="dest_name">Big Ben</h4>
-						</div>
-						<div class="dest_favourite">
-							<i></i>
-						</div>
+				<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0;">
+					<div id="card_script_1">
+						<li>
+							<a id="clickedId" onclick="setClickedKitchenObject(this.id)">
+								<div class="dest_card">
+									<div style="position: relative;">
+										<img src="images/destinations/Big Ben.jpg" id="card_image" style="width:100%">
+										<div class="dest_content">
+											<h4 class="dest_name" id="card_name">Big Ben</h4>
+										</div>
+										<div class="dest_favourite">
+											<i></i>
+										</div>
+									</div>
+
+									<div class="card_description">
+										<div class="details_holder">
+											<h5 style='margin: 0px; color:black' id="card_details" class="card_details">
+											London's iconic national timepiece</h5>
+										</div>
+										<div class="price_holder">
+											<h2 style="margin-left: 60px; color:black" id="card_price" class="card_price"><b>$333</b> </h2>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
 					</div>
 
-					<div class="card_description">
-						<div class="details_holder">
-							<h5 style='margin: 0px;' class="thin" id="profile_username_field">London's iconic national timepiece</h5>
-						</div>
-						<div class="price_holder">
-							<h2 style="margin-left: 60px;"><b>$333</b> </h2>
-						</div>
-					</div>
-				</div>
+					<div id="card_script_2"></div>
+				</ul>
+				
 			</div>
 
 			<?php include("footer.php"); ?>
