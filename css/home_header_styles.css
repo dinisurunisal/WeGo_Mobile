@@ -1,24 +1,30 @@
 .ui-collapsible-heading-toggle {
 	height: 36px;
+	margin-left: 16px;
+	margin-right: 16px;
 	padding-top: 12px;
 	padding-bottom: 12px;
 	padding-right: 0px;
 	padding-left: 38px;
 	border: none;
 	text-align: center;
+	white-space: nowrap;
 }
 
 .ui-collapsible-heading{
-	padding-right: 16px;
-	padding-left: 16px;
+	background: white;
+	border-bottom-color: #c4c4c4;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-radius: 0px !important;
 }
 
 #headerLogo {
 	display: inline-block;
 	margin-top: 10px;
 	margin-bottom:10px;
-	//margin-left:6px;
-	//width: 88.6%;
+	/* margin-left:6px;
+	width: 88.6%; */
 }
 
 #profileIcon {
@@ -38,6 +44,7 @@
 #mb-header-collapsible {
 	border-radius: 12px !important;
 	margin-top: 0px;
+	margin-bottom: 0px;
 	background-color: #ffffff;
 }
 
@@ -46,6 +53,8 @@
 }
 
 #mb-header-collapsible .ui-collapsible-heading .ui-btn {
+	margin-left: 16px;
+	margin-right: 16px;
 	border-radius: 0px !important;
 	background-color: #ffffff;
 	box-shadow: none !important;
@@ -53,12 +62,14 @@
 }
 
 #mb-header-collapsible .ui-collapsible-content {
+	height: auto;
 	border-color: #c4c4c4 !important;
+	white-space: nowrap;
 }
 
 #mb-header-collapsible .ui-input-search {
 	box-shadow: none !important;
-	margin: 5;
+	margin: 0px;
 }
 
 .header-search {
@@ -70,28 +81,27 @@
 
 #mb-header-search-box {
 	display: inline-block;
-	width: 72%;
-	//float: left;
+	padding: 4px 2px 4px 4px;
+	width: 70%;
+}
+
+.ui-input-search {
+	height: 35px;
 }
 
 .header-search-button {
 	display: inline-block;
 	width: auto;
-	//float: right;
 }
 
 #mb-header-search-button {
-	//margin-top: 25px;
-	//width: 15%;
-	//height: 45px;
-	//float: right;
 	border-radius: 12px !important;
 	background-color: #0174CF !important;
 	color: #ffffff !important;
 	border: 0;
 	margin-top: 4;
 	margin-bottom: 4;
-	padding-top: 10;
+	padding-top: 9;
 	padding-bottom: 9;
 	box-shadow: none !important;
 	text-shadow: none !important;

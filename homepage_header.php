@@ -1,12 +1,12 @@
 <style>
 <?php include_once("jquery-theme/themes/theme.css");
-include_once("jquery-theme/themes/home_header_styles.css");
+include_once("css/home_header_styles.css");
 ?>
 </style>
 
 <script src="js/header_script.js"></script>
 
-<div id="homeHeader" style="position:fixed; width:-webkit-fill-available">
+<div id="homeHeader" style="position:fixed; width:-webkit-fill-available;">
     <div data-role="collapsible" class="ui-nodisc-icon ui-alt-icon" id="mb-header-collapsible"
         data-collapsed-icon="search" data-expanded-icon="carat-u" data-iconpos="left">
         <legend id="headerContent">

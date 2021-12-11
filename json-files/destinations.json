@@ -1,0 +1,191 @@
+[
+  {
+    "destinationId": "destinationId1",
+    "destinationName": "Big Ben",
+    "destinationImage": "images/destinations/Big Ben.jpg",
+    "destinationCardDetails": "London's iconic national timepiece",
+    "destinationDescription": "Best sea food kitchen in Colombo",
+    "destinationRating": 100,
+    "location": {
+      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
+      "latLocation": 6.840424,
+      "longLocation": 79.991114
+    },
+    "price": 380,
+    "priceRange": "cheap",
+    "tags": [
+      "london",
+      "england"
+    ],
+    "time": "10:30 to 22:30",
+    "paymentMethod": {
+      "email": "frese-facilitator@gmail.com",
+      "accountNumber": "12312124123",
+      "type": "VISA",
+      "CVC": "123",
+      "exiprationDate": "12/23"
+    }
+  },
+  {
+    "destinationId": "destinationId1",
+    "destinationName": "What the Crab",
+    "destinationImage": "images/kitchens/what_the_crab.jpg",
+    "destinationCardDetails": "Best sea food kitchen in Colombo",
+    "destinationDescription": "Best sea food kitchen in Colombo",
+    "destinationRating": 100,
+    "location": {
+      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
+      "latLocation": 6.840424,
+      "longLocation": 79.991114
+    },
+    "price": 380,
+    "priceRange": "cheap",
+    "tags": [
+      "london",
+      "england"
+    ],
+    "time": "10:30 to 22:30",
+    "paymentMethod": {
+      "email": "frese-facilitator@gmail.com",
+      "accountNumber": "12312124123",
+      "type": "VISA",
+      "CVC": "123",
+      "exiprationDate": "12/23"
+    }
+  },
+  {
+    "destinationId": "destinationId1",
+    "destinationName": "What the Crab",
+    "destinationImage": "images/kitchens/what_the_crab.jpg",
+    "destinationCardDetails": "Best sea food kitchen in Colombo",
+    "destinationDescription": "Best sea food kitchen in Colombo",
+    "destinationRating": 100,
+    "location": {
+      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
+      "latLocation": 6.840424,
+      "longLocation": 79.991114
+    },
+    "price": 380,
+    "priceRange": "cheap",
+    "tags": [
+      "london",
+      "england"
+    ],
+    "time": "10:30 to 22:30",
+    "paymentMethod": {
+      "email": "frese-facilitator@gmail.com",
+      "accountNumber": "12312124123",
+      "type": "VISA",
+      "CVC": "123",
+      "exiprationDate": "12/23"
+    }
+  },
+  {
+    "destinationId": "destinationId1",
+    "destinationName": "What the Crab",
+    "destinationImage": "images/kitchens/what_the_crab.jpg",
+    "destinationCardDetails": "Best sea food kitchen in Colombo",
+    "destinationDescription": "Best sea food kitchen in Colombo",
+    "destinationRating": 100,
+    "location": {
+      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
+      "latLocation": 6.840424,
+      "longLocation": 79.991114
+    },
+    "price": 380,
+    "priceRange": "cheap",
+    "tags": [
+      "london",
+      "england"
+    ],
+    "time": "10:30 to 22:30",
+    "paymentMethod": {
+      "email": "frese-facilitator@gmail.com",
+      "accountNumber": "12312124123",
+      "type": "VISA",
+      "CVC": "123",
+      "exiprationDate": "12/23"
+    }
+  },
+  {
+    "destinationId": "destinationId1",
+    "destinationName": "What the Crab",
+    "destinationImage": "images/kitchens/what_the_crab.jpg",
+    "destinationCardDetails": "Best sea food kitchen in Colombo",
+    "destinationDescription": "Best sea food kitchen in Colombo",
+    "destinationRating": 100,
+    "location": {
+      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
+      "latLocation": 6.840424,
+      "longLocation": 79.991114
+    },
+    "price": 380,
+    "priceRange": "cheap",
+    "tags": [
+      "london",
+      "england"
+    ],
+    "time": "10:30 to 22:30",
+    "paymentMethod": {
+      "email": "frese-facilitator@gmail.com",
+      "accountNumber": "12312124123",
+      "type": "VISA",
+      "CVC": "123",
+      "exiprationDate": "12/23"
+    }
+  },
+  {
+    "destinationId": "destinationId1",
+    "destinationName": "What the Crab",
+    "destinationImage": "images/kitchens/what_the_crab.jpg",
+    "destinationCardDetails": "Best sea food kitchen in Colombo",
+    "destinationDescription": "Best sea food kitchen in Colombo",
+    "destinationRating": 100,
+    "location": {
+      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
+      "latLocation": 6.840424,
+      "longLocation": 79.991114
+    },
+    "price": 380,
+    "priceRange": "cheap",
+    "tags": [
+      "london",
+      "england"
+    ],
+    "time": "10:30 to 22:30",
+    "paymentMethod": {
+      "email": "frese-facilitator@gmail.com",
+      "accountNumber": "12312124123",
+      "type": "VISA",
+      "CVC": "123",
+      "exiprationDate": "12/23"
+    }
+  },
+  {
+    "destinationId": "destinationId1",
+    "destinationName": "What the Crab",
+    "destinationImage": "images/kitchens/what_the_crab.jpg",
+    "destinationCardDetails": "Best sea food kitchen in Colombo",
+    "destinationDescription": "Best sea food kitchen in Colombo",
+    "destinationRating": 100,
+    "location": {
+      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
+      "latLocation": 6.840424,
+      "longLocation": 79.991114
+    },
+    "price": 380,
+    "priceRange": "cheap",
+    "tags": [
+      "london",
+      "england"
+    ],
+    "time": "10:30 to 22:30",
+    "paymentMethod": {
+      "email": "frese-facilitator@gmail.com",
+      "accountNumber": "12312124123",
+      "type": "VISA",
+      "CVC": "123",
+      "exiprationDate": "12/23"
+    }
+  }
+]
