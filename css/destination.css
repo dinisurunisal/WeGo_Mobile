@@ -1,28 +1,121 @@
-.destination_page {
-    
+
+/* Background image for the destination page */
+.dest_background_image .dest_main_intro {
+    position: absolute;
+    top: 60px;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: linear-gradient(to top, rgba(0,0,0,0), rgba(44, 19, 19, 1)); /* Black background with 0.8 opacity */
+    color: #f1f1f1;
+    width: 87%;
+    padding: 50px;
 }
 
-.destination_page .content_container{
-    padding: 0px;
-    margin: 0px; 
+.dest_background_image .dest_heading {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin-top: -25px;
 }
 
-.no_bullets {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.dest_background_image .dest_sub_heading {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    margin-top: -20px;
+}
+
+.dest_background_image .dest_nav_bar {
+    position: absolute;
+    top: 390px;
+    background: rgb(187, 187, 187); /* Fallback color */
+    background: rgba(235, 234, 234, 0.8); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    height: 40px;
+}
+
+.dest_background_image .dest_nav_bar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#dest_filter_icon {
+    width: 21px;
+    height: 21px;
+    padding-left: 10px;
+    float: left;
+}
+
+.dest_map_button {
+    float: right;
+}
+
+/* Destination List - Search Bar */
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+  
+.searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 5px;
+    height: 5px; 
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus{
+    color: #00B4CC;
+}
+
+.searchButton {
+    width: 0;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Thumbnails */
+
+#screen-resolution-breakpoint {
+    width: 50%;
+    float: left;
 }
 
 .dest_card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    border-radius: 15px; /* 5px rounded corners */
-    margin: 15px;
+    border-radius: 15px; /* 15px rounded corners */
+    margin: 10px;
 }
 
-/* Add rounded corners to the top left and the top right corner of the image */
 .dest_card img {
-    border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 0 0; /* Add rounded corners to the top left and the top right corner of the image */
     height: 195px;
     width: 100%;
     object-fit: cover;
@@ -32,8 +125,7 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-/* Caption text */
-.dest_name {
+.dest_card .dest_name {
     position: absolute;
     bottom: -15px;
     left: 15px;
@@ -59,7 +151,7 @@
     margin:0 auto;
 }
 
-i {
+.dest_favourite i {
     cursor:pointer;
     padding:10px 12px 8px;
     background:#fff;
@@ -70,13 +162,13 @@ i {
     transition:.2s;
 }
 
-i:before {
+.dest_favourite i:before {
     font-family:fontawesome;
     content:'\f004';
     font-style:normal;
 }
 
-i.press {
+.dest_favourite i.press {
     animation: size .4s;
     color:#e23b3b;
 }
@@ -94,20 +186,20 @@ i.press {
     100% {padding:10px 12px 8px;}
 }
 
-.card_description {
+.dest_card .card_description {
     display: flex;
     align-items: center;
     margin-top: -20px;
     margin-left: 15px;
 }
 
-.card_description .details_holder {
+.dest_card .card_description .details_holder {
     float: left;
     width: 60%;
     margin-bottom: -10px;
 }
 
-.card_description .price_holder {
+.dest_card .card_description .price_holder {
     width: 40%;
     float: right;
     margin-bottom: -10px;
@@ -118,31 +210,106 @@ i.press {
 and (min-device-width: 375px)
 and (max-device-width: 667px) {
 
-    .background_image img{
+    .dest_background_image img{
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
+
+    /* Background image for the destination page */
+    .dest_background_image .dest_main_intro {
+        width: 92%;
+        padding: 15px;
+    }
+
+    .dest_background_image .dest_heading {
+        font-size: 20px;
+        margin-top: -4px;
+    }
+
+    .dest_background_image .dest_sub_heading {
+        font-size: 14px;
+        margin-top: -10px;
+    }
+
+    .dest_background_image .dest_nav_bar {
+        top: 255px;
+        height: 30px;
+    }
+
+    #dest_filter_icon {
+        width: 15px;
+        height: 15px;
+        padding-left: 5px;
+        margin-top: -5px;
+    }
+    
+    .dest_map_button {
+        margin-top: -10px;
+    }
+
+    #screen-resolution-breakpoint {
+        width: 100%;
+    }
+    
 }
 
 @media only screen
 and (min-device-width: 768px)
 and (max-device-width: 850px) {
 
-    .background_image img{
+    .dest_background_image img{
         height: 380px;
         width: 100%;
         object-fit: cover;
     }
+
+    .dest_card .dest_content {
+        width: 85.5%;
+    }
+
+
 }
 
-@media only screen
-and (min-device-width: 1024px)
-and (max-device-width: 1280px) {
+@media only screen and (min-device-width: 1024px) {
 
-    .background_image img{
+    .dest_background_image img{
         height: 450px;
         width: 100%;
         object-fit: cover;
     }
+
+    #screen-resolution-breakpoint {
+        width: 50%;
+    }
+
+    .dest_card {
+        height: 300px;
+    }
+
+    .dest_card img {
+        height: 250px;
+    }
+
+    .dest_card .dest_content {
+        width: 89.5%;
+    }
+
+    .dest_background_image .dest_nav_bar {
+        top: 460px;
+        height: 40px;
+    }
+
+    #dest_filter_icon {
+        width: 21px;
+        height: 21px;
+        padding-left: 5px;
+        margin-top: -5px;
+    }
+    
+    .dest_map_button {
+        margin-top: -5px;
+    }
+    
+
 }
