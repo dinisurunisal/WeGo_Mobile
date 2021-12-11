@@ -11,14 +11,14 @@
 	text-align: center;
 }
 
-#headerLogo {
+#pageHeader #headerLogo {
 	display: inline-block;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	
 }
 
-#profileIcon {
+#pageHeader #profileIcon {
 	margin-right: -62px;
 	padding-top: 3px;
 	padding-bottom: 3px;
