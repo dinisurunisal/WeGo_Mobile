@@ -1,4 +1,4 @@
-#common_header {
+#pageHeader {
 	background-color: #ffffff !important;
 	height: 36px;
 	padding-top: 12px;
@@ -6,22 +6,19 @@
 	padding-right: 86px;
 	padding-left: 86px;
 	width: -webkit-fill-available;
-	border-bottom-style: solid;
-	border-bottom-color: #c4c4c4;
-	border-bottom-width: thin;
-	text-align: center;
 	z-index: 100;
 	position: fixed;
+	text-align: center;
 }
 
-#common_header_logo {
+#pageHeader #headerLogo {
 	display: inline-block;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	
 }
 
-#common_header_profile_icon {
+#pageHeader #profileIcon {
 	margin-right: -62px;
 	padding-top: 3px;
 	padding-bottom: 3px;
@@ -29,7 +26,7 @@
 	float: right;
 }
 
-#back_btn {
+#backButton {
 	margin-left: -62px;
 	padding-top: 6px;
 	padding-bottom: 6px;
@@ -37,10 +34,19 @@
 	cursor: pointer;
 }
 
-#back_btn:hover {
+#backButton:hover {
 	filter: brightness(50%);
 }
 
-#back_btn:onclick {
+#backButton:onclick {
 	filter: brightness(100%);
+}
+
+#logoImage {
+}
+
+#profileImage{
+}
+
+#backImage {
 }
