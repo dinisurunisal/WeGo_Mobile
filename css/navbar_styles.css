@@ -1,8 +1,7 @@
 #navbar {
 	background-color: #ffffff !important;
 	position: fixed;
-    bottom: 0;
-	
+    	bottom: 0;
 	width: 100%;
 }
 
@@ -10,10 +9,13 @@
 	padding: 4px;
 }
 
+.nav-bar-item {
+	white-space: normal;
+}
+
 .nav-bar-item-option {
-	margin: 1px;
 	padding: 0px;
-	//color: #c4c4c4;
+	font-weight: bolder;
 }
 
 .nav-bar-item.ui-link.ui-btn.ui-btn-active {
