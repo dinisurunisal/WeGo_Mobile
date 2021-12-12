@@ -14,19 +14,19 @@
 	</head>
 	
 	<style>
-		#signup{
+		#sign_up{
 			background-image: url('images/signupBackground.png');
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 			background-size: 376px;
 		}
-		.formDiv{
+		.sign_up .form_div{
 			height: 500px;
 			width: 300px;
 			margin-top: 15%;
 			margin-left: 10%;
 		}
-		.ui-page-theme-a .ui-body-inherit{
+		.sign_up .ui-page-theme-a .ui-body-inherit{
 			color: white;
 			min-height: 2.2em;
 			text-align: left;
@@ -39,15 +39,15 @@
 			margin-bottom: 15px;
 			width: -webkit-fill-available;
 		}
-		A {text-decoration: none;} 
-		.anchorButton{
+		.sign_up A {text-decoration: none;} 
+		.sign_up .anchor_button{
 			height: 26px;
 			width: 58px;
 			margin-top: 10%;
 			margin-left: 5%;
 			margin-bottom: 10%;
 		}
-		.anchorH4{
+		.sign_up .anchor_h4{
 			font-family: Noto Sans;
 			font-size: 15px; 
 			font-weight: 500;
@@ -57,11 +57,11 @@
 			margin-left: 5%;
 			text-align: left;
 		}
-		.wrapper {
+		.sign_up .wrapper_sign {
 			margin-top:15%;
 			text-align: center;
 		}
-		#buttons{
+		.sign_up #buttons_sign{
 			margin-left: auto;
 			margin-right: auto;
 			height:41px; 
@@ -75,13 +75,13 @@
 			background-color:white; 
 			border:none;
 		}
-		.labelform{
+		.sign_up .label_form{
 			font-family: Noto Sans; 
 			font-size: 15px; 
 			font-weight: 500;
 			color:white;
 		}
-		h1{
+		.sign_up h1{
 			text-align: center;
 			font-family: Noto Sans; 
 			font-weight: 900; 
@@ -90,7 +90,7 @@
 			letter-spacing: 0.01em; 
 			color: #ffffff;
 		}
-		p{
+		.sign_up p{
 			text-align: center;
 			font-family: Noto Sans; 
 			font-weight: normal; 
@@ -102,11 +102,11 @@
 	</style>
 
 	<body>
-		<div data-role="page" id="signup">
+		<div data-role="page" id="sign_up" class="sign_up">
 			<div role="main">
 				<a href="login.php" data-transition="slide" data-ajax="false" id="flat-btn" >
 					<!--<h4 class="anchorH4">Back</h4>-->
-					<img src="images/icons/backButtonWhite.png"/ class="anchorButton">
+					<img src="images/icons/backButtonWhite.png" class="anchor_button"/>
                 </a>
 				<h1>
 					Create Account
@@ -114,22 +114,22 @@
 				<p>
 					Create a new account
 				</p>
-				<div class="formDiv">				
+				<div class="form_div">				
                         <form id="form" onsubmit="event.preventDefault(); login()">
-                            <label class="labelform" for="contactNumber"> Name </label>
-                            <input required type="number" name="contactNumber" id="contactNumberForm" class="formField" />
+                            <label class="label_form" for="contactNumber"> Name </label>
+                            <input required type="number" name="contactNumber" id="contactNumberForm" class="form_field" />
 							
-							<label class="labelform" for="contactNumber"> Contact Number </label>
-                            <input required type="number" name="contactNumber" id="contactNumberForm" class="formField" />
+							<label class="label_form" for="contactNumber"> Contact Number </label>
+                            <input required type="number" name="contactNumber" id="contactNumberForm" class="form_field" />
 								
-                            <label class="labelform" for="contactNumber"> Password </label>
-                            <input required type="number" name="contactNumber" id="contactNumberForm" class="formField" />
+                            <label class="label_form" for="contactNumber"> Password </label>
+                            <input required type="number" name="contactNumber" id="contactNumberForm" class="form_field" />
 							
-							<label class="labelform" for="contactNumber"> Confirm Password </label>
-                            <input required type="number" name="contactNumber" id="contactNumberForm" class="formField" />
+							<label class="label_form" for="contactNumber"> Confirm Password </label>
+                            <input required type="number" name="contactNumber" id="contactNumberForm" class="form_field" />
                            
-							<div class="wrapper">
-								<button type="submit" class="buttons" id="buttons" data-role="button">Sign Up</button>
+							<div class="wrapper_sign">
+								<button type="submit" class="buttons_sign" id="buttons_sign" data-role="button">Sign Up</button>
 							</div>
 							
                         </form>
