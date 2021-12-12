@@ -12,6 +12,8 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+	<link rel="stylesheet" href="css/style.css" />
+
 	<script type="text/javascript" src="js/signup.js"></script>
 
 </head>
@@ -22,97 +24,6 @@
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 376px;
-	}
-
-	.sign_up .form_div {
-		height: 500px;
-		width: 300px;
-		margin-top: 15%;
-		margin-left: 10%;
-	}
-
-	.sign_up .ui-input-text {
-		color: white;
-		min-height: 2.2em;
-		text-align: left;
-		border-color: white;
-		border-radius: 5px;
-		background: rgba(0, 0, 0, 0.2);
-		line-height: 1.4em;
-		box-sizing: border-box;
-		margin-top: 2px;
-		margin-bottom: 15px;
-		width: -webkit-fill-available;
-	}
-
-	.sign_up A {
-		text-decoration: none;
-	}
-
-	.sign_up .anchor_button {
-		height: 26px;
-		width: 58px;
-		margin-top: 10%;
-		margin-left: 5%;
-		margin-bottom: 10%;
-	}
-
-	.sign_up .anchor_h4 {
-		font-family: Noto Sans;
-		font-size: 15px;
-		font-weight: 500;
-		color: white;
-		margin-top: 10%;
-		margin-bottom: 20%;
-		margin-left: 5%;
-		text-align: left;
-	}
-
-	.sign_up .wrapper_sign {
-		margin-top: 15%;
-		text-align: center;
-	}
-
-	.sign_up #buttons_sign {
-		margin-left: auto;
-		margin-right: auto;
-		height: 41px;
-		width: 215px;
-		font-family: Noto Sans;
-		font-size: 15px;
-		font-weight: 900;
-		font-color: white;
-		border-radius: 45px;
-		color: #0174CF;
-		background-color: white;
-		border: none;
-	}
-
-	.sign_up .label_form {
-		font-family: Noto Sans;
-		font-size: 15px;
-		font-weight: 500;
-		color: white;
-	}
-
-	.sign_up h1 {
-		text-align: center;
-		font-family: Noto Sans;
-		font-weight: 900;
-		font-size: 30px;
-		line-height: 28px;
-		letter-spacing: 0.01em;
-		color: #ffffff;
-	}
-
-	.sign_up p {
-		text-align: center;
-		font-family: Noto Sans;
-		font-weight: normal;
-		font-size: 17px;
-		line-height: 0;
-		letter-spacing: 0.01em;
-		color: #ffffff;
 	}
 </style>
 
