@@ -15,21 +15,21 @@
 </head>
 
 <style>
-	#forgotPassword {
+	#forgot_password {
 		background-image: url('images/signupBackground.png');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: 376px;
 	}
 
-	.formDiv {
+	.forgot_pass .form_div {
 		height: 500px;
 		width: 300px;
 		margin-top: 15%;
 		margin-left: 10%;
 	}
 
-	.ui-page-theme-a .ui-body-inherit {
+	.forgot_pass .ui-input-text {
 		color: white;
 		min-height: 2.2em;
 		text-align: left;
@@ -43,11 +43,11 @@
 		width: -webkit-fill-available;
 	}
 
-	A {
+	.forgot_pass A {
 		text-decoration: none;
 	}
 
-	.anchorButton {
+	.forgot_pass .anchor_button {
 		height: 26px;
 		width: 58px;
 		margin-top: 10%;
@@ -55,7 +55,7 @@
 		margin-bottom: 10%;
 	}
 
-	.anchorH4 {
+	.forgot_pass .anchor_h4 {
 		font-family: Noto Sans;
 		font-size: 15px;
 		font-weight: 500;
@@ -66,12 +66,12 @@
 		text-align: left;
 	}
 
-	.wrapper {
+	.forgot_pass .wrapper_fpass {
 		margin-top: 15%;
 		text-align: center;
 	}
 
-	#buttons {
+	.forgot_pass #buttons {
 		margin-left: auto;
 		margin-right: auto;
 		height: 41px;
@@ -86,14 +86,14 @@
 		border: none;
 	}
 
-	.labelform {
+	.forgot_pass .label_form {
 		font-family: Noto Sans;
 		font-size: 15px;
 		font-weight: 500;
 		color: white;
 	}
 
-	h1 {
+	.forgot_pass h1 {
 		text-align: center;
 		font-family: Noto Sans;
 		font-weight: 900;
@@ -103,7 +103,7 @@
 		color: #ffffff;
 	}
 
-	p {
+	.forgot_pass p {
 		text-align: center;
 		font-family: Noto Sans;
 		font-weight: normal;
@@ -115,11 +115,11 @@
 </style>
 
 <body>
-	<div data-role="page" id="forgotPassword">
+	<div data-role="page" id="forgot_password" class="forgot_pass">
 		<div role="main">
 			<a href="login.php" data-transition="slide" data-ajax="false" id="flat-btn">
-				<!--<h4 class="anchorH4">Back</h4>-->
-				<img src="images/icons/backButtonWhite.png" / class="anchorButton">
+				<!--<h4 class="anchor_h4">Back</h4>-->
+				<img src="images/icons/backButtonWhite.png" class="anchor_button"/>
 			</a>
 			<h1>
 				Forgot Password
@@ -127,12 +127,12 @@
 			<p>
 				You can reset your password here
 			</p>
-			<div class="formDiv">
+			<div class="form_div">
 				<form id="form" onsubmit="event.preventDefault(); login()">
-					<label class="labelform" for="contactNumber"> Conatact Number </label>
+					<label class="label_form" for="contactNumber"> Conatact Number </label>
 					<input required type="number" name="contactNumber" id="contactNumberForm" class="formField" />
 
-					<div class="wrapper">
+					<div class="wrapper_fpass">
 						<button type="submit" class="buttons" id="buttons" data-role="button">Reset</button>
 					</div>
 
