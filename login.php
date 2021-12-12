@@ -84,9 +84,9 @@
 				<div class="form_div">
                         <form id="form" onsubmit="event.preventDefault(); login()">
                             <label class="label_form" for="contactNumber"> Contact Number </label>
-                            <input required type="number" name="contactNumber" id="contactNumberForm" class="form_field" />
+                            <input required type="number" name="contactNumber" id="contact_number_form" class="form_field" />
                             <label class="label_form" for="password"> Password </label>
-                            <input minlength="6" required type="password" name="password" id="passwordForm" class="form_field" />
+                            <input minlength="6" required type="password" name="password" id="password_form" class="form_field" />
                             <a href="forgot_password.php" data-transition="slide" data-ajax="false" id="flat-btn">
                                 <h4 class="anchor_h4">Forgot Password?</h4>
                             </a>
