@@ -11,8 +11,13 @@
 }
 
 .nav-bar-item-option {
-	margin: 2px;
+	margin: 1px;
 	padding: 0px;
-	color: #c4c4c4;
+	//color: #c4c4c4;
 }
 
+.nav-bar-item.ui-link.ui-btn.ui-btn-active {
+	box-shadow: none !important;
+	background-color: transparent;
+	border-color: transparent;
+}

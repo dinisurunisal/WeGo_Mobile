@@ -15,23 +15,44 @@ include_once("css/navbar_styles.css");
             selectGame();
         } else if (window.location.pathname.endsWith("awards.php")){
             selectAwards();
+        } else {
+            document.getElementById("navHome").style.color = "#c4c4c4";
+        document.getElementById("navHunts").style.color = "#c4c4c4";
+        document.getElementById("navGame").style.color = "#c4c4c4";
+        document.getElementById("navAwards").style.color = "#c4c4c4";
         }
     };
     
     function selectHome() {
       document.getElementById("homeImg").src = "images/icons/homeIconSelected.png";
+      document.getElementById("navHome").style.color = "#0174cf";
+        document.getElementById("navHunts").style.color = "#c4c4c4";
+        document.getElementById("navGame").style.color = "#c4c4c4";
+        document.getElementById("navAwards").style.color = "#c4c4c4";
     }
 
     function selectHunts() {
       document.getElementById("huntsImg").src = "images/icons/huntsIconSelected.png";
+        document.getElementById("navHome").style.color = "#c4c4c4";
+        document.getElementById("navHunts").style.color = "#0174cf";
+        document.getElementById("navGame").style.color = "#c4c4c4";
+        document.getElementById("navAwards").style.color = "#c4c4c4";
     }
 
     function selectGame() {
       document.getElementById("gameImg").src = "images/icons/gameIconSelected.png";
+        document.getElementById("navHome").style.color = "#c4c4c4";
+        document.getElementById("navHunts").style.color = "#c4c4c4";
+        document.getElementById("navGame").style.color = "#0174cf";
+        document.getElementById("navAwards").style.color = "#c4c4c4";
     }
 
     function selectAwards() {
       document.getElementById("awardsImg").src = "images/icons/awardsIconSelected.png";
+        document.getElementById("navHome").style.color = "#c4c4c4";
+        document.getElementById("navHunts").style.color = "#c4c4c4";
+        document.getElementById("navGame").style.color = "#c4c4c4";
+        document.getElementById("navAwards").style.color = "#0174cf";
     }
 </script>
 
