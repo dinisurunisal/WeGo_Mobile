@@ -22,13 +22,13 @@
 			background-attachment: fixed;
 			background-size: 376px;
 		}
-		.formDiv{
+		.login_screen .form_div{
 			height: 500px;
 			width: 300px;
 			margin-top: 80%;
 			margin-left: 10%;
 		}
-		.ui-input-text{
+		.login_screen .ui-input-text{
 			color: white;
 			min-height: 2.2em;
 			text-align: left;
@@ -43,8 +43,8 @@
 			margin-bottom: 15px;
 			width: -webkit-fill-available;
 		}
-		A {text-decoration: none;} 
-		.anchorH4{
+		.login_screen A {text-decoration: none;} 
+		.login_screen .anchor_h4{
 			font-family: Noto Sans;
 			font-size: 15px; 
 			font-weight: 500;
@@ -53,10 +53,10 @@
 			margin-bottom: 30px;
 			text-align: right;
 		}
-		.wrapper {
+		.login_screen .wrapper_log {
 			text-align: center;
 		}
-		#buttons{
+		.login_screen #buttons_log {
 			margin-left: auto;
 			margin-right: auto;
 			height:41px; 
@@ -70,7 +70,7 @@
 			background-color:white; 
 			border:none;
 		}
-		.labelform{
+		.login_screen .label_form{
 			font-family: Noto Sans; 
 			font-size: 15px; 
 			font-weight: 500;
@@ -79,29 +79,26 @@
 	</style>
 
 	<body>
-		<div data-role="page" id="loginScreen" data-theme="d">
-			
+		<div data-role="page" id="login_screen" data-theme="d" class="login_screen">
 			<div role="main">
-				<div class="formDiv">
+				<div class="form_div">
                         <form id="form" onsubmit="event.preventDefault(); login()">
-                            <label class="labelform" for="contactNumber"> Contact Number </label>
-                            <input required type="number" name="contactNumber" id="contactNumberForm" class="formField" />
-                            <label class="labelform" for="password"> Password </label>
-                            <input minlength="6" required type="password" name="password" id="passwordForm" class="formField" />
+                            <label class="label_form" for="contactNumber"> Contact Number </label>
+                            <input required type="number" name="contactNumber" id="contactNumberForm" class="form_field" />
+                            <label class="label_form" for="password"> Password </label>
+                            <input minlength="6" required type="password" name="password" id="passwordForm" class="form_field" />
                             <a href="forgot_password.php" data-transition="slide" data-ajax="false" id="flat-btn">
-                                <h4 class="anchorH4">Forgot Password?</h4>
+                                <h4 class="anchor_h4">Forgot Password?</h4>
                             </a>
 							<div class="wrapper">
-								<button type="submit" class="buttons" data-role="button" id="buttons">Login</button>
+								<button type="submit" class="buttons_log" data-role="button" id="buttons_log">Login</button>
 							</div>
 							<a href="signup.php" data-transition="slide" data-ajax="false" id="flat-btn">
-                                <h4 class="anchorH4" style="text-align: center; margin-top: 20px; font-size: 14px;">SIGN UP FOR NEW ACCOUNT</h4>
+                                <h4 class="anchor_h4" style="text-align: center; margin-top: 20px; font-size: 14px;">SIGN UP FOR NEW ACCOUNT</h4>
                             </a>
                         </form>
                    </div>			
 			</div>
-
-
 		</div>
 	</body>
 </html>
