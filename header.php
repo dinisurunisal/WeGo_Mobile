@@ -6,14 +6,14 @@
 
 <script src="js/header_script.js"></script>
 
-<div id="pageHeader">
-    <div onclick="history.back()" id="backButton">
-        <img id="backImage" src="images/icons/backButton.png" alt="back"/>
+<div id="common_header">
+    <div onclick="history.back()" id="back_btn">
+        <img id="btn_icon_image" src="images/icons/backButton.png" alt="back"/>
     </div>
-    <div id="headerLogo">
-        <img id="logoImage" src="images/HeaderLogo.png" alt="WeGo logo"/>
+    <div id="common_header_logo">
+        <img id="logo_image" src="images/HeaderLogo.png" alt="WeGo logo"/>
     </div>
-    <div id="profileIcon">
-        <img id="profileImage" src="images/user.png" alt="profile"/>
+    <div id="common_header_profile_icon">
+        <img id="profile_image" src="images/user.png" alt="profile"/>
     </div>
 </div>
