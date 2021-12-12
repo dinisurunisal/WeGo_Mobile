@@ -11,6 +11,10 @@
 	border-radius: 0px !important;
 }
 
+#header_collapsible .ui-body-inherit{
+	background-color: white;
+}
+
 #header_collapsible .ui-collapsible-heading-toggle{
 	height: 36px;
 	margin-left: 16px;
