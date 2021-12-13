@@ -11,15 +11,15 @@ include_once("css/navbar_styles.css");
             selectHome();
         } else if (window.location.pathname.endsWith("my_hunts.php")) {
             selectHunts();
-        } else if (window.location.pathname.endsWith("game.php")) {
+        } else if (window.location.pathname.endsWith("treasure_hunt.php")) {
             selectGame();
         } else if (window.location.pathname.endsWith("awards.php")){
             selectAwards();
         } else {
             document.getElementById("navHome").style.color = "#c4c4c4";
-        document.getElementById("navHunts").style.color = "#c4c4c4";
-        document.getElementById("navGame").style.color = "#c4c4c4";
-        document.getElementById("navAwards").style.color = "#c4c4c4";
+            document.getElementById("navHunts").style.color = "#c4c4c4";
+            document.getElementById("navGame").style.color = "#c4c4c4";
+            document.getElementById("navAwards").style.color = "#c4c4c4";
         }
     };
     
