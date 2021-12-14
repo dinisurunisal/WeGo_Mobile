@@ -324,6 +324,97 @@ hr {
 
 /* My Hunts Page */
 
+/* Booking */
+
+.book .booking_details h1 {
+    text-align: center;
+    font-family: Noto Sans;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+}
+
+.book .booking_details .bk_heading {
+    padding-top: 23%;
+}
+
+.book .booking_details .bk_depature {
+    color: #ffffff;
+    margin-left: 53%;
+    margin-top: 8%;
+}
+
+.book .booking_details h4 {
+    font-weight: 600;
+}
+
+.book .booking_details .bk_duration {
+    margin-top: 9%;
+    margin-left: 32%;
+}
+
+.book .booking_details p {
+    font-family: Noto Sans;
+    font-size: 14px;
+    line-height: 0;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+}
+
+.book .booking_details .bk_arrival {
+    color: #ffffff;
+    margin-left: 53%;
+    margin-top: 8%;
+}
+
+.book .booking_card {
+    padding-bottom: 1%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    transition: 0.3s;
+    border-radius: 15px;
+    margin: 5%;
+}
+
+.book .booking_card p {
+    margin: 0;
+    padding: 5%;
+    padding-bottom: 0;
+    font-family: Noto Sans;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    color: #404040;
+}
+
+.book .booking_card .ui-select {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.book .booking_card .bk_checkbox {
+    padding-bottom: 1%;
+}
+
+.book .booking_card .bk_datepick {
+    margin: 5%;
+}
+
+.book .booking_buttons {
+    margin-top: 12%;
+    text-align: center;
+}
+
+.book .booking_buttons .bk_button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    text-align: center;
+}
+
+/* Booking Ticket */
+
 .toggle {
 	border-radius: 12px !important;
 	background-color: #ffffff !important;
