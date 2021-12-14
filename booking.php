@@ -19,6 +19,18 @@
 	<!-- Custom -->
 	<link rel="stylesheet" href="css/style.css" />
 
+	<style>
+		.book .booking_details {
+			background-image: url("images/booking2.png");
+			/* background-repeat:no-repeat;
+       		background-size:contain; */
+			display: block;
+			background-size: contain;
+			height: 337px;
+			width: 380px;
+		}
+	</style>
+
 </head>
 
 <body>
@@ -26,10 +38,107 @@
 		<!-- Header -->
 		<?php include("header.php"); ?>
 
-		<div role="main" class="row">
+		<div class="book">
+			<div class="booking_details">
+				<div class="bk_heading">
+					<h1>
+						Booking
+					</h1>
+				</div>
 
-			<div class="col-md-12" style="float:left; background-color: #2c2e3c; padding:0px 0px;">
+				<div class="bk_depature">
+					<h4>
+						EUS
+					</h4>
+					<p>
+						London Euston
+					</p>
+				</div>
 
+				<div class="bk_duration">
+					<p style="line-height: 10px;">
+						2:00hr
+					</p>
+					<p>
+						500km
+					</p>
+				</div>
+
+				<div class="bk_arrival">
+					<h4>
+						BHM
+					</h4>
+					<p>
+						Birmingham street
+					</p>
+				</div>
+			</div>
+
+			<div class="booking_card">
+				<p>
+					Choose Route *
+				</p>
+				<div>
+					<form>
+						<div class="ui-field-contain">
+							<select name="select-native-1" id="select-native-1">
+								<option value="1">Lodon to Birmingham</option>
+								<option value="2">London to Manchester</option>
+								<option value="3">London to Cardiff</option>
+								<option value="4">London to Rugby</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="booking_card">
+				<p>
+					Choose Destination *
+				</p>
+				<div class="bk_checkbox">
+					<form>
+						<fieldset data-role="controlgroup">
+							<input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+							<label for="checkbox-v-2a">None</label>
+							<input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+							<label for="checkbox-v-2b">Big Ben</label>
+							<input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+							<label for="checkbox-v-2c">London Eye</label>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+
+			<div class="booking_card">
+				<p>
+					Choose Date *
+				</p>
+				<div class="bk_datepick">
+					<input type="text" data-role="date">
+				</div>
+			</div>
+
+			<div class="booking_card">
+				<p>
+					Choose Passengers *
+				</p>
+				<div>
+					<form>
+						<div class="ui-field-contain">
+							<select name="select-native-1" id="select-native-1">
+								<option value="1">One Adult</option>
+								<option value="2">Two Adults</option>
+								<option value="3">Three Adults</option>
+								<option value="4">Four Adults</option>
+							</select>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="booking_buttons">
+				<button onclick="window.location.href='booking_ticket_details.php'" class="bk_button" style="background:#0174cf; color: white; border-color: transparent; font-size: 15px;">Continue</button>
 			</div>
 		</div>
 
