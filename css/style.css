@@ -27,12 +27,298 @@ hr {
 /* Nav Bar */
 
 /* Landing Page */
+.landing h1{
+	text-align: center;
+	font-family: Noto Sans; 
+	font-weight: 900; 
+	font-size: 70px; 
+	line-height: 50px; 
+	letter-spacing: 0.01em; 
+	color: #404040;
+}
+.landing p{
+	text-align: center;
+	font-family: Noto Sans; 
+	font-weight: normal; 
+	font-size: 39.6px; 
+	line-height: 60px; 
+	letter-spacing: 0.01em; 
+	color: #404040;
+}
+.landing #foo{
+	height: 100%;
+}
+.landing .one{
+	height: 70%;
+}
+.landing .wrapper {
+    text-align: center;
+}
+.landing .buttons{
+    top: 50%;
+	margin:50px; 
+	height:100px; 
+	width:500px; 
+	box-shadow: 4px 3px #DCDCDC; 
+	font-family: Noto Sans; 
+	font-size: 40px; 
+	font-color:white; 
+	border-radius:45px; 
+	color:white; 
+	background-color:#0174CF; 
+	border:none;
+}
+.landing .two{
+	height: 70%;
+}
+.landing .three{
+	height: 70%;
+}
+.landing #human{
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 
 /* Login Page */
+.login_screen .form_div{
+    height: 500px;
+    width: 300px;
+    margin-top: 80%;
+    margin-left: 10%;
+}
+.login_screen .ui-input-text{
+    color: white;
+    min-height: 2.2em;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.2);
+    line-height: 1.4em;
+    box-sizing: border-box;
+    margin-top: 2px;
+    margin-bottom: 15px;
+    width: -webkit-fill-available;
+}
+.login_screen A {text-decoration: none;} 
+.login_screen .anchor_h4{
+    font-family: Noto Sans;
+    font-size: 15px; 
+    font-weight: 500;
+    color: white;
+    margin-top: 5px; 
+    margin-bottom: 30px;
+    text-align: right;
+}
+.login_screen .wrapper_log {
+    text-align: center;
+}
+.login_screen #buttons_log {
+    margin-left: auto;
+    margin-right: auto;
+    height:41px; 
+    width:215px; 
+    font-family: Noto Sans; 
+    font-size: 15px; 
+    font-weight: 900;
+    font-color:white; 
+    border-radius:45px; 
+    color:#0174CF; 
+    background-color:white; 
+    border:none;
+}
+.login_screen .label_form{
+    font-family: Noto Sans; 
+    font-size: 15px; 
+    font-weight: 500;
+    color:white;
+}
 
 /* Sign Up Page */
+.sign_up .form_div {
+    height: 500px;
+    width: 300px;
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+.sign_up .ui-input-text {
+    color: white;
+    min-height: 2.2em;
+    text-align: left;
+    border-color: white;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.2);
+    line-height: 1.4em;
+    box-sizing: border-box;
+    margin-top: 2px;
+    margin-bottom: 15px;
+    width: -webkit-fill-available;
+}
+
+.sign_up A {
+    text-decoration: none;
+}
+
+.sign_up .anchor_button {
+    height: 26px;
+    width: 58px;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+}
+
+.sign_up .anchor_h4 {
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    margin-left: 5%;
+    text-align: left;
+}
+
+.sign_up .wrapper_sign {
+    margin-top: 15%;
+    text-align: center;
+}
+
+.sign_up #buttons_sign {
+    margin-left: auto;
+    margin-right: auto;
+    height: 41px;
+    width: 215px;
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-weight: 900;
+    font-color: white;
+    border-radius: 45px;
+    color: #0174CF;
+    background-color: white;
+    border: none;
+}
+
+.sign_up .label_form {
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+
+.sign_up h1 {
+    text-align: center;
+    font-family: Noto Sans;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+}
+
+.sign_up p {
+    text-align: center;
+    font-family: Noto Sans;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 0;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+}
 
 /* Forgot Password Page */
+.forgot_pass .form_div {
+    height: 500px;
+    width: 300px;
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+.forgot_pass .ui-input-text {
+    color: white;
+    min-height: 2.2em;
+    text-align: left;
+    border-color: white;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.2);
+    line-height: 1.4em;
+    box-sizing: border-box;
+    margin-top: 2px;
+    margin-bottom: 15px;
+    width: -webkit-fill-available;
+}
+
+.forgot_pass A {
+    text-decoration: none;
+}
+
+.forgot_pass .anchor_button {
+    height: 26px;
+    width: 58px;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+}
+
+.forgot_pass .anchor_h4 {
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    margin-left: 5%;
+    text-align: left;
+}
+
+.forgot_pass .wrapper_fpass {
+    margin-top: 15%;
+    text-align: center;
+}
+
+.forgot_pass #buttons {
+    margin-left: auto;
+    margin-right: auto;
+    height: 41px;
+    width: 215px;
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-weight: 900;
+    font-color: white;
+    border-radius: 45px;
+    color: #0174CF;
+    background-color: white;
+    border: none;
+}
+
+.forgot_pass .label_form {
+    font-family: Noto Sans;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+
+.forgot_pass h1 {
+    text-align: center;
+    font-family: Noto Sans;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+}
+
+.forgot_pass p {
+    text-align: center;
+    font-family: Noto Sans;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 0;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+}
 
 /* Destination Page */
 
