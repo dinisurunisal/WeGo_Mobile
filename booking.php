@@ -20,72 +20,14 @@
 	<link rel="stylesheet" href="css/style.css" />
 
 	<style>
-		.booking_details {
+		.book .booking_details {
 			background-image: url("images/booking2.png");
 			/* background-repeat:no-repeat;
-   			background-size:contain; */
+       		background-size:contain; */
 			display: block;
 			background-size: contain;
 			height: 337px;
 			width: 380px;
-		}
-
-		.booking_details h1 {
-			text-align: center;
-			font-family: Noto Sans;
-			font-weight: 900;
-			font-size: 30px;
-			line-height: 28px;
-			letter-spacing: 0.01em;
-			color: #ffffff;
-		}
-
-		.booking_details .bk_heading {
-			padding-top: 23%;
-		}
-
-		.booking_details .bk_depature {
-			color: #ffffff;
-			margin-left: 53%;
-			margin-top: 8%;
-		}
-
-		.booking_details h4 {
-			font-weight: 600;
-		}
-
-		.booking_details .bk_duration {
-			margin-top: 9%;
-			margin-left: 32%;
-		}
-
-		.booking_details p {
-			font-family: Noto Sans;
-			font-size: 14px;
-			line-height: 0;
-			letter-spacing: 0.01em;
-			color: #ffffff;
-		}
-
-		.booking_details .bk_arrival {
-			color: #ffffff;
-			margin-left: 53%;
-			margin-top: 8%;
-		}
-
-		.booking_card {
-			box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-			transition: 0.3s;
-			border-radius: 15px;
-			margin: 5%;
-		}
-
-		.booking_card p {
-			padding: 5%;
-			font-family: Noto Sans;
-			font-size: 14px;
-			letter-spacing: 0.01em;
-			color: #404040;
 		}
 	</style>
 
@@ -96,76 +38,108 @@
 		<!-- Header -->
 		<?php include("header.php"); ?>
 
+		<div class="book">
+			<div class="booking_details">
+				<div class="bk_heading">
+					<h1>
+						Booking
+					</h1>
+				</div>
 
-		<div class="booking_details">
-			<div class="bk_heading">
-				<h1>
-					Booking
-				</h1>
+				<div class="bk_depature">
+					<h4>
+						EUS
+					</h4>
+					<p>
+						London Euston
+					</p>
+				</div>
+
+				<div class="bk_duration">
+					<p style="line-height: 10px;">
+						2:00hr
+					</p>
+					<p>
+						500km
+					</p>
+				</div>
+
+				<div class="bk_arrival">
+					<h4>
+						BHM
+					</h4>
+					<p>
+						Birmingham street
+					</p>
+				</div>
 			</div>
 
-			<div class="bk_depature">
-				<h4>
-					EUS
-				</h4>
+			<div class="booking_card">
 				<p>
-					London Euston
+					Choose Route *
 				</p>
+				<div>
+					<form>
+						<div class="ui-field-contain">
+							<select name="select-native-1" id="select-native-1">
+								<option value="1">Lodon to Birmingham</option>
+								<option value="2">London to Manchester</option>
+								<option value="3">London to Cardiff</option>
+								<option value="4">London to Rugby</option>
+							</select>
+						</div>
+					</form>
+				</div>
 			</div>
 
-			<div class="bk_duration">
-				<p style="line-height: 10px;">
-					2:00hr
-				</p>
+			<div class="booking_card">
 				<p>
-					500km
+					Choose Destination *
 				</p>
+				<div class="bk_checkbox">
+					<form>
+						<fieldset data-role="controlgroup">
+							<input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+							<label for="checkbox-v-2a">None</label>
+							<input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+							<label for="checkbox-v-2b">Big Ben</label>
+							<input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+							<label for="checkbox-v-2c">London Eye</label>
+						</fieldset>
+					</form>
+				</div>
 			</div>
 
-			<div class="bk_arrival">
-				<h4>
-					BHM
-				</h4>
+			<div class="booking_card">
 				<p>
-					Birmingham street
+					Choose Date *
 				</p>
+				<div class="bk_datepick">
+					<input type="text" data-role="date">
+				</div>
 			</div>
-		</div>
 
-		<div class="booking_card">
-			<p>
-				Choose Route *
-			</p>
-			<div>
-				<form>
-					<div class="ui-field-contain">
-						<select name="select-native-1" id="select-native-1">
-							<option value="1">The 1st Option</option>
-							<option value="2">The 2nd Option</option>
-							<option value="3">The 3rd Option</option>
-							<option value="4">The 4th Option</option>
-						</select>
-					</div>
-				</form>
+			<div class="booking_card">
+				<p>
+					Choose Passengers *
+				</p>
+				<div>
+					<form>
+						<div class="ui-field-contain">
+							<select name="select-native-1" id="select-native-1">
+								<option value="1">One Adult</option>
+								<option value="2">Two Adults</option>
+								<option value="3">Three Adults</option>
+								<option value="4">Four Adults</option>
+							</select>
+						</div>
+					</form>
+				</div>
 			</div>
-		</div>
 
-		<div class="booking_card">
-			<p>
-				Choose Destination *
-			</p>
-		</div>
-
-		<div class="booking_card">
-			<p>
-				Choose Date *
-			</p>
-		</div>
-
-		<div class="booking_card">
-			<p>
-				Choose Passengers *
-			</p>
+			<div class="booking_buttons">
+				<button onclick="window.location.href='booking_ticket_details.php'" class="bk_button" style="background:#0174cf; color: white; border-color: transparent; font-size: 15px;">Continue</button>
+			</div>
 		</div>
 
 		<?php include("footer.php"); ?>
