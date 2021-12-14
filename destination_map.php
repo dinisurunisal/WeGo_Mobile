@@ -16,17 +16,13 @@
 		<!-- font awesome link -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-		<!-- bootstrap -->
-		<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
-
 		<!-- The three things that jQuery Mobile needs to work -->
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 		<!-- Custom -->
-		<script src="js/destination_list.js"></script>
+		<script src="js/destination.js"></script>
 
 	</head>
 
@@ -44,12 +40,9 @@
 				<img src="images/background_find.jpg" id="london_bg" alt="london_bg" width="100%">
 
 				<div class="dest_nav_bar">
-					<a href="#popup_destination_filter" data-rel="popup" data-transition="pop" onclick="popupDestinationRestoreDefault()">
+					<a href="#popup-browse-kitchen-filter" data-rel="popup" data-transition="pop" onclick="popupBrowseKitchenFilterRestoreDefault()">
 						<img src="images/icons/filterIcon.png" alt="Filter Icon" class="grey-text" id="dest_filter_icon">
 					</a>
-
-					<!-- Destination Filter Popup -->
-					<?php include("destination_filter_popup.php"); ?>
 					<!-- <div class="wrap">
 						<div class="search">
 							<input type="text" class="searchTerm" placeholder="What are you looking for?">
@@ -59,8 +52,8 @@
 						</div>
 					</div> -->
 					<div class="dest_map_button">
-						<a href="destination_map.php">
-							Map
+						<a href="destination_list.php">
+							List
 						</a>
 					</div>
 
@@ -72,7 +65,7 @@
 					<div id="card_script_1">
 						<div id="screen-resolution-breakpoint">
 							<li>
-								<a id="clickedId" onclick="onDestinationSelect(this.id)">
+								<a id="clickedId" onclick="setClickedKitchenObject(this.id)">
 									<div class="dest_card">
 										<div style="position: relative;">
 											<img src="images/destinations/Big Ben.jpg" id="card_image" style="width:100%">
@@ -80,7 +73,7 @@
 												<h4 class="dest_name" id="card_name">Big Ben</h4>
 											</div>
 											<div class="dest_favourite">
-												<i onclick="addToFavourites(this.id)"></i>
+												<i></i>
 											</div>
 										</div>
 
@@ -90,7 +83,7 @@
 												London's iconic national timepiece</h5>
 											</div>
 											<div class="price_holder">
-												<h2 style="margin-left: 55px; color:black" id="card_price" class="card_price"><b>$333</b> </h2>
+												<h2 style="margin-left: 60px; color:black" id="card_price" class="card_price"><b>$333</b> </h2>
 											</div>
 										</div>
 									</div>
@@ -101,8 +94,6 @@
 
 					<div id="card_script_2"></div>
 				</ul>
-
-				
 			</div>
 
 
