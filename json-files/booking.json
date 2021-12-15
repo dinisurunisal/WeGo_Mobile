@@ -1,0 +1,11 @@
+[
+    {
+        "RouteWay": "One Way",
+        "Route": "London to Birmingham",
+        "Destination": [
+            "Big Ben"
+        ],
+        "Date": "12/12/2020",
+        "Passengers": 2
+    }
+]
