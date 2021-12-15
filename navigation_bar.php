@@ -62,25 +62,25 @@ include_once("css/navbar_styles.css");
             <li>
                 <a onclick="selectHome()" href="homepage.php" data-ajax="false" id="navHome" class="nav-bar-item">
                     <img id="homeImg" class="navBarIcon" src="images/icons/homeIcon.png" alt="home"/>
-                    <h7 class="nav-bar-item-option">HOME</h7>
+                    <h4 class="nav-bar-item-option">HOME</h4>
                 </a>
             </li>
             <li>
                 <a onclick="selectHunts()" href="my_hunts.php" data-ajax="false" id="navHunts" rel="dialog" class="nav-bar-item">
                     <img id="huntsImg" class="navBarIcon" src="images/icons/huntsIcon.png" alt="hunts"/>
-                    <h7 class="nav-bar-item-option">HUNTS</h7>
+                    <h4 class="nav-bar-item-option">HUNTS</h4>
                 </a>
             </li>
             <li>
                 <a onclick="selectGame()" href="treasure_hunt.php" data-ajax="false" id="navGame" class="nav-bar-item">
                     <img id="gameImg" class="navBarIcon" src="images/icons/gameIcon.png" alt="game"/>
-                    <h7 class="nav-bar-item-option">GAME</h7>
+                    <h4 class="nav-bar-item-option">GAME</h4>
                 </a>
             </li>
             <li>
                 <a onclick="selectAwards()" id="navAwards" href="awards.php" data-ajax="false" class="nav-bar-item">
                     <img id="awardsImg" class="navBarIcon" src="images/icons/awardsIcon.png" alt="awards"/>
-                    <h7 class="nav-bar-item-option">AWARDS</h7>
+                    <h4 class="nav-bar-item-option">AWARDS</h4>
                 </a>
             </li>
         </ul>
