@@ -1,19 +1,21 @@
 #navbar {
 	background-color: #ffffff !important;
 	position: fixed;
-    	bottom: 0;
+    	bottom: 0px;
+	height : 60px;
 	width: 100%;
 }
 
 .navBarIcon {
-	padding: 4px;
+	padding-top: 2px;
 }
 
-.nav-bar-item {
-	white-space: normal;
-}
+//.nav-bar-item {
+//	white-space: normal;
+//}
 
 .nav-bar-item-option {
+	margin: 1px;
 	padding: 0px;
 	font-weight: bolder;
 }
