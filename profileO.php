@@ -22,7 +22,7 @@
 
 		<style>
 			.top_banner{
-				margin-top:70px;
+				margin-top:44px;
 				margin-left:-16px;
 				margin-right:-16px;
 				position: relative;
@@ -32,22 +32,27 @@
 				width:100%;
 				object-fit:fill;
 				position: relative;
+				
 			}
 			#profile{
 				height:70px;
 				width:70px;
 				object-fit:fill;
-				position: relative;
-				margin-left:auto;
-				margin-right:auto;
-				margin-top:auto;
-				margin-bottom:auto;
+				position: absolute;
+
+				margin:auto;
 				display:block;
+				border-radius: 50%;
+				left: 0;
+    			top: 0;
+   				right: 0;
+   				bottom: 0;
 			}
 			.edit_logout_bar{
 				background-color:#0099e6;
 				width:100%;
 				padding: 5px 5px 5px 5px;
+				margin-top:-22px;
 			}
 			#flex_container{
 				display: flex;
@@ -55,10 +60,16 @@
 			#flex_child{
 				flex:1;
 			}
+			/* #bar_btn{
+				border: none;
+				background-color: inherit;
+				padding: 14px 28px;
+				font-size: 16px;
+				cursor: pointer;
+				display: inline-block;
+			} */
 		</style>
 
-				<!-- top:120px;
-				left:150px; -->
 
 	</head>
 
@@ -76,10 +87,10 @@
 
 			<div class="edit_logout_bar" id="flex_container">
 				<div class="edit_profile_btn" id="flex_child" style="padding-left:10px;">
-					EDIT
+					<a onclick="alert('Hello world!')" >EDIT</a>
 				</div>
-				<div class="logout_btn" id="flex_child" style="text-align: right; padding-right:10px;">
-					LOGOUT
+				<div class="logout_btn"  id="flex_child" style="text-align: right; padding-right:10px;">
+					<a onclick="alert('Hello world!')" >LOGOUT</a>
 				</div>
 			</div>
 
