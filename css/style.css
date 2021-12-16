@@ -1,15 +1,8 @@
 @font-face {
-    font-family: 'Caviar-Dreams';
-    src: url('../fonts/Caviar-Dreams.ttf.woff') format('woff'),
-    url('../fonts/Caviar-Dreams.ttf.svg#Caviar-Dreams') format('svg'),
-    url('../fonts/Caviar-Dreams.ttf.eot'),
-    url('../fonts/Caviar-Dreams.ttf.eot?#iefix') format('embedded-opentype');
-    font-weight: normal;
-    font-style: normal;
+    
 }
 
 body {
-    font-family: 'Caviar-Dreams';
     height: 100%;
     margin: 0;
 }
