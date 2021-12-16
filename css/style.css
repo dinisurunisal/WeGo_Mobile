@@ -1,6 +1,6 @@
-@font-face {
+/*@font-face {
     
-}
+}*/
 
 body {
     height: 100%;
@@ -11,6 +11,31 @@ hr {
     background-color: #000;
     border-color: #000;
     color: #000;
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 23px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+p {
+	font-size: 16px;
+	font-weight: regular;
+}
+
+p2 {
+	font-size: 14px;
+	font-weight: regular;
 }
 
 /* Header
@@ -126,7 +151,39 @@ hr {
 	text-shadow: none !important;
 }
 
-/* Footer */
+/* Footer 
+--------------------------------------------------------------------------------*/
+#page_footer {
+	background-color: #404040 !important;
+	margin-top: 24px;
+	height: 280px;
+	padding-bottom: 60px;
+}
+
+#to_top_button {
+	float: right;
+	margin-right: 16px;
+	cursor: pointer;
+}
+
+#to_top_button:hover {
+  filter: brightness(150%);
+}
+
+#to_top_button:onclick {
+  filter: brightness(100%);
+}
+
+.footer_content {
+	width: -webkit-fill-available;
+	padding: 8px;
+	color: #ffffff;
+	text-align: center;
+}
+
+.footer_content .social_media_icon {
+	padding: 8px;	
+}
 
 /* Nav bar
 --------------------------------------------------------------------------------*/
@@ -154,7 +211,8 @@ hr {
 	border-color: transparent;
 }
 
-/* Landing Page */
+/* Landing Page 
+---------------------------------------------------------------------------------*/
 .landing h1{
 	text-align: center;
 	font-family: Noto Sans; 
@@ -208,7 +266,8 @@ hr {
     display: block;
 }
 
-/* Login Page */
+/* Login Page 
+---------------------------------------------------------------------------------*/
 .login_screen .form_div{
     height: 500px;
     width: 300px;
