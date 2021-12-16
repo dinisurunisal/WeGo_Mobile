@@ -76,6 +76,7 @@ label.ui-btn {
 	font-weight: bold;
 	border-width: 1px;
 	border-style: solid;
+    cursor: pointer;
 }
 .ui-btn {
 	text-decoration: none !important;
@@ -167,13 +168,7 @@ html .ui-alt-icon .ui-radio-off:after {
 .ui-nodisc-icon .ui-btn:after {
 	background-color: transparent;
 }
-/* Icon shadow */
-.ui-shadow-icon.ui-btn:after,
-.ui-shadow-icon .ui-btn:after {
-	-webkit-box-shadow: 0 1px 0 transparent /*{global-icon-shadow}*/;
-	-moz-box-shadow: 0 1px 0 transparent /*{global-icon-shadow}*/;
-	box-shadow: 0 1px 0 transparent /*{global-icon-shadow}*/;
-}
+
 /* Checkbox and radio */
 .ui-btn.ui-checkbox-off:after,
 .ui-btn.ui-checkbox-on:after,
@@ -261,11 +256,11 @@ html .ui-alt-icon .ui-radio-off:after {
 }
 
 .ui-page-theme-a .ui-btn:active,html .ui-bar-a .ui-btn:active,html .ui-body-a .ui-btn:active,html body .ui-group-theme-a .ui-btn:active,html head + body .ui-btn.ui-btn-a:active {
-	background-color:#ffffff ;border-color:#ffffff ;color:#404040 ;text-shadow:0  0  0  #404040 ;
+	background-color:#ffffff ;border-color:#ffffff ;color:#404040 ;
 }
 
 .ui-page-theme-a .ui-btn.ui-btn-active,html .ui-bar-a .ui-btn.ui-btn-active,html .ui-body-a .ui-btn.ui-btn-active,html body .ui-group-theme-a .ui-btn.ui-btn-active,html head + body .ui-btn.ui-btn-a.ui-btn-active,.ui-page-theme-a .ui-checkbox-on:after,html .ui-bar-a .ui-checkbox-on:after,html .ui-body-a .ui-checkbox-on:after,html body .ui-group-theme-a .ui-checkbox-on:after,.ui-btn.ui-checkbox-on.ui-btn-a:after,.ui-page-theme-a .ui-flipswitch-active,html .ui-bar-a .ui-flipswitch-active,html .ui-body-a .ui-flipswitch-active,html body .ui-group-theme-a .ui-flipswitch-active,html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active,.ui-page-theme-a .ui-slider-track .ui-btn-active,html .ui-bar-a .ui-slider-track .ui-btn-active,html .ui-body-a .ui-slider-track .ui-btn-active,html body .ui-group-theme-a .ui-slider-track .ui-btn-active,html body div.ui-slider-track.ui-body-a .ui-btn-active {
-	background-color:#0174cf ;border-color:#0174cf ;color:#ffffff ;text-shadow:0  0  0  #404040 ;
+	background-color:#0174cf ;border-color:#0174cf ;color:#ffffff ;
 }
 
 .ui-page-theme-a .ui-radio-on:after,html .ui-bar-a .ui-radio-on:after,html .ui-body-a .ui-radio-on:after,html body .ui-group-theme-a .ui-radio-on:after,.ui-btn.ui-radio-on.ui-btn-a:after {
@@ -273,7 +268,7 @@ html .ui-alt-icon .ui-radio-off:after {
 }
 
 .ui-page-theme-a .ui-btn:focus,html .ui-bar-a .ui-btn:focus,html .ui-body-a .ui-btn:focus,html body .ui-group-theme-a .ui-btn:focus,html head + body .ui-btn.ui-btn-a:focus,.ui-page-theme-a .ui-focus,html .ui-bar-a .ui-focus,html .ui-body-a .ui-focus,html body .ui-group-theme-a .ui-focus,html head + body .ui-btn-a.ui-focus,html head + body .ui-body-a.ui-focus {
-	-webkit-box-shadow:0 0 12px #0174cf ;-moz-box-shadow:0 0 12px #0174cf ;box-shadow:0 0 12px #0174cf;
+	-webkit-box-shadow:none ;-moz-box-shadow:none ;box-shadow:none;
 }
 
 .ui-disabled,.ui-state-disabled,button[disabled],.ui-select .ui-btn.ui-state-disabled {
