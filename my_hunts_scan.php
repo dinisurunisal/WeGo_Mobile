@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>WeGo</title>
-    <link rel="stylesheet" href="css/my_hunts_styles.css" />
-    <link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
-	<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>QR Scan</title>
+    <link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="jquery-theme/themes/theme.css" />
+    <link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <style>
 /*
         .scan_box:before, .scan_box:after, .scan_box>:first-child:before, .scan_box>:first-child:after {
@@ -30,6 +35,7 @@
             //transform: translateY(-50%);
         }   
         .scan_box {
+            border-radius: 8px;
             transform: translateY(50%);
             text-align:center;
             width:280px;
