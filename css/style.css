@@ -336,18 +336,10 @@ hr {
     color: #ffffff;
 }
 
-.book .booking_details .bk_heading {
-    padding-top: 23%;
-}
-
 .book .booking_details .bk_depature {
     color: #ffffff;
     margin-left: 53%;
     margin-top: 8%;
-}
-
-.book .booking_details h4 {
-    font-weight: 600;
 }
 
 .book .booking_details .bk_duration {

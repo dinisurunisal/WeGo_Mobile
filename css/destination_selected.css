@@ -300,3 +300,15 @@ and (max-device-width: 850px) {
     
 
 }
+
+.dest_background_image .dest_content_block {
+    position: absolute;
+    top: 120px;
+    height: 800px;
+    width: 85%;
+    left: 40px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding-left: 20px;
+    padding-right: 20px;
+}
