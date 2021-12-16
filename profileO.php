@@ -60,14 +60,13 @@
 			#flex_child{
 				flex:1;
 			}
-			/* #bar_btn{
-				border: none;
-				background-color: inherit;
-				padding: 14px 28px;
-				font-size: 16px;
-				cursor: pointer;
-				display: inline-block;
-			} */
+			.user_data_r1{
+				text-align:center;
+			}
+			.user_data_r2{
+				text-align:center;
+			}
+
 		</style>
 
 
@@ -78,6 +77,7 @@
 			<!-- Header -->
 			<?php include("header.php"); ?>
 
+			<!-- main banner -->
 			<div role="main" class="ui-content">
 				<div class="top_banner">
 					<img id="background" src="images/profile_page/background.jpg" alt="">
@@ -85,12 +85,26 @@
 				</div>
 			</div>
 
+			<!-- bar with edit logout buttons -->
 			<div class="edit_logout_bar" id="flex_container">
+
 				<div class="edit_profile_btn" id="flex_child" style="padding-left:10px;">
 					<a onclick="alert('Hello world!')" >EDIT</a>
 				</div>
 				<div class="logout_btn"  id="flex_child" style="text-align: right; padding-right:10px;">
 					<a onclick="alert('Hello world!')" >LOGOUT</a>
+				</div>
+
+			</div>
+
+			<div class="user_data">
+				<div class="user_data_r1">
+					<div class="user_data_r1_items"> First name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; John</div>
+					<div class="user_data_r1_items"> Member since &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4th July 1998</div>
+				</div>
+				<div class="user_data_r2">
+					<div class="user_data_r2_items">Contact No &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 32566985</div>
+					<div class="user_data_r2_items">e-mail &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; samnple@gmail.com</div>
 				</div>
 			</div>
 
