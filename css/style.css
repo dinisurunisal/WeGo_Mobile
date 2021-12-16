@@ -1,6 +1,6 @@
-@font-face {
+/*@font-face {
     
-}
+}*/
 
 body {
     height: 100%;
@@ -13,13 +13,206 @@ hr {
     color: #000;
 }
 
-/* Header */
+h1 {
+	font-size: 32px;
+	font-weight: bold;
+}
 
-/* Footer */
+h2 {
+	font-size: 23px;
+	font-weight: bold;
+}
 
-/* Nav Bar */
+h3 {
+	font-size: 20px;
+	font-weight: bold;
+}
 
-/* Landing Page */
+p {
+	font-size: 16px;
+	font-weight: regular;
+}
+
+p2 {
+	font-size: 14px;
+	font-weight: regular;
+}
+
+/* Header
+--------------------------------------------------------------------------------*/
+#home_header {
+	width: -webkit-fill-available;
+	position:fixed;
+}
+
+#header_collapsible .ui-collapsible-heading{
+	background: white;
+	border-bottom-color: #c4c4c4;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-radius: 0px !important;
+}
+
+#header_collapsible .ui-body-inherit{
+	background-color: white;
+}
+
+#header_collapsible .ui-collapsible-heading-toggle{
+	height: 36px;
+	margin-left: 16px;
+	margin-right: 16px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 0px;
+	padding-left: 38px;
+	border: none;
+	text-align: center;
+	white-space: nowrap;
+}
+
+#home_header_logo {
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom:10px;
+	/* margin-left:6px;
+	width: 88.6%; */
+}
+
+#home_header_profile_icon {
+	display: inline-block;
+	float: right;
+	margin-right: 8px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+#header_collapsible {
+	border-radius: 12px !important;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: #ffffff;
+}
+
+#header_collapsible .ui-collapsible-heading-toggle {
+	background-color: #ffffff;
+}
+
+#header_collapsible .ui-collapsible-heading .ui-btn {
+	margin-left: 16px;
+	margin-right: 16px;
+	border-radius: 0px !important;
+	background-color: #ffffff;
+	box-shadow: none !important;
+	text-align: center;
+}
+
+#header_collapsible .ui-collapsible-content {
+	height: auto;
+	border-color: #c4c4c4 !important;
+	white-space: nowrap;
+}
+
+#header_collapsible .ui-input-search {
+	box-shadow: none !important;
+	margin: 0px;
+}
+
+#header_collapsible .header_search {
+	width: 100%;
+	height: 56px;
+	text-align: center;
+}
+
+#header_collapsible .header_search_box {
+	display: inline-block;
+	padding: 4px 2px 4px 4px;
+	width: 70%;
+}
+
+#header_collapsible .ui-input-search {
+	height: 37.5px;
+}
+
+#header_collapsible .header_search_btn {
+	display: inline-block;
+	width: auto;
+}
+
+#home_search_btn {
+	border-radius: 12px !important;
+	background-color: #0174CF !important;
+	color: #ffffff !important;
+	border: 0;
+	margin-top: 4;
+	margin-bottom: 4;
+	padding-top: 9;
+	padding-bottom: 9;
+	box-shadow: none !important;
+	text-shadow: none !important;
+}
+
+/* Footer 
+--------------------------------------------------------------------------------*/
+#page_footer {
+	background-color: #404040 !important;
+	margin-top: 24px;
+	height: 280px;
+	padding-bottom: 60px;
+}
+
+#to_top_button {
+	float: right;
+	margin-right: 16px;
+	cursor: pointer;
+}
+
+#to_top_button:hover {
+  filter: brightness(150%);
+}
+
+#to_top_button:onclick {
+  filter: brightness(100%);
+}
+
+.footer_content {
+	width: -webkit-fill-available;
+	padding: 8px;
+	color: #ffffff;
+	text-align: center;
+}
+
+.footer_content .social_media_icon {
+	padding: 8px;	
+}
+
+/* Nav bar
+--------------------------------------------------------------------------------*/
+#nav_bar {
+	background-color: #ffffff !important;
+	position: fixed;
+    	bottom: 0px;
+	height : 60px;
+	width: 100%;
+}
+
+.nav_bar_icon {
+	padding-top: 2px;
+}
+
+.nav_bar_item_option {
+	margin: 1px;
+	padding: 0px;
+	font-weight: bolder;
+}
+
+.nav_bar_item.ui-link.ui-btn.ui-btn-active {
+	box-shadow: none !important;
+	background-color: transparent;
+	border-color: transparent;
+}
+
+/* Landing Page 
+---------------------------------------------------------------------------------*/
 .landing h1{
 	text-align: center;
 	font-family: Noto Sans; 
@@ -73,7 +266,8 @@ hr {
     display: block;
 }
 
-/* Login Page */
+/* Login Page 
+---------------------------------------------------------------------------------*/
 .login_screen .form_div{
     height: 500px;
     width: 300px;
