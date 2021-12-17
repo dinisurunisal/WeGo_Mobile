@@ -18,18 +18,20 @@
     <script type="text/javascript" src="js/my_hunts.js"></script>
     
     <style>
-        .past_list {
+        .my_hunts_list {
             padding: 8px 0px 8px 0px!important;
             display: grid;
-            grid-template: auto auto;
+            grid-auto-columns: auto auto;
         }
         
-        .past_card {
-            background-color: white;
+        .my_hunts_card {
+            background-image: url(images/destinations/Cotswolds.jpg);
+            background-position: -180px 60%;
+            background-size: cover;
             border-radius: 12px;
-            height: 265px;
-            width: fit-content;
-            margin: 8px 8px 8px 8px;
+            height: auto;
+            max-width: 370px;
+            margin: 8px 4px 8px 4px;
         }
         
         .card_image_section {
@@ -40,29 +42,51 @@
             float: left;
         }
         
+        .card_image_section p {
+            opacity: 0;
+        }
+/*
         .card_image_section img{
             border-top-left-radius: 12px;
             border-bottom-left-radius: 12px;
             width: 100%;
-            height: 265px;
+            height: auto;
             object-position: -180px;
             object-fit: cover;
         }
+*/
+        .tour_review {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
         
-        .past_card_content {
+        .my_hunts_card_content {
+            background-color: white;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
             display: grid;
             padding: 8px;
             text-align: left;
         }
         
-        .past_card_content h3, p2 {
+        .my_hunts_card_content h3, p2 {
             width: fit-content;
             margin-top: 4px;
             margin-bottom: 4px;
         }
         
-        .past_tour_date {
+        .my_hunts_tour_date, .tour_review {
             color: #c4c4c4;
+        }
+        
+        .my_hunts_upcoming_details {
+            padding-top: 8px;
+            display: grid;
+            height: fit-content;
+            grid-template-columns: auto auto;
+            grid-column-gap: 10px;
         }
         
         .feedback_btn {
@@ -70,6 +94,13 @@
             background-color: #0174cf !important;
             color: white !important;
             text-shadow: none !important;
+        }
+        
+        .rating {
+            padding-top: 8px;
+            display: grid;
+            height: fit-content;
+            grid-template-columns: 145px auto;
         }
     </style>
     
@@ -108,38 +139,78 @@
         </ul>
 -->     
             <div id="upcoming-empty">
-                <h4 style="text-align: center;">Book locations to add them to your upcoming hunts.</h4>
-            </div>
-            <div id="past-empty">
-                <div class="past_list">
-                    
-                    <div class="past_card">
+                <div class="my_hunts_list">
+                    <div class="my_hunts_card">
                         <div class="card_image_section">
-                            <img src="images/destinations/Big Ben.jpg" class="card_image">
+                            <p>image</p>
                         </div>
-                        <div class="past_card_content">
-                            <h3 class="past_location_name">Big Ben</h3>
-                            <p2 class="past_tour_date">Tour completed on 25-12-2021</p2>
+                        <div class="my_hunts_card_content">
+                            <h3 class="my_hunts_location_name">Big Ben</h3>
+                            <p2 class="my_hunts_tour_date">Tour starts on 20th December 2021</p2>
                             <hr>
-                            <p2 class="past_tour_details">EUS - DEL|Duration: 1h 11m|One Way</p2>
-                            <button class="feedback_btn">Leave feedback</button>
+                            <div class="my_hunts_upcoming_details">
+                                <p2>Route:</p2>
+                                <p2 class="upcoming_tour_route">London - Burmingham</p2>
+                                <p2>Duration:</p2>
+                                <p2 class="upcoming_tour_duration">2h 15m</p2>
+                                <p2>Passengers:</p2>
+                                <p2 class="upcoming_tour_passengers">4 Adults</p2>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="past_card">
+                    <div class="my_hunts_card">
                         <div class="card_image_section">
-                            <img src="images/destinations/The%20British%20Museum.jpg" class="card_image">
+                            <p>image</p>
                         </div>
-                        <div class="past_card_content">
-                            <h3 class="past_location_name">Big Ben</h3>
-                            <p2 class="past_tour_date">Tour completed on 25-12-2021</p2>
+                        <div class="my_hunts_card_content">
+                            <h3 class="my_hunts_location_name">Buckingham Palace</h3>
+                            <p2 class="my_hunts_tour_date">Tour starts on 25th December 2021</p2>
                             <hr>
-                            <p2 class="past_tour_details">EUS - DEL|Duration: 1h 11m|One Way</p2>
-                            <button class="feedback_btn">Leave feedback</button>
+                            <div class="my_hunts_upcoming_details">
+                                <p2>Route:</p2>
+                                <p2 class="upcoming_tour_route">London - Westminster</p2>
+                                <p2>Duration:</p2>
+                                <p2 class="upcoming_tour_duration">2h 15m</p2>
+                                <p2>Passengers:</p2>
+                                <p2 class="upcoming_tour_passengers">4 Adults</p2>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <h4 style="text-align: center; ">No locations hunted yet.</h4>
+<!--                <h4 style="text-align: center;">Book locations to add them to your upcoming hunts.</h4>-->
+            </div>
+            <div id="past-empty">
+                <div class="my_hunts_list">
+                    <div class="my_hunts_card">
+                        <div class="card_image_section">
+                            <p>image</p>
+                        </div>
+                        <div class="my_hunts_card_content">
+                            <h3 class="my_hunts_location_name">Big Ben</h3>
+                            <p2 class="my_hunts_tour_date">Tour completed on 25-12-2021</p2>
+                            <hr>
+                            <p2 class="my_hunts_tour_details">EUS - DEL | 1h 11m | One Way</p2>
+                            <button class="feedback_btn">Leave feedback</button>
+                        </div>
+                    </div>
+                    <div class="my_hunts_card">
+                        <div class="card_image_section">
+                            <p>image</p>
+                        </div>
+                        <div class="my_hunts_card_content">
+                            <h3 class="my_hunts_location_name">Big Ben</h3>
+                            <p2 class="my_hunts_tour_date">Tour completed on 25-12-2021</p2>
+                            <hr>
+                            <p2 class="my_hunts_tour_details">EUS - DEL | 1h 11m | One Way</p2>
+                            <div class="rating">
+                                <img src="images/fourStars.png">
+                                <p2>4 Stars</p2>
+                            </div>
+                            <p2 class="tour_review">One of the best destinations which admires the history of UK</p2>
+                        </div>
+                    </div>
+                </div>
+<!--                <h4 style="text-align: center; ">No locations hunted yet.</h4>-->
             </div>
         </div>
         <?php include("footer.php"); ?>
