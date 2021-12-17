@@ -60,6 +60,11 @@
             margin-top: 4px;
             margin-bottom: 4px;
         }
+        
+        .past_tour_date {
+            color: #c4c4c4;
+        }
+        
         .feedback_btn {
             width: 158px !important;
             background-color: #0174cf !important;
@@ -116,9 +121,7 @@
                             <h3 class="past_location_name">Big Ben</h3>
                             <p2 class="past_tour_date">Tour completed on 25-12-2021</p2>
                             <hr>
-                            <h3 class="past_location_route">EUS - DEL</h3>
-                            <h3 class="past_location_duration">Duration: 1h 11m</h3>
-                            <h3 class="past_location_trip">One Way</h3>
+                            <p2 class="past_tour_details">EUS - DEL|Duration: 1h 11m|One Way</p2>
                             <button class="feedback_btn">Leave feedback</button>
                         </div>
                     </div>
@@ -131,9 +134,7 @@
                             <h3 class="past_location_name">Big Ben</h3>
                             <p2 class="past_tour_date">Tour completed on 25-12-2021</p2>
                             <hr>
-                            <h3 class="past_location_route">EUS - DEL</h3>
-                            <h3 class="past_location_duration">Duration: 1h 11m</h3>
-                            <h3 class="past_location_trip">One Way</h3>
+                            <p2 class="past_tour_details">EUS - DEL|Duration: 1h 11m|One Way</p2>
                             <button class="feedback_btn">Leave feedback</button>
                         </div>
                     </div>
