@@ -42,7 +42,7 @@
             float: left;
         }
         
-        .card_image_section p {
+        .card_image_section p, .button_space p2 {
             opacity: 0;
         }
 /*
@@ -102,6 +102,14 @@
             height: fit-content;
             grid-template-columns: 145px auto;
         }
+        
+        .button_space {
+            padding-top: 8px;
+            align-items: right;
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        
     </style>
     
 </head>
@@ -190,7 +198,10 @@
                             <p2 class="my_hunts_tour_date">Tour completed on 25-12-2021</p2>
                             <hr>
                             <p2 class="my_hunts_tour_details">EUS - DEL | 1h 11m | One Way</p2>
-                            <button class="feedback_btn">Leave feedback</button>
+                            <div class="button_space">
+                                <p2>button</p2>
+                                <button class="feedback_btn">Leave feedback</button>
+                            </div>
                         </div>
                     </div>
                     <div class="my_hunts_card">
