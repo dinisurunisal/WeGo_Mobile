@@ -3,7 +3,7 @@
 	<head>
 		<!-- Common -->
 		<meta charset="utf-8">
-		<title>Destination</title>
+		<title>Profile page</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -62,11 +62,53 @@
 			}
 			.user_data_r1{
 				text-align:center;
+				display: flex;
+				flex-direction: row;
 			}
 			.user_data_r2{
 				text-align:center;
+				display: flex;
+				flex-direction: row;
 			}
+			.button_container{
+				display:flex;
+				justify-content: space-around;
+				flex-direction:row;
+			}
+			.button{
+				width:341px;
+				height:85px;
+				border-radius:12px;
+				border-color:#0099e6;
+				background-color:#0099e6;
+				margin:10px;
+				color:white;
+			}
+			@media (max-width: 375px) {
+				.button_container{
+					flex-direction: column;
+				}
+				.user_data_r1{
 
+					flex-direction: column;
+				}
+				.user_data_r2{
+
+					flex-direction: column;
+				}
+
+			}
+			.data{
+				display:flex;
+				flex: 1;
+			}
+			.data_child{
+				flex:1;
+				margin: 10px;
+			}
+			#data_name{
+				font-weight: bold;
+			}
 		</style>
 
 
@@ -99,13 +141,32 @@
 
 			<div class="user_data">
 				<div class="user_data_r1">
-					<div class="user_data_r1_items"> First name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; John</div>
-					<div class="user_data_r1_items"> Member since &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4th July 1998</div>
+					<div class="data">
+						<div class="data_child" id="data_name">First Name</div>
+						<div class="data_child">John watson</div>
+					</div>
+					<div class="data">
+						<div class="data_child" id="data_name">member since</div>
+						<div class="data_child">4th july 1998</div>
+					</div>
 				</div>
 				<div class="user_data_r2">
-					<div class="user_data_r2_items">Contact No &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 32566985</div>
-					<div class="user_data_r2_items">e-mail &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; samnple@gmail.com</div>
+					<div class="data">
+						<div class="data_child" id="data_name">contanct no</div>
+						<div class="data_child">5846545</div>
+					</div>
+					<div class="data">
+						<div class="data_child" id="data_name">E-mail</div>
+						<div class="data_child">sample@gmail.com</div>
+					</div>
 				</div>
+			</div>
+
+			<div class="button_container">
+				<div><button class="button" data-role="none">Favourite List</button></div>
+				<div><button class="button" data-role="none">Send Feedback</button></div>
+				
+				
 			</div>
 
 			<?php include("footer.php"); ?>
