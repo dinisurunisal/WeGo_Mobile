@@ -23,6 +23,10 @@ function loadDestinationList() {
     }
 
     deleteDuplicateCards(); 
+
+    for (var i = 0; i < defaultDestinationDB.length; i++) {
+        document.getElementById("clickedId").id = defaultDestinationDB[i].destinationId;
+    }
 }
 
 
@@ -38,7 +42,8 @@ function deleteDuplicateCards() {
 
 function onDestinationSelect(id) {
   if (typeof (Storage) !== "undefined") {
-    localStorage.setItem("clickedDestinationId", clickedId);
+    localStorage.setItem("clickedDestinationId", id);
+    console.log(id)
     window.location = "destination_selected.php";
   } else {
       showFailure("Unable to load")

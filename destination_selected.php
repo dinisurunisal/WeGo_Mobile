@@ -49,7 +49,7 @@
 
 						<div class="dest_sel_main_container">
 							<div id="dest_sel_image_container">
-								<img src="images/destinations/Big Ben.jpg" id="big_ben" alt="big_ben" width="100%">
+								<img src="images/destinations/Big Ben.jpg" id="sel-dest-image" class="sel-dest-image" alt="big_ben" width="100%">
 							</div>
 							<div id="dest_sel_details_container">
 								<table style="width:100%;border-collapse: collapse;" class="dest_top_table_elements">
