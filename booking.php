@@ -29,6 +29,15 @@
 			height: 337px;
 			width: 380px;
 		}
+
+		.book .booking_details .bk_heading {
+			padding-top: 18%;
+		}
+
+		.book .booking_details h4 {
+			font-weight: 600;
+			margin-bottom: 0;
+		}
 	</style>
 
 </head>
@@ -56,7 +65,7 @@
 				</div>
 
 				<div class="bk_duration">
-					<p style="line-height: 10px;">
+					<p style="padding-bottom: 10px;">
 						2:00hr
 					</p>
 					<p>

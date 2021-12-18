@@ -1,6 +1,6 @@
 <style>
 <?php
-include_once("css/navbar_styles.css");
+    include_once("css/style.css");
     include_once("jquery-theme/themes/theme.css");
 ?>
 </style>
@@ -16,71 +16,71 @@ include_once("css/navbar_styles.css");
         } else if (window.location.pathname.endsWith("awards.php")){
             selectAwards();
         } else {
-            document.getElementById("navHome").style.color = "#c4c4c4";
-            document.getElementById("navHunts").style.color = "#c4c4c4";
-            document.getElementById("navGame").style.color = "#c4c4c4";
-            document.getElementById("navAwards").style.color = "#c4c4c4";
+            document.getElementById("nav_home").style.color = "#c4c4c4";
+            document.getElementById("nav_hunts").style.color = "#c4c4c4";
+            document.getElementById("nav_game").style.color = "#c4c4c4";
+            document.getElementById("nav_awards").style.color = "#c4c4c4";
         }
     };
     
     function selectHome() {
-      document.getElementById("homeImg").src = "images/icons/homeIconSelected.png";
-      document.getElementById("navHome").style.color = "#0174cf";
-        document.getElementById("navHunts").style.color = "#c4c4c4";
-        document.getElementById("navGame").style.color = "#c4c4c4";
-        document.getElementById("navAwards").style.color = "#c4c4c4";
+      document.getElementById("home_img").src = "images/icons/homeIconSelected.png";
+      document.getElementById("nav_home").style.color = "#0174cf";
+        document.getElementById("nav_hunts").style.color = "#c4c4c4";
+        document.getElementById("nav_game").style.color = "#c4c4c4";
+        document.getElementById("nav_awards").style.color = "#c4c4c4";
     }
 
     function selectHunts() {
-      document.getElementById("huntsImg").src = "images/icons/huntsIconSelected.png";
-        document.getElementById("navHome").style.color = "#c4c4c4";
-        document.getElementById("navHunts").style.color = "#0174cf";
-        document.getElementById("navGame").style.color = "#c4c4c4";
-        document.getElementById("navAwards").style.color = "#c4c4c4";
+      document.getElementById("hunts_img").src = "images/icons/huntsIconSelected.png";
+        document.getElementById("nav_home").style.color = "#c4c4c4";
+        document.getElementById("nav_hunts").style.color = "#0174cf";
+        document.getElementById("nav_game").style.color = "#c4c4c4";
+        document.getElementById("nav_awards").style.color = "#c4c4c4";
     }
 
     function selectGame() {
-      document.getElementById("gameImg").src = "images/icons/gameIconSelected.png";
-        document.getElementById("navHome").style.color = "#c4c4c4";
-        document.getElementById("navHunts").style.color = "#c4c4c4";
-        document.getElementById("navGame").style.color = "#0174cf";
-        document.getElementById("navAwards").style.color = "#c4c4c4";
+      document.getElementById("game_img").src = "images/icons/gameIconSelected.png";
+        document.getElementById("nav_home").style.color = "#c4c4c4";
+        document.getElementById("nav_hunts").style.color = "#c4c4c4";
+        document.getElementById("nav_game").style.color = "#0174cf";
+        document.getElementById("nav_awards").style.color = "#c4c4c4";
     }
 
     function selectAwards() {
-      document.getElementById("awardsImg").src = "images/icons/awardsIconSelected.png";
-        document.getElementById("navHome").style.color = "#c4c4c4";
-        document.getElementById("navHunts").style.color = "#c4c4c4";
-        document.getElementById("navGame").style.color = "#c4c4c4";
-        document.getElementById("navAwards").style.color = "#0174cf";
+      document.getElementById("awards_img").src = "images/icons/awardsIconSelected.png";
+        document.getElementById("nav_home").style.color = "#c4c4c4";
+        document.getElementById("nav_hunts").style.color = "#c4c4c4";
+        document.getElementById("nav_game").style.color = "#c4c4c4";
+        document.getElementById("nav_awards").style.color = "#0174cf";
     }
 </script>
 
-<div id="navbar" data-role="footer" data-tap-toggle="false">
+<div id="nav_bar" data-role="footer" data-tap-toggle="false">
     <div data-role='navbar' data-tap-toggle="false" class="nav-bar" style="overflow: hidden;">
         <ul>
             <li>
-                <a onclick="selectHome()" href="homepage.php" data-ajax="false" id="navHome" class="nav-bar-item">
-                    <img id="homeImg" class="navBarIcon" src="images/icons/homeIcon.png" alt="home"/>
-                    <h7 class="nav-bar-item-option">HOME</h7>
+                <a onclick="selectHome()" href="homepage.php" data-ajax="false" id="nav_home" class="nav_bar_item">
+                    <img id="home_img" class="nav_bar_icon" src="images/icons/homeIcon.png" alt="home"/>
+                    <h4 class="nav_bar_item_option">HOME</h4>
                 </a>
             </li>
             <li>
-                <a onclick="selectHunts()" href="my_hunts.php" data-ajax="false" id="navHunts" rel="dialog" class="nav-bar-item">
-                    <img id="huntsImg" class="navBarIcon" src="images/icons/huntsIcon.png" alt="hunts"/>
-                    <h7 class="nav-bar-item-option">HUNTS</h7>
+                <a onclick="selectHunts()" href="my_hunts.php" data-ajax="false" id="nav_hunts" rel="dialog" class="nav_bar_item">
+                    <img id="hunts_img" class="nav_bar_icon" src="images/icons/huntsIcon.png" alt="hunts"/>
+                    <h4 class="nav_bar_item_option">HUNTS</h4>
                 </a>
             </li>
             <li>
-                <a onclick="selectGame()" href="treasure_hunt.php" data-ajax="false" id="navGame" class="nav-bar-item">
-                    <img id="gameImg" class="navBarIcon" src="images/icons/gameIcon.png" alt="game"/>
-                    <h7 class="nav-bar-item-option">GAME</h7>
+                <a onclick="selectGame()" href="treasure_hunt.php" data-ajax="false" id="nav_game" class="nav_bar_item">
+                    <img id="game_img" class="nav_bar_icon" src="images/icons/gameIcon.png" alt="game"/>
+                    <h4 class="nav_bar_item_option">GAME</h4>
                 </a>
             </li>
             <li>
-                <a onclick="selectAwards()" id="navAwards" href="awards.php" data-ajax="false" class="nav-bar-item">
-                    <img id="awardsImg" class="navBarIcon" src="images/icons/awardsIcon.png" alt="awards"/>
-                    <h7 class="nav-bar-item-option">AWARDS</h7>
+                <a onclick="selectAwards()" id="nav_awards" href="awards.php" data-ajax="false" class="nav_bar_item">
+                    <img id="awards_img" class="nav_bar_icon" src="images/icons/awardsIcon.png" alt="awards"/>
+                    <h4 class="nav_bar_item_option">AWARDS</h4>
                 </a>
             </li>
         </ul>

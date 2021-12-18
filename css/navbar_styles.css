@@ -1,24 +1,26 @@
-#navbar {
+#nav_bar {
 	background-color: #ffffff !important;
 	position: fixed;
-    	bottom: 0;
+    	bottom: 0px;
+	height : 60px;
 	width: 100%;
 }
 
-.navBarIcon {
-	padding: 4px;
+.nav_bar_icon {
+	padding-top: 2px;
 }
 
-.nav-bar-item {
-	white-space: normal;
-}
+//.nav_bar_item {
+//	white-space: normal;
+//}
 
-.nav-bar-item-option {
+.nav_bar_item_option {
+	margin: 1px;
 	padding: 0px;
 	font-weight: bolder;
 }
 
-.nav-bar-item.ui-link.ui-btn.ui-btn-active {
+.nav_bar_item.ui-link.ui-btn.ui-btn-active {
 	box-shadow: none !important;
 	background-color: transparent;
 	border-color: transparent;
