@@ -20,6 +20,7 @@
 
 	<!-- Custom -->
 	<script src="js/destination_list.js"></script>
+	<script src="js/favorites_list_share.js"></script>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -134,9 +135,9 @@
 			margin-right: auto;
 			width: 120px;
 			text-align: center;
-			background:#0174cf;
-			color: white; 
-			border-color: transparent; 
+			background: #0174cf;
+			color: white;
+			border-color: transparent;
 			font-weight: 100;
 			font-size: 15px;
 		}
@@ -152,10 +153,10 @@
 		<div role="main" class="favourites">
 			<div class="fa_heading">
 				<h1>
-					Ticket Details
+					Favorites
 				</h1>
 				<p>
-					Confirm your ticket details from here
+					Find your favorite destinations
 				</p>
 			</div>
 			<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0">
@@ -182,7 +183,17 @@
 			</ul>
 
 			<div class="favourite_buttons">
-				<button onclick="window.location.href='booking_ticket_details.php'" class="fa_button">Share</button>
+				<button onclick="showEmailPopup();" class="fa_button">Share</button>
+			</div>
+
+			<div data-role="popup" data-position-to="window" data-transition="pop" class="popup" style="padding: 20px;" id="emailPopup">
+				<form id="formProfile" onsubmit="event.preventDefault(); sendEmail()">
+					<h3 class="heading-three" style="text-align:center;">Share your Favourites</h3>
+					<label class="labelform grey heading-five" for="emailFormShare"> Email </label>
+					<input type="text" required name="name" id="emailFormShare" placeholder="johndoe@gmail.com" class="formField" />
+					<button id="sendBtn" type="submit" style="margin-top: 15px; background-color: #0174cf; color: #ffffff; text-shadow: none; width: 180px; margin-left: auto; margin-right: auto;" class="button-custom" data-role="button">Send</button>
+					<button onclick="closeEmailPopup()" style="text-shadow:none; background-color: #ffffff; color: #0174CF; margin-left: auto; margin-right: auto; margin-top: 2%; width: 180px; border-color: #ddd;">Back</button>
+				</form>
 			</div>
 		</div>
 
