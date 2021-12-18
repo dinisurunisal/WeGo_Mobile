@@ -1,0 +1,152 @@
+
+/* Background image for the destination page */
+.dest_background_image .dest_main_intro {
+    position: absolute;
+    top: 60px;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: linear-gradient(to top, rgba(0,0,0,0), rgba(44, 19, 19, 1)); /* Black background with 0.8 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.dest_background_image .dest_sel_content_block {
+    position: absolute;
+    top: 100px;
+    height: 800px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 85%; /* Need a specific value to work */
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+.dest_sel_content_block .dest_sel_main_container{
+    position: relative;
+    height: 280px;
+    margin-bottom: 10px;
+}
+
+.dest_sel_content_block .dest_sel_internal_block .dest_sel_heading {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.dest_sel_content_block .dest_sel_main_container #dest_sel_image_container {
+    width:60%;
+    padding: 0px !important;
+    margin:0px !important;
+    float: left;
+}
+
+.dest_sel_content_block .dest_sel_main_container #dest_sel_image_container img {
+    object-fit: cover;
+    height: 280px;
+}
+
+.dest_sel_content_block .dest_sel_main_container #dest_sel_details_container {
+    position: relative; 
+    padding-top: 15px;
+    width:40%;
+    text-align:center;
+    float: left;
+}
+
+.dest_sel_content_block .dest_sel_main_container #dest_sel_details_container .dest_top_table_elements tr {
+    height:50px;
+}
+
+.dest_sel_content_block .dest_sel_main_container #dest_sel_details_container .dest_bottom_table_elements .table_price {
+    font-size: 22px;
+    color: #0174cf; 
+}
+
+.dest_sel_content_block .dest_sel_buttons {
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 20%;
+}
+
+.dest_sel_content_block .dest_sel_buttons .book_btn {
+    background:#0174cf; 
+    color: white; 
+    border-color: transparent; 
+    font-size: 15px;
+}
+
+.dest_side_texts{
+    text-align:left;
+    float: left;
+}
+
+.dest_sel_content_block .dest_sel_description {
+    position: relative; 
+    padding: 5px;
+    background-color: rgb(228, 253, 249);
+    text-align: justify;
+}
+
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px) {
+
+    .dest_background_image img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .dest_background_image .dest_sel_content_block {
+        width: 95%; /* Need a specific value to work */
+        padding: 0px;
+    }
+
+    .dest_sel_content_block .dest_sel_main_container #dest_sel_image_container {
+        width:100%;
+        float: left;
+    }
+
+    .dest_sel_content_block .dest_sel_main_container #dest_sel_details_container {
+        width:100%;
+        text-align:center;
+        float: left;
+        font-size: 13px;
+    }
+
+    .dest_sel_content_block .dest_sel_description {
+        margin-top: 200px;
+    }
+    
+    
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 850px) {
+
+    .dest_background_image img{
+        height: 380px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+}
+
+@media only screen and (min-device-width: 1024px) {
+
+    .dest_background_image img{
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
