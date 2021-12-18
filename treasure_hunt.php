@@ -3,31 +3,30 @@
 	<head>
 		<!-- Common -->
 		<meta charset="utf-8">
-		<title>Destination</title>
+		<title>Treasure Hunt</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         
-		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
+		
 		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
-
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <link rel="stylesheet" href="jquery-theme/themes/theme.css" />
+        <link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
 		<!-- The three things that jQuery Mobile needs to work -->
-		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-<!--
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
--->
+		
+
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
 		<!-- Custom -->
-		<script src="js/destination.js"></script>
+<!--		<script src="js/destination.js"></script>-->
 
 	</head>
 
 	<body>
-		<div data-role="page" id="destination_page">
+		<div data-role="page" id="treasure_hunt_page">
 			<!-- Header -->
+            <?php include("navigation_bar.php"); ?>
 			<?php include("header.php"); ?>
-
 			<div style="margin-top: 60px; height: auto; padding: 0px; text-align: center;">
                 <div style="background:white; padding: 16px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px;" >
                     <h2 style="margin-top: 6px; margin-bottom:2px">Treasure Hunt</h2>
@@ -50,7 +49,6 @@
                 </div>
 			</div>
 			<?php include("footer.php"); ?>
-			<?php include("navigation_bar.php"); ?>
 		</div>
 	</body>
 </html>
