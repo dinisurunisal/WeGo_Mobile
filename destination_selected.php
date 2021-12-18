@@ -41,12 +41,95 @@
 				</div>
 				<img src="images/background_find.jpg" id="london_bg" alt="london_bg" width="100%">
 
-				<div class="dest_content_block">
-					<div style="position: relative;">
-						dddd
-					</div>
-					<div style="position: relative;">
-						dddd
+				<div class="dest_sel_content_block">
+					<div class="dest_sel_internal_block">
+						<div class="dest_sel_heading">
+							<span class="dest_sel_heading_name" id="dest_sel_heading_name">London's Big Ben</span>
+						</div>
+
+						<div class="dest_sel_main_container">
+							<div id="dest_sel_image_container">
+								<img src="images/destinations/Big Ben.jpg" id="big_ben" alt="big_ben" width="100%">
+							</div>
+							<div id="dest_sel_details_container">
+								<table style="width:100%;border-collapse: collapse;" class="dest_top_table_elements">
+									<tr>
+										<td style="padding: 0px 5px 0px 15px;">
+											<i class="material-icons">stars</i>
+										</td>
+										<td>
+											<span class="dest_side_texts">
+												Clock tower in London, England 
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding: 0px 5px 0px 15px;">
+											<i class="material-icons">access_time</i>
+										</td>
+										<td>
+											<span class="dest_side_texts">
+												Open 24x7
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding: 0px 5px 0px 15px;">
+											<i class="material-icons">location_on</i>
+										</td>
+										<td>
+											<span class="dest_side_texts">
+												London SW1A 0AA, United Kingdom
+											</span>
+										</td>
+									</tr>
+									<tr style="height:50px;">
+										<td style="padding: 0px 5px 0px 15px">
+											<i class="material-icons">groups</i>
+										</td>
+										<td>
+											<span class="dest_side_texts">
+											Moderately Crowded
+											</span>
+										</td>
+									</tr>
+								</table>
+
+								<div class="dest_bottom_table_elements">
+									<table style="text-align: left;">
+										<tr>
+											<td style="padding: 0px 5px 0px 15px;">
+												Tour Price
+											</td>
+										</tr>
+										<tr>
+											<td style="padding: 0px 5px 0px 15px;" class="table_price">
+												<b>$ 55.00</b>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="dest_sel_description">
+							<p> The Houses of Parliament and Elizabeth Tower, commonly called Big Ben, are among London's most iconic landmarks and must-see London attractions. Technically, Big Ben is the name given to the massive bell inside the clock tower, which weighs more than 13 tons (13,760 kg). 
+								The clock tower looks spectacular at night when the four clock faces are illuminated. 
+							</p>
+							<p>
+								Big Ben first rang across Westminster on 31 May 1859. A short time later, in September 1859, 
+								Big Ben cracked. A lighter hammer was fitted and the bell rotated to present an undamaged section 
+								to the hammer. This is the bell as we hear it today.
+							</p>
+						</div>
+
+						<div class="dest_sel_buttons">
+							<button class="book_btn">
+								BOOK TRAIN
+							</button>
+						</div>
+
+
 					</div>
 				</div>
 			</div>
