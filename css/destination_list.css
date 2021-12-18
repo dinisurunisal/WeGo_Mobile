@@ -6,15 +6,18 @@
     background: rgb(0, 0, 0); /* Fallback color */
     background: linear-gradient(to top, rgba(0,0,0,0), rgba(44, 19, 19, 1)); /* Black background with 0.8 opacity */
     color: #f1f1f1;
-    width: 87%;
-    padding: 50px;
+    width: 100%;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 .dest_background_image .dest_heading {
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 30px;
-    margin-top: -25px;
+    margin-top: 10px;
 }
 
 .dest_background_image .dest_sub_heading {
@@ -22,6 +25,7 @@
     color: rgb(255, 255, 255);
     font-size: 17px;
     margin-top: -20px;
+    padding: 0px 40px 0 40px;
 }
 
 .dest_background_image .dest_nav_bar {
@@ -204,19 +208,19 @@ and (max-device-width: 667px) {
     }
 
     /* Background image for the destination page */
-    .dest_background_image .dest_main_intro {
+    /* .dest_background_image .dest_main_intro {
         width: 92%;
         padding: 15px;
-    }
+    } */
 
     .dest_background_image .dest_heading {
         font-size: 20px;
-        margin-top: -4px;
     }
 
     .dest_background_image .dest_sub_heading {
         font-size: 14px;
         margin-top: -10px;
+        padding: 0px 20px 0 20px;
     }
 
     .dest_background_image .dest_nav_bar {
