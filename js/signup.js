@@ -1,4 +1,4 @@
-function register() {
+function signup() {
   var users = JSON.parse(localStorage.getItem("users"));
   var name = document.getElementById("name_reg").value;
   var password = document.getElementById("password_reg").value;

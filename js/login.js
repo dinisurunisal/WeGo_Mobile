@@ -1,6 +1,26 @@
+var destinations = [];
+
 $(document).on("pageinit", function () {
-    init();
+    initJsonFiles();
 });
+
+function initJsonFiles() {
+    // localStorage.clear();
+    $.getJSON("json-files/destinations.json", function (jsonFile) {
+        if (typeof (Storage) !== "undefined") {
+            destinations = JSON.parse(localStorage.getItem("destinations"));
+            if (destinations == null) {
+                destinations = jsonFile;
+            }
+            localStorage.setItem("destinations", JSON.stringify(destinations));
+            console.log(localStorage)
+        } else {
+            showFailure("Your browser does not support WeGo Mobile Application.");
+        }
+
+        init();
+    });
+}
 
 function init() {
     var posters = [

@@ -1,40 +1,49 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<!-- Common -->
-		<meta charset="utf-8">
-		<title>Destination</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
-		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
-		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
-
-		<!-- The three things that jQuery Mobile needs to work -->
-		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
-		<!-- Custom -->
-		<script src="js/destination.js"></script>
-
-	</head>
-
-	<body>
-		<div data-role="page" id="destination_page">
-			<!-- Header -->
-			<?php include("header.php"); ?>
-
-			<div role="main" class="ui-content">
-
-				<div class="col-md-6 col-sm-6 col-xs-12 fill" style="float:left; background-color: #2c2e3c; padding:0px 0px;">
-					<img src="images/background_find.jpg">
-				</div>
-			</div>
+<style>
+#message_box {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    border-radius: 25px !important;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 200px;
+    z-index: 1101;
+    padding: 5px;
+    padding-top: 30px;
+    background: teal;
+    display: none;
+}
+</style>
 
 
-		</div>
-	</body>
-</html>
+<script>
+function showSuccess(message) {
+    $("#message_box").fadeIn();
+    $("#popup_custom_message").html(message)
+    $("#popup_custom_icon").html("check_circle")
+    $("#message_box").css("background", "teal")
+    setTimeout(function() {
+        $("#message_box").fadeOut();
+    }, 2000);
+}
+
+function showFailure(message) {
+    $("#message_box").fadeIn();
+    $("#popup_custom_message").html(message)
+    $("#popup_custom_icon").html("close")
+    $("#message_box").css("background", "red")
+    setTimeout(function() {
+        $("#message_box").fadeOut();
+    }, 2000);
+
+}
+</script>
+
+<div id="message_box" style="text-align:center">
+    <i id="popup_custom_icon" style="font-size: 75px; color: white; " class="material-icons">
+        check_circle
+    </i>
+    <h4 id="popup_custom_message" style="color: white;">Success
+    </h4>
+</div>
