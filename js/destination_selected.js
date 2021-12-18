@@ -20,6 +20,11 @@ function initialize() {
 function loadData(){
     $('.sel-dest-image').attr('src', destination.destinationImage);
     $('#dest_sel_heading_name').text(destination.destinationName);
+    $('#dest_sel_about').text(destination.destinationCardDetails);
+    $('#dest_sel_time').text(destination.time);
+    $('#dest_sel_address').text(destination.location.addressName);
+    $('#dest_sel_crowd').text(destination.crowdRange);
+    $('#dest_sel_price').text(dollarSign + ' ' + destination.price);
     // var categoryText = '';
     // $.each(seller.categories,function(index, category){
     //     // $('#kitchen-category').text();

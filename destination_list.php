@@ -79,6 +79,12 @@
 											<div class="dest_content">
 												<h4 class="dest_name" id="card_name">Big Ben</h4>
 											</div>
+											<div class="dest_star_rating">
+												<div class="dest_star_chip">
+													<span id="card_star_score">4.4</span>
+													<i class="material-icons" style="font-size: 20px; vertical-align: -2px"> star </i>
+												</div>
+											</div>
 											<div class="dest_favourite">
 												<i onclick="addToFavourites(this.id)"></i>
 											</div>
@@ -90,7 +96,7 @@
 												London's iconic national timepiece</h5>
 											</div>
 											<div class="price_holder">
-												<h2 style="margin-left: 55px; color:black" id="card_price" class="card_price"><b>$333</b> </h2>
+												<h2 style="margin-left: 35px; color:black" id="card_price" class="card_price"><b>$333</b> </h2>
 											</div>
 										</div>
 									</div>
