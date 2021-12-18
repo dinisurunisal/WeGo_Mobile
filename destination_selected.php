@@ -58,7 +58,7 @@
 											<i class="material-icons">stars</i>
 										</td>
 										<td>
-											<span class="dest_side_texts">
+											<span class="dest_side_texts" id="dest_sel_about">
 												Clock tower in London, England 
 											</span>
 										</td>
@@ -68,7 +68,7 @@
 											<i class="material-icons">access_time</i>
 										</td>
 										<td>
-											<span class="dest_side_texts">
+											<span class="dest_side_texts" id="dest_sel_time">
 												Open 24x7
 											</span>
 										</td>
@@ -78,7 +78,7 @@
 											<i class="material-icons">location_on</i>
 										</td>
 										<td>
-											<span class="dest_side_texts">
+											<span class="dest_side_texts" id="dest_sel_address">
 												London SW1A 0AA, United Kingdom
 											</span>
 										</td>
@@ -88,7 +88,7 @@
 											<i class="material-icons">groups</i>
 										</td>
 										<td>
-											<span class="dest_side_texts">
+											<span class="dest_side_texts" id="dest_sel_crowd">
 											Moderately Crowded
 											</span>
 										</td>
@@ -104,7 +104,7 @@
 										</tr>
 										<tr>
 											<td style="padding: 0px 5px 0px 15px;" class="table_price">
-												<b>$ 55.00</b>
+												<b id="dest_sel_price">$ 55.00</b>
 											</td>
 										</tr>
 									</table>
@@ -124,7 +124,7 @@
 						</div>
 
 						<div class="dest_sel_buttons">
-							<button class="book_btn">
+							<button class="book_btn" onclick="window.location.href='booking.php'">
 								BOOK TRAIN
 							</button>
 						</div>
