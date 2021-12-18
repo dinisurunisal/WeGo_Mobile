@@ -227,8 +227,8 @@
 			-webkit-border-radius: 20px;
 			background-image:
 				-webkit-gradient(linear, left top, left bottom,
-					from(#dc4d14),
-					to(#dc4d14));
+					from(#0174CF),
+					to(#0174CF));
 			color: #fff;
 			text-shadow: none !important;
 		}
