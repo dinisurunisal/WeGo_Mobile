@@ -61,13 +61,13 @@ function signup() {
     localStorage.setItem("currentlySignedInUser", JSON.stringify(currentUser));
     showSuccess("Registered");
     setTimeout(function () {
-      $("#popup-introduction").popup("open");
+      goToApp();
     }, 2500);
   }
 }
 
 function goToApp() {
-  window.location.href = "search_screen.php";
+  window.location.href = "homepage.php";
 }
 
 function goBack() {
