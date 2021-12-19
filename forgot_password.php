@@ -14,6 +14,8 @@
 
 	<link rel="stylesheet" href="css/style.css" />
 
+	<script type="text/javascript" src="js/forget_password.js"></script>
+
 </head>
 
 <style>
@@ -39,7 +41,7 @@
 				You can reset your password here
 			</p>
 			<div class="form_div">
-				<form id="form" onsubmit="event.preventDefault(); login()">
+				<form id="form" onsubmit="event.preventDefault(); forget_password()">
 					<label class="label_form" for="contactNumber"> Conatact Number </label>
 					<input required type="number" name="contactNumber" id="contactNumberForm" class="formField" />
 
@@ -48,11 +50,17 @@
 					</div>
 
 				</form>
+				<div id="confirmationMessage" style="margin-top:50px; visibility: hidden;">
+					<h2 style="color: #ffffff;">A reset message has been sent to your phone.</h2>
+				</div>
 			</div>
 		</div>
 
-
 	</div>
+
+	<?php
+	include("success_message.php");
+	?>
 </body>
 
 </html>
