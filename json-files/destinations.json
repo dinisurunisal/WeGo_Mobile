@@ -1,23 +1,25 @@
 [
   {
     "destinationId": "destinationId1",
-    "destinationName": "Big Ben",
+    "destinationName": "London's Big Ben",
     "destinationImage": "images/destinations/Big Ben.jpg",
     "destinationCardDetails": "London's iconic national timepiece",
-    "destinationDescription": "Best sea food kitchen in Colombo",
-    "destinationRating": 100,
+    "destinationDescription1": "The Houses of Parliament and Elizabeth Tower, commonly called Big Ben, are among London's most iconic landmarks and must-see London attractions. Technically, Big Ben is the name given to the massive bell inside the clock tower, which weighs more than 13 tons (13,760 kg). The clock tower looks spectacular at night when the four clock faces are illuminated.",
+    "destinationDescription2": "Big Ben first rang across Westminster on 31 May 1859. A short time later, in September 1859, Big Ben cracked. A lighter hammer was fitted and the bell rotated to present an undamaged section to the hammer. This is the bell as we hear it today.",
+    "destinationRating": 4.5,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
       "longLocation": 79.991114
     },
-    "price": 380,
+    "price": "55.00",
     "priceRange": "cheap",
     "tags": [
       "london",
       "england"
     ],
-    "time": "10:30 to 22:30",
+    "time": "Open 24x7",
+    "crowdRange": "Moderately Crowded",
     "paymentMethod": {
       "email": "frese-facilitator@gmail.com",
       "accountNumber": "12312124123",
@@ -31,20 +33,22 @@
     "destinationName": "St. Paul's Cathedral",
     "destinationImage": "images/destinations/St. Pauls Cathedral.jpg",
     "destinationCardDetails": "Iconic cathedral's churchyard & garden",
-    "destinationDescription": "Best sea food kitchen in Colombo",
-    "destinationRating": 100,
+    "destinationDescription1": "Best sea food kitchen in Colombo",
+    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationRating": 4.9,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
       "longLocation": 79.991114
     },
-    "price": 380,
+    "price": "30.00",
     "priceRange": "cheap",
     "tags": [
       "london",
       "england"
     ],
     "time": "10:30 to 22:30",
+    "crowdRange": "Moderately Crowded",
     "paymentMethod": {
       "email": "frese-facilitator@gmail.com",
       "accountNumber": "12312124123",
@@ -58,20 +62,22 @@
     "destinationName": "Buckingham Palace",
     "destinationImage": "images/destinations/Buckingham Palace.jpg",
     "destinationCardDetails": "Home of the British Queen & State Rooms",
-    "destinationDescription": "Best sea food kitchen in Colombo",
-    "destinationRating": 100,
+    "destinationDescription1": "Best sea food kitchen in Colombo",
+    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationRating": 4.6,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
       "longLocation": 79.991114
     },
-    "price": 380,
+    "price": "90.00",
     "priceRange": "cheap",
     "tags": [
       "london",
       "england"
     ],
     "time": "10:30 to 22:30",
+    "crowdRange": "Moderately Crowded",
     "paymentMethod": {
       "email": "frese-facilitator@gmail.com",
       "accountNumber": "12312124123",
@@ -85,20 +91,22 @@
     "destinationName": "Tower of London",
     "destinationImage": "images/destinations/Tower of London.jpg",
     "destinationCardDetails": "Medieval castle housing the crown jewels",
-    "destinationDescription": "Best sea food kitchen in Colombo",
-    "destinationRating": 100,
+    "destinationDescription1": "Best sea food kitchen in Colombo",
+    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationRating": 3.5,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
       "longLocation": 79.991114
     },
-    "price": 380,
+    "price": "28.90",
     "priceRange": "cheap",
     "tags": [
       "london",
       "england"
     ],
     "time": "10:30 to 22:30",
+    "crowdRange": "Moderately Crowded",
     "paymentMethod": {
       "email": "frese-facilitator@gmail.com",
       "accountNumber": "12312124123",
@@ -112,20 +120,22 @@
     "destinationName": "The Cotsworlds",
     "destinationImage": "images/destinations/Cotswolds.jpg",
     "destinationCardDetails": "Hills with medieval villages & churches",
-    "destinationDescription": "Best sea food kitchen in Colombo",
-    "destinationRating": 100,
+    "destinationDescription1": "Best sea food kitchen in Colombo",
+    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationRating": 4.5,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
       "longLocation": 79.991114
     },
-    "price": 380,
+    "price": "40.25",
     "priceRange": "cheap",
     "tags": [
       "london",
       "england"
     ],
     "time": "10:30 to 22:30",
+    "crowdRange": "Moderately Crowded",
     "paymentMethod": {
       "email": "frese-facilitator@gmail.com",
       "accountNumber": "12312124123",
@@ -139,20 +149,22 @@
     "destinationName": "Warwick Castle",
     "destinationImage": "images/destinations/Warwick Castle.jpg",
     "destinationCardDetails": "Iconic clifftop fortress & dungeons",
-    "destinationDescription": "Best sea food kitchen in Colombo",
-    "destinationRating": 100,
+    "destinationDescription1": "Best sea food kitchen in Colombo",
+    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationRating": 4.5,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
       "longLocation": 79.991114
     },
-    "price": 380,
+    "price": "70.00",
     "priceRange": "cheap",
     "tags": [
       "london",
       "england"
     ],
     "time": "10:30 to 22:30",
+    "crowdRange": "Moderately Crowded",
     "paymentMethod": {
       "email": "frese-facilitator@gmail.com",
       "accountNumber": "12312124123",
@@ -166,20 +178,22 @@
     "destinationName": "York Minster",
     "destinationImage": "images/destinations/York Minster.jpg",
     "destinationCardDetails": "Iconic gothic-style medieval cathedral",
-    "destinationDescription": "Best sea food kitchen in Colombo",
-    "destinationRating": 100,
+    "destinationDescription1": "Best sea food kitchen in Colombo",
+    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationRating": 4.5,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
       "longLocation": 79.991114
     },
-    "price": 380,
+    "price": "29.00",
     "priceRange": "cheap",
     "tags": [
       "london",
       "england"
     ],
     "time": "10:30 to 22:30",
+    "crowdRange": "Moderately Crowded",
     "paymentMethod": {
       "email": "frese-facilitator@gmail.com",
       "accountNumber": "12312124123",
@@ -193,20 +207,22 @@
     "destinationName": "The British Museum",
     "destinationImage": "images/destinations/The British Museum.jpg",
     "destinationCardDetails": "A historian's treasure trove",
-    "destinationDescription": "Best sea food kitchen in Colombo",
-    "destinationRating": 100,
+    "destinationDescription1": "Best sea food kitchen in Colombo",
+    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationRating": 4.9,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
       "longLocation": 79.991114
     },
-    "price": 380,
+    "price": "45.00",
     "priceRange": "cheap",
     "tags": [
       "london",
       "england"
     ],
     "time": "10:30 to 22:30",
+    "crowdRange": "Moderately Crowded",
     "paymentMethod": {
       "email": "frese-facilitator@gmail.com",
       "accountNumber": "12312124123",

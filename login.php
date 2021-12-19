@@ -47,6 +47,7 @@
 					</a>
 				</form>
 			</div>
+			<?php include("success_popups.php");?>
 		</div>
 	</div>
 </body>
