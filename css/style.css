@@ -41,7 +41,8 @@ p2 {
 --------------------------------------------------------------------------------*/
 #home_header {
 	width: -webkit-fill-available;
-	position:fixed;
+	position: fixed;
+    z-index: 100;
 }
 
 #header_collapsible .ui-collapsible-heading{
@@ -78,7 +79,6 @@ p2 {
 }
 
 #home_header_profile_icon {
-	display: inline-block;
 	float: right;
 	margin-right: 8px;
 	margin-top: 3px;
