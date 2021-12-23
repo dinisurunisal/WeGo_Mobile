@@ -30,7 +30,7 @@
             background-size: cover;
             border-radius: 12px;
             height: auto;
-            max-width: 100%;
+            max-width: 370px;
             margin: 8px 4px 8px 4px;
         }
         
