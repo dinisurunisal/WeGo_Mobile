@@ -17,12 +17,17 @@ function loadDestinationList() {
         document.getElementById("card_name").innerHTML = defaultDestinationDB[i].destinationName;
         document.getElementById("card_details").innerHTML = defaultDestinationDB[i].destinationCardDetails;
         document.getElementById("card_price").innerHTML = dollarSign + defaultDestinationDB[i].price;
+        document.getElementById("card_star_score").innerHTML = defaultDestinationDB[i].destinationRating;
         // document.getElementById("kitchen-rating-script").innerHTML = (defaultDestinationDB[i].kitchenRatingTotal / defaultDestinationDB[i].kitchenRatingUserNumber).toFixed(1);
     
         $("#card_script_1").clone().appendTo("#card_script_2");
     }
 
     deleteDuplicateCards(); 
+
+    for (var i = 0; i < defaultDestinationDB.length; i++) {
+        document.getElementById("clickedId").id = defaultDestinationDB[i].destinationId;
+    }
 }
 
 
@@ -38,7 +43,7 @@ function deleteDuplicateCards() {
 
 function onDestinationSelect(id) {
   if (typeof (Storage) !== "undefined") {
-    localStorage.setItem("clickedDestinationId", clickedId);
+    localStorage.setItem("clickedDestinationId", id);
     window.location = "destination_selected.php";
   } else {
       showFailure("Unable to load")

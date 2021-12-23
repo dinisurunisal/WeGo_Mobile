@@ -1,4 +1,4 @@
-function register() {
+function signup() {
   var users = JSON.parse(localStorage.getItem("users"));
   var name = document.getElementById("name_reg").value;
   var password = document.getElementById("password_reg").value;
@@ -61,13 +61,13 @@ function register() {
     localStorage.setItem("currentlySignedInUser", JSON.stringify(currentUser));
     showSuccess("Registered");
     setTimeout(function () {
-      $("#popup-introduction").popup("open");
+      goToApp();
     }, 2500);
   }
 }
 
 function goToApp() {
-  window.location.href = "search_screen.php";
+  window.location.href = "homepage.php";
 }
 
 function goBack() {

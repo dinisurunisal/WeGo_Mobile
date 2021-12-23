@@ -60,6 +60,7 @@
 
 				</form>
 			</div>
+			<?php include("success_popups.php");?>
 		</div>
 
 

@@ -20,23 +20,80 @@
 	<link rel="stylesheet" href="css/style.css" />
 
 	<style>
-		.book .booking_details {
-			background-image: url("images/booking2.png");
-			/* background-repeat:no-repeat;
-       		background-size:contain; */
-			display: block;
-			background-size: contain;
-			height: 337px;
-			width: 380px;
+		@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+			.book .booking_details {
+				background-image: url("images/booking2.png");
+				display: block;
+				background-size: contain;
+				height: 337px;
+				width: 380px;
+				object-fit: cover;
+			}
+
+			.book .booking_details .bk_heading {
+				padding-top: 18%;
+			}
+
+			.book .booking_details h4 {
+				font-weight: 600;
+				margin-bottom: 0;
+			}
+
+			.book .booking_card {
+				margin: 5%;	
+			}
 		}
 
-		.book .booking_details .bk_heading {
-			padding-top: 18%;
+		@media only screen and (min-device-width: 768px) and (max-device-width: 850px) {
+			.book .booking_details {
+				background-image: url("images/booking2.png");
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				background-size: contain;
+				height: 337px;
+				width: 380px;
+				object-fit: cover;
+			}
+
+			.book .booking_details .bk_heading {
+				padding-top: 18%;
+			}
+
+			.book .booking_details h4 {
+				font-weight: 600;
+				margin-bottom: 0;
+			}
+
+			.book .booking_card {
+				margin: 3%;	
+			}
 		}
 
-		.book .booking_details h4 {
-			font-weight: 600;
-			margin-bottom: 0;
+		@media only screen and (min-device-width: 1024px) {
+			.book .booking_details {
+				background-image: url("images/booking2.png");
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				background-size: contain;
+				height: 337px;
+				width: 380px;
+				object-fit: cover;
+			}
+
+			.book .booking_details .bk_heading {
+				padding-top: 18%;
+			}
+
+			.book .booking_details h4 {
+				font-weight: 600;
+				margin-bottom: 0;
+			}
+
+			.book .booking_card {
+				margin: 3%;	
+			}
 		}
 	</style>
 
@@ -48,40 +105,43 @@
 		<?php include("header.php"); ?>
 
 		<div class="book">
-			<div class="booking_details">
-				<div class="bk_heading">
-					<h1>
-						Booking
-					</h1>
-				</div>
+			<div style="background-color: #0174cf; border-radius: 15px">
+				<div class="booking_details">
+					<div class="bk_heading">
+						<h1>
+							Booking
+						</h1>
+					</div>
 
-				<div class="bk_depature">
-					<h4>
-						EUS
-					</h4>
-					<p>
-						London Euston
-					</p>
-				</div>
+					<div class="bk_depature">
+						<h4>
+							EUS
+						</h4>
+						<p>
+							London Euston
+						</p>
+					</div>
 
-				<div class="bk_duration">
-					<p style="padding-bottom: 10px;">
-						2:00hr
-					</p>
-					<p>
-						500km
-					</p>
-				</div>
+					<div class="bk_duration">
+						<p style="padding-bottom: 10px;">
+							2:00hr
+						</p>
+						<p>
+							500km
+						</p>
+					</div>
 
-				<div class="bk_arrival">
-					<h4>
-						BHM
-					</h4>
-					<p>
-						Birmingham street
-					</p>
+					<div class="bk_arrival">
+						<h4>
+							BHM
+						</h4>
+						<p>
+							Birmingham street
+						</p>
+					</div>
 				</div>
 			</div>
+
 
 			<div class="booking_card">
 				<p>
