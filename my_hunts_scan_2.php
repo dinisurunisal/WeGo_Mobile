@@ -15,7 +15,10 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     
 <!--    QR script-->
-    <script type="text/javascript" src="qr-resource/qcode-decoder.min.js"></script>
+<!--    <script type="text/javascript" src="qr-resource/qcode-decoder.min.js"></script>-->
+    <script 
+    src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js">
+    </script>
     
     <style>
 /*
@@ -72,62 +75,61 @@
         </div>
         <div class="scan_bg" style="width:-webkit-fill-available; text-align:-webkit-center; padding:16px; background-color:#404040;">
             <div class="scan_box">
-                <video id="qr_scan" autoplay></video>
+                <div id="reader"></div>
+<!--                <input type="file" id="qr-input-file" accept="image/*" capture>-->
             </div>
         </div>
-        <div id="result" onclick="qrcode.decode_url(qr_scan)">- scanning -</div>
 	</div>
     <script>
-        const vgaConstraints = {
-            video: { width: { exact: 280 }, height: { exact: 280 } },
-        };
-
-        var qr = new QCodeDecoder();
-
-        if (!(qr.isCanvasSupported() && qr.hasGetUserMedia())) {
-          alert('Your browser doesn\'t match the required specs.');
-          throw new Error('Canvas and getUserMedia are required');
+        function onScanSuccess(decodedText, decodedResult) {
+            // Handle on success condition with the decoded text or result.
+            console.log(`Scan result: ${decodedText}`, decodedResult);
         }
-        
-        const mediaStream = new MediaStream();
-        
-        var video = document.querySelector("#qr_scan");
-        video.srcObject = mediaStream;
-//        var video = document.getElementById('camera');
 
-        if (navigator.mediaDevices.getUserMedia) {
-//            navigator.mediaDevices.getUserMedia(vgaConstraints).then((stream) => {
+        var html5QrcodeScanner = new Html5QrcodeScanner(
+            "reader", { fps: 10, qrbox: 250 });
+        html5QrcodeScanner.render(onScanSuccess);
+//        const vgaConstraints = {
+//            video: { width: { exact: 280 }, height: { exact: 280 } },
+//        };
+//        
+//        var video = document.querySelector("#qr_scan");
+//        video.srcObject = mediaStream;
+////        var video = document.getElementById('camera');
+//
+//        if (navigator.mediaDevices.getUserMedia) {
+////            navigator.mediaDevices.getUserMedia(vgaConstraints).then((stream) => {
+////                video.srcObject = stream;
+////            });
+//          navigator.mediaDevices.getUserMedia(vgaConstraints)
+//            .then(function (stream) {
+//                var videoTracks = stream.getVideoTracks();
+//                console.log('Got stream with constraints:', vgaConstraints);
+//                console.log('Using video device: ' + videoTracks[0].label);
+//                stream.onremovetrack = function() {
+//                    console.log('Stream ended');
+//                };
+//                window.stream = stream; // make variable available to browser console
 //                video.srcObject = stream;
+//                
+//              //window.stream = stream;
+//              //video.srcObject = window.stream;
+//            })
+//            .catch(function (err0r) {
+//              console.log(err0r);
 //            });
-          navigator.mediaDevices.getUserMedia(vgaConstraints)
-            .then(function (stream) {
-                var videoTracks = stream.getVideoTracks();
-                console.log('Got stream with constraints:', vgaConstraints);
-                console.log('Using video device: ' + videoTracks[0].label);
-                stream.onremovetrack = function() {
-                    console.log('Stream ended');
-                };
-                window.stream = stream; // make variable available to browser console
-                video.srcObject = stream;
-                
-              //window.stream = stream;
-              //video.srcObject = window.stream;
-            })
-            .catch(function (err0r) {
-              console.log(err0r);
-            });
-        }
-        
-        function resultHandler (err, result) {
-            if (err)
-                return console.log(err.message);
-
-            alert(result);
-        }
-        
-        video.srcObject = mediaStream;
-        
-        qr.decodeFromCamera(video, resultHandler);
+//        }
+//        
+//        function resultHandler (err, result) {
+//            if (err)
+//                return console.log(err.message);
+//
+//            alert(result);
+//        }
+//        
+//        video.srcObject = mediaStream;
+//        
+//        qr.decodeFromCamera(video, resultHandler);
         
     </script>
 </body>
