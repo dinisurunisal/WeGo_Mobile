@@ -1,6 +1,8 @@
 
 $(document).on("pageinit", function () {
     initPage();
+    populatePastHunts();
+    populateUpcomingHunts();
 });
 
 var orders;
@@ -95,8 +97,8 @@ function selectPastHunts() {
     document.getElementById("past-hunts-btn").style.color = "white";
     document.getElementById("upcoming-hunts-btn").style.background = "white";
     document.getElementById("upcoming-hunts-btn").style.color = "#c4c4c4";
-    document.getElementById("past-order-inner-list").style.display = "block";
-    document.getElementById("upcoming-order-list").style.display = "none";
+    // document.getElementById("past-order-inner-list").style.display = "block";
+    // document.getElementById("upcoming-order-list").style.display = "none";
 //    if (!hasPastFound) {
 //        $("#past-empty-image").show();
 //    } else {
@@ -111,8 +113,8 @@ function selectUpcomingHunts() {
     document.getElementById("upcoming-hunts-btn").style.color = "white";
     document.getElementById("past-hunts-btn").style.background = "white";
     document.getElementById("past-hunts-btn").style.color = "#c4c4c4";
-    document.getElementById("past-order-inner-list").style.display = "none";
-    document.getElementById("upcoming-order-list").style.display = "block";
+    // document.getElementById("past-order-inner-list").style.display = "none";
+    // document.getElementById("upcoming-order-list").style.display = "block";
 //    if (!hasUpcomingFound) {
 //        $("#upcoming-empty-image").show();
 //
@@ -124,6 +126,68 @@ function selectUpcomingHunts() {
 //function setOrder(orderId) {
 //    selectedOrder = orderId
 //}
+
+function populatePastHunts() {
+
+    var pastHunts = JSON.parse(localStorage.getItem('pastHunts'));
+    console.log(pastHunts);
+
+    for (var i = 0; i < pastHunts.length; i++) {
+        document.getElementById("past_hunt_card_image").src = pastHunts[i].imageUrl;
+        document.getElementById("past_my_hunts_location_name").innerHTML = pastHunts[i].destName;
+        document.getElementById("past_my_hunts_tour_date").innerHTML = pastHunts[i].tourDate;
+        document.getElementById("past_my_hunts_tour_details").innerHTML = pastHunts[i].tourDetails;
+        // document.getElementById("card_star_score").innerHTML = defaultDestinationDB[i].destinationRating;
+        // document.getElementById("kitchen-rating-script").innerHTML = (defaultDestinationDB[i].kitchenRatingTotal / defaultDestinationDB[i].kitchenRatingUserNumber).toFixed(1);
+
+        if ( pastHunts[i].huntId === 'mh2') {
+            document.getElementById("button_space").style.display = "none"
+            document.getElementById("rating").style.display = "block"
+            document.getElementById("tour_review").style.display = "block"
+        } else {
+            document.getElementById("rating").style.display = "none"
+            document.getElementById("tour_review").style.display = "none"
+        }
+
+
+        $("#past_my_hunts_list").clone().appendTo("#past_my_hunts_list_2");
+    }
+
+    deleteDuplicateCards("past_my_hunts_list"); 
+
+    for (var i = 0; i < pastHunts.length; i++) {
+
+
+    }
+
+}
+
+// Delete duplicate cards
+function deleteDuplicateCards(idName) {
+    var id = document.getElementById(idName);
+    id.parentNode.removeChild(id);
+}
+
+function populateUpcomingHunts() {
+
+    var pastHunts = JSON.parse(localStorage.getItem('upcomingHunts'));
+    console.log(pastHunts);
+
+    for (var i = 0; i < pastHunts.length; i++) {
+        document.getElementById("upcoming_hunt_card_image").src = pastHunts[i].imageUrl;
+        document.getElementById("upcoming_my_hunts_location_name").innerHTML = pastHunts[i].destName;
+        document.getElementById("upcoming_my_hunts_tour_date").innerHTML = pastHunts[i].tourDate;
+        document.getElementById("upcoming_tour_route").innerHTML = pastHunts[i].tourRoute;
+        document.getElementById("upcoming_tour_duration").innerHTML = pastHunts[i].tourDuration;
+        document.getElementById("upcoming_tour_passengers").innerHTML = pastHunts[i].tourPassengers;
+
+        $("#upcoming_my_hunts_list").clone().appendTo("#upcoming_my_hunts_list_2");
+    }
+
+    deleteDuplicateCards("upcoming_my_hunts_list"); 
+
+}
+  
 
 function populatePastOrders() {
     $.each(orders, function (index, order) {
