@@ -72,7 +72,7 @@
 					<div id="card_script_1">
 						<div id="screen-resolution-breakpoint">
 							<li>
-								<a id="clickedId" onclick="onDestinationSelect(this.id)">
+								<a id="clickedId" onclick="onDestinationSelect(this.id)"> 
 									<div class="dest_card">
 										<div style="position: relative;">
 											<img src="images/destinations/Big Ben.jpg" id="card_image" style="width:100%">

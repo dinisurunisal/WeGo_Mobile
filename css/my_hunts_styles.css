@@ -12,3 +12,130 @@
 	border-radius: 8px !important;
 	/* box-shadow: 2px 4px 6px #c4c4c4; */
 }
+
+#my-hunts-page #my_hunts_list {
+	/* padding: 8px 0px 8px 0px!important;
+	display: grid;
+	grid-auto-columns: auto auto; */
+}
+
+#my-hunts-page .my_hunts_card {
+	/* background-image: url(images/destinations/Cotswolds.jpg); */
+	/* background-position: -180px 60%;
+	background-size: cover; */
+	border-radius: 12px;
+	height: 200px;
+	max-width: 100%;
+	margin: 8px 4px 8px 4px;
+}
+
+#my-hunts-page .my_hunts_card img {
+	border-radius: 12px 0px 0px 12px; /* Add rounded corners to the top left and the top right corner of the image */
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+}
+
+#my-hunts-page #my_hunt_resolution_breakdown {
+	width: 100%;
+}
+
+#my-hunts-page .card_image_section {
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+	width: 35%;
+	display: grid;
+	float: left;
+}
+
+#my-hunts-page .card_image_section p, .button_space p2 {
+	opacity: 0;
+}
+/*
+.card_image_section img{
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+	width: 100%;
+	height: auto;
+	object-position: -180px;
+	object-fit: cover;
+}
+*/
+#my-hunts-page .tour_review {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+}
+
+#my-hunts-page .my_hunts_card_content {
+	background-color: white;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+	display: grid;
+	padding: 0 0 0 8px;
+	text-align: left;
+	height: 200px;
+}
+
+#my-hunts-page .my_hunts_card_content h3, p2 {
+	width: fit-content;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+#my-hunts-page .my_hunts_tour_date, .tour_review {
+	color: #c4c4c4;
+}
+
+#my-hunts-page .my_hunts_upcoming_details {
+	padding-top: 8px;
+	display: grid;
+	height: fit-content;
+	grid-template-columns: auto auto;
+	grid-column-gap: 10px;
+}
+
+#my-hunts-page .feedback_btn {
+	width: 158px !important;
+	background-color: #0174cf !important;
+	color: white !important;
+	text-shadow: none !important;
+}
+
+#my-hunts-page .rating img{
+	width: 30%;
+	height: 20px;
+	object-fit: cover;
+}
+
+#my-hunts-page .button_space {
+	padding-top: 8px;
+	display:inline-block;
+	width: 95%;
+}
+
+#my-hunts-page .button_space .feedback_btn {
+	float: right;
+}
+
+@media only screen
+	and (min-device-width: 812px)
+	and (max-device-width: 900px) {
+	#my-hunts-page #my_hunt_resolution_breakdown {
+		width: 50%;
+		float: left;
+	}
+	
+}
+
+@media only screen
+	and (min-device-width: 768px)
+	and (max-device-width: 850px) {
+
+}
+
+@media only screen and (min-device-width: 1024px) {
+
+	
+}
