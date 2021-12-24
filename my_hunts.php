@@ -193,4 +193,4 @@
             <?php include("navigation_bar.php"); ?>
         </div>
     </body>
-</html
+</html>
