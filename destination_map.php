@@ -31,7 +31,7 @@
 			/* Always set the map height explicitly to define the size of the div
 				* element that contains the map. */
 			#map {
-				height: 400px;
+				height: 500px;
 			}
 
 		</style>
@@ -64,7 +64,7 @@
 				</div>
 			</div>
 
-			<div role="main" class="ui-content" style="height: 450px;">
+			<div role="main" class="ui-content" style="height: 480px;">
 				<div id="map">
 				</div>
 			</div>
