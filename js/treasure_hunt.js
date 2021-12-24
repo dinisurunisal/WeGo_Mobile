@@ -1,4 +1,5 @@
 const dollarSign = "$ "
+var defaultDestinationDB = [];
 let map;
 
 const tourStops = [
@@ -36,10 +37,7 @@ function addMarkerWithTimeout(position, timeout, title, content) {
   '<div id="content">' +
   '<div id="siteNotice">' +
   "</div>" +
-  '<h2 id="firstHeading" class="firstHeading">' + title + '</h2>' +
-  '<div id="bodyContent">' +
-  "<p><b>" + content + "</b></p>" +
-  "</div>" +
+  '<h3 id="firstHeading" class="firstHeading">' + title + '</h3>' +
   "</div>";
 
   // Create an info window to share between markers.
@@ -59,15 +57,12 @@ function addMarkerWithTimeout(position, timeout, title, content) {
 
     // Add a click listener for each marker, and set up the info window.
     marker.addListener("click", () => {
+      document.getElementById("treasure_hunt_selected_name").innerHTML = title;
+      document.getElementById("treasure_hunt_selected_details").innerHTML = content;
       infoWindow.close();
       infoWindow.open(marker.getMap(), marker);
     });
     
   }, timeout);
-}
-
-
-function goToDestinationList() {
-  window.location = "destination_list.php";
 }
  

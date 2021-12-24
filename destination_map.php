@@ -31,7 +31,7 @@
 			/* Always set the map height explicitly to define the size of the div
 				* element that contains the map. */
 			#map {
-				height: 500px;
+				height: 480px;
 			}
 
 		</style>
