@@ -59,7 +59,7 @@
 						</div>
 					</div> -->
 					<div class="dest_map_button">
-						<a href="destination_map.php">
+						<a onclick="goToDestinationMap()">
 							Map
 						</a>
 					</div>

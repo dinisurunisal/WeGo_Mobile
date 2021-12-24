@@ -112,3 +112,7 @@ function addToFavourites(id) {
   }
 
 }
+
+function goToDestinationMap() {
+    window.location = "destination_map.php";
+}
