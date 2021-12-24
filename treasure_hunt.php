@@ -18,7 +18,23 @@
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<!-- Custom -->
-<!--		<script src="js/destination.js"></script>-->
+		<script src="js/treasure_hunt.js"></script>
+
+        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTaSledUuIuOU0iipt8JzdHB2J-ZJayr4&callback=initMap" ></script>
+
+        <style>
+			/* Always set the map height explicitly to define the size of the div
+				* element that contains the map. */
+			#treasure_hunt_page #map {
+				height: 500px;
+			}
+
+            #treasure_hunt_page #treasure_hunt_map_space{
+                height: 495px;
+            }
+
+		</style>
 
 	</head>
 
@@ -38,11 +54,13 @@
                     </div>
                 </div>
                 
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.68056342787!2d-0.1268140842631077!3d51.50072917963407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604c38c8cd1d9%3A0xb78f2474b9a45aa9!2sBig%20Ben!5e0!3m2!1sen!2sus!4v1639405031679!5m2!1sen!2sus" style="width: 100%; margin-top: -15px; height: 320px">
-                </iframe>
-                <div style="height: 234px; background:white; margin-top:-15px; padding: 16px; border-top-right-radius: 12px; border-top-left-radius: 12px; text-align: left;">
-                    <h3 style="margin-top: 6px; margin-bottom:2px">Big Ben Tower</h3>
-                    <p style="margin-top:2px; margin-bottom:16px">Wodne ened aehf</p>
+                <div id="treasure_hunt_map_space">
+                    <div id="map">
+                    </div>
+                </div>
+                <div style="height: 234px; background:white; margin-top:-15px; padding: 16px; border-top-right-radius: 12px; border-top-left-radius: 12px; text-align: left; z-index: 99999; position: relative;">
+                    <h3 style="margin-top: 6px; margin-bottom:2px" id="treasure_hunt_selected_name">London's Big Ben</h3>
+                    <p style="margin-top:2px; margin-bottom:16px" id="treasure_hunt_selected_details">London's iconic national timepiece</p>
                     <p>wdwdw</p>
                     <p>wdwdw</p>
                     <button style="width:120px; background:#0174cf; color: white; float: right;">Play Game</button>
