@@ -22,7 +22,7 @@
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 		<!-- Custom -->
-		<!-- <script src="js/destination_map.js"></script> -->
+		<script src="js/destination_map.js"></script>
 
 		<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
 		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTaSledUuIuOU0iipt8JzdHB2J-ZJayr4&callback=initMap" ></script>
@@ -35,16 +35,6 @@
 			}
 
 		</style>
-
-		<script>
-			let map;
-			function initMap() {
-				map = new google.maps.Map(document.getElementById("map"), {
-				center: { lat: -34.397, lng: 150.644 },
-				zoom: 8,
-				});
-			}
-		</script>
 
 	</head>
 
@@ -66,7 +56,7 @@
 						<img src="images/icons/filterIcon.png" alt="Filter Icon" class="grey-text" id="dest_filter_icon">
 					</a>
 					<div class="dest_map_button">
-						<a href="destination_list.php">
+						<a onclick="goToDestinationList()">
 							List
 						</a>
 					</div>
