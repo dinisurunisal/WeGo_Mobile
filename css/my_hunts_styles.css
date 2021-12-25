@@ -65,7 +65,7 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: 100%;
+	max-width: 97%;
 }
 
 #my-hunts-page .my_hunts_card_content {
@@ -93,7 +93,7 @@
 	display: grid;
 	height: fit-content;
 	grid-template-columns: auto auto;
-	grid-column-gap: 10px;
+	grid-column-gap: 4px;
 }
 
 #my-hunts-page .feedback_btn {
@@ -103,10 +103,13 @@
 	text-shadow: none !important;
 }
 
-#my-hunts-page .rating img{
-	width: 30%;
-	height: 20px;
-	object-fit: cover;
+#my-hunts-page .rating p2 {
+    	vertical-align: text-top;
+}
+
+#my-hunts-page .rating img {
+	width: 110px;
+	height: auto;
 }
 
 #my-hunts-page .button_space {
