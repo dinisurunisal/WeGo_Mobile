@@ -31,26 +31,7 @@
                         <li><a id="upcoming-hunts-btn" class="toggle-buttons" href="#" onclick="selectUpcomingHunts()">Upcoming Hunts</a></li>
                     </ul>
                 </div><!-- /navbar -->
-    <!--
-            <ul id="past-order-inner-list" style="display:block" data-role="listview">
-                    <li style="margin-top: 10px; height: 60px; background: #00a99d;" class="past_order_card">
-                        <div class="list-header center-outer-div">
-                            <div class="center-inner-div">
-                                <h3 class="bold heading-four white">Past Orders</h3>
-                            </div>
-                        </div>
-                    </li>
-            </ul>
-            <ul style="display:none;" id="upcoming-order-list" data-role="listview">
-                    <li style="margin-top: 10px; height: 60px; background: #00a99d;" class="past_order_card">
-                        <div class="list-header center-outer-div">
-                            <div class="center-inner-div">
-                                <h3 class="bold heading-four white">Upcoming Orders</h3>
-                            </div>
-                        </div>
-                    </li>
-            </ul>
-    -->     
+ 
                 <div id="upcoming-empty">
                     <ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0">
                         <div class="my_hunts_list" id="upcoming_my_hunts_list">
@@ -81,44 +62,6 @@
                         <div id="upcoming_my_hunts_list_2"></div>
                     </ul>
 
-                    <!-- <div class="my_hunts_list">
-                        <div class="my_hunts_card">
-                            <div class="card_image_section">
-                                <p>image</p>
-                            </div>
-                            <div class="my_hunts_card_content">
-                                <h3 class="my_hunts_location_name">Big Ben</h3>
-                                <p2 class="my_hunts_tour_date">Tour starts on 20th December 2021</p2>
-                                <hr>
-                                <div class="my_hunts_upcoming_details">
-                                    <p2>Route:</p2>
-                                    <p2 class="upcoming_tour_route">London - Burmingham</p2>
-                                    <p2>Duration:</p2>
-                                    <p2 class="upcoming_tour_duration">2h 15m</p2>
-                                    <p2>Passengers:</p2>
-                                    <p2 class="upcoming_tour_passengers">4 Adults</p2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="my_hunts_card">
-                            <div class="card_image_section">
-                                <p>image</p>
-                            </div>
-                            <div class="my_hunts_card_content">
-                                <h3 class="my_hunts_location_name">Buckingham Palace</h3>
-                                <p2 class="my_hunts_tour_date">Tour starts on 25th December 2021</p2>
-                                <hr>
-                                <div class="my_hunts_upcoming_details">
-                                    <p2>Route:</p2>
-                                    <p2 class="upcoming_tour_route">London - Westminster</p2>
-                                    <p2>Duration:</p2>
-                                    <p2 class="upcoming_tour_duration">2h 15m</p2>
-                                    <p2>Passengers:</p2>
-                                    <p2 class="upcoming_tour_passengers">4 Adults</p2>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
     <!--                <h4 style="text-align: center;">Book locations to add them to your upcoming hunts.</h4>-->
                 </div>
                 <div id="past-empty">
@@ -153,39 +96,6 @@
 
                         <div id="past_my_hunts_list_2"></div>
                     </ul>
-                    <!-- <div class="my_hunts_list">
-                        <div class="my_hunts_card">
-                            <div class="card_image_section">
-                                <p>image</p>
-                            </div>
-                            <div class="my_hunts_card_content">
-                                <h3 class="my_hunts_location_name">Big Ben</h3>
-                                <p2 class="my_hunts_tour_date">Tour completed on 25-12-2021</p2>
-                                <hr>
-                                <p2 class="my_hunts_tour_details">EUS - DEL | 1h 11m | One Way</p2>
-                                <div class="button_space">
-                                    <p2>button</p2>
-                                    <button class="feedback_btn">Leave feedback</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="my_hunts_card">
-                            <div class="card_image_section">
-                                <p>image</p>
-                            </div>
-                            <div class="my_hunts_card_content">
-                                <h3 class="my_hunts_location_name">Big Ben</h3>
-                                <p2 class="my_hunts_tour_date">Tour completed on 25-12-2021</p2>
-                                <hr>
-                                <p2 class="my_hunts_tour_details">EUS - DEL | 1h 11m | One Way</p2>
-                                <div class="rating">
-                                    <img src="images/fourStars.png">
-                                    <p2>4 Stars</p2>
-                                </div>
-                                <p2 class="tour_review">One of the best destinations which admires the history of UK</p2>
-                            </div>
-                        </div>
-                    </div> -->
     <!--                <h4 style="text-align: center; ">No locations hunted yet.</h4>-->
                 </div>
             </div>

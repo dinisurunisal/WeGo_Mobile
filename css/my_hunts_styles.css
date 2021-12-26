@@ -13,16 +13,7 @@
 	/* box-shadow: 2px 4px 6px #c4c4c4; */
 }
 
-#my-hunts-page #my_hunts_list {
-	/* padding: 8px 0px 8px 0px!important;
-	display: grid;
-	grid-auto-columns: auto auto; */
-}
-
 #my-hunts-page .my_hunts_card {
-	/* background-image: url(images/destinations/Cotswolds.jpg); */
-	/* background-position: -180px 60%;
-	background-size: cover; */
 	border-radius: 12px;
 	height: 200px;
 	max-width: 100%;
@@ -51,16 +42,7 @@
 #my-hunts-page .card_image_section p, .button_space p2 {
 	opacity: 0;
 }
-/*
-.card_image_section img{
-	border-top-left-radius: 12px;
-	border-bottom-left-radius: 12px;
-	width: 100%;
-	height: auto;
-	object-position: -180px;
-	object-fit: cover;
-}
-*/
+
 #my-hunts-page .tour_review {
 	white-space: nowrap;
 	overflow: hidden;
