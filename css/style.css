@@ -8,8 +8,10 @@ body {
 }
 
 hr {
-	width: 100%;
-    	color: #c4c4c4;
+	height: 1px;
+	border: none !important;
+	width: 97%;
+	background-color: #c4c4c4;
 }
 
 h1 {
@@ -29,12 +31,12 @@ h3 {
 
 p {
 	font-size: 16px;
-	font-weight: regular;
+	font-weight: normal;
 }
 
 p2 {
 	font-size: 14px;
-	font-weight: regular;
+	font-weight: normal;
 }
 
 /* Header
