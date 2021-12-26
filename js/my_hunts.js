@@ -5,7 +5,7 @@ $(document).on("pageinit", function () {
     populateUpcomingHunts();
 });
 
-var orders;
+var hunts;
 //var selectedOrder;
 //var currentlySignedInUse
 //var hasUpcomingFound;
@@ -19,76 +19,62 @@ function initPage() {
     document.getElementById("upcoming-hunts-btn").style.color = "#c4c4c4";
     $("#past-empty").show();
     $("#upcoming-empty").hide();
-//    currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
-//    orders = currentlySignedInUser.orders;
-//    console.log(orders);
 
-//    if (orders == null) {
-//        orders = []
+   currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
+   hunts = currentlySignedInUser.bookings;
+   console.log(hunts);
+
+//    if (hunts.isFeedbackGiven == true) {
+//     hunts.isFeedbackGiven == false;
 //    }
-//
-//    hasUpcomingFound = false;
-//    hasPastFound = false;
-//    $.each(orders, function (index, order) {
-//        if (order.isComplete) {
-//            hasPastFound = true;
-//        } else {
-//            hasUpcomingFound = true;
-//        }
-//    });
-//    $("#past-empty-image").hide();
-//
-//    $("#upcoming-empty-image").hide();
-//
-//    if (!hasPastFound) {
-//        $("#past-empty").show();
-//    } else {
-//        $("#past-empty-image").hide();
-//    }
-//    populatePastOrders();
-//    setupStars();
+
+   if (hunts == null) {
+    hunts = []
+   }
+
+   setupStars();
 }
 
 
-//function setupStars() {
-//    $("#star_rating_one").on("click mouseover", function () {
-//        $("#star_rating_one").html("star")
-//        $("#star_rating_two").html("star_border")
-//        $("#star_rating_three").html("star_border")
-//        $("#star_rating_four").html("star_border")
-//        $("#star_rating_five").html("star_border")
-//    })
-//    $("#star_rating_two").on("click mouseover", function () {
-//        $("#star_rating_one").html("star")
-//        $("#star_rating_two").html("star")
-//        $("#star_rating_three").html("star_border")
-//        $("#star_rating_four").html("star_border")
-//        $("#star_rating_five").html("star_border")
-//    })
-//    $("#star_rating_three").on("click mouseover", function () {
-//        $("#star_rating_one").html("star")
-//        $("#star_rating_two").html("star")
-//        $("#star_rating_three").html("star")
-//        $("#star_rating_four").html("star_border")
-//        $("#star_rating_five").html("star_border")
-//
-//    })
-//    $("#star_rating_four").on("click mouseover", function () {
-//        $("#star_rating_one").html("star")
-//        $("#star_rating_two").html("star")
-//        $("#star_rating_three").html("star")
-//        $("#star_rating_four").html("star")
-//        $("#star_rating_five").html("star_border")
-//
-//    })
-//    $("#star_rating_five").on("click mouseover", function () {
-//        $("#star_rating_one").html("star")
-//        $("#star_rating_two").html("star")
-//        $("#star_rating_three").html("star")
-//        $("#star_rating_four").html("star")
-//        $("#star_rating_five").html("star")
-//    })
-//}
+function setupStars() {
+   $("#star_rating_one").on("click mouseover", function () {
+       $("#star_rating_one").html("star")
+       $("#star_rating_two").html("star_border")
+       $("#star_rating_three").html("star_border")
+       $("#star_rating_four").html("star_border")
+       $("#star_rating_five").html("star_border")
+   })
+   $("#star_rating_two").on("click mouseover", function () {
+       $("#star_rating_one").html("star")
+       $("#star_rating_two").html("star")
+       $("#star_rating_three").html("star_border")
+       $("#star_rating_four").html("star_border")
+       $("#star_rating_five").html("star_border")
+   })
+   $("#star_rating_three").on("click mouseover", function () {
+       $("#star_rating_one").html("star")
+       $("#star_rating_two").html("star")
+       $("#star_rating_three").html("star")
+       $("#star_rating_four").html("star_border")
+       $("#star_rating_five").html("star_border")
+
+   })
+   $("#star_rating_four").on("click mouseover", function () {
+       $("#star_rating_one").html("star")
+       $("#star_rating_two").html("star")
+       $("#star_rating_three").html("star")
+       $("#star_rating_four").html("star")
+       $("#star_rating_five").html("star_border")
+
+   })
+   $("#star_rating_five").on("click mouseover", function () {
+       $("#star_rating_one").html("star")
+       $("#star_rating_two").html("star")
+       $("#star_rating_three").html("star")
+       $("#star_rating_four").html("star")
+       $("#star_rating_five").html("star")
+   })
+}
 
 function selectPastHunts() {
     $("#upcoming-empty").hide();
@@ -170,43 +156,40 @@ function populateUpcomingHunts() {
     deleteDuplicateCards("upcoming_my_hunts_list"); 
 
 }
-  
 
-//function trackOrder(order) {
-//    localStorage.setItem("currentlyTrackingOrder", order);
-//    window.location.href = "tracking_screen.php";
-//}
 
-//function submitFeedback() {
-//    var comment = $("#commentForm").val();
-//    var starCount = 0;
-//    $('#star_rating_holder').children('i').each(function () {
-//        if ($(this).html() == "star") {
-//            starCount++;
-//        }
-//    });
-//    $.each(orders, function (key, order) {
-//        if (order.id == selectedOrder) {
-//            order.feedbackRating = starCount;
-//            order.feedbackComment = comment;
-//            console.log("Saved");
-//        }
-//    });
-//    var users = JSON.parse(localStorage.getItem('users'));
-//    $.each(users, function (key, user) {
-//        if (user.contactNumber === currentlySignedInUser.contactNumber) {
-//            users[key] = currentlySignedInUser;
-//        }
-//    });
-//    localStorage.setItem("users", JSON.stringify(users));
-//    currentlySignedInUser.orders = orders;
-//    console.log(orders);
-//    localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
-//    showSuccess("Feedback saved.");
-//    $("#popupBasic").popup("close")
-//
-//    setTimeout(function () {
-//        location.reload();
-//
-//    }, 2000);
-//}
+function submitFeedback() {
+   var comment = $("#form_comment").val();
+   var starCount = 0;
+   $('#star_rating_holder').children('i').each(function () {
+       if ($(this).html() == "star") {
+           starCount++;
+       }
+   });
+
+   $.each(hunts, function (key, hunt) {
+       if (hunt.id == 1) {
+           hunt.ratingStars = starCount;
+           hunt.ratingComment = comment;
+           console.log("Saved");
+       }
+   });
+
+   var users = JSON.parse(localStorage.getItem('users'));
+   $.each(users, function (key, user) {
+       if (user.contactNumber === currentlySignedInUser.contactNumber) {
+           users[key] = currentlySignedInUser;
+       }
+   });
+   localStorage.setItem("users", JSON.stringify(users));
+   currentlySignedInUser.bookings = hunts;
+   console.log(hunts);
+   localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
+   showSuccess("Feedback saved.");
+   $("#popupBasic").popup("close")
+
+   setTimeout(function () {
+       location.reload();
+
+   }, 2000);
+}

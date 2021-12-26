@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <title>WeGo</title>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         
         <link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -79,7 +81,9 @@
                                             <hr>
                                             <p2 class="my_hunts_tour_details" id="past_my_hunts_tour_details">EUS - DEL | 1h 11m | One Way</p2>
                                             <div class="button_space" id="button_space">
+                                            <a href="#my_hunts_feedback" data-rel="popup" data-transition="pop" data-position-to="window">
                                                 <button class="feedback_btn">Leave feedback</button>
+                                            </a>  
                                             </div>
                                             <div class="rating" id="rating">
                                                 <img src="images/fourStars.png">
@@ -98,36 +102,26 @@
                     </ul>
     <!--                <h4 style="text-align: center; ">No locations hunted yet.</h4>-->
                 </div>
-                <a href="#my_hunts_feedback" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-position-to="window">Feedback</a>
+                <!-- <a href="#my_hunts_feedback" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-position-to="window">Feedback</a> -->
 
                 <div data-role="popup" data-transition="pop" style="padding: 20px;" id="my_hunts_feedback" class="ui-content">
                     <form id="form" onsubmit="event.preventDefault(); submitFeedback()">
                         <h2>How was your experience?</h2>
                         <p2>Let us know what you think</p2>
     <!--                    <label class="labelform grey heading-five" for="password"> Rating </label>-->
-    <!--
+    
                         <div id="star_rating_holder">
-                            <i id="star_rating_one" class="material-icons">
-                                ui-icon-star
-                            </i>
-                            <i id="star_rating_two" class="material-icons">
-                                ui-icon-star
-                            </i>
-                            <i id="star_rating_three" class="material-icons">
-                                ui-icon-star
-                            </i>
-                            <i id="star_rating_four" class="material-icons">
-                                ui-icon-star
-                            </i>
-                            <i id="star_rating_five" class="material-icons">
-                                ui-icon-star
-                            </i>
+                            <i id="star_rating_one" class="material-icons" style="font-size: 40px; color:red">star_border</i>
+                            <i id="star_rating_two" class="material-icons" style="font-size: 40px; color:red">star_border</i>
+                            <i id="star_rating_three" class="material-icons" style="font-size: 40px; color:red">star_border</i>
+                            <i id="star_rating_four" class="material-icons" style="font-size: 40px; color:red">star_border</i>
+                            <i id="star_rating_five" class="material-icons" style="font-size: 40px; color:red">star_border</i>
                         </div>
-    -->
-                        <img src="images/fourStars.png" style="width: 70%; padding: 8px 0 8px 0;">
+   
+                        <!-- <img src="images/fourStars.png" style="width: 70%; padding: 8px 0 8px 0;"> -->
                         <textarea type="text" required name="comment" id="form_comment" class="formField" placeholder="Enter your comment here"></textarea>
                         <div class="form_button_container">
-                            <button data-rel="back" class="cancel_btn" data-rel="back">Cancel</button>
+                            <a data-rel="back"><button class="cancel_btn">Cancel</button></a>
                             <button type="submit" class="submit_btn" data-role="button">Submit</button>
                         </div>
                     </form>
@@ -135,6 +129,7 @@
             </div>
             <?php include("footer.php"); ?>
             <?php include("navigation_bar.php"); ?>
+            <?php include("success_popups.php"); ?>
         </div>
     </body>
 </html>

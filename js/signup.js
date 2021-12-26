@@ -23,6 +23,7 @@ function signup() {
         id: 1,
         poiName: "CAQ 1120",
         isComplete: true,
+        isFeedbackGiven: false,
         bookingDate: "12/12/2019",
         routeStart: "EUS",
         routeFinish: "BHM",
