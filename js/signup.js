@@ -31,6 +31,7 @@ function signup() {
         durationMin: 15,
         ratingStars: 4,
         ratingComment: "one of the best destinations",
+        passengers: 2,
         imageUrl:
           "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_16:9/project%20prism%2Fcolor%20search%20archive%2F2ee0d7a33e80d1667d0c7f4bd262159f8da38333",
       },
