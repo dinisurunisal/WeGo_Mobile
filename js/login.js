@@ -34,6 +34,10 @@ function init() {
     var bookings = {
     }
 
+    var tempBooking = {
+
+    }
+
     var users = [
 
     ]
@@ -51,6 +55,7 @@ function init() {
     if (typeof (Storage) !== "undefined") {
         localStorage.setItem("posters", JSON.stringify(posters));
         localStorage.setItem("bookings", JSON.stringify(bookings));
+        localStorage.setItem("tempBooking", JSON.stringify(tempBooking));
         localStorage.setItem("pastHunts", JSON.stringify(pastHunts));
         localStorage.setItem("upcomingHunts", JSON.stringify(upcomingHunts));
         if (localStorage.getItem("users") == null) {
