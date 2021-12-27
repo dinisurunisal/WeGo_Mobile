@@ -18,6 +18,59 @@
 
 	<!-- Custom -->
 	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/booking.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('#select-native-1').on('change', function() {
+				if (this.value == '1') {
+					$("#booking_details_1").show();
+					$("#check_1").show();
+				} else {
+					$("#booking_details_1").hide();
+					$("#check_1").hide();
+				}
+
+				if (this.value == '2') {
+					$("#booking_details_2").show();
+					$("#check_2").show();
+					$("#check_5").show();
+				} else {
+					$("#booking_details_2").hide();
+					$("#check_2").hide();
+					$("#check_5").hide();
+				}
+
+				if (this.value == '3') {
+					$("#booking_details_3").show();
+					$("#check_3").show();
+				} else {
+					$("#booking_details_3").hide();
+					$("#check_3").hide();
+				}
+
+				if (this.value == '4') {
+					$("#booking_details_4").show();
+					$("#check_4").show();
+				} else {
+					$("#booking_details_4").hide();
+					$("#check_4").hide();
+				}
+			});
+		});
+
+		$(document).ready(function() {
+			$('#checkbtn').click(function() {
+				checked = $("input[type=checkbox]:checked").length;
+
+				if (!checked) {
+					alert("You must check at least one checkbox.");
+					return false;
+				}
+
+			});
+		});
+	</script>
 
 	<style>
 		@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
@@ -40,7 +93,7 @@
 			}
 
 			.book .booking_card {
-				margin: 5%;	
+				margin: 5%;
 			}
 		}
 
@@ -66,7 +119,7 @@
 			}
 
 			.book .booking_card {
-				margin: 3%;	
+				margin: 3%;
 			}
 		}
 
@@ -92,7 +145,7 @@
 			}
 
 			.book .booking_card {
-				margin: 3%;	
+				margin: 3%;
 			}
 		}
 	</style>
@@ -113,102 +166,212 @@
 						</h1>
 					</div>
 
-					<div class="bk_depature">
-						<h4>
-							EUS
-						</h4>
-						<p>
-							London Euston
-						</p>
+					<div style="display: none;" id="booking_details_1">
+						<div class="bk_depature">
+							<h4>
+								EUS
+							</h4>
+							<p>
+								London Euston
+							</p>
+						</div>
+
+						<div class="bk_duration">
+							<p style="padding-bottom: 10px;">
+								2:00hr
+							</p>
+							<p>
+								500km
+							</p>
+						</div>
+
+						<div class="bk_arrival">
+							<h4>
+								BHM
+							</h4>
+							<p>
+								Birmingham street
+							</p>
+						</div>
 					</div>
 
-					<div class="bk_duration">
-						<p style="padding-bottom: 10px;">
-							2:00hr
-						</p>
-						<p>
-							500km
-						</p>
+					<div style="display: none;" id="booking_details_2">
+						<div class="bk_depature">
+							<h4>
+								EUS
+							</h4>
+							<p>
+								London Euston
+							</p>
+						</div>
+
+						<div class="bk_duration">
+							<p style="padding-bottom: 10px;">
+								1:30hr
+							</p>
+							<p>
+								300km
+							</p>
+						</div>
+
+						<div class="bk_arrival">
+							<h4>
+								MAN
+							</h4>
+							<p>
+								Manchester street
+							</p>
+						</div>
 					</div>
 
-					<div class="bk_arrival">
-						<h4>
-							BHM
-						</h4>
-						<p>
-							Birmingham street
-						</p>
+					<div style="display: none;" id="booking_details_3">
+						<div class="bk_depature">
+							<h4>
+								EUS
+							</h4>
+							<p>
+								London Euston
+							</p>
+						</div>
+
+						<div class="bk_duration">
+							<p style="padding-bottom: 10px;">
+								3:00hr
+							</p>
+							<p>
+								600km
+							</p>
+						</div>
+
+						<div class="bk_arrival">
+							<h4>
+								CDF
+							</h4>
+							<p>
+								Cardiff Central
+							</p>
+						</div>
 					</div>
+
+					<div style="display: none;" id="booking_details_4">
+						<div class="bk_depature">
+							<h4>
+								EUS
+							</h4>
+							<p>
+								London Euston
+							</p>
+						</div>
+
+						<div class="bk_duration">
+							<p style="padding-bottom: 10px;">
+								4:00hr
+							</p>
+							<p>
+								700km
+							</p>
+						</div>
+
+						<div class="bk_arrival">
+							<h4>
+								WCML
+							</h4>
+							<p>
+								Rugby Railway
+							</p>
+						</div>
+					</div>
+
 				</div>
 			</div>
 
-
-			<div class="booking_card">
-				<p>
-					Choose Route *
-				</p>
-				<div>
-					<form>
+			<form id="form" onsubmit="event.preventDefault(); bookOne()">
+				<div class="booking_card">
+					<p>
+						Choose Route *
+					</p>
+					<div>
 						<div class="ui-field-contain">
-							<select name="select-native-1" id="select-native-1">
+							<select required name="select-native-1" id="select-native-1">
+								<option value="0">None</option>
 								<option value="1">Lodon to Birmingham</option>
 								<option value="2">London to Manchester</option>
 								<option value="3">London to Cardiff</option>
 								<option value="4">London to Rugby</option>
 							</select>
 						</div>
-					</form>
-				</div>
-			</div>
 
-			<div class="booking_card">
-				<p>
-					Choose Destination *
-				</p>
-				<div class="bk_checkbox">
-					<form>
+					</div>
+				</div>
+
+				<div class="booking_card">
+					<p>
+						Choose Destination (if any)
+					</p>
+					<div class="bk_checkbox">
+
 						<fieldset data-role="controlgroup">
-							<input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
-							<label for="checkbox-v-2a">None</label>
-							<input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
-							<label for="checkbox-v-2b">Big Ben</label>
-							<input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
-							<label for="checkbox-v-2c">London Eye</label>
+							<div style="display: none;" id="check_1">
+								<input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+								<label for="checkbox-v-2b">one</label>
+							</div>
+
+							<div style="display: none;" id="check_2">
+								<input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+								<label for="checkbox-v-2c">two</label>
+							</div>
+
+							<div style="display: none;" id="check_3">
+								<input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
+								<label for="checkbox-v-2d">three</label>
+							</div>
+
+							<div style="display: none;" id="check_4">
+								<input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
+								<label for="checkbox-v-2e">four</label>
+							</div>
+
+							<div style="display: none;" id="check_5">
+								<input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
+								<label for="checkbox-v-2f">five</label>
+							</div>
+
 						</fieldset>
-					</form>
-				</div>
-			</div>
 
-			<div class="booking_card">
-				<p>
-					Choose Date *
-				</p>
-				<div class="bk_datepick">
-					<input type="text" data-role="date">
+					</div>
 				</div>
-			</div>
 
-			<div class="booking_card">
-				<p>
-					Choose Passengers *
-				</p>
-				<div>
-					<form>
+				<div class="booking_card">
+					<p>
+						Choose Date *
+					</p>
+					<div class="bk_datepick">
+						<input required type="date" data-role="date" id="datePicker">
+					</div>
+				</div>
+
+				<div class="booking_card">
+					<p>
+						Choose Passengers *
+					</p>
+					<div>
 						<div class="ui-field-contain">
-							<select name="select-native-1" id="select-native-1">
+							<select required name="select-native-2" id="select-native-2">
 								<option value="1">One Adult</option>
 								<option value="2">Two Adults</option>
 								<option value="3">Three Adults</option>
 								<option value="4">Four Adults</option>
 							</select>
 						</div>
-					</form>
-				</div>
-			</div>
 
-			<div class="booking_buttons">
-				<button onclick="window.location.href='booking_ticket_details.php'" class="bk_button" style="background:#0174cf; color: white; border-color: transparent; font-size: 15px;">Continue</button>
-			</div>
+					</div>
+				</div>
+
+				<div class="booking_buttons">
+					<button type="submit" class="bk_button" style="background:#0174cf; color: white; border-color: transparent; font-size: 15px;" id="checkbtn">Continue</button>
+					<!-- onclick="window.location.href='booking_ticket_details.php'" -->
+				</div>
+			</form>
 		</div>
 
 		<?php include("footer.php"); ?>
