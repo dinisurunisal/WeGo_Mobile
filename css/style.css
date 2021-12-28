@@ -3,8 +3,8 @@
 }*/
 
 body {
-    	height: 100%;
-    	margin: 0;
+    height: 100%;
+    margin: 0;
 }
 
 hr {
@@ -189,6 +189,7 @@ p2 {
 /* Nav bar
 --------------------------------------------------------------------------------*/
 #nav_bar {
+    z-index: 200;
 	background-color: #ffffff !important;
 	position: fixed;
     	bottom: 0px;
@@ -324,7 +325,8 @@ p2 {
     color:white;
 }
 
-/* Sign Up Page */
+/* Sign Up Page
+---------------------------------------------------------------------------------*/
 .sign_up .form_div {
     height: 500px;
     width: 300px;
@@ -416,7 +418,8 @@ p2 {
     color: #ffffff;
 }
 
-/* Forgot Password Page */
+/* Forgot Password Page
+---------------------------------------------------------------------------------*/
 .forgot_pass .form_div {
     height: 500px;
     width: 300px;
@@ -508,11 +511,14 @@ p2 {
     color: #ffffff;
 }
 
-/* Destination Page */
+/* Destination Page
+---------------------------------------------------------------------------------*/
 
-/* My Hunts Page */
+/* My Hunts Page
+---------------------------------------------------------------------------------*/
 
-/* Booking */
+/* Booking
+---------------------------------------------------------------------------------*/
 
 .book .booking_details h1 {
     text-align: center;
@@ -592,7 +598,123 @@ p2 {
     text-align: center;
 }
 
-/* Booking Ticket */
+/* Booking Ticket
+---------------------------------------------------------------------------------*/
+
+
+/* Treasure hunt
+---------------------------------------------------------------------------------*/
+#treasure_hunt_content {
+	margin-top: 60px;
+    height: auto;
+    padding: 0px;
+    text-align: center;
+}
+
+#treasure_hunt_content #search_section {
+	background: #f6f6f6;
+    padding: 16px 16px 12px 16px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+#treasure_hunt_content #search_section h2 {
+    margin-top: 6px;
+	margin-bottom: 2px;
+}
+
+#treasure_hunt_content #search_section p2 {
+    margin-top: 2px;
+	margin-bottom: 24px;
+}
+
+#treasure_hunt_content .game_search_box {
+    display: inline-grid;
+	width: 85% !important;
+    grid-template-columns: auto 40px;
+    border-style: solid;
+    border-radius: 12px;
+    border-width: thin;
+    margin-top: 24px;
+    margin-bottom: 2px;
+    padding: 2px;
+    background-color: white;
+}
+
+.game_search_box a{
+    width: 40px;
+    padding: 0px;
+    margin: 0px !important; 
+    border-radius: 12px !important;
+}
+
+.game_search_box .ui-input-search {
+    height: 26px !important;
+    margin-top: 14px !important;
+    margin-bottom: 4px !important;
+}
+
+.game_search_box input {
+    min-height: 26px !important;
+    padding: 1px 8px 1px 14px !important;
+}
+
+.game_search_box .ui-input-text {
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0px;
+}
+
+/* Always set the map height explicitly to define the size of the div element that contains the map. */
+#treasure_hunt_page #map {
+    height: 395px;
+}
+
+#treasure_hunt_content #location_section {
+    height: 124px;
+	background: #f6f6f6;
+    margin-top:-15px;
+    padding: 16px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    text-align: left;
+    z-index: 99; 
+    position: relative;
+}
+
+#treasure_hunt_selected_name {
+    margin-top: 6px; 
+    margin-bottom:2px;
+}
+
+#treasure_hunt_selected_details {
+    margin-top:4px; 
+    margin-bottom:16px;
+}
+
+#treasure_hunt_content #location_section div {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+#treasure_hunt_duration {
+    margin-top:2px;
+    margin-bottom:2px;
+}
+
+#treasure_hunt_status {
+    color: #0174cf;
+    margin-top:24px;
+    margin-bottom: 2px;
+    position: absolute;
+}
+
+#treasure_hunt_page #game_button {
+    width:120px;
+    background:#0174cf;
+    color: white;
+}
 
 .toggle {
 	border-radius: 12px !important;
