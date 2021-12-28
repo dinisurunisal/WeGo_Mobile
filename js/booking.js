@@ -87,39 +87,40 @@ function bookOne() {
 
   if (route == 1) {
     routeStartID = "EUS";
-    routeStartName = "London Euston";
+    routeStartName = "London";
     routeFinishID = "BHM";
-    routeFinishName = "Birmingham street";
+    routeFinishName = "Birmingham";
     durationHours = 2;
     durationMin = 00;
     distance = "500km";
   } else if (route == 2) {
     routeStartID = "EUS";
-    routeStartName = "London Euston";
+    routeStartName = "London";
     routeFinishID = "MAN";
-    routeFinishName = "Manchester street";
+    routeFinishName = "Manchester";
     durationHours = 1;
     durationMin = 30;
     distance = "300km";
   } else if (route == 3) {
     routeStartID = "EUS";
-    routeStartName = "London Euston";
+    routeStartName = "London";
     routeFinishID = "CDF";
-    routeFinishName = "Cardiff Central";
+    routeFinishName = "Cardiff";
     durationHours = 3;
     durationMin = 00;
     distance = "600km";
   } else if (route == 4) {
     routeStartID = "EUS";
-    routeStartName = "London Euston";
+    routeStartName = "London";
     routeFinishID = "WCML";
-    routeFinishName = "Rugby Railway";
+    routeFinishName = "Rugby";
     durationHours = 4;
     durationMin = 00;
     distance = "700km";
   }
 
   var bookingTemp = {
+    bbRoute: route,
     bbPOI: POI,
     bbRouteStartID: routeStartID,
     bbRouteStartName: routeStartName,
@@ -133,10 +134,6 @@ function bookOne() {
   };
 
   var tempBooking = JSON.parse(localStorage.getItem("tempBooking"));
-//   if (tempBooking == null) {
-//     tempBooking = [];
-//   }
-
   tempBooking.push(bookingTemp);
   localStorage.setItem("tempBooking", JSON.stringify(tempBooking));
 
@@ -152,4 +149,10 @@ function bookOne() {
   // console.log(bookingTemp);
 
   console.log(tempBooking);
+
+  goToApp();
+}
+
+function goToApp() {
+  window.location.href = "booking_ticket_details.php";
 }
