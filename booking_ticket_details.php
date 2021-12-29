@@ -19,7 +19,11 @@
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 	<!-- Custom -->
-	<script src="js/booking.js"></script>
+	<script
+        src="https://www.paypal.com/sdk/js?client-id=AbH_Jnmi7kSr89TNkVxzUkiIc8L1J22tBdqSqmOtsff7Fv3R0cDjX_ceL9CUWYf8biaqDu_2hQK1_D1T">
+    </script>
+
+	<script src="js/booking_ticket_details.js"></script>
 
 	<style>
 		.tickets .tk_heading {
@@ -304,27 +308,27 @@
 			<div class="booking_card">
 				<div class="tk_depature">
 					<div class="depature">
-						<h4>
+						<h4 id="route_start_ID">
 							EUS
 						</h4>
-						<p>
+						<p id="route_start_name">
 							London
 						</p>
 					</div>
 
 					<div class="arrival">
-						<h4>
+						<h4 id="route_finish_ID">
 							BHM
 						</h4>
-						<p>
+						<p id="route_finish_name">
 							Birmingham
 						</p>
 					</div>
 					<div class="duration">
-						<p>
+						<p id="route_duration">
 							02:00hr
 						</p>
-						<p>
+						<p id="route_distance">
 							500km
 						</p>
 					</div>
@@ -333,19 +337,20 @@
 			<div class="booking_card_two" style="margin-top: 2%;">
 				<div class="tk_details_one">
 					<p style="float: left;">Ticket Type</p>
-					<h4 style="float: right;">One Way</h4>
+					<h4 style="float: right;" id="ticket_type">One Way</h4>
 				</div>
 				<div class="tk_details_two">
 					<p style="float: left;">Chosen Destination</p>
-					<h4 style="float: right;">Big Ben</h4>
+					<h4 style="float: right;" id="poi_destination">Big Ben</h4>
+					<h4 style="float: right;" id="poi_destination_2"></h4>
 				</div>
 				<div class="tk_details_three">
 					<p style="float: left;">Date</p>
-					<h4 style="float: right;">12-12-2020</h4>
+					<h4 style="float: right;" id="date_book">12-12-2020</h4>
 				</div>
 				<div class="tk_details_four">
 					<p style="float: left;">Passengers</p>
-					<h4 style="float: right;">2</h4>
+					<h4 style="float: right;" id="number_passengers">2</h4>
 				</div>
 			</div>
 
@@ -380,14 +385,17 @@
 							</h1>
 						</div>
 					</div>
-					<button id="placeOrder" onclick="placeOrder('approved')" style="text-shadow:none; background-color: #0174CF; color: #ffffff; margin-left: auto; margin-right: auto; margin-top: 6%; width: 180px;" disabled>Place Order </button>
-					<button style="text-shadow:none; background-color: #ffffff; color: #0174CF; margin-left: auto; margin-right: auto; margin-top: 2%; width: 180px; border-color: #ddd;"> Cancel </button>
+					<button id="placeOrder" onclick="placeOrder('approved')" style="text-shadow:none; background-color: #0174CF; color: #ffffff; margin-left: auto; margin-right: auto; margin-top: 6%; width: 180px;">Place Order </button>
 					<a href="#popupDialog" id="placeOrderLink" data-transition="pop" data-position-to="window" data-rel="popup" style="color: white;pointer-events: none;"></a>
 					<div id="paypal-button-container" style="display: none;"></div>
 					<div id="paypal-card-container" style="display: none;"></div>
+					<button onclick="cancel()" style="text-shadow:none; background-color: #ffffff; color: #0174CF; margin-left: auto; margin-right: auto; margin-top: 2%; width: 180px; border-color: #ddd;"> Cancel </button>
 				</div>
 			</div>
 		</div>
+		<?php
+            include("success_popups.php");
+        ?>
 
 		<?php include("footer.php"); ?>
 		<?php include("navigation_bar.php"); ?>
