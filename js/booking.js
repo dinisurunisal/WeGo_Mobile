@@ -38,6 +38,9 @@ function initPage() {
   hunts = currentlySignedInUser.bookings;
   console.log(hunts);
   console.log(currentlySignedInUser);
+
+  tempBooking = JSON.parse(localStorage.getItem("tempBooking"));
+  console.log(tempBooking);
 }
 
 function bookOne() {

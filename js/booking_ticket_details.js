@@ -6,12 +6,21 @@ var tempBooking;
 let subTotal = 0;
 let serviceCharge = 20;
 let totalPrice = 0;
-let sellerEmail = "pasinduekanayake123@gmail.com"
+let sellerEmail = "pasinduekanayake123@gmail.com";
+let images = [
+  "images/destinations/Big Ben.jpg",
+  "images/destinations/Cotswolds.jpg",
+  "images/destinations/York Minster.jpg",
+  "images/destinations/The British Museum.jpg",
+  "images/destinations/Big Ben.jpg",
+];
+let poiName;
+let poiImage;
 
 function initPage() {
   tempBooking = JSON.parse(localStorage.getItem("tempBooking"));
   console.log(tempBooking);
-  currentUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
+  currentUser = JSON.parse(localStorage.getItem("currentlySignedInUser"));
 
   getData();
   calculatePrice();
@@ -217,25 +226,106 @@ function placeOrder(status) {
     if (bookings != null && bookings.length > 0) {
       lastBookingId = bookings[bookings.length - 1].id;
     } else {
-        lastBookingId = 1;
+      lastBookingId = 1;
     }
-    let newBooking = {
-      'id': lastBookingId + 1,
-      'poiName': "CAQ 1120",
-      'isComplete': false,
-      'isFeedbackGiven': false,
-      'bookingDate': date,
-      'routeStart': routeStartName,
-      'routeFinish': routeFinishName,
-      'durationHours': durationHours,
-      'durationMin': durationMin,
-      'ratingStars': '',
-      'ratingComment': '',
-      'passengers': passengers,
-      'imageUrl':
-        "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_16:9/project%20prism%2Fcolor%20search%20archive%2F2ee0d7a33e80d1667d0c7f4bd262159f8da38333",
-    };
-    bookings.push(newBooking);
+    for (var i = 0; i < POIs.length; i++) {
+      if (POIs[i] == 1) {
+        poiName = "one";
+        poiImage = images[0];
+        let newBooking = {
+          id: lastBookingId + 1,
+          poiName: poiName,
+          isComplete: false,
+          isFeedbackGiven: false,
+          bookingDate: date,
+          routeStart: routeStartName,
+          routeFinish: routeFinishName,
+          durationHours: durationHours,
+          durationMin: durationMin,
+          ratingStars: "",
+          ratingComment: "",
+          passengers: passengers,
+          imageUrl: poiImage,
+        };
+        bookings.push(newBooking);
+      } else if (POIs[i] == 2) {
+        poiName = "two";
+        poiImage = images[1];
+        let newBooking = {
+          id: lastBookingId + 1,
+          poiName: poiName,
+          isComplete: false,
+          isFeedbackGiven: false,
+          bookingDate: date,
+          routeStart: routeStartName,
+          routeFinish: routeFinishName,
+          durationHours: durationHours,
+          durationMin: durationMin,
+          ratingStars: "",
+          ratingComment: "",
+          passengers: passengers,
+          imageUrl: poiImage,
+        };
+        bookings.push(newBooking);
+      } else if (POIs[i] == 3) {
+        poiName = "three";
+        poiImage = images[2];
+        let newBooking = {
+          id: lastBookingId + 1,
+          poiName: poiName,
+          isComplete: false,
+          isFeedbackGiven: false,
+          bookingDate: date,
+          routeStart: routeStartName,
+          routeFinish: routeFinishName,
+          durationHours: durationHours,
+          durationMin: durationMin,
+          ratingStars: "",
+          ratingComment: "",
+          passengers: passengers,
+          imageUrl: poiImage,
+        };
+        bookings.push(newBooking);
+      } else if (POIs[i] == 4) {
+        poiName = "four";
+        poiImage = images[3];
+        let newBooking = {
+          id: lastBookingId + 1,
+          poiName: poiName,
+          isComplete: false,
+          isFeedbackGiven: false,
+          bookingDate: date,
+          routeStart: routeStartName,
+          routeFinish: routeFinishName,
+          durationHours: durationHours,
+          durationMin: durationMin,
+          ratingStars: "",
+          ratingComment: "",
+          passengers: passengers,
+          imageUrl: poiImage,
+        };
+        bookings.push(newBooking);
+      } else {
+        poiName = "five";
+        poiImage = images[4];
+        let newBooking = {
+          id: lastBookingId + 1,
+          poiName: poiName,
+          isComplete: false,
+          isFeedbackGiven: false,
+          bookingDate: date,
+          routeStart: routeStartName,
+          routeFinish: routeFinishName,
+          durationHours: durationHours,
+          durationMin: durationMin,
+          ratingStars: "",
+          ratingComment: "",
+          passengers: passengers,
+          imageUrl: poiImage,
+        };
+        bookings.push(newBooking);
+      }
+    }
 
     // if (document.getElementById("pointsChecked").checked) {
     //   userPoints = 0;
@@ -275,6 +365,10 @@ function placeOrder(status) {
     // localStorage.setItem("sellerOrders", JSON.stringify(sellerOrders));
 
     localStorage.removeItem("tempBooking");
+
+    var tempBooking = [];
+    localStorage.setItem("tempBooking", JSON.stringify(tempBooking));
+
     showSuccess("Order placed, see it in upcoming hunts.");
     setTimeout(function () {
       window.location.replace("my_hunts.php");
@@ -283,4 +377,16 @@ function placeOrder(status) {
   if (status === "cancel") {
     showFailure("Payment Failed");
   }
+}
+
+function cancel() {
+  localStorage.removeItem("tempBooking");
+
+  var tempBooking = [];
+  localStorage.setItem("tempBooking", JSON.stringify(tempBooking));
+
+  showFailure("Payment Canceled");
+  setTimeout(function () {
+    window.location.replace("booking.php");
+  }, 3000);
 }

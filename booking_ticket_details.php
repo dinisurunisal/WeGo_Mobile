@@ -389,7 +389,7 @@
 					<a href="#popupDialog" id="placeOrderLink" data-transition="pop" data-position-to="window" data-rel="popup" style="color: white;pointer-events: none;"></a>
 					<div id="paypal-button-container" style="display: none;"></div>
 					<div id="paypal-card-container" style="display: none;"></div>
-					<button style="text-shadow:none; background-color: #ffffff; color: #0174CF; margin-left: auto; margin-right: auto; margin-top: 2%; width: 180px; border-color: #ddd;"> Cancel </button>
+					<button onclick="cancel()" style="text-shadow:none; background-color: #ffffff; color: #0174CF; margin-left: auto; margin-right: auto; margin-top: 2%; width: 180px; border-color: #ddd;"> Cancel </button>
 				</div>
 			</div>
 		</div>

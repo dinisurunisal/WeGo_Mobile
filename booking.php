@@ -64,7 +64,7 @@
 				checked = $("input[type=checkbox]:checked").length;
 
 				if (!checked) {
-					alert("You must check at least one checkbox.");
+					alert("You must check at least one destination checkbox.");
 					return false;
 				}
 
@@ -306,7 +306,7 @@
 
 				<div class="booking_card">
 					<p>
-						Choose Destination (if any)
+						Choose Destination *
 					</p>
 					<div class="bk_checkbox">
 
