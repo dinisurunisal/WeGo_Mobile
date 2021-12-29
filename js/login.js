@@ -34,9 +34,7 @@ function init() {
     var bookings = {
     }
 
-    var tempBooking = {
-
-    }
+    var tempBooking = []
 
     var users = [
 
