@@ -12,30 +12,67 @@
         <link rel="stylesheet" href="jquery-theme/themes/theme.css" />
         <link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
         <link rel="stylesheet" href="css/style.css" />
-		<!-- The three things that jQuery Mobile needs to work -->
-		
 
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		<!-- Custom -->
 		<script src="js/treasure_hunt.js"></script>
 
         <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
         <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTaSledUuIuOU0iipt8JzdHB2J-ZJayr4&callback=initMap" ></script>
 
         <style>
-			/* Always set the map height explicitly to define the size of the div
-				* element that contains the map. */
-			#treasure_hunt_page #map {
-				height: 500px;
-			}
+            @media only screen 
+                and (min-device-height: 375px) 
+                and (max-device-height: 700px) {
+                    #treasure_hunt_page #map {
+				        float: right;
+                        width: 60%;
+                        height: 254px !important;
+			         }
 
-            #treasure_hunt_page #treasure_hunt_map_space{
-                height: 495px;
-            }
+                    #treasure_hunt_page #search_section {
+                        border-radius: 0px !important;
+                        padding: 2px 16px 12px 16px !important;
+				        float: left;
+                        width: 36%;
+			         }
 
+                    #treasure_hunt_page #location_section {
+                        padding: 12px 16px 14px 16px !important;
+				        float: left;
+                        width: 36%;
+                        
+			         }
+                    
+                    #treasure_hunt_page .game_search_box {
+                        margin-top: 12px !important;
+                        margin-bottom: 4px !important;
+                    }
+
+                }
+            @media only screen 
+                and (min-device-height: 700px) {
+                    #treasure_hunt_page #map {
+				        height: 360px !important;
+			         }
+
+                }
+            
+            @media only screen 
+                and (min-device-height: 812px) {
+                    #treasure_hunt_page #map {
+				        height: 408px !important;
+			         }
+
+                }
+            
+            @media only screen 
+                and (min-device-height: 1024px) {
+                    #treasure_hunt_page #map {
+				        height: 608px !important;
+			         }
+                }
 		</style>
-
 	</head>
 
 	<body>
@@ -43,13 +80,14 @@
 			<!-- Header -->
             <?php include("navigation_bar.php"); ?>
 			<?php include("header.php"); ?>
-			<div style="margin-top: 60px; height: auto; padding: 0px; text-align: center;">
-                <div style="background:white; padding: 16px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px;" >
-                    <h2 style="margin-top: 6px; margin-bottom:2px">Treasure Hunt</h2>
-                    <p style="margin-top:2px; margin-bottom:24px">Find locations to hunt and learn more</p>
+			<div id="treasure_hunt_content">
+                <div id="search_section">
+                    <h2>Treasure Hunt</h2>
+                    <p2>Find locations to hunt and learn more</p2>
                     <div class="game_search">
-                        <div class="game_search_box" >
-                            <input type="search" data-clear-btn="false" name="game-search-box">
+                        <div class="game_search_box">
+                            <input type="text" data-clear-btn="false" name="game-search-box">
+                            <a class="ui-alt-icon ui-btn ui-btn-icon-right ui-icon-search"></a>
                         </div>
                     </div>
                 </div>
@@ -58,15 +96,19 @@
                     <div id="map">
                     </div>
                 </div>
-                <div style="height: 234px; background:white; margin-top:-15px; padding: 16px; border-top-right-radius: 12px; border-top-left-radius: 12px; text-align: left; z-index: 99999; position: relative;">
-                    <h3 style="margin-top: 6px; margin-bottom:2px" id="treasure_hunt_selected_name">London's Big Ben</h3>
-                    <p style="margin-top:2px; margin-bottom:16px" id="treasure_hunt_selected_details">London's iconic national timepiece</p>
-                    <p>wdwdw</p>
-                    <p>wdwdw</p>
-                    <button style="width:120px; background:#0174cf; color: white; float: right;">Play Game</button>
+                <div id="location_section">
+                    <h3 id="treasure_hunt_selected_name">London's Big Ben</h3>
+                    <p id="treasure_hunt_selected_details">London's iconic national timepiece</p>
+                    <div>
+                        <p id="treasure_hunt_duration" style="margin-top:2px; margin-bottom:2px">Walk 1 h</p>
+                        <p id="treasure_hunt_status">Open now</p>
+                        <a href="treasure_hunt_game.php">
+                            <button id="game_button">Play Game</button>
+                        </a>
+                    </div>
                 </div>
 			</div>
-			<?php include("footer.php"); ?>
+<!--			<?php include("footer.php"); ?>-->
 		</div>
 	</body>
 </html>

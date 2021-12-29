@@ -58,6 +58,18 @@
 				}
 			});
 		});
+
+		$(document).ready(function() {
+			$('#checkbtn').click(function() {
+				checked = $("input[type=checkbox]:checked").length;
+
+				if (!checked) {
+					alert("You must check at least one destination checkbox.");
+					return false;
+				}
+
+			});
+		});
 	</script>
 
 	<style>
@@ -281,6 +293,7 @@
 					<div>
 						<div class="ui-field-contain">
 							<select required name="select-native-1" id="select-native-1">
+								<option value="0">None</option>
 								<option value="1">Lodon to Birmingham</option>
 								<option value="2">London to Manchester</option>
 								<option value="3">London to Cardiff</option>
@@ -293,16 +306,11 @@
 
 				<div class="booking_card">
 					<p>
-						Choose Destination (if any)
+						Choose Destination *
 					</p>
 					<div class="bk_checkbox">
 
 						<fieldset data-role="controlgroup">
-							<!-- <div>
-								<input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
-								<label for="checkbox-v-2a">None</label>
-							</div> -->
-
 							<div style="display: none;" id="check_1">
 								<input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
 								<label for="checkbox-v-2b">one</label>
@@ -360,7 +368,7 @@
 				</div>
 
 				<div class="booking_buttons">
-					<button type="submit" class="bk_button" style="background:#0174cf; color: white; border-color: transparent; font-size: 15px;">Continue</button>
+					<button type="submit" class="bk_button" style="background:#0174cf; color: white; border-color: transparent; font-size: 15px;" id="checkbtn">Continue</button>
 					<!-- onclick="window.location.href='booking_ticket_details.php'" -->
 				</div>
 			</form>
