@@ -177,11 +177,11 @@
     border-radius:50%;
     display:inline-block;
     margin:0 0 15px;
-    color:#aaa;
+    color:rgb(238, 8, 8);
     transition:.2s;
 }
 
-.dest_favourite i:before {
+/* .dest_favourite i:before {
     font-family:fontawesome;
     content:'\f004';
     font-style:normal;
@@ -190,7 +190,7 @@
 .dest_favourite i.press {
     animation: size .4s;
     color:#e23b3b;
-}
+} */
   
 .dest_card .card_description {
     display: flex;

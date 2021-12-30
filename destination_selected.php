@@ -52,6 +52,12 @@
 									<i class="material-icons" style="font-size: 20px; vertical-align: -2px"> star </i>
 								</div>
 							</div>
+
+							<div class="dest_sel_favourite">
+								<i id="favouriteId" onclick="addToFavourites(this.id)" class="material-icons">
+									favorite_border
+								</i>
+							</div>
 						</div>
 
 						<div class="dest_sel_main_container">
@@ -144,6 +150,8 @@
 			<div role="main" class="ui-content" style="height: 450px;">
 		
 			</div>
+
+			<?php include("success_popups.php"); ?>
 
 
 			<?php include("footer.php"); ?>
