@@ -5,7 +5,7 @@ $(document).on("pageinit", function () {
 });
 
 function initJsonFiles() {
-    //localStorage.clear();
+    localStorage.clear();
     $.getJSON("json-files/destinations.json", function (jsonFile) {
         if (typeof (Storage) !== "undefined") {
             destinations = JSON.parse(localStorage.getItem("destinations"));

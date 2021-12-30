@@ -2,12 +2,12 @@ const dollarSign = "$ "
 var defaultDestinationDB = [];
 
 $(function initialization() {
-    $.getJSON("json-files/destinations.json", function (jsonFile) {
-        defaultDestinationDB = jsonFile;
-        console.log(defaultDestinationDB)
-
+    var destinations = JSON.parse(localStorage.getItem("destinations"));
+    defaultDestinationDB = destinations;
+    console.log(defaultDestinationDB)
+    if (defaultDestinationDB) {
         loadDestinationList();
-    });
+    }
 });
 
 function loadDestinationList() {
@@ -27,6 +27,13 @@ function loadDestinationList() {
 
     for (var i = 0; i < defaultDestinationDB.length; i++) {
         document.getElementById("clickedId").id = defaultDestinationDB[i].destinationId;
+        document.getElementById("favouriteId").id = defaultDestinationDB[i].destinationId + "_favourite";
+
+        if (defaultDestinationDB[i].isFavourite == true) {
+            document.getElementById(defaultDestinationDB[i].destinationFavId).innerHTML = "favorite";
+          } else {
+            document.getElementById(defaultDestinationDB[i].destinationFavId).innerHTML = "favorite_border";
+          }
     }
 }
 
@@ -50,66 +57,43 @@ function onDestinationSelect(id) {
   }
 }
 
-$(function () {
-  $("i").click(function () {
-    $("i").toggleClass("press", 1000);
-  });
-});
+// $(function () {
+//     $("i").click(function () {
+//       $("i").toggleClass("press", 1000);
+//     });
+//   });
 
 function addToFavourites(id) {
+
+  console.log(id)
 
   if (!e) var e = window.event;
   e.cancelBubble = true;
   if (e.stopPropagation)
       e.stopPropagation();
 
-  var favVal = $("#" + id).html();
-  var users = JSON.parse(localStorage.getItem('users'));
-  var sellers = JSON.parse(localStorage.getItem('sellers'));
+  var destination = defaultDestinationDB.find(obj => obj.destinationFavId === id);
+  console.log(destination)
+  console.log(destination.isFavourite)
 
-  var currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
-  if (favVal == "favorite") {
-      $.each(sellers, function (key, seller) {
-          if (seller.sellerId == id.replace("favourite", "")) {
-              $.each(users, function (key, user) {
-                  if (user.contactNumber == currentlySignedInUser.contactNumber) {
-
-                      var filteredUser = user.favouritesList.filter(function (value, index, arr) {
-                          return value.sellerId != seller.sellerId
-
-                      });
-                      user.favouritesList = filteredUser;
-                      var filteredCurrentUser = currentlySignedInUser.favouritesList.filter(function (value, index, arr) {
-                          return value.sellerId != seller.sellerId
-                      });
-                      currentlySignedInUser.favouritesList = filteredCurrentUser;
-                      localStorage.setItem("users", JSON.stringify(users));
-                      localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
-                      $("#" + id).html("favorite_border");
-                  }
-              });
-          }
-      });
+  if (destination.isFavourite == true) {
+    document.getElementById(id).innerHTML = "favorite_border";
+    $.each(defaultDestinationDB, function (key, destination) {
+        if (destination.destinationFavId == id) {
+            destination.isFavourite = false
+        }
+    });
+    
   } else {
-      console.log(sellers);
-      $.each(sellers, function (key, seller) {
-          if (seller.sellerId == id.replace("favourite", "")) {
-              $.each(users, function (key, user) {
-                  if (user.contactNumber == currentlySignedInUser.contactNumber) {
-                      user.favouritesList.push({ 'sellerId': seller.sellerId, 'kitchenName': seller.kitchenName });
-                      currentlySignedInUser.favouritesList.push({ 'sellerId': seller.sellerId, 'kitchenName': seller.kitchenName });
-                      localStorage.setItem("users", JSON.stringify(users));
-                      localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
-                      $("#" + id).html("favorite");
-                      showSuccess("Added to Favourites List")
-
-                  }
-              });
-          }
-      });
-
-
+    document.getElementById(id).innerHTML = "favorite";
+    $.each(defaultDestinationDB, function (key, destination) {
+        if (destination.destinationFavId == id) {
+            destination.isFavourite = true
+        }
+    });
+    showSuccess("Added to Favourites List")
   }
+  localStorage.setItem("destinations", JSON.stringify(defaultDestinationDB));
 
 }
 
