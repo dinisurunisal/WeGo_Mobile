@@ -14,7 +14,9 @@ include_once("css/style.css");
                 <img id="logo_image" src="images/HeaderLogo.png" alt="WeGo logo"/>
             </div>
             <div id="home_header_profile_icon">
-                <img id="profile_image" src="images/user.png" alt="profile"/>
+                <a href="profile.php"  style="z-index: 105;">
+                    <img id="profile_image" src="images/user.png" alt="profile"/>
+                </a>
             </div>
         </legend>
         <div class="header_search">

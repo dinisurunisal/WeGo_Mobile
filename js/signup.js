@@ -23,6 +23,7 @@ function signup() {
         id: 1,
         poiName: "CAQ 1120",
         isComplete: true,
+        isFeedbackGiven: false,
         bookingDate: "12/12/2019",
         routeStart: "EUS",
         routeFinish: "BHM",
@@ -30,6 +31,7 @@ function signup() {
         durationMin: 15,
         ratingStars: 4,
         ratingComment: "one of the best destinations",
+        passengers: 2,
         imageUrl:
           "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_16:9/project%20prism%2Fcolor%20search%20archive%2F2ee0d7a33e80d1667d0c7f4bd262159f8da38333",
       },
@@ -61,13 +63,13 @@ function signup() {
     localStorage.setItem("currentlySignedInUser", JSON.stringify(currentUser));
     showSuccess("Registered");
     setTimeout(function () {
-      $("#popup-introduction").popup("open");
+      goToApp();
     }, 2500);
   }
 }
 
 function goToApp() {
-  window.location.href = "search_screen.php";
+  window.location.href = "homepage.php";
 }
 
 function goBack() {

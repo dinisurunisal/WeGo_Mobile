@@ -25,12 +25,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<style>
-		.favourites .fa_heading {
-			text-align: center;
-			margin-top: 25%;
-			margin-bottom: 10%;
-		}
-
 		.favourites .fa_heading h1 {
 			text-align: center;
 			font-family: Noto Sans;
@@ -140,6 +134,30 @@
 			border-color: transparent;
 			font-weight: 100;
 			font-size: 15px;
+		}
+
+		@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+			.favourites .fa_heading {
+			text-align: center;
+			margin-top: 25%;
+			margin-bottom: 10%;
+		}
+		}
+
+		@media only screen and (min-device-width: 768px) and (max-device-width: 850px) {
+			.favourites .fa_heading {
+			text-align: center;
+			margin-top: 12%;
+			margin-bottom: 5%;
+		}
+		}
+
+		@media only screen and (min-device-width: 1024px) {
+			.favourites .fa_heading {
+			text-align: center;
+			margin-top: 10%;
+			margin-bottom: 4%;
+		}
 		}
 	</style>
 

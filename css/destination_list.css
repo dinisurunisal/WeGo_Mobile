@@ -137,6 +137,21 @@
     font-size: 20px;
 }
 
+.dest_card .dest_star_rating {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    font-size: 18px;
+}
+
+.dest_card .dest_star_chip {
+    background-color: rgb(248, 93, 66);
+    border-radius: 15px;
+    padding: 0 5px 0 5px;
+    line-height: 20px;
+}
+
 .dest_card .dest_content {
     position: absolute;
     bottom: 5px;
@@ -162,11 +177,11 @@
     border-radius:50%;
     display:inline-block;
     margin:0 0 15px;
-    color:#aaa;
+    color:rgb(238, 8, 8);
     transition:.2s;
 }
 
-.dest_favourite i:before {
+/* .dest_favourite i:before {
     font-family:fontawesome;
     content:'\f004';
     font-style:normal;
@@ -175,7 +190,7 @@
 .dest_favourite i.press {
     animation: size .4s;
     color:#e23b3b;
-}
+} */
   
 .dest_card .card_description {
     display: flex;

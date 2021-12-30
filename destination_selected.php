@@ -44,7 +44,20 @@
 				<div class="dest_sel_content_block">
 					<div class="dest_sel_internal_block">
 						<div class="dest_sel_heading">
-							<span class="dest_sel_heading_name" id="dest_sel_heading_name">London's Big Ben</span>
+							<span class="dest_sel_heading_name" id="dest_sel_heading_name" style="margin-right: 20px;">London's Big Ben</span>
+
+							<div class="dest_star_rating">
+								<div class="dest_star_chip">
+									<span id="dest_sel_star_score">4.4</span>
+									<i class="material-icons" style="font-size: 20px; vertical-align: -2px"> star </i>
+								</div>
+							</div>
+
+							<div class="dest_sel_favourite">
+								<i id="favouriteId" onclick="addToFavourites(this.id)" class="material-icons">
+									favorite_border
+								</i>
+							</div>
 						</div>
 
 						<div class="dest_sel_main_container">
@@ -58,7 +71,7 @@
 											<i class="material-icons">stars</i>
 										</td>
 										<td>
-											<span class="dest_side_texts">
+											<span class="dest_side_texts" id="dest_sel_about">
 												Clock tower in London, England 
 											</span>
 										</td>
@@ -68,7 +81,7 @@
 											<i class="material-icons">access_time</i>
 										</td>
 										<td>
-											<span class="dest_side_texts">
+											<span class="dest_side_texts" id="dest_sel_time">
 												Open 24x7
 											</span>
 										</td>
@@ -78,7 +91,7 @@
 											<i class="material-icons">location_on</i>
 										</td>
 										<td>
-											<span class="dest_side_texts">
+											<span class="dest_side_texts" id="dest_sel_address">
 												London SW1A 0AA, United Kingdom
 											</span>
 										</td>
@@ -88,7 +101,7 @@
 											<i class="material-icons">groups</i>
 										</td>
 										<td>
-											<span class="dest_side_texts">
+											<span class="dest_side_texts" id="dest_sel_crowd">
 											Moderately Crowded
 											</span>
 										</td>
@@ -104,7 +117,7 @@
 										</tr>
 										<tr>
 											<td style="padding: 0px 5px 0px 15px;" class="table_price">
-												<b>$ 55.00</b>
+												<b id="dest_sel_price">$ 55.00</b>
 											</td>
 										</tr>
 									</table>
@@ -124,7 +137,7 @@
 						</div>
 
 						<div class="dest_sel_buttons">
-							<button class="book_btn">
+							<button class="book_btn" onclick="window.location.href='booking.php'">
 								BOOK TRAIN
 							</button>
 						</div>
@@ -137,6 +150,8 @@
 			<div role="main" class="ui-content" style="height: 450px;">
 		
 			</div>
+
+			<?php include("success_popups.php"); ?>
 
 
 			<?php include("footer.php"); ?>

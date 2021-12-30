@@ -59,7 +59,7 @@
 						</div>
 					</div> -->
 					<div class="dest_map_button">
-						<a href="destination_map.php">
+						<a onclick="goToDestinationMap()">
 							Map
 						</a>
 					</div>
@@ -72,15 +72,23 @@
 					<div id="card_script_1">
 						<div id="screen-resolution-breakpoint">
 							<li>
-								<a id="clickedId" onclick="onDestinationSelect(this.id)">
+								<a id="clickedId" onclick="onDestinationSelect(this.id)"> 
 									<div class="dest_card">
 										<div style="position: relative;">
 											<img src="images/destinations/Big Ben.jpg" id="card_image" style="width:100%">
 											<div class="dest_content">
 												<h4 class="dest_name" id="card_name">Big Ben</h4>
 											</div>
+											<div class="dest_star_rating">
+												<div class="dest_star_chip">
+													<span id="card_star_score">4.4</span>
+													<i class="material-icons" style="font-size: 20px; vertical-align: -2px"> star </i>
+												</div>
+											</div>
 											<div class="dest_favourite">
-												<i onclick="addToFavourites(this.id)"></i>
+												<i id="favouriteId" onclick="addToFavourites(this.id)" class="material-icons">
+													favorite_border
+												</i>
 											</div>
 										</div>
 
@@ -90,7 +98,7 @@
 												London's iconic national timepiece</h5>
 											</div>
 											<div class="price_holder">
-												<h2 style="margin-left: 55px; color:black" id="card_price" class="card_price"><b>$333</b> </h2>
+												<h2 style="margin-left: 35px; color:black" id="card_price" class="card_price"><b>$333</b> </h2>
 											</div>
 										</div>
 									</div>
@@ -102,6 +110,7 @@
 					<div id="card_script_2"></div>
 				</ul>
 
+				<?php include("success_popups.php"); ?>
 				
 			</div>
 

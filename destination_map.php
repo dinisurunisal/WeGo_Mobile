@@ -9,7 +9,7 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<!-- <link rel="stylesheet" href="css/themes/my-custom-theme.css" /> -->
-		<link rel="stylesheet" href="css/destination.css" /> 
+		<link rel="stylesheet" href="css/destination_list.css" /> 
 		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
 		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
 
@@ -22,7 +22,19 @@
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 		<!-- Custom -->
-		<script src="js/destination.js"></script>
+		<script src="js/destination_map.js"></script>
+
+		<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+		<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTaSledUuIuOU0iipt8JzdHB2J-ZJayr4&callback=initMap" ></script>
+
+		<style>
+			/* Always set the map height explicitly to define the size of the div
+				* element that contains the map. */
+			#map {
+				height: 480px;
+			}
+
+		</style>
 
 	</head>
 
@@ -43,16 +55,8 @@
 					<a href="#popup-browse-kitchen-filter" data-rel="popup" data-transition="pop" onclick="popupBrowseKitchenFilterRestoreDefault()">
 						<img src="images/icons/filterIcon.png" alt="Filter Icon" class="grey-text" id="dest_filter_icon">
 					</a>
-					<!-- <div class="wrap">
-						<div class="search">
-							<input type="text" class="searchTerm" placeholder="What are you looking for?">
-							<button data-theme="none" type="submit" class="searchButton">
-								<i class="fa fa-search"></i>
-							</button>
-						</div>
-					</div> -->
 					<div class="dest_map_button">
-						<a href="destination_list.php">
+						<a onclick="goToDestinationList()">
 							List
 						</a>
 					</div>
@@ -60,45 +64,15 @@
 				</div>
 			</div>
 
-			<div role="main" class="ui-content">
-				<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0">
-					<div id="card_script_1">
-						<div id="screen-resolution-breakpoint">
-							<li>
-								<a id="clickedId" onclick="setClickedKitchenObject(this.id)">
-									<div class="dest_card">
-										<div style="position: relative;">
-											<img src="images/destinations/Big Ben.jpg" id="card_image" style="width:100%">
-											<div class="dest_content">
-												<h4 class="dest_name" id="card_name">Big Ben</h4>
-											</div>
-											<div class="dest_favourite">
-												<i></i>
-											</div>
-										</div>
-
-										<div class="card_description">
-											<div class="details_holder">
-												<h5 style='margin: 0px; color:black' id="card_details" class="card_details">
-												London's iconic national timepiece</h5>
-											</div>
-											<div class="price_holder">
-												<h2 style="margin-left: 60px; color:black" id="card_price" class="card_price"><b>$333</b> </h2>
-											</div>
-										</div>
-									</div>
-								</a>
-							</li>
-						</div>
-					</div>
-
-					<div id="card_script_2"></div>
-				</ul>
+			<div role="main" class="ui-content" style="height: 480px;">
+				<div id="map">
+				</div>
 			</div>
 
 
 			<?php include("footer.php"); ?>
 			<?php include("navigation_bar.php"); ?>
 		</div>
+
 	</body>
 </html>

@@ -6,8 +6,8 @@
 		<title>Profile page</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> -->
 		<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
 		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
 		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
@@ -109,6 +109,49 @@
 			#data_name{
 				font-weight: bold;
 			}
+
+			#profile_page .profile_video {
+				left: 0; 
+				right: 0; 
+				margin-left: auto; 
+				margin-right: auto; 
+				width: 85%; /* Need a specific value to work */
+				object-fit: cover;
+			}
+
+			#profile_page .profile_video iframe {
+				width: 660px;
+				height: 340px;
+			}
+
+			@media only screen
+			and (min-device-width: 375px)
+			and (max-device-width: 667px) {
+				#profile_page .profile_video iframe {
+					width: 320px;
+					height: 200px;
+				}
+				
+			}
+
+			@media only screen
+			and (min-device-width: 812px)
+			and (max-device-width: 850px) {
+				#profile_page .profile_video iframe {
+					width: 690px;
+					height: 315px;
+				}
+			}
+
+			@media only screen and (min-device-width: 1024px) {
+				#profile_page .profile_video iframe {
+					width: 870px;
+					height: 415px;
+				}
+			}
+
+
+
 		</style>
 
 
@@ -167,6 +210,10 @@
 				<div><button class="button" data-role="none">Send Feedback</button></div>
 				
 				
+			</div>
+
+			<div class="profile_video">
+				<iframe src="https://www.youtube.com/embed/9g8sfVsl2GU" frameborder="0" allowfullscreen></iframe>
 			</div>
 
 			<?php include("footer.php"); ?>

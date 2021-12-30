@@ -5,7 +5,7 @@ $(document).on("pageinit", function () {
 });
 
 function initJsonFiles() {
-    // localStorage.clear();
+    localStorage.clear();
     $.getJSON("json-files/destinations.json", function (jsonFile) {
         if (typeof (Storage) !== "undefined") {
             destinations = JSON.parse(localStorage.getItem("destinations"));
@@ -34,13 +34,28 @@ function init() {
     var bookings = {
     }
 
+    var tempBooking = []
+
     var users = [
 
+    ]
+
+    var pastHunts = [
+        { 'huntId': 'mh1', 'destName': 'Big Ben', 'imageUrl': 'images/destinations/Big Ben.jpg', 'tourDate':'Tour completed on 20-12-2021', 'tourDetails':'MEL - DEL | 3h 11m | One Way'},
+        { 'huntId': 'mh2', 'destName': 'Cotswolds', 'imageUrl': 'images/destinations/Cotswolds.jpg', 'tourDate':'Tour completed on 25-12-2021', 'tourDetails':'EUS - DEL | 1h 11m | Two Way'}
+    ]
+
+    var upcomingHunts = [
+        { 'destName': 'York Minster', 'imageUrl': 'images/destinations/York Minster.jpg', 'tourDate':'Tour completed on 25-12-2021', 'tourRoute':'London - Burmingham', 'tourDuration': '2h 15m', 'tourPassengers': '4 Adults'},
+        { 'destName': 'The British Museum', 'imageUrl': 'images/destinations/The British Museum.jpg', 'tourDate':'Tour completed on 25-12-2021', 'tourRoute':'London - Burmingham', 'tourDuration': '6hr 2m', 'tourPassengers': '3 Adults'}
     ]
 
     if (typeof (Storage) !== "undefined") {
         localStorage.setItem("posters", JSON.stringify(posters));
         localStorage.setItem("bookings", JSON.stringify(bookings));
+        localStorage.setItem("tempBooking", JSON.stringify(tempBooking));
+        localStorage.setItem("pastHunts", JSON.stringify(pastHunts));
+        localStorage.setItem("upcomingHunts", JSON.stringify(upcomingHunts));
         if (localStorage.getItem("users") == null) {
             localStorage.setItem("users", JSON.stringify(users));
         }

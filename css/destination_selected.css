@@ -36,6 +36,47 @@
 .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading {
     font-size: 25px;
     margin-bottom: 5px;
+    display: inline-flex;
+    width: 70%;
+}
+
+.dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_star_rating {
+    /* position: absolute;
+    bottom: 20px;
+    right: 20px; */
+    margin-top: 5px;
+    width: 60px;
+    color: white;
+    font-size: 18px;
+}
+
+.dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_star_chip {
+    background-color: rgb(248, 93, 66);
+    border-radius: 15px;
+    padding: 0 5px 0 5px;
+    line-height: 20px;
+}
+
+.dest_sel_content_block .dest_sel_internal_block .dest_sel_favourite {
+    top: 10px;
+    right: 15px;
+    position: absolute;
+    height:100px;
+    margin:0 auto;
+}
+
+.dest_sel_content_block .dest_sel_internal_block .dest_sel_favourite i {
+    cursor:pointer;
+    padding: 10px 12px 8px;
+    background:#fff;
+    border-radius:50%;
+    border: 1px solid;
+    box-shadow: 5px 10px 8px  #888888;
+    border-color: rgb(128, 128, 128);
+    display:inline-block;
+    margin:0 0 15px;
+    color:rgb(238, 8, 8);
+    transition:.2s;
 }
 
 .dest_sel_content_block .dest_sel_main_container #dest_sel_image_container {
@@ -120,6 +161,10 @@ and (max-device-width: 667px) {
         text-align:center;
         float: left;
         font-size: 13px;
+    }
+
+    .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading #dest_sel_heading_name {
+        font-size: 20px;
     }
 
     .dest_sel_content_block .dest_sel_description {
