@@ -40,6 +40,10 @@
     width: 70%;
 }
 
+.dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_sel_heading_name {
+    margin-right: 20px;
+}
+
 .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_star_rating {
     /* position: absolute;
     bottom: 20px;
@@ -55,6 +59,11 @@
     border-radius: 15px;
     padding: 0 5px 0 5px;
     line-height: 20px;
+}
+
+.dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_star_chip i {
+    font-size: 20px; 
+    vertical-align: -2px
 }
 
 .dest_sel_content_block .dest_sel_internal_block .dest_sel_favourite {
@@ -147,8 +156,9 @@ and (max-device-width: 667px) {
     }
 
     .dest_background_image .dest_sel_content_block {
-        width: 95%; /* Need a specific value to work */
+        width: 100%; /* Need a specific value to work */
         padding: 0px;
+        top: 60px;
     }
 
     .dest_sel_content_block .dest_sel_main_container #dest_sel_image_container {
@@ -163,8 +173,51 @@ and (max-device-width: 667px) {
         font-size: 13px;
     }
 
+    .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        /* height: 50px; */
+    }
+
     .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading #dest_sel_heading_name {
         font-size: 20px;
+        margin-left: 5px;
+    }
+
+    .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_sel_favourite {
+        top: 0;
+    }
+
+    .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_star_rating {
+        width: 50px;
+        font-size: 15px;
+    }
+
+    .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_star_chip i {
+        font-size: 15px; 
+        vertical-align: -2px
+    }
+
+    .dest_sel_content_block .dest_sel_internal_block .dest_sel_favourite {
+        top: 10px;
+        right: 15px;
+        position: absolute;
+        height:100px;
+        margin:0 auto;
+    }
+    
+    .dest_sel_content_block .dest_sel_internal_block .dest_sel_favourite i {
+        cursor:pointer;
+        padding: 10px 12px 8px;
+        background:#fff;
+        border-radius:50%;
+        border: 1px solid;
+        box-shadow: 5px 10px 8px  #888888;
+        border-color: rgb(128, 128, 128);
+        display:inline-block;
+        margin:0 0 15px;
+        color:rgb(238, 8, 8);
+        transition:.2s;
     }
 
     .dest_sel_content_block .dest_sel_description {
