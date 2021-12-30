@@ -19,7 +19,7 @@
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 	<!-- Custom -->
-	<script src="js/destination_list.js"></script>
+	<!-- <script src="js/destination_list.js"></script> -->
 	<script src="js/favorites_list_share.js"></script>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -107,7 +107,7 @@
 			transition: .2s;
 		}
 
-		.favourites .dest_card .dest_favourite i:before {
+		/* .favourites .dest_card .dest_favourite i:before {
 			font-family: fontawesome;
 			content: '\f004';
 			font-style: normal;
@@ -116,7 +116,7 @@
 		.favourites .dest_card .dest_favourite i.press {
 			animation: size .4s;
 			color: #e23b3b;
-		}
+		} */
 
 		.favourites .favourite_buttons {
 			margin-top: 12%;
@@ -184,13 +184,15 @@
 							<a id="clickedId" onclick="onDestinationSelect(this.id)">
 								<div class="dest_card">
 									<div style="position: relative;">
-										<img src="images/destinations/Big Ben.jpg" id="card_image" style="width:100%">
+										<img id="card_image" src="images/destinations/Big Ben.jpg" id="card_image" style="width:100%">
 										<div class="sub_card">
-											<h4 class="dest_name">BIG BEN</h4>
-											<p class="dest_discription">Big Ben is the nickname for the Great Bell of the striking clock at the north end of the Palace of Westminster</p>
+											<h4 id="card_name" class="dest_name">BIG BEN</h4>
+											<p id="card_details" class="dest_discription">Big Ben is the nickname for the Great Bell of the striking clock at the north end of the Palace of Westminster</p>
 										</div>
 										<div class="dest_favourite">
-											<i onclick="addToFavourites(this.id)"></i>
+											<i id="favouriteId" onclick="addToFavourites(this.id)" class="material-icons">
+											favorite_border
+											</i>
 										</div>
 									</div>
 								</div>
@@ -198,6 +200,8 @@
 						</li>
 					</div>
 				</div>
+
+				<div id="card_script_2"></div>
 			</ul>
 
 			<div class="favourite_buttons">
@@ -215,6 +219,7 @@
 			</div>
 		</div>
 
+		<?php include("success_popups.php"); ?>
 		<?php include("footer.php"); ?>
 		<?php include("navigation_bar.php"); ?>
 	</div>
