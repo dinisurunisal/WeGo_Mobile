@@ -18,7 +18,7 @@
 		<!-- Custom -->
 <!--		<script src="js/destination.js"></script>-->
         <style>
-            #treasure_hunt_page {
+            #treasure_hunt_game_page {
                 background-image:url(images/game/gameBackground.png);
                 background-position: center;
                 background-size: cover;
@@ -26,7 +26,7 @@
                 text-align: center;
             }
             
-            #treasure_hunt_page .game_name {
+            #treasure_hunt_game_page .game_name {
                 width: 130px;
             }
 
@@ -90,7 +90,7 @@
 	</head>
 
 	<body>
-		<div data-role="page" id="treasure_hunt_page">
+		<div data-role="page" id="treasure_hunt_game_page">
 			<!-- Header -->
 			<div role="main" class="game_content">
                 <div style="height: 30px"></div>
