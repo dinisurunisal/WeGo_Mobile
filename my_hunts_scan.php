@@ -16,7 +16,7 @@
 
         <!--    QR script-->
         <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-        <!-- <script type="text/javascript" src="js/qr_scanner.js"></script> -->
+        <script type="text/javascript" src="js/qr_scanner.js"></script>
 
         <style>
             @media only screen 
@@ -86,7 +86,7 @@
         </div> -->
     </body>
 
-    <script>
+    <!-- <script>
         let scanner = new Instascan.Scanner({video: document.getElementById('qr_scan')});
 
         Instascan.Camera.getCameras().then(function(cameras){
@@ -103,5 +103,5 @@
             alert (c);
             // popupwindow = window.("#my_hunts_feedback");
         });
-    </script>
+    </script> -->
 </html>
