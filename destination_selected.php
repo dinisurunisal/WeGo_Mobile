@@ -44,13 +44,19 @@
 				<div class="dest_sel_content_block">
 					<div class="dest_sel_internal_block">
 						<div class="dest_sel_heading">
-							<span class="dest_sel_heading_name" id="dest_sel_heading_name" style="margin-right: 20px;">London's Big Ben</span>
+							<span class="dest_sel_heading_name" id="dest_sel_heading_name">London's Big Ben</span>
 
 							<div class="dest_star_rating">
 								<div class="dest_star_chip">
 									<span id="dest_sel_star_score">4.4</span>
-									<i class="material-icons" style="font-size: 20px; vertical-align: -2px"> star </i>
+									<i class="material-icons"> star </i>
 								</div>
+							</div>
+
+							<div class="dest_sel_favourite">
+								<i id="favouriteId" onclick="addToFavourites(this.id)" class="material-icons">
+									favorite_border
+								</i>
 							</div>
 						</div>
 
@@ -141,9 +147,11 @@
 				</div>
 			</div>
 
-			<div role="main" class="ui-content" style="height: 450px;">
+			<div role="main" class="ui-content">
 		
 			</div>
+
+			<?php include("success_popups.php"); ?>
 
 
 			<?php include("footer.php"); ?>

@@ -86,7 +86,9 @@
 												</div>
 											</div>
 											<div class="dest_favourite">
-												<i onclick="addToFavourites(this.id)"></i>
+												<i id="favouriteId" onclick="addToFavourites(this.id)" class="material-icons">
+													favorite_border
+												</i>
 											</div>
 										</div>
 
@@ -108,6 +110,7 @@
 					<div id="card_script_2"></div>
 				</ul>
 
+				<?php include("success_popups.php"); ?>
 				
 			</div>
 

@@ -517,6 +517,62 @@ p2 {
 /* My Hunts Page
 ---------------------------------------------------------------------------------*/
 
+/* QR Scanner
+---------------------------------------------------------------------------------*/
+
+#scan_qr_page {
+    display: grid;
+    grid-template-columns: auto;
+    align-content: flex-start;
+}
+
+#scan_qr_page .scan_instructions {
+    padding: 24px;
+    background-color: #0174CF;
+    height: fit-content;
+}
+
+#scan_qr_page h2, #scan_qr_page p {
+    color: white;
+}
+
+#scan_qr_page .scan_bg {
+    width:-webkit-fill-available;
+    text-align:-webkit-center;
+    background-color:#404040;
+    height: -webkit-fill-available;
+}
+
+#scan_qr_page .scan_box {
+    border-radius: 8px;
+    text-align:center;
+    width:65vw;
+    height:65vw;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    padding-top: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 6px;
+    background: linear-gradient(180deg,#13ff00,rgba(0,0,128,0)) no-repeat 0% 0%,
+    linear-gradient(0deg,#13ff00,rgba(0,0,128,0)) no-repeat 0% 100%,
+    linear-gradient(180deg,#13ff00,rgba(0,0,128,0)) no-repeat 100% 0%,
+    linear-gradient(0deg,#13ff00,rgba(0,0,128,0)) no-repeat 100% 100%,
+    linear-gradient(90deg,#13ff00,rgba(0,0,128,0)) no-repeat 0% 0%,
+    linear-gradient(90deg,#13ff00,rgba(0,0,128,0)) no-repeat 0% 100%,
+    linear-gradient(-90deg,#13ff00,rgba(0,0,128,0)) no-repeat 100% 0%,
+    linear-gradient(-90deg,#13ff00,rgba(0,0,128,0)) no-repeat 100% 100%;
+    background-size: 6em 12px, 6em 12px, 6em 12px, 6em 12px, 12px 6em, 12px 6em, 12px 6em, 12px 6em;
+}
+
+#scan_qr_page #qr_scan {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    object-fit: fill;
+    padding: 8px;
+    background-color: #404040;
+}
+
 /* Booking
 ---------------------------------------------------------------------------------*/
 
