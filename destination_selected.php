@@ -147,7 +147,7 @@
 				</div>
 			</div>
 
-			<div role="main" class="ui-content" style="height: 450px;">
+			<div role="main" class="ui-content">
 		
 			</div>
 

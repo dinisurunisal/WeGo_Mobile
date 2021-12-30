@@ -144,6 +144,10 @@
     text-align: justify;
 }
 
+.destination_page .ui-content {
+    height: 450px;
+}
+
 
 @media only screen
 and (min-device-width: 375px)
@@ -174,18 +178,31 @@ and (max-device-width: 667px) {
     }
 
     .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading {
+        width: 80%;
         margin-top: 20px;
         margin-bottom: 20px;
-        /* height: 50px; */
     }
 
     .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading #dest_sel_heading_name {
         font-size: 20px;
-        margin-left: 5px;
+        margin-left: 20px;
+        margin-right: 15px;
     }
 
     .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_sel_favourite {
-        top: 0;
+        top: 8px;
+        right: 15px;
+        position: absolute;
+        height:80px;
+        margin:0 auto;
+    }
+
+    .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_sel_favourite i {
+        cursor:pointer;
+        padding: 10px 12px 8px;
+        box-shadow: 5px 5px 8px  #888888;
+        display:inline-block;
+        margin:0 0 15px;
     }
 
     .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_star_rating {
@@ -198,32 +215,30 @@ and (max-device-width: 667px) {
         vertical-align: -2px
     }
 
-    .dest_sel_content_block .dest_sel_internal_block .dest_sel_favourite {
-        top: 10px;
-        right: 15px;
-        position: absolute;
-        height:100px;
-        margin:0 auto;
+    .dest_sel_content_block .dest_sel_main_container #dest_sel_details_container .dest_top_table_elements tr {
+        width: 50%;
+        float: left;
     }
     
-    .dest_sel_content_block .dest_sel_internal_block .dest_sel_favourite i {
-        cursor:pointer;
-        padding: 10px 12px 8px;
-        background:#fff;
-        border-radius:50%;
-        border: 1px solid;
-        box-shadow: 5px 10px 8px  #888888;
-        border-color: rgb(128, 128, 128);
-        display:inline-block;
-        margin:0 0 15px;
-        color:rgb(238, 8, 8);
-        transition:.2s;
+    .dest_sel_content_block .dest_sel_buttons {
+        position: absolute;
+        top: 470px;
+        width: 30%;
+        right: -225px;
+    }
+
+    .dest_sel_content_block .dest_sel_buttons .book_btn {
+        font-size: 12px;
     }
 
     .dest_sel_content_block .dest_sel_description {
-        margin-top: 200px;
+        margin-top: 180px;
+        padding: 15px;
     }
-    
+
+    .destination_page .ui-content {
+        height: 650px;
+    }
     
 }
 
