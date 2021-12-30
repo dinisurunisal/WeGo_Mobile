@@ -57,6 +57,28 @@
     line-height: 20px;
 }
 
+.dest_sel_content_block .dest_sel_internal_block .dest_sel_favourite {
+    top: 10px;
+    right: 15px;
+    position: absolute;
+    height:100px;
+    margin:0 auto;
+}
+
+.dest_sel_content_block .dest_sel_internal_block .dest_sel_favourite i {
+    cursor:pointer;
+    padding: 10px 12px 8px;
+    background:#fff;
+    border-radius:50%;
+    border: 1px solid;
+    box-shadow: 5px 10px 8px  #888888;
+    border-color: rgb(128, 128, 128);
+    display:inline-block;
+    margin:0 0 15px;
+    color:rgb(238, 8, 8);
+    transition:.2s;
+}
+
 .dest_sel_content_block .dest_sel_main_container #dest_sel_image_container {
     width:60%;
     padding: 0px !important;

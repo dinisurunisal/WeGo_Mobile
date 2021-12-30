@@ -65,8 +65,6 @@ function onDestinationSelect(id) {
 
 function addToFavourites(id) {
 
-  console.log(id)
-
   if (!e) var e = window.event;
   e.cancelBubble = true;
   if (e.stopPropagation)
@@ -74,7 +72,6 @@ function addToFavourites(id) {
 
   var destination = defaultDestinationDB.find(obj => obj.destinationFavId === id);
   console.log(destination)
-  console.log(destination.isFavourite)
 
   if (destination.isFavourite == true) {
     document.getElementById(id).innerHTML = "favorite_border";
