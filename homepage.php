@@ -347,7 +347,7 @@
                     <div>
                         <h4 style="font-size: 20px;">Destination</h4>
                         <div>
-                            <button class="hp_button">See all</button>
+                            <button onclick="window.location.href='destination_list.php'" class="hp_button">See all</button>
                         </div>
                     </div>
                     <div>
@@ -385,7 +385,7 @@
                         <p>Book your train from here now</p>
                     </div>
                     <div>
-                        <button class="hp_button">Book</button>
+                        <button onclick="window.location.href='booking.php'" class="hp_button">Book</button>
                     </div>
                 </div>
 
@@ -395,7 +395,7 @@
                         <p>Play games to learn more about destinations and earn points</p>
                     </div>
                     <div>
-                        <button class="hp_button">Play</button>
+                        <button onclick="window.location.href='treasure_hunt.php'" class="hp_button">Play</button>
                     </div>
                 </div>
             </div>
