@@ -145,6 +145,48 @@
 
 					</div>
 				</div>
+
+				<div class="review_card_section">
+					<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0">
+						<div id="card_script_1">
+							<div id="screen-resolution-breakpoint">
+								<li>
+									<div class="dest_review_card">
+										<div style="position: relative;">
+											<img src="images/destinations/Big Ben.jpg" id="card_image" style="width:100%">
+											<div class="dest_content">
+												<h4 class="dest_name" id="card_name">Big Ben</h4>
+											</div>
+											<div class="dest_star_rating">
+												<div class="dest_star_chip">
+													<span id="card_star_score">4.4</span>
+													<i class="material-icons" style="font-size: 20px; vertical-align: -2px"> star </i>
+												</div>
+											</div>
+											<div class="dest_favourite">
+												<i id="favouriteId" onclick="addToFavourites(this.id)" class="material-icons">
+													favorite_border
+												</i>
+											</div>
+										</div>
+
+										<div class="card_description">
+											<div class="details_holder">
+												<h5 style='margin: 0px; color:black' id="card_details" class="card_details">
+												London's iconic national timepiece</h5>
+											</div>
+											<div class="price_holder">
+												<h2 style="margin-left: 35px; color:black" id="card_price" class="card_price"><b>$333</b> </h2>
+											</div>
+										</div>
+									</div>
+								</li>
+							</div>
+						</div>
+
+						<div id="card_script_2"></div>
+					</ul>
+				</div>
 			</div>
 
 			<div role="main" class="ui-content">

@@ -35,6 +35,25 @@ function loadData(){
     } else {
         document.getElementById(destination.destinationFavId).innerHTML = "favorite_border";
     }
+
+    for (var i = 0; i < destination.destinationReviews.length; i++) {
+      // document.getElementById("card_image").src = defaultDestinationDB[i].destinationImage;
+      // document.getElementById("card_name").innerHTML = defaultDestinationDB[i].destinationName;
+      // document.getElementById("card_details").innerHTML = defaultDestinationDB[i].destinationCardDetails;
+      // document.getElementById("card_price").innerHTML = dollarSign + defaultDestinationDB[i].price;
+      // document.getElementById("card_star_score").innerHTML = defaultDestinationDB[i].destinationRating;
+      // document.getElementById("kitchen-rating-script").innerHTML = (defaultDestinationDB[i].kitchenRatingTotal / defaultDestinationDB[i].kitchenRatingUserNumber).toFixed(1);
+  
+      $("#card_script_1").clone().appendTo("#card_script_2");
+    }
+
+    deleteDuplicateCards(); 
+}
+
+// Delete 'card_script_1'
+function deleteDuplicateCards() {
+  var id = document.getElementById("card_script_1");
+  id.parentNode.removeChild(id);
 }
 
 function addToFavourites(id) {
