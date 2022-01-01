@@ -104,7 +104,7 @@
 	float: right;
 }
 
-#my-hunts-page .form_button_container {
+/* #my-hunts-page .form_button_container {
 	display: grid !important;
 	grid-auto-flow: column;
 	justify-content: space-around;
@@ -137,7 +137,7 @@
 
 #my-hunts-page #my_hunts_feedback .cancel_btn {
 	color: #0174cf;
-}
+} */
 
 
 @media only screen

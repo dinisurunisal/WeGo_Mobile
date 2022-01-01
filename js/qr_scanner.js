@@ -1,4 +1,4 @@
-// let scanner = "";
+
 $(function initialization(){
     let scanner = new Instascan.Scanner({video: document.getElementById('qr_scan')});
     Instascan.Camera.getCameras().then(function(cameras){
@@ -12,9 +12,11 @@ $(function initialization(){
     });
     
     scanner.addListener('scan', function(c) {
-        alert (c);
+        // alert (c);
+        let feedbackLink = document.getElementById("feedback_link");
+        // document.getElementById("scan_qr_page").style.display = "none";
+        feedbackLink.click();
+        //  alert (c);
     });
 });
-
-// let scanner = new Instascan.Scanner({video: video2});
 

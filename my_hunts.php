@@ -163,29 +163,7 @@
     <!--                <h4 style="text-align: center; ">No locations hunted yet.</h4>-->
                 </div>
                 <!-- <a href="#my_hunts_feedback" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-position-to="window">Feedback</a> -->
-
-                <div data-role="popup" data-transition="pop" style="padding: 20px;" id="my_hunts_feedback" class="ui-content">
-                    <form id="form" onsubmit="event.preventDefault(); submitFeedback()">
-                        <h2>How was your experience?</h2>
-                        <p2>Let us know what you think</p2>
-    <!--                    <label class="labelform grey heading-five" for="password"> Rating </label>-->
-    
-                        <div id="star_rating_holder">
-                            <i id="star_rating_one" class="material-icons" style="font-size: 40px; color:red">star_border</i>
-                            <i id="star_rating_two" class="material-icons" style="font-size: 40px; color:red">star_border</i>
-                            <i id="star_rating_three" class="material-icons" style="font-size: 40px; color:red">star_border</i>
-                            <i id="star_rating_four" class="material-icons" style="font-size: 40px; color:red">star_border</i>
-                            <i id="star_rating_five" class="material-icons" style="font-size: 40px; color:red">star_border</i>
-                        </div>
-   
-                        <!-- <img src="images/fourStars.png" style="width: 70%; padding: 8px 0 8px 0;"> -->
-                        <textarea type="text" required name="comment" id="form_comment" class="formField" placeholder="Enter your comment here"></textarea>
-                        <div class="form_button_container">
-                            <a data-rel="back"><button class="cancel_btn">Cancel</button></a>
-                            <button type="submit" class="submit_btn" data-role="button">Submit</button>
-                        </div>
-                    </form>
-                </div>
+                <?php include("my_hunts_feedback.php")?>
             </div>
             <div id="scan_qr_section">
                 <div class="scan_instructions">
