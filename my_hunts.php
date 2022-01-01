@@ -34,6 +34,7 @@
                 align-items: flex-end;
                 justify-content: space-between;
                 margin: 0px 12px;
+                z-index: 199;
             }
 
             #scan_qr_section .scan_instructions {
@@ -98,7 +99,7 @@
                         <div class="my_hunts_list" id="upcoming_my_hunts_list">
                             <div id="my_hunt_resolution_breakdown">
                                 <li>
-                                    <div class="my_hunts_card">
+                                    <div class="my_hunts_card" onclick="onDestinationSelect(this.id)">
                                         <div class="card_image_section">
                                             <img src="images/destinations/Big Ben.jpg" id="upcoming_hunt_card_image">
                                         </div>
@@ -130,7 +131,7 @@
                         <div class="my_hunts_list" id="past_my_hunts_list">
                             <div id="my_hunt_resolution_breakdown">
                                 <li>
-                                    <div class="my_hunts_card">
+                                    <div class="my_hunts_card" onclick="onDestinationSelect(this.id)">
                                         <div class="card_image_section">
                                             <img src="images/destinations/Big Ben.jpg" id="past_hunt_card_image">
                                         </div>

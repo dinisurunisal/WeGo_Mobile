@@ -1,19 +1,13 @@
 <style>
-<?php
-include_once("css/style.css");
-    include_once("jquery-theme/themes/theme.css");
-?>
+    <?php include_once("css/style.css"); include_once("jquery-theme/themes/theme.css");?>
 </style>
 
 <script src="js/footer_script.js"></script>
 
 <div id="page_footer">
-    <div class="footer_content">
-        <div onclick="topFunction()" title="Go to top" id="to_top_button">
-            <img src="images/icons/toTop.png"/ alt="scrollUp">
-        </div>
+    <div onclick="topFunction()" title="Go to top" id="to_top_button">
+        <img src="images/icons/toTop.png" alt="scrollUp"/>
     </div>
-    <br>
     <div class="footer_content">
         <div><a class="footer_links">About Us</a></div>
         <div><a class="footer_links">Terms & Conditions</a></div>
