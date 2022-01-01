@@ -149,7 +149,7 @@
 				<div class="review_card_section">
 					<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0">
 						<div id="card_script_1">
-							<div id="screen-resolution-breakpoint">
+							<div id="review-card-resolution-breakpoint">
 								<li>
 									<div class="dest_review_card">
 										<div style="position: relative;">

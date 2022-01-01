@@ -161,7 +161,7 @@
     padding: 20px;
 }
 
-#screen-resolution-breakpoint {
+#review-card-resolution-breakpoint {
     width: 50%;
     float: left;
 }
@@ -298,12 +298,31 @@ and (max-device-width: 667px) {
 and (min-device-width: 768px)
 and (max-device-width: 850px) {
 
+    .review_card_section {
+        top: 700px;
+    }
+
     .dest_background_image img{
         height: 380px;
         width: 100%;
         object-fit: cover;
     }
 
+}
+
+@media only screen
+	and (min-device-width: 812px)
+	and (max-device-width: 900px) {
+
+    .review_card_section {
+        top: 700px;
+    }
+
+    #review-card-resolution-breakpoint {
+        width: 100%;
+        float: left;
+    }
+	
 }
 
 @media only screen and (min-device-width: 1024px) {
