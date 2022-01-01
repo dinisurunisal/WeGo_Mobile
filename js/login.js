@@ -60,7 +60,7 @@ function init() {
             localStorage.setItem("users", JSON.stringify(users));
         }
     } else {
-        showFailure("Your browser does not support Frese.");
+        showFailure("Your browser does not support WeGo.");
     }
 }
 
