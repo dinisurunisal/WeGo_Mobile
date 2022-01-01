@@ -13,7 +13,7 @@
     <div id="common_header_logo">
         <img id="logo_image" src="images/HeaderLogo.png" alt="WeGo logo"/>
     </div>
-    <div id="common_header_profile_icon">
-        <a href="profile.php"><img id="profile_image" src="images/user.png" alt="profile"/> </a>
+    <div id="common_header_profile_icon" onclick="window.location.href='profile.php'">
+        <img id="profile_image" src="images/user.png" alt="profile"/>
     </div>
 </div>
