@@ -102,9 +102,7 @@
                     <div>
                         <p id="treasure_hunt_duration" style="margin-top:2px; margin-bottom:2px">Walk 1 h</p>
                         <p id="treasure_hunt_status">Open now</p>
-                        <a href="treasure_hunt_game.php">
-                            <button id="game_button">Play Game</button>
-                        </a>
+                        <button id="game_button" onclick="window.location.href='treasure_hunt_game.php'">Play Game</button>
                     </div>
                 </div>
 			</div>

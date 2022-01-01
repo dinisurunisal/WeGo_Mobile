@@ -192,7 +192,7 @@
                     <p2>Found a hunt not in upcoming list? add the hunt to your hunts list</p2>
                 </div>
                 <div>
-                    <a href="my_hunts_scan.php"><button>Scan QR</button></a>
+                    <button onclick="window.location.href='my_hunts_scan.php'">Scan QR</button>
                 </div>
             </div>
             <?php include("footer.php"); ?>

@@ -1,7 +1,5 @@
 <style>
-<?php include_once("jquery-theme/themes/theme.css");
-include_once("css/style.css");
-?>
+    <?php include_once("jquery-theme/themes/theme.css"); include_once("css/style.css");?>
 </style>
 
 <script src="js/header_script.js"></script>
@@ -14,9 +12,7 @@ include_once("css/style.css");
                 <img id="logo_image" src="images/HeaderLogo.png" alt="WeGo logo"/>
             </div>
             <div id="home_header_profile_icon">
-                <a href="profile.php"  style="z-index: 105;">
-                    <img id="profile_image" src="images/user.png" alt="profile"/>
-                </a>
+                <img id="profile_image" src="images/user.png" alt="profile"/>
             </div>
         </legend>
         <div class="header_search">
@@ -27,6 +23,11 @@ include_once("css/style.css");
                 <button id="home_search_btn" onclick="headerSearchButtonFunction()">Search</button>
             </div>
         </div>
-    </div>   
+    </div>
+    <div>
+        <a id="profile_link" href="profile.php">
+            <img id="profile_image" src="images/user.png" alt="profile"/>
+        </a>
+    </div> 
 </div>
 

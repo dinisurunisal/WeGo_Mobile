@@ -47,6 +47,12 @@ p2 {
     z-index: 100;
 }
 
+#home_header #profile_link {
+    position: absolute;
+    right: 24px;
+    top: 15px;
+}
+
 #header_collapsible .ui-collapsible-heading{
 	background: white;
 	border-bottom-color: #c4c4c4;
@@ -805,5 +811,5 @@ and (max-device-width: 1024px) {
 /* Media Query for Macs */
 
 @media only screen and (min-width: 1300px) {
-
+    
 }
