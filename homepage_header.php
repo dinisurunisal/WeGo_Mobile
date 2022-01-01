@@ -25,9 +25,9 @@
         </div>
     </div>
     <div>
-        <a id="profile_link" href="profile.php">
+        <div id="profile_link" onclick="window.location.href='profile.php'">
             <img id="profile_image" src="images/user.png" alt="profile"/>
-        </a>
+        </div>
     </div> 
 </div>
 
