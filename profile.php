@@ -23,7 +23,7 @@
 		<!-- Custom -->
 		<!-- <script src="js/destination.js"></script> -->
 
-		<script type="text/javascript" src="js/profile.js"></script>
+		
 		<link rel="stylesheet" href="css/profile.css">
 
 
@@ -107,10 +107,10 @@
                 <h3 class="heading-three" style="text-align:center;">Give Us your Feedback</h3>
                 <label class="labelform grey heading-five" for="feedbackForm"> Feedback</label>
                 <input type="text" required name="name" id="feedbackForm" class="formField" />
-				<div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
-					<button id="sendBtn" onclick="closeFeedbackPopup();"  class="button_popup" data-role="none">Cancel</button>
-					<button id="cancelBtn" type="submit" class="button_popup" data-role="none">Send</button>
-				</div>
+					<div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
+						<button id="cancelBtn" onclick="closeFeedbackPopup();"  class="button_popup" data-role="none">Cancel</button>
+						<button id="sendBtn" type="submit" class="button_popup" data-role="none">Send</button>
+					</div>
             </form>
         	</div>
 
@@ -118,8 +118,11 @@
 				<iframe src="https://www.youtube.com/embed/9g8sfVsl2GU" frameborder="0" allowfullscreen></iframe>
 			</div>
 
+			<?php include("success_popups.php");?>
 			<?php include("footer.php"); ?>
 			<?php include("navigation_bar.php"); ?>
 		</div>
+
+		<script type="text/javascript" src="js/profile.js"></script>
 	</body>
 </html>

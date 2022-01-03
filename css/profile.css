@@ -32,7 +32,7 @@
 
 
 .edit_logout_bar{
-    background-color:#0099e6;
+    background-color:#0174cf;
     width:100%;
     padding: 5px 5px 5px 5px;
     margin-top:-22px;
@@ -66,8 +66,8 @@
     width:341px;
     height:85px;
     border-radius:6px;
-    border-color:#0099e6;
-    background-color:#0099e6;
+    border-color:#0174cf;
+    background-color:#0174cf;
     margin:10px;
     color:white;
 
@@ -94,13 +94,13 @@
 }
 
 #sendBtn{
-    color:#0099e6;
-    background-color: white;
+    color:white;
+    background-color: #0174cf;
 }
 
 #cancelBtn{
-    color:white;
-    background-color:#0099e6 ;
+    color:#0174cf;
+    background-color: white;
 }
 
 @media only screen and (max-device-width: 375px) {
@@ -122,6 +122,8 @@
 .data_child{
     flex:1;
     margin: 10px;
+    padding-left: 20px;
+    text-align: left;
 }
 #data_name{
     font-weight: bold;
