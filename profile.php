@@ -8,7 +8,7 @@
 
 		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> -->
-		<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
+		<!-- <link rel="stylesheet" href="css/themes/my-custom-theme.css" /> -->
 		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
 		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
 
@@ -17,142 +17,15 @@
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 		<!-- Custom -->
 		<!-- <script src="js/destination.js"></script> -->
 
-		<style>
-			.top_banner{
-				margin-top:44px;
-				margin-left:-16px;
-				margin-right:-16px;
-				position: relative;
-			}
-			#background{
-				height:200px;
-				width:100%;
-				object-fit:fill;
-				position: relative;
-				
-			}
-			#profile{
-				height:70px;
-				width:70px;
-				object-fit:fill;
-				position: absolute;
+		<script type="text/javascript" src="js/profile.js"></script>
+		<link rel="stylesheet" href="css/profile.css">
 
-				margin:auto;
-				display:block;
-				border-radius: 50%;
-				left: 0;
-    			top: 0;
-   				right: 0;
-   				bottom: 0;
-			}
-			.edit_logout_bar{
-				background-color:#0099e6;
-				width:100%;
-				padding: 5px 5px 5px 5px;
-				margin-top:-22px;
-			}
-			#flex_container{
-				display: flex;
-			}
-			#flex_child{
-				flex:1;
-			}
-			.user_data_r1{
-				text-align:center;
-				display: flex;
-				flex-direction: row;
-			}
-			.user_data_r2{
-				text-align:center;
-				display: flex;
-				flex-direction: row;
-			}
-			.button_container{
-				display:flex;
-				justify-content: space-around;
-				flex-direction:row;
-			}
-			.button{
-				width:341px;
-				height:85px;
-				border-radius:12px;
-				border-color:#0099e6;
-				background-color:#0099e6;
-				margin:10px;
-				color:white;
-			}
-			@media (max-width: 375px) {
-				.button_container{
-					flex-direction: column;
-				}
-				.user_data_r1{
-
-					flex-direction: column;
-				}
-				.user_data_r2{
-
-					flex-direction: column;
-				}
-
-			}
-			.data{
-				display:flex;
-				flex: 1;
-			}
-			.data_child{
-				flex:1;
-				margin: 10px;
-			}
-			#data_name{
-				font-weight: bold;
-			}
-
-			#profile_page .profile_video {
-				left: 0; 
-				right: 0; 
-				margin-left: auto; 
-				margin-right: auto; 
-				width: 85%; /* Need a specific value to work */
-				object-fit: cover;
-			}
-
-			#profile_page .profile_video iframe {
-				width: 660px;
-				height: 340px;
-			}
-
-			@media only screen
-			and (min-device-width: 375px)
-			and (max-device-width: 667px) {
-				#profile_page .profile_video iframe {
-					width: 320px;
-					height: 200px;
-				}
-				
-			}
-
-			@media only screen
-			and (min-device-width: 812px)
-			and (max-device-width: 850px) {
-				#profile_page .profile_video iframe {
-					width: 690px;
-					height: 315px;
-				}
-			}
-
-			@media only screen and (min-device-width: 1024px) {
-				#profile_page .profile_video iframe {
-					width: 870px;
-					height: 415px;
-				}
-			}
-
-
-
-		</style>
 
 
 	</head>
@@ -195,7 +68,7 @@
 				</div>
 				<div class="user_data_r2">
 					<div class="data">
-						<div class="data_child" id="data_name">contanct no</div>
+						<div class="data_child" id="data_name">contact no</div>
 						<div class="data_child">5846545</div>
 					</div>
 					<div class="data">
@@ -206,11 +79,40 @@
 			</div>
 
 			<div class="button_container">
-				<div><button class="button" data-role="none">Favourite List</button></div>
-				<div><button class="button" data-role="none">Send Feedback</button></div>
-				
-				
+				<div class="center">
+					<button class="button" data-role="none">
+						<span class="button_icon">
+						<ion-icon name="heart-outline"></ion-icon>
+						</span>
+						<span class="button_text">
+							Favourite List
+						</span>
+					</button>
+				</div>
+				<div class="center">
+					<button class="button" data-role="none" onclick="showFeedbackPopup();" data-ajax="false">
+						<span class="button_icon">
+						<ion-icon name="chatbox-outline"></ion-icon>
+						</span>
+						<span class="button_text">
+							Send Feedback
+						</span>
+					</button>
+				</div>	
 			</div>
+
+			<div data-role="popup" data-position-to="window" data-transition="pop" class="popup" style="padding: 20px;"
+            id="feedbackPopup">
+            <form id="formProfile" onsubmit="event.preventDefault(); sendFeedback()">
+                <h3 class="heading-three" style="text-align:center;">Give Us your Feedback</h3>
+                <label class="labelform grey heading-five" for="feedbackForm"> Feedback</label>
+                <input type="text" required name="name" id="feedbackForm" class="formField" />
+				<div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
+					<button id="sendBtn" onclick="closeFeedbackPopup();"  class="button_popup" data-role="none">Cancel</button>
+					<button id="cancelBtn" type="submit" class="button_popup" data-role="none">Send</button>
+				</div>
+            </form>
+        	</div>
 
 			<div class="profile_video">
 				<iframe src="https://www.youtube.com/embed/9g8sfVsl2GU" frameborder="0" allowfullscreen></iframe>
