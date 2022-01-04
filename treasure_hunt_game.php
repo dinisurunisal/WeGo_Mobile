@@ -16,7 +16,7 @@
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 		<!-- Custom -->
-<!--		<script src="js/destination.js"></script>-->
+		<script src="js/image_puzzle.js"></script>
         <style>
             #treasure_hunt_game_page {
                 background-image:url(images/game/gameBackground.png);
@@ -51,6 +51,76 @@
                 max-width: 280px;
             }
             
+            #collage hr{
+                border:none;
+                border-top:2px solid #f5f2f2;
+                height:1px;
+            }
+
+            #collage #playPanel {
+                background-color:#c2defc;
+                padding:10px 0px;
+                margin: 10px auto;
+                max-width:800px;
+                width:95%;
+            }
+
+            #collage #actualImageBox {
+                display: inline-block;
+                font-size:0.8em;
+                margin: 10px 10px;
+                vertical-align: top;
+                width:280px;
+            }
+
+            #collage #stepBox, #collage #timeBox {
+                display:inline-block;
+                width:100%;
+            }
+
+            #collage #stepBox div {
+                background-color:#c2defc;
+                display:inline-block;
+                padding:1px 4px;
+                margin: 0px auto;
+                max-width:800px;
+            }
+
+            #collage img#actualImage{
+                border:2px solid #a46;
+                height:280px;
+                width:280px;
+            }
+
+            #collage #sortable {
+                border:2px solid #a46;
+                list-style-type: none;
+                display: inline-block;
+                margin: 10px;
+                padding: 0;
+                width: 400px;
+            }
+
+            #collage #sortable li {
+                background-size: 400% 400%;
+                border: none;
+                cursor: pointer;
+                margin: 0;
+                padding: 0;
+                float: left;
+                width: 100px;
+                height: 100px;
+            }
+
+            #collage button  {
+                background-color:#f5f2f2;
+                border:1px solid #cce;
+                display: inline;
+                font-size: 14px;
+                height: auto;
+                width: auto;
+                padding: 3px 8px;
+            }
 
             .game_exit_btn {
                 width: 70px !important;
@@ -86,7 +156,6 @@
                     }
                 }
         </style>
-
 	</head>
 
 	<body>
@@ -98,8 +167,23 @@
                     <img class="game_name" src="images/game/gameHeading.png">
                 </div>
                 <div id="game_area">
-                    <div>
-                        <img src="images/destinations/Big%20Ben.jpg" alt="game"  style="width: 100%; height: 100%;">
+                    <div style="display:inline-block; margin:auto; width:100%; vertical-align:top;">
+                        <ul id="sortable" class="sortable"></ul>
+                        <!-- <table style="height: 100%; width: 100%; text-align: center; color: white;">
+                            <tr>
+                                <td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td></td><td></td><td></td>
+                            </tr>
+                        </table> -->
+                        <!-- <img src="images/destinations/Big%20Ben.jpg" alt="game"  style="width: 100%; height: 100%;"> -->
                     </div>
                 </div>
                 <div id="game_info">
@@ -112,5 +196,36 @@
                 </div>
 			</div>
 		</div>
+        <script>
+            // var l = [1, 2, 3, 4, 5, 6, 7, 8, 0];
+
+            // function drawPuzzle() {
+            //     for(i=0; i<9; i++) {
+            //         document.getElementsByTagName('td')[i].innerHTML = l[i];
+            //     }
+            // }
+
+            var images = [
+                { src: 'images/destinations/Big%20Ben.jpg', title: 'Tigers Nest Temple, Bhutan' }
+            ];
+
+            $(function () {
+                var gridSize = 3;
+                imagePuzzle.startGame(images, gridSize);
+
+                // $('#newPhoto').click(function () {
+                //     imagePuzzle.startGame(images, gridSize);
+                // });
+
+                // $('#levelPanel :radio').change(function (e) {
+                //     var gridSize = $(this).val();
+                //     imagePuzzle.startGame(images, gridSize);
+                // });
+            });
+
+            // function rules() {
+            //     alert('Rearrange the pieces so that you get a sample image. \nThe steps taken are counted');
+            // }
+        </script>
 	</body>
 </html>
