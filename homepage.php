@@ -17,7 +17,7 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-    <script type="text/javascript" src="js/carousel.js"></script>
+    <script type="text/javascript" src="js/homepage.js"></script>
 
     <style>
         .home {
@@ -32,22 +32,27 @@
         .carousel {
             align-items: center;
             display: flex;
-            margin: 2rem auto;
+            /* margin: 2rem auto; */
             overflow: hidden;
             position: relative;
+            height: 30vh;
         }
 
-        .carousel__images {
+        .carousel_images {
+            height: 100%;
             display: flex;
             transform: translateX(0);
             transition: transform 0.25s;
         }
 
-        .carousel__images img {
-            border-radius: 5px;
+        .carousel_images img {
+            /* border-radius: 5px; */
+            height: -webkit-fill-available;
+            width: 100vw;
+            object-fit: cover;
         }
 
-        .carousel__button {
+        .carousel_button {
             background: teal;
             border: 0;
             border-radius: 50%;
@@ -62,17 +67,17 @@
             z-index: 1;
         }
 
-        .carousel__button.previous {
+        .carousel_button.previous {
             width: 30px;
             left: 5px;
         }
 
-        .carousel__button.next {
+        .carousel_button.next {
             width: 30px;
             right: 5px;
         }
 
-        .carousel__button:hover {
+        .carousel_button:hover {
             opacity: 0.5;
         }
 
@@ -179,13 +184,13 @@
             }
 
         @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-            .posters img {
+            /* .posters img {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-            }
+            } */
 
-            .posters .carousel__button {
+            .posters .carousel_button {
                 border-radius: 50%;
                 padding-left: 3%;
                 padding-right: 6%;
@@ -198,16 +203,17 @@
             #thumbnail_list_small .thumbnail_content {
                 height: 200px;
             }
+
         }
 
         @media only screen and (min-device-width: 768px) and (max-device-width: 850px) {
-            .posters img {
+            /* .posters img {
                 height: 380px;
                 width: 100%;
                 object-fit: cover;
-            }
+            } */
 
-            .posters .carousel__button {
+            .posters .carousel_button {
                 border-radius: 50%;
                 padding-left: 3%;
                 padding-right: 5%;
@@ -223,13 +229,13 @@
         }
 
         @media only screen and (min-device-width: 1024px) {
-            .posters img {
+            /* .posters img {
                 height: 450px;
                 width: 100%;
                 object-fit: cover;
-            }
+            } */
 
-            .posters .carousel__button {
+            .posters .carousel_button {
                 border-radius: 50%;
                 padding-left: 2%;
                 padding-right: 3%;
@@ -254,13 +260,12 @@
         <div class="home">
             <div class="posters">
                 <div class="carousel">
-                    <button class="carousel__button previous" id="previous">
-                        < </button>
-                            <div class="carousel__images">
-                                <img src="images/homepage/Iphone1.jpg" alt="poster1">
-                                <img src="images/homepage/Iphone2.jpg" alt="poster2">
+                    <button class="carousel_button previous" id="c_previous" onclick="carouselMove(this.id)"> < </button>
+                            <div class="carousel_images" style="transform: translateX(0vw);">
+                                <img src="images/homepage/Iphone1.jpg" alt="">
+                                <img src="images/homepage/Iphone2.jpg" alt="">
                             </div>
-                            <button class="carousel__button next" id="next"> > </button>
+                    <button class="carousel_button next" id="c_next" onclick="carouselMove(this.id)"> > </button>
                 </div>
             </div>
 
@@ -281,37 +286,37 @@
                         </div>
                         <div id="thumbnail_list_small">
                             <div id="thumbnail_one" class="thumbnail_card">
-                                <a id="clickedId" onclick="onDestinationSelect(this.id)">
+                                <a id="clickedId" onclick="onDestinationSelect('destinationId1')">
                                     <div class="thumbnail_content">
-                                        <img src="images/destinations/Big Ben.jpg" class="thumbnail_image">
-                                        <h3 class="thumbnail_name">BIG BEN</h3>
+                                        <img src="images/destinations/Big Ben.jpg" class="thumbnail_image" id="thumbnail_image_one">
+                                        <h3 class="thumbnail_name" id="thumbnail_name_one">BIG BEN</h3>
                                     </div>
                                 </a>
                             </div>
 
                             <div id="thumbnail_two" class="thumbnail_card">
-                                <a id="clickedId" onclick="onDestinationSelect(this.id)">
+                                <a id="clickedId" onclick="onDestinationSelect('destinationId2')">
                                     <div class="thumbnail_content">
-                                        <img src="images/destinations/Cotswolds.jpg" class="thumbnail_image">
-                                        <h3 class="thumbnail_name">COTSWOLDS</h3>
+                                        <img src="images/destinations/Cotswolds.jpg" class="thumbnail_image" id="thumbnail_image_two">
+                                        <h3 class="thumbnail_name" id="thumbnail_name_two">COTSWOLDS</h3>
                                     </div>
                                 </a>
                             </div>
 
                             <div id="thumbnail_three" class="thumbnail_card">
-                                <a id="clickedId" onclick="onDestinationSelect(this.id)">
+                                <a id="clickedId" onclick="onDestinationSelect('destinationId3')">
                                     <div class="thumbnail_content">
-                                        <img src="images/destinations/York Minster.jpg" class="thumbnail_image">
-                                        <h3 class="thumbnail_name">YORK MINSTER</h3>
+                                        <img src="images/destinations/York Minster.jpg" class="thumbnail_image" id="thumbnail_image_three">
+                                        <h3 class="thumbnail_name" id="thumbnail_name_three">YORK MINSTER</h3>
                                     </div>
                                 </a>
                             </div>
 
                             <div id="thumbnail_four" class="thumbnail_card">
-                                <a id="clickedId" onclick="onDestinationSelect(this.id)">
+                                <a id="clickedId" onclick="onDestinationSelect('destinationId4')">
                                     <div class="thumbnail_content">
-                                        <img src="images/destinations/Buckingham Palace.jpg" class="thumbnail_image">
-                                        <h3 class="thumbnail_name">BUCKINGHAM PALACE</h3>
+                                        <img src="images/destinations/Buckingham Palace.jpg" class="thumbnail_image" id="thumbnail_image_four">
+                                        <h3 class="thumbnail_name" id="thumbnail_name_four">BUCKINGHAM PALACE</h3>
                                     </div>
                                 </a>
                             </div>
