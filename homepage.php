@@ -32,22 +32,27 @@
         .carousel {
             align-items: center;
             display: flex;
-            margin: 2rem auto;
+            /* margin: 2rem auto; */
             overflow: hidden;
             position: relative;
+            height: 30vh;
         }
 
-        .carousel__images {
+        .carousel_images {
+            height: 100%;
             display: flex;
             transform: translateX(0);
             transition: transform 0.25s;
         }
 
-        .carousel__images img {
-            border-radius: 5px;
+        .carousel_images img {
+            /* border-radius: 5px; */
+            height: -webkit-fill-available;
+            width: 100vw;
+            object-fit: cover;
         }
 
-        .carousel__button {
+        .carousel_button {
             background: teal;
             border: 0;
             border-radius: 50%;
@@ -62,17 +67,17 @@
             z-index: 1;
         }
 
-        .carousel__button.previous {
+        .carousel_button.previous {
             width: 30px;
             left: 5px;
         }
 
-        .carousel__button.next {
+        .carousel_button.next {
             width: 30px;
             right: 5px;
         }
 
-        .carousel__button:hover {
+        .carousel_button:hover {
             opacity: 0.5;
         }
 
@@ -179,13 +184,13 @@
             }
 
         @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-            .posters img {
+            /* .posters img {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-            }
+            } */
 
-            .posters .carousel__button {
+            .posters .carousel_button {
                 border-radius: 50%;
                 padding-left: 3%;
                 padding-right: 6%;
@@ -198,16 +203,17 @@
             #thumbnail_list_small .thumbnail_content {
                 height: 200px;
             }
+
         }
 
         @media only screen and (min-device-width: 768px) and (max-device-width: 850px) {
-            .posters img {
+            /* .posters img {
                 height: 380px;
                 width: 100%;
                 object-fit: cover;
-            }
+            } */
 
-            .posters .carousel__button {
+            .posters .carousel_button {
                 border-radius: 50%;
                 padding-left: 3%;
                 padding-right: 5%;
@@ -223,13 +229,13 @@
         }
 
         @media only screen and (min-device-width: 1024px) {
-            .posters img {
+            /* .posters img {
                 height: 450px;
                 width: 100%;
                 object-fit: cover;
-            }
+            } */
 
-            .posters .carousel__button {
+            .posters .carousel_button {
                 border-radius: 50%;
                 padding-left: 2%;
                 padding-right: 3%;
@@ -254,13 +260,12 @@
         <div class="home">
             <div class="posters">
                 <div class="carousel">
-                    <button class="carousel__button previous" id="previous">
-                        < </button>
-                            <div class="carousel__images">
-                                <img src="images/homepage/Iphone1.jpg" alt="poster1">
-                                <img src="images/homepage/Iphone2.jpg" alt="poster2">
+                    <button class="carousel_button previous" id="c_previous" onclick="carouselMove(this.id)"> < </button>
+                            <div class="carousel_images" style="transform: translateX(0vw);">
+                                <img src="images/homepage/Iphone1.jpg" alt="">
+                                <img src="images/homepage/Iphone2.jpg" alt="">
                             </div>
-                            <button class="carousel__button next" id="next"> > </button>
+                    <button class="carousel_button next" id="c_next" onclick="carouselMove(this.id)"> > </button>
                 </div>
             </div>
 
