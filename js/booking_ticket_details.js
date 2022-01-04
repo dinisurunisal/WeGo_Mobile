@@ -128,6 +128,7 @@ function getData() {
   routeFinishName = lastRecord.bbRouteFinishName;
   routeStartID = lastRecord.bbRouteStartID;
   routeStartName = lastRecord.bbRouteStartName;
+  routeType = lastRecord.bbRouteType;
 
   routeDuration = durationHours + ":" + durationMin + "0hr";
 
@@ -140,7 +141,7 @@ function getData() {
   document.getElementById("route_distance").innerHTML = distance;
 
   //second card
-  document.getElementById("ticket_type").innerHTML = "should do";
+  document.getElementById("ticket_type").innerHTML = routeType;
   document.getElementById("date_book").innerHTML = date;
   document.getElementById("number_passengers").innerHTML = passengers;
   for (var i = 0; i < POIs.length; i++) {
