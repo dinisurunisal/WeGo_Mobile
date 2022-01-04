@@ -21,6 +21,7 @@ $(document).on("pageinit", function () {
 var hunts;
 
 var POI = [];
+var routeType = "One Way";
 var routeStartID;
 var routeStartName;
 var routeFinishID;
@@ -43,6 +44,15 @@ function initPage() {
   console.log(tempBooking);
 }
 
+function selectRouteType(id) {
+  if (id == "oneway-btn"){
+    routeType = "One Way"
+  }
+  if (id == "roundtrip-btn"){
+    routeType = "Round Trip"
+  }
+}
+
 function bookOne() {
   var route = document.getElementById("select-native-1").value;
   var destinationOne = document.getElementById("checkbox-v-2b");
@@ -52,6 +62,7 @@ function bookOne() {
   var destinationFive = document.getElementById("checkbox-v-2f");
   var date = document.getElementById("datePicker").value;
   var passengers = document.getElementById("select-native-2").value;
+  var typeRoute = routeType
 
   if (destinationOne.checked == true) {
     destinationOne = true;
@@ -124,6 +135,7 @@ function bookOne() {
 
   var bookingTemp = {
     bbRoute: route,
+    bbRouteType: typeRoute,
     bbPOI: POI,
     bbRouteStartID: routeStartID,
     bbRouteStartName: routeStartName,

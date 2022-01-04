@@ -73,6 +73,7 @@
 	</script>
 
 	<style>
+
 		@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
 			.book .booking_details {
 				background-image: url("images/booking2.png");
@@ -286,6 +287,13 @@
 			</div>
 
 			<form id="form" onsubmit="event.preventDefault(); bookOne()">
+				<div data-role="navbar" class="toggle_book">
+                    <ul>
+                        <li><a id="oneway-btn" href="#" class="toggle_book-buttons ui-btn-active" onclick="selectRouteType(this.id)">One Way</a></li>
+                        <li><a id="roundtrip-btn" class="toggle_book-buttons" href="#" onclick="selectRouteType(this.id)">Round Trip</a></li>
+                    </ul>
+                </div>
+
 				<div class="booking_card">
 					<p>
 						Choose Route *
