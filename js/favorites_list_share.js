@@ -113,9 +113,9 @@ function closeEmailPopup() {
 function sendEmail() {
     var email = $("#emailFormShare").val();
     $("#sendBtn").html('Sending....')
-    var favourites = "Hey, here are my favourite kitchens on Gedarata FOOD.\nCheck them out:\n";
-    $.each(currentlySignedInUser.favouritesList, function (key, item) {
-        favourites += item.kitchenName + ",\n"
+    var favourites = "Hey, here are my favourite destinations that I found on WeGo.\nCheck them out:\n";
+    $.each(newFavouriteList, function (key, item) {
+        favourites += item.destinationName + ",\n"
     });
     jQuery.ajax({
         type: "POST",
@@ -127,7 +127,6 @@ function sendEmail() {
             $("#sendBtn").html('Send')
             showSuccess("Favourites Sent")
             closeEmailPopup();
-
         },
     }
     )
