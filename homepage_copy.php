@@ -28,19 +28,24 @@
             .carousel {
                 align-items: center;
                 display: flex;
-                margin: 2rem auto;
+                /* margin: 2rem auto; */
                 overflow: hidden;
                 position: relative;
+                height: 30vh;
             }
 
             .carousel__images {
+                height: 100%;
                 display: flex;
                 transform: translateX(0);
                 transition: transform 0.25s;
             }
 
             .carousel__images img {
-                border-radius: 5px;
+                /* border-radius: 5px; */
+                height: -webkit-fill-available;
+                width: 100vw;
+                object-fit: cover;
             }
 
             .carousel__button {
@@ -70,6 +75,15 @@
 
             .carousel__button:hover {
                 opacity: 0.5;
+            }
+
+            .home_content {
+                background-color: #f6f6f6;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                margin-top: -12px;
+                padding: 12px 0px;
+                z-index: 100;
             }
 
             .hp_heading h1 {
@@ -139,7 +153,7 @@
                 float: right;
             }
 
-            #thumbnail_list_small {
+            #home_thumbnail_list {
                 height: fit-content;
                 display: grid;
                 grid-template-columns: 35vw 35vw;
@@ -148,18 +162,18 @@
                 padding-top: 4px;
             }
 
-            #thumbnail_list_small .thumbnail_card {
+            #home_thumbnail_list .list_card {
                 width: -webkit-fill-available;
             }
 
-            #thumbnail_list_small .thumbnail_content {
+            #home_thumbnail_list .thumbnail_content {
                 height: 180px;
                 text-align: center;
                 margin-top: 12px;
                 border-radius: 12px;
             }
 
-            #thumbnail_list_small .thumbnail_image {
+            #home_thumbnail_list .thumbnail_image {
                 height: 100%;
                 width: -webkit-fill-available;
                 object-fit: cover;
@@ -167,7 +181,7 @@
                 /* -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(40, 40, 40, 40)); */
             }
 
-            #thumbnail_list_small .thumbnail_name {
+            #home_thumbnail_list .thumbnail_name {
                 color: white;
                 margin: -50px 0px 0px 0px !important;
                 text-shadow: #404040 0px 0px 12px;
@@ -175,12 +189,32 @@
             }
 
             @media only screen and (max-device-height: 400px) {
-                #thumbnail_list_small {
+                #home_thumbnail_slider {
+                    display: none;
+                }
+
+                #home_thumbnail_list {
                     grid-template-columns: 20vw 20vw 20vw 20vw !important;
                 }
 
-                #thumbnail_list_small .thumbnail_content {
+                #home_thumbnail_list .thumbnail_content {
                     height: 200px;
+                }
+
+                .carousel {
+                    height: 65vh;
+                }
+            }
+
+            @media only screen and (max-device-width: 420px) {
+                #home_thumbnail_slider {
+                    display: none;
+                }
+            }
+
+            @media only screen and (min-device-width: 421px) and (min-device-height: 401px) {
+                #home_thumbnail_list {
+                    display: none;
                 }
             }
         </style>
@@ -191,19 +225,18 @@
         <div data-role="page" id="homePage">
             <?php include("homepage_header.php"); ?>
             <div class="home">
-                <div class="posters" style="height:240px;">
-                    <!-- <div class="carousel">
-                        <button class="carousel__button previous" id="previous">
-                            < </button>
+                <div class="posters">
+                    <div class="carousel">
+                        <button class="carousel__button previous" id="previous"> < </button>
                                 <div class="carousel__images">
                                     <img src="images/homepage/Iphone1.jpg" alt="poster1">
                                     <img src="images/homepage/Iphone2.jpg" alt="poster2">
                                 </div>
                                 <button class="carousel__button next" id="next"> > </button>
-                    </div> -->
+                    </div>
                 </div>
 
-                <div>
+                <div class="home_content">
                     <div class="hp_heading">
                         <h1>
                             Welcome!
@@ -218,8 +251,8 @@
                             <h3>Destination</h3>
                             <button onclick="window.location.href='destination_list.php'" id="see_all_btn" class="hp_button">See all</button>
                         </div>
-                        <div id="thumbnail_list_small">
-                            <div id="thumbnail_one" class="thumbnail_card">
+                        <div id="home_thumbnail_list">
+                            <div id="thumbnail_one" class="list_card">
                                 <a id="clickedId" onclick="onDestinationSelect(this.id)">
                                     <div class="thumbnail_content">
                                         <img src="images/destinations/Big Ben.jpg" class="thumbnail_image">
@@ -228,7 +261,7 @@
                                 </a>
                             </div>
 
-                            <div id="thumbnail_two" class="thumbnail_card">
+                            <div id="thumbnail_two" class="list_card">
                                 <a id="clickedId" onclick="onDestinationSelect(this.id)">
                                     <div class="thumbnail_content">
                                         <img src="images/destinations/Cotswolds.jpg" class="thumbnail_image">
@@ -237,7 +270,7 @@
                                 </a>
                             </div>
 
-                            <div id="thumbnail_three" class="thumbnail_card">
+                            <div id="thumbnail_three" class="list_card">
                                 <a id="clickedId" onclick="onDestinationSelect(this.id)">
                                     <div class="thumbnail_content">
                                         <img src="images/destinations/York Minster.jpg" class="thumbnail_image">
@@ -246,7 +279,7 @@
                                 </a>
                             </div>
 
-                            <div id="thumbnail_four" class="thumbnail_card">
+                            <div id="thumbnail_four" class="list_card">
                                 <a id="clickedId" onclick="onDestinationSelect(this.id)">
                                     <div class="thumbnail_content">
                                         <img src="images/destinations/Buckingham Palace.jpg" class="thumbnail_image">
@@ -255,6 +288,44 @@
                                 </a>
                             </div>
                         </div>
+                        <div id="home_thumbnail_slider">
+                            <div id="thumbnail_one" class="slider_card">
+                                <a id="clickedId" onclick="onDestinationSelect(this.id)">
+                                    <div class="thumbnail_content">
+                                        <img src="images/destinations/Big Ben.jpg" class="thumbnail_image">
+                                        <h3 class="thumbnail_name">BIG BEN</h3>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div id="thumbnail_two" class="slider_card">
+                                <a id="clickedId" onclick="onDestinationSelect(this.id)">
+                                    <div class="thumbnail_content">
+                                        <img src="images/destinations/Cotswolds.jpg" class="thumbnail_image">
+                                        <h3 class="thumbnail_name">COTSWOLDS</h3>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div id="thumbnail_three" class="slider_card">
+                                <a id="clickedId" onclick="onDestinationSelect(this.id)">
+                                    <div class="thumbnail_content">
+                                        <img src="images/destinations/York Minster.jpg" class="thumbnail_image">
+                                        <h3 class="thumbnail_name">YORK MINSTER</h3>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div id="thumbnail_four" class="slider_card">
+                                <a id="clickedId" onclick="onDestinationSelect(this.id)">
+                                    <div class="thumbnail_content">
+                                        <img src="images/destinations/Buckingham Palace.jpg" class="thumbnail_image">
+                                        <h3 class="thumbnail_name">BUCKINGHAM PALACE</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="home_small_card">
