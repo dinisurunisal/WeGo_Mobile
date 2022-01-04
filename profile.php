@@ -80,7 +80,7 @@
 
 			<div class="button_container">
 				<div class="center">
-					<button class="button" data-role="none">
+					<button class="button" data-role="none" onclick="location.href='favourites.php'" >
 						<span class="button_icon">
 						<ion-icon name="heart-outline"></ion-icon>
 						</span>
@@ -107,10 +107,12 @@
                 <h3 class="heading-three" style="text-align:center;">Give Us your Feedback</h3>
                 <label class="labelform grey heading-five" for="feedbackForm"> Feedback</label>
                 <input type="text" required name="name" id="feedbackForm" class="formField" />
+
 					<div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
 						<button id="cancelBtn" onclick="closeFeedbackPopup();"  class="button_popup" data-role="none">Cancel</button>
 						<button id="sendBtn" type="submit" class="button_popup" data-role="none">Send</button>
 					</div>
+
             </form>
         	</div>
 
