@@ -6,6 +6,7 @@ function showFeedbackPopup() {
 
 // close feedback popup
 function closeFeedbackPopup() {
+    showFailure("Are you sure?")
     $("#feedbackPopup").popup("close");
 
 }
