@@ -58,8 +58,8 @@
 			}
 
 			.dest_sel_internal_block .dest_sel_favourite {
-				top: 12px;
-				right: 20px;
+				top: 12px !important;
+				right: 20px !important;
 				position: absolute !important;
 				margin: 0 !important;
 				height: fit-content !important;
