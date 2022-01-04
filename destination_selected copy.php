@@ -47,23 +47,28 @@
 			}
 
 			.dest_sel_internal_block .dest_sel_favourite i {
-				padding: 10px 10px 8px !important;
+				padding: 5px 5px !important;
 				margin: 0px !important;
 				border: none !important;
     			box-shadow: 0px 0px 6px #404040 !important;
 			}
 
+			.dest_sel_heading .dest_star_rating {
+				margin-top: 0px !important;
+			}
+
 			.dest_sel_internal_block .dest_sel_favourite {
-				top: 12px !important;
-				right: 20px !important;
+				top: 12px;
+				right: 20px;
 				position: absolute !important;
 				margin: 0 !important;
+				height: fit-content !important;
 			}
 
 			.dest_sel_internal_block .dest_sel_heading {
 				width: -webkit-fill-available !important;
 				align-items: center !important;
-				margin-bottom: 12px !important;
+				margin-bottom: 20px !important;
 			}
 
 			.review_card_section {
@@ -144,6 +149,78 @@
 
 			.dest_replier_info p{
 				margin: 2px;
+			}
+
+			@media only screen
+				and (min-device-width: 375px)
+				and (max-device-width: 667px) {
+					.dest_sel_content_block {
+						margin: 0px !important;
+						padding: 0px !important;
+					}
+
+					.review_card_section h2 {
+						margin-left: 20px;
+					}
+			}
+
+			@media only screen
+				and (max-device-height: 500px) {
+					.dest_sel_content_block {
+						margin: 0px !important;
+						padding: 0px !important;
+					}
+
+					.review_card_section h2 {
+						margin-left: 20px;
+					}
+
+					#dest_sel_image_container {
+						width: 40% !important;
+					}
+
+					#dest_sel_image_container img {
+						/* height: 50% !important; */
+					}
+
+					.dest_sel_heading {
+						width: 60% !important;
+						position: absolute;
+						margin-left: 42%;
+						margin-top: 8px;
+						z-index: 2;
+					}
+
+					.dest_sel_favourite {
+						top: 0px !important;
+						right: 24px !important;
+					}
+
+					#dest_sel_details_container {
+						width: 60% !important;
+						margin-top: 24px;
+					}
+
+					.dest_side_texts {
+						width: -webkit-fit-available;
+					}
+
+					.dest_sel_buttons {
+						position: absolute;
+						right: 24px !important;
+						left: auto !important;
+						top: 62vh;
+						margin: 0px !important;
+					}
+
+					.dest_sel_description {
+						padding-left: 16px !important;
+						padding-right: 16px !important;
+					}
+
+					.dest_sel_description, .review_card_section {
+						margin: 24px 24px !important;
+					}
 			}
 
 		</style>
@@ -263,7 +340,7 @@
 
 							<div class="review_card_section">
 								<h2>Reviews</h2>
-								<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0">
+								<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0; display: inline-block;">
 									<div id="card_script_1" onclick="openReply()">
 										<div id="review-card-resolution-breakpoint">
 											<li>
