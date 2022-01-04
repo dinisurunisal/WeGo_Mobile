@@ -17,7 +17,7 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-    <script type="text/javascript" src="js/carousel.js"></script>
+    <script type="text/javascript" src="js/homepage.js"></script>
 
     <style>
         .home {
@@ -286,37 +286,37 @@
                         </div>
                         <div id="thumbnail_list_small">
                             <div id="thumbnail_one" class="thumbnail_card">
-                                <a id="clickedId" onclick="onDestinationSelect(this.id)">
+                                <a id="clickedId" onclick="onDestinationSelect('destinationId1')">
                                     <div class="thumbnail_content">
-                                        <img src="images/destinations/Big Ben.jpg" class="thumbnail_image">
-                                        <h3 class="thumbnail_name">BIG BEN</h3>
+                                        <img src="images/destinations/Big Ben.jpg" class="thumbnail_image" id="thumbnail_image_one">
+                                        <h3 class="thumbnail_name" id="thumbnail_name_one">BIG BEN</h3>
                                     </div>
                                 </a>
                             </div>
 
                             <div id="thumbnail_two" class="thumbnail_card">
-                                <a id="clickedId" onclick="onDestinationSelect(this.id)">
+                                <a id="clickedId" onclick="onDestinationSelect('destinationId2')">
                                     <div class="thumbnail_content">
-                                        <img src="images/destinations/Cotswolds.jpg" class="thumbnail_image">
-                                        <h3 class="thumbnail_name">COTSWOLDS</h3>
+                                        <img src="images/destinations/Cotswolds.jpg" class="thumbnail_image" id="thumbnail_image_two">
+                                        <h3 class="thumbnail_name" id="thumbnail_name_two">COTSWOLDS</h3>
                                     </div>
                                 </a>
                             </div>
 
                             <div id="thumbnail_three" class="thumbnail_card">
-                                <a id="clickedId" onclick="onDestinationSelect(this.id)">
+                                <a id="clickedId" onclick="onDestinationSelect('destinationId3')">
                                     <div class="thumbnail_content">
-                                        <img src="images/destinations/York Minster.jpg" class="thumbnail_image">
-                                        <h3 class="thumbnail_name">YORK MINSTER</h3>
+                                        <img src="images/destinations/York Minster.jpg" class="thumbnail_image" id="thumbnail_image_three">
+                                        <h3 class="thumbnail_name" id="thumbnail_name_three">YORK MINSTER</h3>
                                     </div>
                                 </a>
                             </div>
 
                             <div id="thumbnail_four" class="thumbnail_card">
-                                <a id="clickedId" onclick="onDestinationSelect(this.id)">
+                                <a id="clickedId" onclick="onDestinationSelect('destinationId4')">
                                     <div class="thumbnail_content">
-                                        <img src="images/destinations/Buckingham Palace.jpg" class="thumbnail_image">
-                                        <h3 class="thumbnail_name">BUCKINGHAM PALACE</h3>
+                                        <img src="images/destinations/Buckingham Palace.jpg" class="thumbnail_image" id="thumbnail_image_four">
+                                        <h3 class="thumbnail_name" id="thumbnail_name_four">BUCKINGHAM PALACE</h3>
                                     </div>
                                 </a>
                             </div>
