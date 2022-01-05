@@ -40,7 +40,7 @@ function loadData(){
     }
 
     for (var i = 0; i < destination.destinationReviews.length; i++) {
-      // document.getElementById("review_thumb_image").src = destination.destinationReviews[i].name;
+      document.getElementById("review_thumb_image").src = destination.destinationReviews[i].reviewerImage;
       document.getElementById("dest_reviewer_name").innerHTML = destination.destinationReviews[i].name;
       document.getElementById("dest_reviewer_count").innerHTML = destination.destinationReviews[i].reviewCount + ' Reviews';
       document.getElementById("dest_review_comment").innerHTML = destination.destinationReviews[i].reviewDescription;
