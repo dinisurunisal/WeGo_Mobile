@@ -3,7 +3,11 @@ var l = [];
 var boxNames = ["box1", "box2", "box3", "box4", "box5", "box6", "box7", "box8", "box9"];
 var n = 0;
 
-$(function initialization(){
+$(document).on("pageinit", function () {
+    initialize();
+});
+
+function initialize(){
     // do {
     //     ri = Math.floor(Math.random()*(g.length));
     //     r = g[ri];
@@ -18,7 +22,7 @@ $(function initialization(){
     l = [1,2,3,4,5,6,7,0,8];
 
     drawPuzzle();
-});
+}
 
 
 function drawPuzzle() {
@@ -101,5 +105,8 @@ function chkWin() {
     for(i=0; i<8; i++) {
         if(l[i]!=i+1) {a = 0;}
     }
-    if(a==1) {showSuccess('Game Completed')}
+
+    if(a==1) {
+        showSuccess('Game Completed')
+    }
 }
