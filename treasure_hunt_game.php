@@ -15,6 +15,10 @@
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.8.17/jquery-ui.min.js"></script>
+        <script src="jquery.ui.touch-punch.min.js"></script>
+
 		<!-- Custom -->
 		<script src="js/image_puzzle.js"></script>
         <style>
