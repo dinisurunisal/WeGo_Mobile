@@ -54,29 +54,14 @@
                 width: 70px !important;
             }
 
-            table {
-                background-color: white;
-                border-radius: 12px;
-                border-style: solid;
-                border-color: white;
-                border-width: medium;
-                border-spacing: 0px;
-                padding: 4px;
-            }
-
             td {
-                width: 80px !important;
-                height: 80px !important;
-                border-color: white;
-                border-style: solid;
-                border-width: medium;
-                padding: 0px;
-                border: 0px;
+                width: 80px;
+                height: 80px;
             }
 
             td img {
-                width: 94%;
-                height: 100%;
+                width: -webkit-fill-available;
+                height: -webkit-fill-available;
             }
             
             @media only screen 
@@ -122,21 +107,21 @@
                 <div id="game_area">
                     <div style="display:inline-block; margin:auto; width:100%; vertical-align:top;">
                         <!-- <ul id="sortable" class="sortable"></ul> -->
-                        <table cellpadding=0 cellspacing=0 style="height: fit-content; width: fit-content; text-align: center; color: white;">
+                        <table style="height: fit-content; width: fit-content; text-align: center; color: white;">
                             <tr>
-                                <td class="img_box" id="box1" onclick="boxClick(this.id)"></td>
-                                <td class="img_box" id="box2" onclick="boxClick(this.id)"></td>
-                                <td class="img_box" id="box3" onclick="boxClick(this.id)"></td>
+                                <td id="box1" onclick="boxClick(this.id)"></td>
+                                <td id="box2" onclick="boxClick(this.id)"></td>
+                                <td id="box3" onclick="boxClick(this.id)"></td>
                             </tr>
                             <tr>
-                                <td class="img_box" id="box4" onclick="boxClick(this.id)"></td>
-                                <td class="img_box" id="box5" onclick="boxClick(this.id)"></td>
-                                <td class="img_box" id="box6" onclick="boxClick(this.id)"></td>
+                                <td id="box4" onclick="boxClick(this.id)"></td>
+                                <td id="box5" onclick="boxClick(this.id)"></td>
+                                <td id="box6" onclick="boxClick(this.id)"></td>
                             </tr>
                             <tr>
-                                <td class="img_box" id="box7" onclick="boxClick(this.id)"></td>
-                                <td class="img_box" id="box8" onclick="boxClick(this.id)"></td>
-                                <td class="img_box" id="box9" onclick="boxClick(this.id)"></td>
+                                <td id="box7" onclick="boxClick(this.id)"></td>
+                                <td id="box8" onclick="boxClick(this.id)"></td>
+                                <td id="box9" onclick="boxClick(this.id)"></td>
                             </tr>
                         </table>
                         <!-- <img src="images/destinations/Big%20Ben.jpg" alt="game"  style="width: 100%; height: 100%;"> -->
@@ -153,5 +138,100 @@
 			</div>
             <?php include("success_popups.php"); ?>
 		</div>
+        <!-- <script>
+
+            var g = [1,2,3,4,5,6,7,8,0];
+            var l = [];
+            var boxNames = ["box1", "box2", "box3", "box4", "box5", "box6", "box7", "box8", "box9"];
+
+            var n = 0;
+
+            do {
+                ri = Math.floor(Math.random()*(g.length));
+                r = g[ri];
+
+                if(r!=-1) {
+                    l.push(r);
+                    g[ri] = -1;
+                    n+=1;
+                }
+
+            } while(n<9);
+
+
+            function drawPuzzle() {
+                for(i=0;i<9;i++) {
+                    document.getElementsByTagName('td')[i].innerHTML = '<img src="images/game/'+l[i]+'.jpg">';
+                }
+                chkWin();
+            }
+
+            function boxClick(id) {
+                
+                boxNumber = boxNames.indexOf(id);
+                emptyBoxNumber = l.indexOf(0);
+                
+                if(emptyBoxNumber == (boxNumber + 3)) {
+                    mvDown();
+                }
+
+                if(emptyBoxNumber == (boxNumber - 3)) {
+                    mvUp();
+                }
+
+                if((emptyBoxNumber == (boxNumber + 1)) & !(emptyBoxNumber == 0 || emptyBoxNumber == 3 || emptyBoxNumber == 6)) {
+                    mvRight();
+                }
+
+                if((emptyBoxNumber == (boxNumber - 1)) & !(emptyBoxNumber == 2 || emptyBoxNumber == 5 || emptyBoxNumber == 8))  {
+                    mvLeft();
+                }
+            }
+
+            function mvDown() {
+                i = l.indexOf(0);
+                j = i - 3;
+                t = l[i];
+                l[i] = l[j];
+                l[j] = t;
+                drawPuzzle();
+            }
+            function mvUp() {
+                i = l.indexOf(0);
+                j = i + 3;
+                t = l[i];
+                l[i] = l[j];
+                l[j] = t;
+                drawPuzzle();
+            }
+
+            function mvRight() {
+                i = l.indexOf(0);
+                j = i - 1;
+                t = l[i];
+                l[i] = l[j];
+                l[j] = t;
+                drawPuzzle();
+            }
+
+            function mvLeft() {
+                i = l.indexOf(0);
+                j = i + 1;
+                t = l[i];
+                l[i] = l[j];
+                l[j] = t;
+                drawPuzzle();
+            }
+
+            function chkWin() {
+                var a = 1;
+                for(i=0; i<8; i++) {
+                    if(l[i]!=i+1) {a = 0;}
+                }
+                if(a==1) {showSuccess('Game Completed')}
+            }
+
+            drawPuzzle();
+        </script> -->
 	</body>
 </html>
