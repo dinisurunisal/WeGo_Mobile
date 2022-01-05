@@ -1,3 +1,21 @@
+var currentlySignedInUser;
+
+$(document).on("pageinit",function(){
+    currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
+    populateUserFields();
+});
+
+function populateUserFields(){
+    $('#username_field').html(currentlySignedInUser.username);
+    $('#member_since_field').html(currentlySignedInUser.signupDate);
+    $('#contant_number_field').html(currentlySignedInUser.contant_number_field);
+    $('#email_field').html(currentlySignedInUser.email)
+}
+
+
+
+
+
 // open feedback popup
 function showFeedbackPopup() {
     $("#feedbackPopup").popup("open");
@@ -16,6 +34,8 @@ function sendFeedback() {
     $("#feedbackPopup").popup("close");
 
 }
+
+
 
 // document.getElementById("sendBtn").addEventListener("click", myFunction);
 

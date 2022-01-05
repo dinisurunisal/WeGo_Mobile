@@ -59,21 +59,21 @@
 				<div class="user_data_r1">
 					<div class="data">
 						<div class="data_child" id="data_name">First Name</div>
-						<div class="data_child">John watson</div>
+						<div class="data_child" id="username_field">John watson</div>
 					</div>
 					<div class="data">
 						<div class="data_child" id="data_name">member since</div>
-						<div class="data_child">4th july 1998</div>
+						<div class="data_child" id="member_since_field">4th july 1998</div>
 					</div>
 				</div>
 				<div class="user_data_r2">
 					<div class="data">
 						<div class="data_child" id="data_name">contact no</div>
-						<div class="data_child">5846545</div>
+						<div class="data_child" id="contant_number_field">5846545</div>
 					</div>
 					<div class="data">
 						<div class="data_child" id="data_name">E-mail</div>
-						<div class="data_child">sample@gmail.com</div>
+						<div class="data_child" id="email_field">sample@gmail.com</div>
 					</div>
 				</div>
 			</div>
