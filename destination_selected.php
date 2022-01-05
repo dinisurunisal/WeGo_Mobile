@@ -151,8 +151,8 @@
 												<div class="dest_reviewer">
 													<img src="images/reviewer1.jpg" id="review_thumb_image">
 													<div class="dest_reviewer_info">
-														<p>Sherlock Holmes</p>
-														<p2>133 Reviews</p2> 
+														<p id="dest_reviewer_name">Sherlock Holmes</p>
+														<p2 id="dest_reviewer_count">133 Reviews</p2> 
 													</div>
 												</div>
 												<div class="dest_reviewer_raiting">
@@ -165,12 +165,17 @@
 													</div>
 													<p2>3 days ago</p2>
 												</div>
-												<p class="dest_review_comment">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
+												<p class="dest_review_comment" id="dest_review_comment">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
 												<div class="dest_review_reply">
-													<div  class="reply_btn">
+													<!-- <div class="reply_btn" id="destReviewId" onclick="onReplyClick(this.id)">
 														<p>Reply</p>
+													</div> -->
+													<div class="reply_btn" id="destReviewId" onclick="onReplyClick(this.id)">
+														<a href="#destination_reply" data-rel="popup" data-transition="pop" data-position-to="window">
+															<button class="feedback_btn"><p>Reply</p></button>
+														</a>  
 													</div>
-													<div class="des_reply">
+													<div id="des_reply">
 														<div class="dest_replier">
 															<img src="images/reviewer1.jpg" id="review_thumb_image">
 															<div class="dest_replier_info">
@@ -196,6 +201,7 @@
 					</div>
 				</div>
 
+				<?php include("destination_reply.php")?>
 			</div>
 
 			<!-- <div role="main" class="ui-content">

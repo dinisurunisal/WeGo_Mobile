@@ -119,6 +119,7 @@
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
+    margin-top: 20px;
     width: 20%;
 }
 
@@ -140,7 +141,7 @@
 
 .dest_sel_content_block .review_card_section {
     position: relative ;
-    padding: 20px 0px !important;
+    padding: 5px 0px !important;
 }
 
 .dest_sel_content_block .review_card_section #review-card-resolution-breakpoint {
@@ -203,7 +204,7 @@
     margin: 0px !important;
 }
 
-.review_card_section .dest_review_card .des_reply {
+.review_card_section .dest_review_card #des_reply {
     margin-left: 24px;
     display: none;
 }
@@ -298,6 +299,7 @@ and (max-device-width: 667px) {
         top: 470px;
         width: 30%;
         right: -225px;
+        margin-top: 0px;
     }
 
     .dest_sel_content_block .dest_sel_buttons .book_btn {
