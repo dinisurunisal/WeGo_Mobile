@@ -1,91 +1,105 @@
-﻿var timerFunction;
+﻿var g = [1,2,3,4,5,6,7,8,0];
+var l = [];
+var boxNames = ["box1", "box2", "box3", "box4", "box5", "box6", "box7", "box8", "box9"];
+var n = 0;
 
-var imagePuzzle = {
-    stepCount: 0,
-    startTime: new Date().getTime(),
-    startGame: function (images, gridSize) {
-        this.setImage(images, gridSize);
-        $('#playPanel').show();
-        $('#sortable').randomize();
-        this.enableSwapping('#sortable li');
-        this.stepCount = 0;
-        this.startTime = new Date().getTime();
-        this.tick();
-    },
-    tick: function () {
-        var now = new Date().getTime();
-        var elapsedTime = parseInt((now - imagePuzzle.startTime) / 1000, 10);
-        $('#timerPanel').text(elapsedTime);
-        timerFunction = setTimeout(imagePuzzle.tick, 1000);
-    },
-    enableSwapping: function (elem) {
-        $(elem).draggable({
-            snap: '#droppable',
-            snapMode: 'outer',
-            revert: "invalid",
-            helper: "clone"
-        });
-        $(elem).droppable({
-            drop: function (event, ui) {
-                var $dragElem = $(ui.draggable).clone().replaceAll(this);
-                $(this).replaceAll(ui.draggable);
+$(function initialization(){
+    // do {
+    //     ri = Math.floor(Math.random()*(g.length));
+    //     r = g[ri];
 
-                currentList = $('#sortable > li').map(function (i, el) { return $(el).attr('data-value'); });
-                if (isSorted(currentList))
-                    $('#actualImageBox').empty().html($('#gameOver').html());
-                else {
-                    var now = new Date().getTime();
-                    imagePuzzle.stepCount++;
-                    $('.stepCount').text(imagePuzzle.stepCount);
-                    $('.timeCount').text(parseInt((now - imagePuzzle.startTime) / 1000, 10));
-                }
+    //     if(r!=-1) {
+    //         l.push(r);
+    //         g[ri] = -1;
+    //         n+=1;
+    //     }
 
-                imagePuzzle.enableSwapping(this);
-                imagePuzzle.enableSwapping($dragElem);
-            }
-        });
-    },
+    // } while(n<9);
+    l = [1,2,3,4,5,6,7,0,8];
 
-    setImage: function (images, gridSize) {
-        console.log(gridSize);
-        gridSize = gridSize || 4; // If gridSize is null or not passed, default it as 4.
-        console.log(gridSize);
-        var percentage = 100 / (gridSize - 1);
-        var image = images[Math.floor(Math.random() * images.length)];
-        $('#imgTitle').html(image.title);
-        $('#actualImage').attr('src', image.src);
-        $('#sortable').empty();
-        for (var i = 0; i < gridSize * gridSize; i++) {
-            var xpos = (percentage * (i % gridSize)) + '%';
-            var ypos = (percentage * Math.floor(i / gridSize)) + '%';
-            var li = $('<li class="item" data-value="' + (i) + '"></li>').css({
-                'background-image': 'url(' + image.src + ')',
-                'background-size': (gridSize * 100) + '%',
-                'background-position': xpos + ' ' + ypos,
-                'width': 400 / gridSize,
-                'height': 400 / gridSize
-            });
-            $('#sortable').append(li);
-        }
-        $('#sortable').randomize();
+    drawPuzzle();
+});
+
+
+function drawPuzzle() {
+    // imagesrc = "images/destinations/Big%20Ben.jpg";
+    // var percentage = 100 / (3 - 1);
+    // for (var i = 0; i < 3 * 3; i++) {
+    //     var xpos = (percentage * (i % 3)) + '%';
+    //     var ypos = (percentage * Math.floor(i / 3)) + '%';
+        
+    //     document.getElementsByTagName('td')[i].innerHTML = '<div class="switch_img" style="background-image: url(' + imagesrc +'); background-size: 300%; background-position: ' + xpos + ' ' + ypos +'; width: ' + 400 / 3  + '; height: ' + 400 / 3 + ';"></div>';
+    // }
+
+    // document.getElementsByTagName('td')[l.indexOf(0)].innerHTML = '<div class="switch_img" style="background-color: white; width: ' + 400 / 3  + '; height: ' + 400 / 3 + ';"></div>';
+    
+    for(i=0;i<9;i++) {
+        document.getElementsByTagName('td')[i].innerHTML = '<img src="images/game/bigben/'+l[i]+'.jpg">';
     }
-};
-
-function isSorted(arr) {
-    for (var i = 0; i < arr.length - 1; i++) {
-        if (arr[i] != i)
-            return false;
-    }
-    return true;
+    chkWin();
 }
-$.fn.randomize = function (selector) {
-    var $elems = selector ? $(this).find(selector) : $(this).children(),
-        $parents = $elems.parent();
 
-    $parents.each(function () {
-        $(this).children(selector).sort(function () {
-            return Math.round(Math.random()) - 0.5;
-        }).remove().appendTo(this);
-    });
-    return this;
-};
+function boxClick(id) {
+    
+    boxNumber = boxNames.indexOf(id);
+    emptyBoxNumber = l.indexOf(0);
+    
+    if(emptyBoxNumber == (boxNumber + 3)) {
+        mvDown();
+    }
+
+    if(emptyBoxNumber == (boxNumber - 3)) {
+        mvUp();
+    }
+
+    if((emptyBoxNumber == (boxNumber + 1)) & !(emptyBoxNumber == 0 || emptyBoxNumber == 3 || emptyBoxNumber == 6)) {
+        mvRight();
+    }
+
+    if((emptyBoxNumber == (boxNumber - 1)) & !(emptyBoxNumber == 2 || emptyBoxNumber == 5 || emptyBoxNumber == 8))  {
+        mvLeft();
+    }
+}
+
+function mvDown() {
+    i = l.indexOf(0);
+    j = i - 3;
+    t = l[i];
+    l[i] = l[j];
+    l[j] = t;
+    drawPuzzle();
+}
+function mvUp() {
+    i = l.indexOf(0);
+    j = i + 3;
+    t = l[i];
+    l[i] = l[j];
+    l[j] = t;
+    drawPuzzle();
+}
+
+function mvRight() {
+    i = l.indexOf(0);
+    j = i - 1;
+    t = l[i];
+    l[i] = l[j];
+    l[j] = t;
+    drawPuzzle();
+}
+
+function mvLeft() {
+    i = l.indexOf(0);
+    j = i + 1;
+    t = l[i];
+    l[i] = l[j];
+    l[j] = t;
+    drawPuzzle();
+}
+
+function chkWin() {
+    var a = 1;
+    for(i=0; i<8; i++) {
+        if(l[i]!=i+1) {a = 0;}
+    }
+    if(a==1) {showSuccess('Game Completed')}
+}
