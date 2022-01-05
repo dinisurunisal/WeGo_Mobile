@@ -1,22 +1,14 @@
 
-/* Background image for the destination page */
-.dest_background_image .dest_main_intro {
+.destination_page .ui-content #london_bg {
+    height: 380px;
     position: absolute;
-    top: 60px;
-    background: rgb(0, 0, 0); /* Fallback color */
-    background: linear-gradient(to top, rgba(0,0,0,0), rgba(44, 19, 19, 1)); /* Black background with 0.8 opacity */
-    color: #f1f1f1;
-    width: 100%;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
+    z-index: 0;
+    object-fit: cover;
 }
 
-.dest_background_image .dest_sel_content_block {
-    position: absolute;
-    top: 100px;
-    height: 800px;
+.ui-content .dest_sel_content_block {
+    position: relative;
+    margin-top: 60px;
     left: 0; 
     right: 0; 
     margin-left: auto; 
@@ -25,12 +17,6 @@
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     padding: 20px;
-}
-
-.dest_sel_content_block .dest_sel_main_container{
-    position: relative;
-    height: 280px;
-    margin-bottom: 10px;
 }
 
 .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading {
@@ -88,6 +74,12 @@
     transition:.2s;
 }
 
+.dest_sel_content_block .dest_sel_internal_block .dest_sel_main_container{
+    position: relative;
+    height: 280px;
+    margin-bottom: 10px;
+}
+
 .dest_sel_content_block .dest_sel_main_container #dest_sel_image_container {
     width:60%;
     padding: 0px !important;
@@ -105,6 +97,11 @@
     padding-top: 15px;
     width:40%;
     text-align:center;
+    float: left;
+}
+
+.dest_sel_content_block .dest_sel_main_container #dest_sel_details_container .dest_side_texts{
+    text-align:left;
     float: left;
 }
 
@@ -132,11 +129,6 @@
     font-size: 15px;
 }
 
-.dest_side_texts{
-    text-align:left;
-    float: left;
-}
-
 .dest_sel_content_block .dest_sel_description {
     position: relative; 
     padding: 5px;
@@ -144,78 +136,106 @@
     text-align: justify;
 }
 
-.destination_page .ui-content {
-    height: 450px;
-}
-
 /* Thumbnails */
 
-.review_card_section {
-    position: absolute;
-    top: 700px;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 85%; /* Need a specific value to work */
-    padding: 20px;
+.dest_sel_content_block .review_card_section {
+    position: relative ;
+    padding: 20px 0px !important;
 }
 
-#review-card-resolution-breakpoint {
+.dest_sel_content_block .review_card_section #review-card-resolution-breakpoint {
     width: 50%;
     float: left;
 }
 
-.dest_review_card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+.dest_sel_content_block .review_card_section .dest_review_card {
+    position: relative;
+    display: inline-block;
     border-radius: 15px; /* 15px rounded corners */
     margin: 10px;
+    padding: 16px;
+    box-shadow: 0px 0px 6px #c4c4c4 !important;
 }
 
-.dest_review_card .thumb_image_div {
+.dest_sel_content_block .review_card_section .dest_review_card .thumb_image_div {
     width: 100px;
     height: 100px;  
 }
 
-.dest_review_card .thumb_image_div img {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;
+.dest_sel_content_block .review_card_section .dest_review_card img {
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 50%;     
-    object-fit: cover;
+    object-fit: cover !important;
 }
 
-.dest_review_card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.review_card_section .dest_review_card .dest_reviewer{
+    display: inline-flex;
+    margin-bottom: 12px;
 }
 
-.dest_review_card .dest_name {
-    position: absolute;
-    bottom: -15px;
-    left: 15px;
-    color: white;
-    font-size: 20px;
+.review_card_section .dest_review_card .dest_reviewer_info {
+    padding-left: 8px;
+    display: grid;
 }
 
+.review_card_section .dest_review_card .dest_reviewer_info p{
+    margin: 2px;
+}
 
+.review_card_section .dest_review_card .dest_reviewer_raiting {
+    display: inline-flex;
+    min-inline-size: -webkit-fill-available;
+    align-items: center;
+}
+
+.review_card_section .dest_review_card .dest_reviewer_raiting #star_rating_holder {
+    margin-right: 8px;
+}
+
+.review_card_section .dest_review_card .reply_btn {
+    float: right;
+    margin-right: 12px;
+}
+
+.review_card_section .dest_review_card .reply_btn p {
+    font-weight: bold;
+    margin: 0px !important;
+}
+
+.review_card_section .dest_review_card .des_reply {
+    margin-left: 24px;
+    display: none;
+}
+
+.review_card_section .dest_review_card .dest_replier {
+    display: inline-flex;
+    margin-bottom: 12px;
+    min-inline-size: -webkit-fill-available;
+}
+
+.review_card_section .dest_review_card .dest_review_reply {
+    margin: 12px 0px;
+}
+
+.review_card_section .dest_review_card .dest_replier_info {
+    padding-left: 8px;
+    display: grid;
+}
+
+.review_card_section .dest_review_card .dest_replier_info p{
+    margin: 2px;
+}
 
 
 @media only screen
 and (min-device-width: 375px)
 and (max-device-width: 667px) {
 
-    .dest_background_image img{
-        height: 100%;
+    .ui-content .dest_sel_content_block {
         width: 100%;
-        object-fit: cover;
-    }
-
-    .dest_background_image .dest_sel_content_block {
-        width: 100%; /* Need a specific value to work */
         padding: 0px;
-        height: 1200px;
-        top: 60px;
+        margin-top: 10px;
     }
 
     .dest_sel_content_block .dest_sel_main_container #dest_sel_image_container {
@@ -289,17 +309,13 @@ and (max-device-width: 667px) {
         padding: 15px;
     }
 
-    .destination_page .ui-content {
-        height: 950px;
-    }
-    
-    .review_card_section {
-        top: 950px;
-    }
-
-    #review-card-resolution-breakpoint {
+    .dest_sel_content_block .review_card_section #review-card-resolution-breakpoint {
         width: 100%;
         float: left;
+    }
+
+    .dest_sel_content_block .review_card_section h2 {
+        margin-left: 20px;
     }
 }
 
@@ -307,36 +323,76 @@ and (max-device-width: 667px) {
 and (min-device-width: 768px)
 and (max-device-width: 850px) {
 
-    /* .review_card_section {
-        top: 700px;
-    } */
-
-    .dest_background_image img{
-        height: 380px;
-        width: 100%;
-        object-fit: cover;
-    }
-
 }
 
 @media only screen
 	and (min-device-width: 812px)
 	and (max-device-width: 900px) {
 
-    .review_card_section {
-        top: 700px;
+
+    .ui-content .dest_sel_content_block {
+        width: 100%;
+        margin-top: 10px;
+        padding: 0px;
     }
 
-    #review-card-resolution-breakpoint {
+    .dest_sel_content_block .review_card_section #review-card-resolution-breakpoint {
         width: 100%;
         float: left;
+    }
+
+    .review_card_section .dest_review_card .review_card_section h2 {
+        margin-left: 20px;
+    }
+
+    .dest_sel_content_block .dest_sel_main_container #dest_sel_image_container {
+        width: 40% !important;
+    }
+
+    .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading {
+        width: 60% !important;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8px;
+        z-index: 2;
+    }
+
+    .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_sel_favourite {
+        top: 0px !important;
+        right: 24px !important;
+    }
+
+    .dest_sel_content_block .dest_sel_main_container #dest_sel_details_container {
+        width: 60% !important;
+        margin-top: 24px;
+    }
+    
+    .dest_sel_content_block .dest_sel_buttons {
+        position: absolute;
+        right: 24px !important;
+        left: auto !important;
+        top: 62vh;
+        margin: 0px !important;
+    }
+
+    .dest_sel_content_block .dest_sel_description {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .dest_side_texts {
+        width: -webkit-fit-available;
+    }
+
+    .dest_sel_description, .review_card_section {
+        margin: 24px 24px !important;
     }
 	
 }
 
 @media only screen and (min-device-width: 1024px) {
 
-    .dest_background_image img{
+    .ui-content img{
         height: 450px;
         width: 100%;
         object-fit: cover;
