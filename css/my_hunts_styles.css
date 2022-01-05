@@ -68,7 +68,7 @@
 }
 
 #my-hunts-page .my_hunts_tour_date {
-	color: #c4c4c4;
+	color: #a7a7a7;
 }
 
 #my-hunts-page .my_hunts_upcoming_details {
@@ -91,11 +91,12 @@
 }
 
 #my-hunts-page .my_hunts_card_content .tour_star_holder p2 {
-    vertical-align: text-top;
+    vertical-align: top;
 	margin-left: 10px !important;
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
 	width: 100% !important;
+	font-size: 16px;
 }
 
 #my-hunts-page .button_space {

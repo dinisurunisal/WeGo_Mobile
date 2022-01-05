@@ -6,7 +6,6 @@ const starList = ['tour_star_rating_one', 'tour_star_rating_two', 'tour_star_rat
 $(document).on("pageinit", function () {
     initPage();
     populatePastHunts();
-    // populateUpcomingHunts();
 });
 
 function initPage() {
@@ -28,6 +27,8 @@ function initPage() {
 
    if (hunts == null) {
     hunts = []
+   } else {
+    populateUpcomingHunts();
    }
 
     setupStars();
@@ -137,16 +138,13 @@ function deleteDuplicateCards(idName) {
 
 function populateUpcomingHunts() {
 
-    var pastHunts = JSON.parse(localStorage.getItem('upcomingHunts'));
-    console.log(pastHunts);
-
-    for (var i = 0; i < pastHunts.length; i++) {
-        document.getElementById("upcoming_hunt_card_image").src = pastHunts[i].imageUrl;
-        document.getElementById("upcoming_my_hunts_location_name").innerHTML = pastHunts[i].destName;
-        document.getElementById("upcoming_my_hunts_tour_date").innerHTML = pastHunts[i].tourDate;
-        document.getElementById("upcoming_tour_route").innerHTML = pastHunts[i].tourRoute;
-        document.getElementById("upcoming_tour_duration").innerHTML = pastHunts[i].tourDuration;
-        document.getElementById("upcoming_tour_passengers").innerHTML = pastHunts[i].tourPassengers;
+    for (var i = 0; i < hunts.length; i++) {
+        document.getElementById("upcoming_hunt_card_image").src = hunts[i].imageUrl;
+        document.getElementById("upcoming_my_hunts_location_name").innerHTML = hunts[i].destName;
+        document.getElementById("upcoming_my_hunts_tour_date").innerHTML = hunts[i].tourDate;
+        document.getElementById("upcoming_tour_route").innerHTML = hunts[i].tourRoute;
+        document.getElementById("upcoming_tour_duration").innerHTML = hunts[i].tourDuration;
+        document.getElementById("upcoming_tour_passengers").innerHTML = hunts[i].tourPassengers;
 
         $("#upcoming_my_hunts_list").clone().appendTo("#upcoming_my_hunts_list_2");
     }

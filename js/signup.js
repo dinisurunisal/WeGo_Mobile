@@ -28,20 +28,36 @@ function signup() {
     bookings: [
       {
         id: 1,
-        poiName: "CAQ 1120",
-        isComplete: true,
+        poiName: "York Minster",
+        isComplete: false,
         isFeedbackGiven: false,
-        bookingDate: "12/12/2019",
-        routeStart: "EUS",
-        routeFinish: "BHM",
+        bookingDate: "25-12-2021",
+        routeStart: "London",
+        routeFinish: "Burmingham",
         durationHours: 2,
         durationMin: 15,
         ratingStars: 4,
         ratingComment: "one of the best destinations",
         passengers: 2,
         imageUrl:
-          "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_16:9/project%20prism%2Fcolor%20search%20archive%2F2ee0d7a33e80d1667d0c7f4bd262159f8da38333",
+          "images/destinations/York Minster.jpg",
       },
+      {
+        id: 2,
+        poiName: "The British Museum",
+        isComplete: false,
+        isFeedbackGiven: false,
+        bookingDate: "25-12-2022",
+        routeStart: "Yorkshire",
+        routeFinish: "Westminster",
+        durationHours: 6,
+        durationMin: 20,
+        ratingStars: 4,
+        ratingComment: "one of the best destinations",
+        passengers: 3,
+        imageUrl:
+          "images/destinations/The British Museum.jpg",
+      }
     ],
   };
   //localStorage.setItem("users", JSON.stringify([]));
