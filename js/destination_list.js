@@ -80,6 +80,7 @@ function addToFavourites(id) {
             destination.isFavourite = false
         }
     });
+    showSuccess("Removed from Favourites List")
     
   } else {
     document.getElementById(id).innerHTML = "favorite";

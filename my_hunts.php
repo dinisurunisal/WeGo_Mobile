@@ -131,7 +131,7 @@
                         <div class="my_hunts_list" id="past_my_hunts_list">
                             <div id="my_hunt_resolution_breakdown">
                                 <li>
-                                    <div class="my_hunts_card" onclick="onDestinationSelect(this.id)">
+                                    <div class="my_hunts_card">
                                         <div class="card_image_section">
                                             <img src="images/destinations/Big Ben.jpg" id="past_hunt_card_image">
                                         </div>
@@ -145,9 +145,13 @@
                                                     <button class="feedback_btn">Leave feedback</button>
                                                 </a>  
                                             </div>
-                                            <div class="rating" id="rating">
-                                                <img src="images/fourStars.png">
-                                                <p2>4 Stars</p2>
+                                            <div id="tour_star_holder" class="tour_star_holder">
+                                                <i id="tour_star_rating_one" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+                                                <i id="tour_star_rating_two" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+                                                <i id="tour_star_rating_three" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+                                                <i id="tour_star_rating_four" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+                                                <i id="tour_star_rating_five" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+                                                <p2 id="tour_rating">4 Stars</p2>
                                             </div>
                                             <p2 class="tour_review" id="tour_review">
                                                 One of the best destinations which admires the history of UK
