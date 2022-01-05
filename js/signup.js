@@ -1,6 +1,11 @@
 function signup() {
   var users = JSON.parse(localStorage.getItem("users"));
   var name = document.getElementById("name_reg").value;
+  var email = document.getElementById("email_reg").value;
+
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+
   var password = document.getElementById("password_reg").value;
   var conPassword = document.getElementById("confirm_password_reg").value;
   var contactNumber = document.getElementById("contact_number_reg").value;
@@ -14,9 +19,11 @@ function signup() {
   }
   var currentUser = {
     username: name,
+    email: email,
     currentPoints: 100,
     contactNumber: contactNumber,
     password: password,
+    signupDate: date,
     favouritesList: [],
     bookings: [
       {

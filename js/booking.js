@@ -15,6 +15,7 @@
 // }
 
 $(document).on("pageinit", function () {
+  routeType = "One Way"
   initPage();
 });
 

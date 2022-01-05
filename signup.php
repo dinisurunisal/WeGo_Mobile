@@ -25,6 +25,11 @@
 		background-attachment: fixed;
 		background-size: 376px;
 	}
+
+	::placeholder { 
+  		color: white;
+  		opacity: 0.5; 
+	}
 </style>
 
 <body>
@@ -43,16 +48,19 @@
 			<div class="form_div">
 				<form id="form" onsubmit="event.preventDefault(); signup()">
 					<label class="label_form" for="name"> Name </label>
-					<input required type="text" name="name" id="name_reg" class="form_field" />
+					<input required type="text" name="name" id="name_reg" class="form_field" placeholder="John Smith" />
+
+					<label class="label_form" for="email"> Email </label>
+					<input type="email"  pattern=".+@gmail\.com" name="email" id="email_reg" class="form_field" placeholder="example@gmail.com" />
 
 					<label class="label_form" for="contact_number"> Contact Number </label>
-					<input maxlength="10" required type="number" name="contact_number" id="contact_number_reg" class="form_field" />
+					<input maxlength="10" required type="number" name="contact_number" id="contact_number_reg" class="form_field" placeholder="07xxxxxxxx" />
 
 					<label class="label_form" for="password"> Password </label>
-					<input minlength="6" required type="password" name="password" id="password_reg" class="form_field" />
+					<input minlength="6" required type="password" name="password" id="password_reg" class="form_field" placeholder="******" />
 
 					<label class="label_form" for="contactNumber"> Confirm Password </label>
-					<input minlength="6" required type="password" name="confirm_password" id="confirm_password_reg" class="form_field" />
+					<input minlength="6" required type="password" name="confirm_password" id="confirm_password_reg" class="form_field" placeholder="******" />
 
 					<div class="wrapper_sign">
 						<button type="submit" class="buttons_sign" id="buttons_sign" data-role="button">Sign Up</button>
