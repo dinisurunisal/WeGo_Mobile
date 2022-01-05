@@ -123,7 +123,7 @@ function sendEmail() {
         data: { email: email, list: favourites },
         dataType: "json",
         complete: function (response) {
-            console.log("done")
+            console.log("done") 
             $("#sendBtn").html('Send')
             showSuccess("Favourites Sent")
             closeEmailPopup();

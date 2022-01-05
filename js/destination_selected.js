@@ -12,6 +12,7 @@ function initialize() {
     console.log(destinationId);
     destinations = JSON.parse(localStorage.getItem("destinations"));
     destination = destinations.find(obj => obj.destinationId === destinationId);
+    console.log(destinations);
     loadData();
     // renderList();
     // setHeight();
@@ -37,8 +38,10 @@ function loadData(){
     }
 
     for (var i = 0; i < destination.destinationReviews.length; i++) {
-      // document.getElementById("card_image").src = defaultDestinationDB[i].destinationImage;
-      // document.getElementById("card_name").innerHTML = defaultDestinationDB[i].destinationName;
+      // document.getElementById("review_thumb_image").src = destination.destinationReviews[i].name;
+      document.getElementById("dest_reviewer_name").innerHTML = destination.destinationReviews[i].name;
+      document.getElementById("dest_reviewer_count").innerHTML = destination.destinationReviews[i].reviewCount + ' Reviews';
+      document.getElementById("dest_review_comment").innerHTML = destination.destinationReviews[i].reviewDescription;
       // document.getElementById("card_details").innerHTML = defaultDestinationDB[i].destinationCardDetails;
       // document.getElementById("card_price").innerHTML = dollarSign + defaultDestinationDB[i].price;
       // document.getElementById("card_star_score").innerHTML = defaultDestinationDB[i].destinationRating;
@@ -47,7 +50,26 @@ function loadData(){
       $("#card_script_1").clone().appendTo("#card_script_2");
     }
 
+    // $('#star_rating_holder').children('i').each(function () {
+    //   if ($(this).html() == "star") {
+    //       starCount++;
+    //   }
+    // });
+
     deleteDuplicateCards(); 
+
+    for (var i = 0; i < destination.destinationReviews.length; i++) {
+      document.getElementById("destReviewId").id = destination.destinationId + '_rev' + (i+1);
+    }
+
+    // if ( pastHunts[i].huntId === 'mh2') {
+    //   document.getElementById("button_space").style.display = "none"
+    //   document.getElementById("rating").style.display = "block"
+    //   document.getElementById("tour_review").style.display = "block"
+    // } else {
+    //     document.getElementById("rating").style.display = "none"
+    //     document.getElementById("tour_review").style.display = "none"
+    // }
 }
 
 // Delete 'card_script_1'
@@ -58,28 +80,69 @@ function deleteDuplicateCards() {
 
 function addToFavourites(id) {
 
-    if (!e) var e = window.event;
-    e.cancelBubble = true;
-    if (e.stopPropagation)
-        e.stopPropagation();
-  
-    if (destination.isFavourite == true) {
-      document.getElementById(id).innerHTML = "favorite_border";
-      $.each(destinations, function (key, item) {
-          if (item.destinationFavId == id) {
-            item.isFavourite = false
-          }
-      });
-      
-    } else {
-      document.getElementById(id).innerHTML = "favorite";
-      $.each(destinations, function (key, item) {
-          if (item.destinationFavId == id) {
-            item.isFavourite = true
-          }
-      });
-      showSuccess("Added to Favourites List")
-    }
-    localStorage.setItem("destinations", JSON.stringify(destinations));
-  
+  if (!e) var e = window.event;
+  e.cancelBubble = true;
+  if (e.stopPropagation)
+      e.stopPropagation();
+
+  if (destination.isFavourite == true) {
+    document.getElementById(id).innerHTML = "favorite_border";
+    $.each(destinations, function (key, item) {
+        if (item.destinationFavId == id) {
+          item.isFavourite = false
+        }
+    });
+    
+  } else {
+    document.getElementById(id).innerHTML = "favorite";
+    $.each(destinations, function (key, item) {
+        if (item.destinationFavId == id) {
+          item.isFavourite = true
+        }
+    });
+    showSuccess("Added to Favourites List")
   }
+  localStorage.setItem("destinations", JSON.stringify(destinations));
+
+}
+
+function onReplyClick(id) {
+  console.log(id)
+  document.getElementById("des_reply").style.display = "block"
+  // if (typeof (Storage) !== "undefined") {
+  //   localStorage.setItem("clickedDestinationId", id);
+  //   window.location = "destination_selected.php";
+  // } else {
+  //     showFailure("Unable to load")
+  // }
+}
+
+function submitReply() {
+  var comment = $("#form_comment").val();
+
+  // $.each(hunts, function (key, hunt) {
+  //     if (hunt.id == 1) {
+  //         hunt.ratingStars = starCount;
+  //         hunt.ratingComment = comment;
+  //         console.log("Saved");
+  //     }
+  // });
+
+  // var users = JSON.parse(localStorage.getItem('users'));
+  // $.each(users, function (key, user) {
+  //     if (user.contactNumber === currentlySignedInUser.contactNumber) {
+  //         users[key] = currentlySignedInUser;
+  //     }
+  // });
+  // localStorage.setItem("users", JSON.stringify(users));
+  // currentlySignedInUser.bookings = hunts;
+  // console.log(hunts);
+  // localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
+  showSuccess("Feedback saved.");
+  $("#popupBasic").popup("close")
+
+  setTimeout(function () {
+      location.reload();
+
+  }, 2000);
+}
