@@ -140,20 +140,17 @@
 
 .dest_sel_content_block .review_card_section {
     position: relative ;
-    width: -webkit-fill-available !important;
     padding: 20px 0px !important;
 }
 
 .dest_sel_content_block .review_card_section #review-card-resolution-breakpoint {
     width: 50%;
     float: left;
-    position: relative;
 }
 
 .dest_sel_content_block .review_card_section .dest_review_card {
     position: relative;
     display: inline-block;
-				width: -webkit-fill-available;
     border-radius: 15px; /* 15px rounded corners */
     margin: 10px;
     padding: 16px;
@@ -235,15 +232,10 @@
 and (min-device-width: 375px)
 and (max-device-width: 667px) {
 
-    .ui-content img{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-
     .ui-content .dest_sel_content_block {
         width: 100%;
         padding: 0px;
+        margin-top: 10px;
     }
 
     .dest_sel_content_block .dest_sel_main_container #dest_sel_image_container {
@@ -322,7 +314,7 @@ and (max-device-width: 667px) {
         float: left;
     }
 
-    .review_card_section .dest_review_card .review_card_section h2 {
+    .dest_sel_content_block .review_card_section h2 {
         margin-left: 20px;
     }
 }
@@ -337,9 +329,63 @@ and (max-device-width: 850px) {
 	and (min-device-width: 812px)
 	and (max-device-width: 900px) {
 
-    #review-card-resolution-breakpoint {
+
+    .ui-content .dest_sel_content_block {
+        width: 100%;
+        margin-top: 10px;
+        padding: 0px;
+    }
+
+    .dest_sel_content_block .review_card_section #review-card-resolution-breakpoint {
         width: 100%;
         float: left;
+    }
+
+    .review_card_section .dest_review_card .review_card_section h2 {
+        margin-left: 20px;
+    }
+
+    .dest_sel_content_block .dest_sel_main_container #dest_sel_image_container {
+        width: 40% !important;
+    }
+
+    .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading {
+        width: 60% !important;
+        position: absolute;
+        margin-left: 42%;
+        margin-top: 8px;
+        z-index: 2;
+    }
+
+    .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading .dest_sel_favourite {
+        top: 0px !important;
+        right: 24px !important;
+    }
+
+    .dest_sel_content_block .dest_sel_main_container #dest_sel_details_container {
+        width: 60% !important;
+        margin-top: 24px;
+    }
+    
+    .dest_sel_content_block .dest_sel_buttons {
+        position: absolute;
+        right: 24px !important;
+        left: auto !important;
+        top: 62vh;
+        margin: 0px !important;
+    }
+
+    .dest_sel_content_block .dest_sel_description {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .dest_side_texts {
+        width: -webkit-fit-available;
+    }
+
+    .dest_sel_description, .review_card_section {
+        margin: 24px 24px !important;
     }
 	
 }
