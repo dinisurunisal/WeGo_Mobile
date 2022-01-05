@@ -204,7 +204,7 @@
     margin: 0px !important;
 }
 
-.review_card_section .dest_review_card .des_reply {
+.review_card_section .dest_review_card #des_reply {
     margin-left: 24px;
     display: none;
 }

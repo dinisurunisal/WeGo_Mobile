@@ -141,9 +141,9 @@
                                             <hr>
                                             <p2 class="my_hunts_tour_details" id="past_my_hunts_tour_details">EUS - DEL | 1h 11m | One Way</p2>
                                             <div class="button_space" id="button_space">
-                                            <a href="#my_hunts_feedback" data-rel="popup" data-transition="pop" data-position-to="window">
-                                                <button class="feedback_btn">Leave feedback</button>
-                                            </a>  
+                                                <a href="#my_hunts_feedback" data-rel="popup" data-transition="pop" data-position-to="window">
+                                                    <button class="feedback_btn">Leave feedback</button>
+                                                </a>  
                                             </div>
                                             <div class="rating" id="rating">
                                                 <img src="images/fourStars.png">

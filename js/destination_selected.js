@@ -61,6 +61,15 @@ function loadData(){
     for (var i = 0; i < destination.destinationReviews.length; i++) {
       document.getElementById("destReviewId").id = destination.destinationId + '_rev' + (i+1);
     }
+
+    // if ( pastHunts[i].huntId === 'mh2') {
+    //   document.getElementById("button_space").style.display = "none"
+    //   document.getElementById("rating").style.display = "block"
+    //   document.getElementById("tour_review").style.display = "block"
+    // } else {
+    //     document.getElementById("rating").style.display = "none"
+    //     document.getElementById("tour_review").style.display = "none"
+    // }
 }
 
 // Delete 'card_script_1'
@@ -99,10 +108,41 @@ function addToFavourites(id) {
 
 function onReplyClick(id) {
   console.log(id)
+  document.getElementById("des_reply").style.display = "block"
   // if (typeof (Storage) !== "undefined") {
   //   localStorage.setItem("clickedDestinationId", id);
   //   window.location = "destination_selected.php";
   // } else {
   //     showFailure("Unable to load")
   // }
+}
+
+function submitReply() {
+  var comment = $("#form_comment").val();
+
+  // $.each(hunts, function (key, hunt) {
+  //     if (hunt.id == 1) {
+  //         hunt.ratingStars = starCount;
+  //         hunt.ratingComment = comment;
+  //         console.log("Saved");
+  //     }
+  // });
+
+  // var users = JSON.parse(localStorage.getItem('users'));
+  // $.each(users, function (key, user) {
+  //     if (user.contactNumber === currentlySignedInUser.contactNumber) {
+  //         users[key] = currentlySignedInUser;
+  //     }
+  // });
+  // localStorage.setItem("users", JSON.stringify(users));
+  // currentlySignedInUser.bookings = hunts;
+  // console.log(hunts);
+  // localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
+  showSuccess("Feedback saved.");
+  $("#popupBasic").popup("close")
+
+  setTimeout(function () {
+      location.reload();
+
+  }, 2000);
 }
