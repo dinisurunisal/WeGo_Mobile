@@ -47,7 +47,7 @@
 			<div class="edit_logout_bar" id="flex_container">
 
 				<div class="edit_profile_btn" id="flex_child" style="padding-left:10px;">
-					<a onclick="alert('Hello world!')" >EDIT</a>
+					<a onclick="showProfileMethod();" >EDIT</a>
 				</div>
 				<div class="logout_btn"  id="flex_child" style="text-align: right; padding-right:10px;">
 					<a onclick="alert('Hello world!')" >LOGOUT</a>
@@ -115,6 +115,28 @@
 
             </form>
         	</div>
+
+			<div data-role="popup" data-position-to="window" data-transition="pop" class="popup" style="padding: 20px;"
+            id="popupBasic">
+            <form id="formProfile" onsubmit="event.preventDefault(); saveProfileInformation()">
+                <h3 class="heading-three" style="text-align:center;">Edit Profile Information</h3>
+                <label class="labelform grey heading-five" for="nameForm"> Name</label>
+                <input type="text" name="name" id="nameForm" placeholder="John Doe" class="formField" />
+                <label class="labelform grey heading-five" for="contactNumberForm"> Contact Number </label>
+                <input type="text" name="contactNumber" id="contactNumberForm" placeholder="0768XXXXXX"
+                    class="formField" />
+                <label class="labelform grey heading-five" for="passwordForm"> Password</label>
+                <input type="password" name="password" id="passwordForm" class="formField" />
+                <label class="labelform grey heading-five" for="confirmPasswordForm"> Confirm Password</label>
+                <input type="password" name="confirmPassword" id="confirmPasswordForm" class="formField" />
+                <!-- <button type="submit" class="button-custom" data-role="button">Save</button> -->
+
+				<div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
+						<button id="cancelBtn" onclick="closeEditPopup();"  class="button_popup" data-role="none">Cancel</button>
+						<button id="sendBtn" type="submit" class="button_popup" data-role="none">Save</button>
+				</div>
+            </form>
+        </div>
 
 			<div class="profile_video">
 				<iframe src="https://www.youtube.com/embed/9g8sfVsl2GU" frameborder="0" allowfullscreen></iframe>

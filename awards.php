@@ -22,7 +22,7 @@
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 		<!-- Custom -->
-		<script src="js/destination.js"></script>
+		
 
 	</head>
 
@@ -32,11 +32,21 @@
 			<?php include("header.php"); ?>
 
 			<div role="main" class="ui-content">
-				ddddd
+				
 			</div>
+
+			<div class="top" style="margin-top:50px; text-align: center;">
+			<h2>Awards</h2>
+			<h4>Find Your Current Points and Challenges</h4>
+			<h1 id="points">100</h1>
+			<h2>Points</h2>
+			</div>
+
+
 
 			<?php include("footer.php"); ?>
 			<?php include("navigation_bar.php"); ?>
 		</div>
+		<script type="text/javascript" src="js/awards.js"></script>
 	</body>
 </html>
