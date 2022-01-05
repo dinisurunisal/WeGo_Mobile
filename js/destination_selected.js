@@ -50,13 +50,17 @@ function loadData(){
       $("#card_script_1").clone().appendTo("#card_script_2");
     }
 
-    $('#star_rating_holder').children('i').each(function () {
-      if ($(this).html() == "star") {
-          starCount++;
-      }
-    });
+    // $('#star_rating_holder').children('i').each(function () {
+    //   if ($(this).html() == "star") {
+    //       starCount++;
+    //   }
+    // });
 
     deleteDuplicateCards(); 
+
+    for (var i = 0; i < destination.destinationReviews.length; i++) {
+      document.getElementById("destReviewId").id = destination.destinationId + '_rev' + (i+1);
+    }
 }
 
 // Delete 'card_script_1'
@@ -67,28 +71,38 @@ function deleteDuplicateCards() {
 
 function addToFavourites(id) {
 
-    if (!e) var e = window.event;
-    e.cancelBubble = true;
-    if (e.stopPropagation)
-        e.stopPropagation();
-  
-    if (destination.isFavourite == true) {
-      document.getElementById(id).innerHTML = "favorite_border";
-      $.each(destinations, function (key, item) {
-          if (item.destinationFavId == id) {
-            item.isFavourite = false
-          }
-      });
-      
-    } else {
-      document.getElementById(id).innerHTML = "favorite";
-      $.each(destinations, function (key, item) {
-          if (item.destinationFavId == id) {
-            item.isFavourite = true
-          }
-      });
-      showSuccess("Added to Favourites List")
-    }
-    localStorage.setItem("destinations", JSON.stringify(destinations));
-  
+  if (!e) var e = window.event;
+  e.cancelBubble = true;
+  if (e.stopPropagation)
+      e.stopPropagation();
+
+  if (destination.isFavourite == true) {
+    document.getElementById(id).innerHTML = "favorite_border";
+    $.each(destinations, function (key, item) {
+        if (item.destinationFavId == id) {
+          item.isFavourite = false
+        }
+    });
+    
+  } else {
+    document.getElementById(id).innerHTML = "favorite";
+    $.each(destinations, function (key, item) {
+        if (item.destinationFavId == id) {
+          item.isFavourite = true
+        }
+    });
+    showSuccess("Added to Favourites List")
   }
+  localStorage.setItem("destinations", JSON.stringify(destinations));
+
+}
+
+function onReplyClick(id) {
+  console.log(id)
+  // if (typeof (Storage) !== "undefined") {
+  //   localStorage.setItem("clickedDestinationId", id);
+  //   window.location = "destination_selected.php";
+  // } else {
+  //     showFailure("Unable to load")
+  // }
+}

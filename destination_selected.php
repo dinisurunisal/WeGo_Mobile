@@ -167,7 +167,7 @@
 												</div>
 												<p class="dest_review_comment" id="dest_review_comment">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
 												<div class="dest_review_reply">
-													<div  class="reply_btn">
+													<div class="reply_btn" id="destReviewId" onclick="onReplyClick(this.id)">
 														<p>Reply</p>
 													</div>
 													<div class="des_reply">

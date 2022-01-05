@@ -25,6 +25,7 @@
     "destinationReviews": [
       {
         "name": "Joe Stockton",
+        "reviewerId": "destinationId1_rev1",
         "reviewCount": "133",
         "rating": 3,
         "reviewDate": "3 days ago",
@@ -40,6 +41,7 @@
       },
       {
         "name": "Mary Watson",
+        "reviewerId": "destinationId1_rev2",
         "reviewCount": "120",
         "rating": 4,
         "reviewDate": "week ago",
@@ -88,6 +90,7 @@
     "destinationReviews": [
       {
         "name": "Joe Stockton",
+        "reviewerId": "destinationId2_rev1",
         "reviewCount": "133",
         "rating": 3,
         "reviewDate": "3 days ago",
@@ -103,6 +106,7 @@
       },
       {
         "name": "Mary Watson",
+        "reviewerId": "destinationId2_rev2",
         "reviewCount": "120",
         "rating": 4,
         "reviewDate": "week ago",
@@ -151,6 +155,7 @@
     "destinationReviews": [
       {
         "name": "Joe Stockton",
+        "reviewerId": "destinationId3_rev1",
         "reviewCount": "133",
         "rating": 3,
         "reviewDate": "3 days ago",
@@ -166,6 +171,7 @@
       },
       {
         "name": "Mary Watson",
+        "reviewerId": "destinationId3_rev2",
         "reviewCount": "120",
         "rating": 4,
         "reviewDate": "week ago",
@@ -214,6 +220,7 @@
     "destinationReviews": [
       {
         "name": "Joe Stockton",
+        "reviewerId": "destinationId4_rev1",
         "reviewCount": "133",
         "rating": 3,
         "reviewDate": "3 days ago",
@@ -229,6 +236,7 @@
       },
       {
         "name": "Mary Watson",
+        "reviewerId": "destinationId4_rev2",
         "reviewCount": "120",
         "rating": 4,
         "reviewDate": "week ago",
@@ -277,6 +285,7 @@
     "destinationReviews": [
       {
         "name": "Joe Stockton",
+        "reviewerId": "destinationId5_rev1",
         "reviewCount": "133",
         "rating": 3,
         "reviewDate": "3 days ago",
@@ -292,6 +301,7 @@
       },
       {
         "name": "Mary Watson",
+        "reviewerId": "destinationId5_rev2",
         "reviewCount": "120",
         "rating": 4,
         "reviewDate": "week ago",
@@ -340,6 +350,7 @@
     "destinationReviews": [
       {
         "name": "Joe Stockton",
+        "reviewerId": "destinationId6_rev1",
         "reviewCount": "133",
         "rating": 3,
         "reviewDate": "3 days ago",
@@ -356,6 +367,7 @@
       {
         "name": "Mary Watson",
         "reviewCount": "120",
+        "reviewerId": "destinationId6_rev2",
         "rating": 4,
         "reviewDate": "week ago",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
@@ -403,6 +415,7 @@
     "destinationReviews": [
       {
         "name": "Joe Stockton",
+        "reviewerId": "destinationId7_rev1",
         "reviewCount": "133",
         "rating": 3,
         "reviewDate": "3 days ago",
@@ -418,6 +431,7 @@
       },
       {
         "name": "Mary Watson",
+        "reviewerId": "destinationId7_rev2",
         "reviewCount": "120",
         "rating": 4,
         "reviewDate": "week ago",
@@ -466,6 +480,7 @@
     "destinationReviews": [
       {
         "name": "Joe Stockton",
+        "reviewerId": "destinationId8_rev1",
         "reviewCount": "133",
         "rating": 3,
         "reviewDate": "3 days ago",
@@ -481,6 +496,7 @@
       },
       {
         "name": "Mary Watson",
+        "reviewerId": "destinationId8_rev2",
         "reviewCount": "120",
         "rating": 4,
         "reviewDate": "week ago",
