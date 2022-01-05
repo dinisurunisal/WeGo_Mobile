@@ -12,6 +12,7 @@ function initialize() {
     console.log(destinationId);
     destinations = JSON.parse(localStorage.getItem("destinations"));
     destination = destinations.find(obj => obj.destinationId === destinationId);
+    console.log(destinations);
     loadData();
     // renderList();
     // setHeight();
@@ -37,8 +38,10 @@ function loadData(){
     }
 
     for (var i = 0; i < destination.destinationReviews.length; i++) {
-      // document.getElementById("card_image").src = defaultDestinationDB[i].destinationImage;
-      // document.getElementById("card_name").innerHTML = defaultDestinationDB[i].destinationName;
+      // document.getElementById("review_thumb_image").src = destination.destinationReviews[i].name;
+      document.getElementById("dest_reviewer_name").innerHTML = destination.destinationReviews[i].name;
+      document.getElementById("dest_reviewer_count").innerHTML = destination.destinationReviews[i].reviewCount + ' Reviews';
+      document.getElementById("dest_review_comment").innerHTML = destination.destinationReviews[i].reviewDescription;
       // document.getElementById("card_details").innerHTML = defaultDestinationDB[i].destinationCardDetails;
       // document.getElementById("card_price").innerHTML = dollarSign + defaultDestinationDB[i].price;
       // document.getElementById("card_star_score").innerHTML = defaultDestinationDB[i].destinationRating;
@@ -46,6 +49,12 @@ function loadData(){
   
       $("#card_script_1").clone().appendTo("#card_script_2");
     }
+
+    $('#star_rating_holder').children('i').each(function () {
+      if ($(this).html() == "star") {
+          starCount++;
+      }
+    });
 
     deleteDuplicateCards(); 
 }
