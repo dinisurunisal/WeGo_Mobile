@@ -36,9 +36,8 @@
 			<!-- Header -->
 			<?php include("header.php"); ?>
 
-			<div class="dest_background_image" style="margin-top: 50px;">
-				<div class="dest_main_intro">
-				</div>
+			<div role="main" class="ui-content" style="height: 100%; margin-top: 50px; padding: 0px;">
+
 				<img src="images/background_find.jpg" id="london_bg" alt="london_bg" width="100%">
 
 				<div class="dest_sel_content_block">
@@ -142,36 +141,66 @@
 							</button>
 						</div>
 
+						<div class="review_card_section">
+							<h2>Top Reviews</h2>
+							<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0; display: inline-block;">
+								<div id="card_script_1">
+									<div id="review-card-resolution-breakpoint">
+										<li>
+											<div class="dest_review_card">
+												<div class="dest_reviewer">
+													<img src="images/reviewer1.jpg" id="review_thumb_image">
+													<div class="dest_reviewer_info">
+														<p>Sherlock Holmes</p>
+														<p2>133 Reviews</p2> 
+													</div>
+												</div>
+												<div class="dest_reviewer_raiting">
+													<div id="star_rating_holder">
+														<i id="star_rating_one" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+														<i id="star_rating_two" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+														<i id="star_rating_three" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+														<i id="star_rating_four" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+														<i id="star_rating_five" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+													</div>
+													<p2>3 days ago</p2>
+												</div>
+												<p class="dest_review_comment">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
+												<div class="dest_review_reply">
+													<div  class="reply_btn">
+														<p>Reply</p>
+													</div>
+													<div class="des_reply">
+														<div class="dest_replier">
+															<img src="images/reviewer1.jpg" id="review_thumb_image">
+															<div class="dest_replier_info">
+																<p>Sherlock Holmes</p>
+																<p2>133 Reviews</p2>
+															</div>
+														</div>
+														<!-- <p>Sherlock Holmes</p>
+														<p2>133 Reviews</p2> -->
+														<p2>Just now</p2>
+														<p class="dest_review_reply">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</div>
+								</div>
+
+								<div id="card_script_2"></div>
+							</ul>
+						</div>
 
 					</div>
 				</div>
 
-				<div class="review_card_section">
-					<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0">
-						<div id="card_script_1">
-							<div id="review-card-resolution-breakpoint">
-								<li>
-									<div class="dest_review_card">
-										<div style="position: relative;">
-											<div class="thumb_image_div">
-												<img src="images/reviewer1.jpg" id="review_thumb_image">
-											</div>
-											<div class="dest_review_content">
-												<h4 class="dest_review_name" id="dest_review_name">Big Ben</h4>
-											</div>
-									</div>
-								</li>
-							</div>
-						</div>
-
-						<div id="card_script_2"></div>
-					</ul>
-				</div>
 			</div>
 
-			<div role="main" class="ui-content">
+			<!-- <div role="main" class="ui-content">
 		
-			</div>
+			</div> -->
 
 			<?php include("success_popups.php"); ?>
 
