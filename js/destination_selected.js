@@ -1,7 +1,9 @@
 const dollarSign = "$ "
+const starList = ['star_rating_one', 'star_rating_two', 'star_rating_three', 'star_rating_four', 'star_rating_five'];
 var destinationId;
 var destination;
 var destinations;
+
 
 $(document).on("pageinit", function () {
     initialize();
@@ -42,11 +44,16 @@ function loadData(){
       document.getElementById("dest_reviewer_name").innerHTML = destination.destinationReviews[i].name;
       document.getElementById("dest_reviewer_count").innerHTML = destination.destinationReviews[i].reviewCount + ' Reviews';
       document.getElementById("dest_review_comment").innerHTML = destination.destinationReviews[i].reviewDescription;
+      document.getElementById("star_rating_one").innerHTML = 'star';
       // document.getElementById("card_details").innerHTML = defaultDestinationDB[i].destinationCardDetails;
       // document.getElementById("card_price").innerHTML = dollarSign + defaultDestinationDB[i].price;
       // document.getElementById("card_star_score").innerHTML = defaultDestinationDB[i].destinationRating;
       // document.getElementById("kitchen-rating-script").innerHTML = (defaultDestinationDB[i].kitchenRatingTotal / defaultDestinationDB[i].kitchenRatingUserNumber).toFixed(1);
   
+      for (let j = 0; j <  destination.destinationReviews[i].rating; j++) {
+        document.getElementById(starList[j]).innerHTML = 'star';
+      }
+
       $("#card_script_1").clone().appendTo("#card_script_2");
     }
 
