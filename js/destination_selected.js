@@ -138,7 +138,7 @@ function submitReply() {
   // currentlySignedInUser.bookings = hunts;
   // console.log(hunts);
   // localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
-  showSuccess("Feedback saved.");
+  showSuccess("Reply saved.");
   $("#popupBasic").popup("close")
 
   setTimeout(function () {
