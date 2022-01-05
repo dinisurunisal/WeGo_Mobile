@@ -48,6 +48,7 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	max-width: 97%;
+	color: #777676;
 }
 
 #my-hunts-page .my_hunts_card_content {
@@ -66,7 +67,7 @@
 	margin-bottom: 4px;
 }
 
-#my-hunts-page .my_hunts_tour_date, .tour_review {
+#my-hunts-page .my_hunts_tour_date {
 	color: #c4c4c4;
 }
 
@@ -85,13 +86,16 @@
 	text-shadow: none !important;
 }
 
-#my-hunts-page .rating p2 {
-    vertical-align: text-top;
+#my-hunts-page .my_hunts_card_content .tour_star_holder {
+    margin-right: 8px;
 }
 
-#my-hunts-page .rating img {
-	width: 110px;
-	height: auto;
+#my-hunts-page .my_hunts_card_content .tour_star_holder p2 {
+    vertical-align: text-top;
+	margin-left: 10px !important;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	width: 100% !important;
 }
 
 #my-hunts-page .button_space {

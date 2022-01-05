@@ -53,12 +53,6 @@ function loadData(){
       $("#card_script_1").clone().appendTo("#card_script_2");
     }
 
-    // $('#star_rating_holder').children('i').each(function () {
-    //   if ($(this).html() == "star") {
-    //       starCount++;
-    //   }
-    // });
-
     deleteDuplicateCards(); 
 
     for (var i = 0; i < destination.destinationReviews.length; i++) {
