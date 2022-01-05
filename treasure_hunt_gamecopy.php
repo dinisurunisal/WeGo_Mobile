@@ -239,10 +239,8 @@
             }
 
             function boxClick(id) {
-                
-                boxNumber = boxNames.indexOf(id.toString()) + 1;
-                alert(id);
-                alert(boxNames.indexOf(id.toString()));
+
+                boxNumber = boxNames.indexOf(id) + 1;
 
                 if(l.indexOf(0)==boxNumber + 3) {
                     mvDown();
@@ -370,7 +368,7 @@
                 for(i=0;i<8;i++) {
                     if(l[i]!=i+1) {a = 0;}
                 }
-                if(a==1) {showSuccess('Game Completed')}
+                if(a==1) {showSuccess('You Won !');}
             }
 
             drawPuzzle();
