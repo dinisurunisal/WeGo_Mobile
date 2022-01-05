@@ -44,11 +44,7 @@ function loadData(){
       document.getElementById("dest_reviewer_name").innerHTML = destination.destinationReviews[i].name;
       document.getElementById("dest_reviewer_count").innerHTML = destination.destinationReviews[i].reviewCount + ' Reviews';
       document.getElementById("dest_review_comment").innerHTML = destination.destinationReviews[i].reviewDescription;
-      document.getElementById("star_rating_one").innerHTML = 'star';
-      // document.getElementById("card_details").innerHTML = defaultDestinationDB[i].destinationCardDetails;
-      // document.getElementById("card_price").innerHTML = dollarSign + defaultDestinationDB[i].price;
-      // document.getElementById("card_star_score").innerHTML = defaultDestinationDB[i].destinationRating;
-      // document.getElementById("kitchen-rating-script").innerHTML = (defaultDestinationDB[i].kitchenRatingTotal / defaultDestinationDB[i].kitchenRatingUserNumber).toFixed(1);
+      document.getElementById("dest_reviewer_date").innerHTML = destination.destinationReviews[i].reviewDate;
   
       for (let j = 0; j <  destination.destinationReviews[i].rating; j++) {
         document.getElementById(starList[j]).innerHTML = 'star';

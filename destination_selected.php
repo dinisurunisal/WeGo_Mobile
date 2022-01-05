@@ -163,7 +163,7 @@
 														<i id="star_rating_four" class="material-icons" style="font-size: 22px; color:red">star_border</i>
 														<i id="star_rating_five" class="material-icons" style="font-size: 22px; color:red">star_border</i>
 													</div>
-													<p2>3 days ago</p2>
+													<p2 id="dest_reviewer_date">3 days ago</p2>
 												</div>
 												<p class="dest_review_comment" id="dest_review_comment">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
 												<div class="dest_review_reply">
