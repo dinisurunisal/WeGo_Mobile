@@ -27,7 +27,7 @@
             }
             
             #treasure_hunt_game_page .game_name {
-                width: 130px;
+                width: 164px;
             }
 
             .game_content {
@@ -40,9 +40,15 @@
 
             .game_content #game_area, #game_info {
                 text-align: -webkit-center;
-                padding: 0px 24px 24px 24px;
+                padding: 24px 24px 24px 24px;
                 width: 75vw;
                 height: 75vw;
+            }
+
+            #game_info {
+                display: grid;
+                align-items: end;
+                justify-items: center;
             }
 
             #game_info h1, p {
@@ -50,11 +56,19 @@
                 max-width: 280px;
             }
 
+            #game_info h1 {
+                margin-top: 6px;
+                margin-bottom: 4px;
+            }
+
             .game_exit_btn {
+                /* margin-top: 30px; */
                 width: 70px !important;
             }
 
             table {
+                height: -webkit-fill-available !important;
+                width: -webkit-fill-available !important;
                 background-color: white;
                 border-radius: 12px;
                 border-style: solid;
@@ -65,8 +79,8 @@
             }
 
             td {
-                width: 80px !important;
-                height: 80px !important;
+                width: -webkit-fill-available;
+                height: -webkit-fill-available;
                 border-color: white;
                 border-style: solid;
                 border-width: medium;
@@ -75,9 +89,27 @@
             }
 
             td img {
-                width: 94%;
-                height: 100%;
+                width: 96%;
+                height: 96%;
             }
+
+            @media only screen 
+                and (max-device-width: 400px) {
+
+                    #treasure_hunt_game_page .game_name {
+                        position: absolute;
+                        top: 11vh;
+                    }
+
+                    .game_content {
+                        align-content: flex-end;
+                    }
+
+                    .game_content #game_info {
+                        height: 62vw !important;
+                    }
+
+                }
             
             @media only screen 
                 and (min-device-width: 700px) {
@@ -86,14 +118,22 @@
                         grid-template-columns: auto auto;
                     }
 
+                    #treasure_hunt_game_page .game_name {
+                        margin-top: -10px;
+                    }
+
                     .game_content #game_area, #game_info {
                         width: 36vw;
-                        height: 32vw;
+                        height: 36vw;
                     }
 
                     #game_area div {
                         width:36vw;
-                        height: 32vw;
+                        height: 36vw;
+                    }
+
+                    #game_info h1 {
+                        margin-top: 20px !important;
                     }
                 }
 
@@ -114,38 +154,39 @@
 	<body>
 		<div data-role="page" id="treasure_hunt_game_page">
 			<!-- Header -->
+            <!-- <div style="height: 30px"></div> -->
+            <!-- <div>
+                <img class="game_name" src="images/game/gameHeading.png">
+            </div> -->
 			<div role="main" class="game_content">
-                <div style="height: 30px"></div>
-                <div>
-                    <img class="game_name" src="images/game/gameHeading.png">
-                </div>
                 <div id="game_area">
-                    <div style="display:inline-block; margin:auto; width:100%; vertical-align:top;">
+                    <!-- <div> -->
                         <!-- <ul id="sortable" class="sortable"></ul> -->
-                        <table cellpadding=0 cellspacing=0 style="height: fit-content; width: fit-content; text-align: center; color: white;">
-                            <tr>
-                                <td class="img_box" id="box1" onclick="boxClick(this.id)"></td>
-                                <td class="img_box" id="box2" onclick="boxClick(this.id)"></td>
-                                <td class="img_box" id="box3" onclick="boxClick(this.id)"></td>
-                            </tr>
-                            <tr>
-                                <td class="img_box" id="box4" onclick="boxClick(this.id)"></td>
-                                <td class="img_box" id="box5" onclick="boxClick(this.id)"></td>
-                                <td class="img_box" id="box6" onclick="boxClick(this.id)"></td>
-                            </tr>
-                            <tr>
-                                <td class="img_box" id="box7" onclick="boxClick(this.id)"></td>
-                                <td class="img_box" id="box8" onclick="boxClick(this.id)"></td>
-                                <td class="img_box" id="box9" onclick="boxClick(this.id)"></td>
-                            </tr>
-                        </table>
+                    <table cellpadding=0 cellspacing=0 style="height: fit-content; width: fit-content; text-align: center; color: white;">
+                        <tr>
+                            <td class="img_box" id="box1" onclick="boxClick(this.id)"></td>
+                            <td class="img_box" id="box2" onclick="boxClick(this.id)"></td>
+                            <td class="img_box" id="box3" onclick="boxClick(this.id)"></td>
+                        </tr>
+                        <tr>
+                            <td class="img_box" id="box4" onclick="boxClick(this.id)"></td>
+                            <td class="img_box" id="box5" onclick="boxClick(this.id)"></td>
+                            <td class="img_box" id="box6" onclick="boxClick(this.id)"></td>
+                        </tr>
+                        <tr>
+                            <td class="img_box" id="box7" onclick="boxClick(this.id)"></td>
+                            <td class="img_box" id="box8" onclick="boxClick(this.id)"></td>
+                            <td class="img_box" id="box9" onclick="boxClick(this.id)"></td>
+                        </tr>
+                    </table>
                         <!-- <img src="images/destinations/Big%20Ben.jpg" alt="game"  style="width: 100%; height: 100%;"> -->
-                    </div>
+                    <!-- </div> -->
                 </div>
                 <div id="game_info">
-                    <h1 style="margin-top: 8px">Did you know?</h1>
+                    <img class="game_name" src="images/game/gameHeading.png">
+                    <h1>Did you know?</h1>
                     <p>The Big Ben cracked on 1859 few months after it first rung. A new lighter hammer was fitted soon after.</p>
-                    <br>
+                    <!-- <br> -->
                     <div>
                         <button onclick="history.back()" class="game_exit_btn">Exit</button>
                     </div>
