@@ -107,6 +107,17 @@ function chkWin() {
     }
 
     if(a==1) {
-        showSuccess('Game Completed')
+        UpdatePoints();
     }
+}
+
+function UpdatePoints(){
+    currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
+    console.log(1);
+    currentlySignedInUser.currentPoints = currentlySignedInUser.currentPoints + 10;
+    console.log(2);
+    localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser))
+    console.log(3);
+    showSuccess("Game Completed.");
+
 }
