@@ -436,10 +436,8 @@ p2 {
 /* Forgot Password Page
 ---------------------------------------------------------------------------------*/
 .forgot_pass .form_div {
-    height: 500px;
     width: 300px;
-    margin-top: 15%;
-    margin-left: 10%;
+    margin-top: 5vh;
 }
 
 .forgot_pass .ui-input-text {
@@ -463,7 +461,7 @@ p2 {
 .forgot_pass .anchor_button {
     height: 26px;
     width: 58px;
-    margin-top: 10%;
+    margin-top: 5vh;
     margin-left: 5%;
     margin-bottom: 10%;
 }
@@ -507,6 +505,7 @@ p2 {
 }
 
 .forgot_pass h1 {
+    margin-bottom: 1vh;
     text-align: center;
     font-family: Noto Sans;
     font-weight: 900;
