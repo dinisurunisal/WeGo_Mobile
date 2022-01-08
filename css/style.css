@@ -344,10 +344,8 @@ p2 {
 /* Sign Up Page
 ---------------------------------------------------------------------------------*/
 .sign_up .form_div {
-    height: 500px;
     width: 300px;
-    margin-top: 15%;
-    margin-left: 10%;
+    margin-top: 5vh;
 }
 
 .sign_up .ui-input-text {
@@ -371,7 +369,7 @@ p2 {
 .sign_up .anchor_button {
     height: 26px;
     width: 58px;
-    margin-top: 10%;
+    margin-top: 5vh;
     margin-left: 5%;
     margin-bottom: 10%;
 }
@@ -415,6 +413,7 @@ p2 {
 }
 
 .sign_up h1 {
+    margin-bottom: 1vh;
     text-align: center;
     font-family: Noto Sans;
     font-weight: 900;
