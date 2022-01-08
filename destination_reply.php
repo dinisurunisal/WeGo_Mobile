@@ -1,41 +1,41 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<!-- Common -->
-		<meta charset="utf-8">
-		<title>Destination</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    <?php include_once("css/style.css"); include_once("jquery-theme/themes/theme.css");?>
+	.form_button_container {
+		display: grid;
+    	grid-template-columns: auto auto;
+		justify-content: space-between;
+	}
 
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
-		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
-		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
+	.cancel_btn {
+		color: #0174cf !important;
+	}
 
-		<!-- The three things that jQuery Mobile needs to work -->
-		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	.submit_btn {
+		background-color: #0174cf !important;
+		color: white !important;
+	}
 
-		<!-- Custom -->
-		<script src="js/destination.js"></script>
+	#form_comment {
+		height: 95px !important;
+		background-color: #c4c4c4;
+	}
 
-	</head>
+	#form {
+		width: 62vw;
+	}
+</style>
 
-	<body>
-		<div data-role="page" id="destination_page">
-			<!-- Header -->
-			<?php include("header.php"); ?>
+<!-- <script src="js/footer_script.js"></script> -->
 
-			<div role="main" class="ui-content">
+<div data-role="popup" data-transition="pop" style="padding: 20px;" id="destination_reply" class="ui-content">
+    <form id="form" onsubmit="event.preventDefault(); submitReply()">
+<!--                    <label class="labelform grey heading-five" for="password"> Rating </label>-->
 
-				<div class="col-md-6 col-sm-6 col-xs-12 fill" style="float:left; background-color: #2c2e3c; padding:0px 0px;">
-					<img src="images/background_find.jpg">
-				</div>
-			</div>
-
-			<?php include("footer.php"); ?>
-			<?php include("navigation_bar.php"); ?>
+		<!-- <img src="images/fourStars.png" style="width: 70%; padding: 8px 0 8px 0;"> -->
+		<textarea type="text" required name="comment" id="form_comment" class="formField" placeholder="Enter your reply here"></textarea>
+		<div class="form_button_container">
+			<a data-rel="back"><button class="cancel_btn">Cancel</button></a>
+			<button type="submit" class="submit_btn" data-role="button">Submit</button>
 		</div>
-	</body>
-</html>
+	</form>
+</div> 

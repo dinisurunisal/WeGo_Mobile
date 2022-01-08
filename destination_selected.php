@@ -36,9 +36,8 @@
 			<!-- Header -->
 			<?php include("header.php"); ?>
 
-			<div class="dest_background_image" style="margin-top: 50px;">
-				<div class="dest_main_intro">
-				</div>
+			<div role="main" class="ui-content" style="height: 100%; margin-top: 50px; padding: 0px;">
+
 				<img src="images/background_find.jpg" id="london_bg" alt="london_bg" width="100%">
 
 				<div class="dest_sel_content_block">
@@ -142,36 +141,72 @@
 							</button>
 						</div>
 
+						<div class="review_card_section">
+							<h2>Top Reviews</h2>
+							<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0; display: inline-block;">
+								<div id="card_script_1">
+									<div id="review-card-resolution-breakpoint">
+										<li>
+											<div class="dest_review_card">
+												<div class="dest_reviewer">
+													<img src="images/reviewer1.jpg" id="review_thumb_image">
+													<div class="dest_reviewer_info">
+														<p id="dest_reviewer_name">Sherlock Holmes</p>
+														<p2 id="dest_reviewer_count">133 Reviews</p2> 
+													</div>
+												</div>
+												<div class="dest_reviewer_raiting">
+													<div id="star_rating_holder">
+														<i id="star_rating_one" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+														<i id="star_rating_two" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+														<i id="star_rating_three" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+														<i id="star_rating_four" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+														<i id="star_rating_five" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+													</div>
+													<p2 id="dest_reviewer_date">3 days ago</p2>
+												</div>
+												<p class="dest_review_comment" id="dest_review_comment">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
+												<div class="dest_review_reply">
+													<!-- <div class="reply_btn" id="destReviewId" onclick="onReplyClick(this.id)">
+														<p>Reply</p>
+													</div> -->
+													<div class="reply_btn" id="destReviewId" onclick="onReplyClick(this.id)">
+														<a href="#destination_reply" data-rel="popup" data-transition="pop" data-position-to="window">
+															<button class="feedback_btn"><p>Reply</p></button>
+														</a>  
+													</div>
+													<div id="des_reply">
+														<div class="dest_replier">
+															<img src="images/reviewer1.jpg" id="review_thumb_image">
+															<div class="dest_replier_info">
+																<p>Sherlock Holmes</p>
+																<p2>133 Reviews</p2>
+															</div>
+														</div>
+														<!-- <p>Sherlock Holmes</p>
+														<p2>133 Reviews</p2> -->
+														<p2>Just now</p2>
+														<p class="dest_review_reply">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
+													</div>
+												</div>
+											</div>
+										</li>
+									</div>
+								</div>
+
+								<div id="card_script_2"></div>
+							</ul>
+						</div>
 
 					</div>
 				</div>
 
-				<div class="review_card_section">
-					<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0">
-						<div id="card_script_1">
-							<div id="review-card-resolution-breakpoint">
-								<li>
-									<div class="dest_review_card">
-										<div style="position: relative;">
-											<div class="thumb_image_div">
-												<img src="images/reviewer1.jpg" id="review_thumb_image">
-											</div>
-											<div class="dest_review_content">
-												<h4 class="dest_review_name" id="dest_review_name">Big Ben</h4>
-											</div>
-									</div>
-								</li>
-							</div>
-						</div>
-
-						<div id="card_script_2"></div>
-					</ul>
-				</div>
+				<?php include("destination_reply.php")?>
 			</div>
 
-			<div role="main" class="ui-content">
+			<!-- <div role="main" class="ui-content">
 		
-			</div>
+			</div> -->
 
 			<?php include("success_popups.php"); ?>
 

@@ -1,15 +1,12 @@
 
+var hunts;
+var pastHunts = JSON.parse(localStorage.getItem('pastHunts'));
+const starList = ['tour_star_rating_one', 'tour_star_rating_two', 'tour_star_rating_three', 'tour_star_rating_four', 'tour_star_rating_five'];
+
 $(document).on("pageinit", function () {
     initPage();
     populatePastHunts();
-    populateUpcomingHunts();
 });
-
-var hunts;
-//var selectedOrder;
-//var currentlySignedInUse
-//var hasUpcomingFound;
-//var hasPastFound;
 
 function initPage() {
     $("#my-hunts-toggle").addClass("ui-btn-active");
@@ -30,9 +27,11 @@ function initPage() {
 
    if (hunts == null) {
     hunts = []
+   } else {
+    populateUpcomingHunts();
    }
 
-   setupStars();
+    setupStars();
 }
 
 
@@ -100,8 +99,7 @@ function selectUpcomingHunts() {
 
 function populatePastHunts() {
 
-    var pastHunts = JSON.parse(localStorage.getItem('pastHunts'));
-    console.log(pastHunts);
+    console.log(pastHunts)
 
     for (var i = 0; i < pastHunts.length; i++) {
         document.getElementById("past_hunt_card_image").src = pastHunts[i].imageUrl;
@@ -109,13 +107,19 @@ function populatePastHunts() {
         document.getElementById("past_my_hunts_tour_date").innerHTML = pastHunts[i].tourDate;
         document.getElementById("past_my_hunts_tour_details").innerHTML = pastHunts[i].tourDetails;
 
-        if ( pastHunts[i].huntId === 'mh2') {
-            document.getElementById("button_space").style.display = "none"
-            document.getElementById("rating").style.display = "block"
-            document.getElementById("tour_review").style.display = "block"
+        if ( pastHunts[i].tourRating == null) {
+            document.getElementById("tour_star_holder").style.display = "none";
+            document.getElementById("tour_review").style.display = "none";
         } else {
-            document.getElementById("rating").style.display = "none"
-            document.getElementById("tour_review").style.display = "none"
+            document.getElementById("button_space").style.display = "none"
+            document.getElementById("tour_star_holder").style.display = "block"
+            document.getElementById("tour_review").style.display = "block"
+            document.getElementById("tour_rating").innerHTML = pastHunts[i].tourRating + ' Stars';
+            document.getElementById("tour_review").innerHTML = pastHunts[i].tourComment;
+
+            for (let j = 0; j < pastHunts[i].tourRating; j++) {
+                document.getElementById(starList[j]).innerHTML = 'star';
+            }
         }
 
 
@@ -123,11 +127,6 @@ function populatePastHunts() {
     }
 
     deleteDuplicateCards("past_my_hunts_list"); 
-
-    for (var i = 0; i < pastHunts.length; i++) {
-
-
-    }
 
 }
 
@@ -139,16 +138,13 @@ function deleteDuplicateCards(idName) {
 
 function populateUpcomingHunts() {
 
-    var pastHunts = JSON.parse(localStorage.getItem('upcomingHunts'));
-    console.log(pastHunts);
-
-    for (var i = 0; i < pastHunts.length; i++) {
-        document.getElementById("upcoming_hunt_card_image").src = pastHunts[i].imageUrl;
-        document.getElementById("upcoming_my_hunts_location_name").innerHTML = pastHunts[i].destName;
-        document.getElementById("upcoming_my_hunts_tour_date").innerHTML = pastHunts[i].tourDate;
-        document.getElementById("upcoming_tour_route").innerHTML = pastHunts[i].tourRoute;
-        document.getElementById("upcoming_tour_duration").innerHTML = pastHunts[i].tourDuration;
-        document.getElementById("upcoming_tour_passengers").innerHTML = pastHunts[i].tourPassengers;
+    for (var i = 0; i < hunts.length; i++) {
+        document.getElementById("upcoming_hunt_card_image").src = hunts[i].imageUrl;
+        document.getElementById("upcoming_my_hunts_location_name").innerHTML = hunts[i].poiName;
+        document.getElementById("upcoming_my_hunts_tour_date").innerHTML = "Tour completed on " + hunts[i].bookingDate;
+        document.getElementById("upcoming_tour_route").innerHTML = hunts[i].routeStart + " - " + hunts[i].routeFinish;
+        document.getElementById("upcoming_tour_duration").innerHTML = hunts[i].durationHours + "h " + hunts[i].durationMin + "m";
+        document.getElementById("upcoming_tour_passengers").innerHTML = hunts[i].passengers + " Adults";
 
         $("#upcoming_my_hunts_list").clone().appendTo("#upcoming_my_hunts_list_2");
     }
@@ -164,32 +160,42 @@ function submitFeedback() {
    $('#star_rating_holder').children('i').each(function () {
        if ($(this).html() == "star") {
            starCount++;
+           console.log(starCount)
        }
    });
 
-   $.each(hunts, function (key, hunt) {
-       if (hunt.id == 1) {
-           hunt.ratingStars = starCount;
-           hunt.ratingComment = comment;
-           console.log("Saved");
+   $.each(pastHunts, function (key, hunt) {
+       if (hunt.huntId == 'mh1') {
+            hunt.tourRating = starCount;
+            hunt.tourComment = comment;
+            console.log("Saved");
        }
    });
 
-   var users = JSON.parse(localStorage.getItem('users'));
-   $.each(users, function (key, user) {
-       if (user.contactNumber === currentlySignedInUser.contactNumber) {
-           users[key] = currentlySignedInUser;
-       }
-   });
-   localStorage.setItem("users", JSON.stringify(users));
-   currentlySignedInUser.bookings = hunts;
-   console.log(hunts);
-   localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
-   showSuccess("Feedback saved.");
+//    var users = JSON.parse(localStorage.getItem('users'));
+//    $.each(users, function (key, user) {
+//        if (user.contactNumber === currentlySignedInUser.contactNumber) {
+//            users[key] = currentlySignedInUser;
+//        }
+//    });
+//    localStorage.setItem("users", JSON.stringify(users));
+//    currentlySignedInUser.bookings = hunts;
+//    console.log(hunts);
+   localStorage.setItem('pastHunts', JSON.stringify(pastHunts));
+//    showSuccess("Feedback saved.");
+   UpdatePoints();
    $("#popupBasic").popup("close")
 
    setTimeout(function () {
        location.reload();
 
    }, 2000);
+}
+
+function UpdatePoints(){
+    currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
+    currentlySignedInUser.currentPoints = currentlySignedInUser.currentPoints + 10;
+    localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser))
+    showSuccess("Feedback saved.");
+
 }
