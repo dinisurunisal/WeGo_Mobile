@@ -1,9 +1,10 @@
-<style>
-    <?php
-    include_once("css/mb_styles_set_1.css");
-    include_once("css/destination_filter_popup.css");
-    ?>
-</style>
+
+
+<!-- <link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
+<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" /> -->
+
+
+<link rel="stylesheet" href="css/destination_filter_popup.css">
 
 <script src="js/destination_filter_popup.js"></script>
 
