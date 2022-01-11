@@ -253,6 +253,10 @@
                 grid-template-columns: 20vw 20vw 20vw 20vw !important;
             }
 
+            .carousel {
+                height: 40vh;
+            }
+
         }
     </style>
 
