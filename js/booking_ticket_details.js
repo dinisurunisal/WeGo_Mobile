@@ -1,4 +1,5 @@
 $(document).on("pageinit", function () {
+  document.getElementById("back_btn").style.display = "none";
   initPage();
 });
 
