@@ -173,14 +173,16 @@
                 width: -webkit-fill-available;
                 object-fit: cover;
                 border-radius: 12px;
+                filter: brightness(0.8)
                 /* -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(40, 40, 40, 40)); */
             }
 
             #thumbnail_list_small .thumbnail_name {
                 color: white;
                 margin: -50px 0px 0px 0px !important;
-                text-shadow: #404040 0px 0px 12px;
-                font-size: 13px;
+                text-shadow: #404040 -2px -2px 6px;
+                font-size: 16px;
+                position: relative;
             }
 
         @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
