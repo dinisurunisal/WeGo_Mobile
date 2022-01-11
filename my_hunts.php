@@ -84,7 +84,7 @@
     <body>
         <div data-role="page" id="my-hunts-page">
             <?php include("header.php"); ?>
-            <div style="margin-top: 60px; height: 800px; padding: 16px; text-align: center;">
+            <div id="my_hunts_content" style="margin-top: 60px; padding: 16px; text-align: center; display: flow-root; margin-bottom: 32vh;">
                 <h2 style="margin-top: 6px; margin-bottom:2px">My Hunts</h2>
                 <p style="margin-top:2px; margin-bottom:24px">Find your past and upcoming hunts</p>
                 <div data-role="navbar" class="toggle">

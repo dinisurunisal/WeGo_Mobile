@@ -18,18 +18,71 @@
 
 </head>
 <style>
-	body {
-		margin: 0;
-		background-image: url('images/loginBackground.png');
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: 376px;
+	@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+		body {
+			margin: 0;
+			background-image: url('images/loginBackground.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 376px;
+		}
+
+		.login_screen .form_div {
+			margin-top: 80%;
+		}
+	}
+
+	@media only screen and (min-device-width: 768px) and (max-device-width: 800px) {
+		body {
+			margin: 0;
+			background-image: url('images/loginBackground2.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 769px;
+		}
+
+		.login_screen .form_div {
+			margin-top: 50%;
+		}
+	}
+
+	@media only screen and (min-device-width: 805px) and (max-device-width: 850px) {
+		body {
+			margin: 0;
+			background-image: url('images/loginBackground4.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 812px;
+		}
+
+		.login_screen .main_cls {
+			justify-items: end;
+		}
+
+		.login_screen .form_div {
+			margin-top: 6%;
+			padding-right: 9%;
+		}
+	}
+
+	@media only screen and (min-device-width: 1024px) {
+		body {
+			margin: 0;
+			background-image: url('images/loginBackground3.png');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: 1040px;
+		}
+
+		.login_screen .form_div {
+			margin-top: 30%;
+		}
 	}
 </style>
 
 <body>
 	<div data-role="page" id="login_screen" data-theme="d" class="login_screen">
-		<div role="main">
+		<div role="main" class="main_cls">
 			<div class="form_div">
 				<form id="form" onsubmit="event.preventDefault(); login()">
 					<label class="label_form" for="contactNumber"> Contact Number </label>
@@ -47,7 +100,7 @@
 					</a>
 				</form>
 			</div>
-			<?php include("success_popups.php");?>
+			<?php include("success_popups.php"); ?>
 		</div>
 	</div>
 </body>
