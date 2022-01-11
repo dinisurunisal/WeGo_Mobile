@@ -20,7 +20,7 @@ function signup() {
   var currentUser = {
     username: name,
     email: email,
-    currentPoints: 100,
+    currentPoints: 150,
     contactNumber: contactNumber,
     password: password,
     signupDate: date,

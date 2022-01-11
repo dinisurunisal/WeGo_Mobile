@@ -182,11 +182,20 @@ function submitFeedback() {
 //    currentlySignedInUser.bookings = hunts;
 //    console.log(hunts);
    localStorage.setItem('pastHunts', JSON.stringify(pastHunts));
-   showSuccess("Feedback saved.");
+//    showSuccess("Feedback saved.");
+   UpdatePoints();
    $("#popupBasic").popup("close")
 
    setTimeout(function () {
        location.reload();
 
    }, 2000);
+}
+
+function UpdatePoints(){
+    currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
+    currentlySignedInUser.currentPoints = currentlySignedInUser.currentPoints + 10;
+    localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser))
+    showSuccess("Feedback saved.");
+
 }

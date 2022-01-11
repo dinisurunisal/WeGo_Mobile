@@ -15,12 +15,8 @@
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-        <script src="http://code.jquery.com/jquery.min.js"></script>
-        <script src="http://code.jquery.com/ui/1.8.17/jquery-ui.min.js"></script>
-        <script src="jquery.ui.touch-punch.min.js"></script>
-
 		<!-- Custom -->
-		<script src="js/image_puzzle.js"></script>
+		<script src="js/game_puzzle.js"></script>
         <style>
             #treasure_hunt_game_page {
                 background-image:url(images/game/gameBackground.png);
@@ -31,7 +27,7 @@
             }
             
             #treasure_hunt_game_page .game_name {
-                width: 130px;
+                width: 164px;
             }
 
             .game_content {
@@ -44,91 +40,76 @@
 
             .game_content #game_area, #game_info {
                 text-align: -webkit-center;
-                padding: 0px 24px 24px 24px;
+                padding: 24px 24px 24px 24px;
                 width: 75vw;
                 height: 75vw;
             }
-            
+
+            #game_info {
+                display: grid;
+                align-items: end;
+                justify-items: center;
+            }
 
             #game_info h1, p {
                 color: white;
                 max-width: 280px;
             }
-            
-            #collage hr{
-                border:none;
-                border-top:2px solid #f5f2f2;
-                height:1px;
-            }
 
-            #collage #playPanel {
-                background-color:#c2defc;
-                padding:10px 0px;
-                margin: 10px auto;
-                max-width:800px;
-                width:95%;
-            }
-
-            #collage #actualImageBox {
-                display: inline-block;
-                font-size:0.8em;
-                margin: 10px 10px;
-                vertical-align: top;
-                width:280px;
-            }
-
-            #collage #stepBox, #collage #timeBox {
-                display:inline-block;
-                width:100%;
-            }
-
-            #collage #stepBox div {
-                background-color:#c2defc;
-                display:inline-block;
-                padding:1px 4px;
-                margin: 0px auto;
-                max-width:800px;
-            }
-
-            #collage img#actualImage{
-                border:2px solid #a46;
-                height:280px;
-                width:280px;
-            }
-
-            #collage #sortable {
-                border:2px solid #a46;
-                list-style-type: none;
-                display: inline-block;
-                margin: 10px;
-                padding: 0;
-                width: 400px;
-            }
-
-            #collage #sortable li {
-                background-size: 400% 400%;
-                border: none;
-                cursor: pointer;
-                margin: 0;
-                padding: 0;
-                float: left;
-                width: 100px;
-                height: 100px;
-            }
-
-            #collage button  {
-                background-color:#f5f2f2;
-                border:1px solid #cce;
-                display: inline;
-                font-size: 14px;
-                height: auto;
-                width: auto;
-                padding: 3px 8px;
+            #game_info h1 {
+                margin-top: 6px;
+                margin-bottom: 4px;
             }
 
             .game_exit_btn {
+                /* margin-top: 30px; */
                 width: 70px !important;
             }
+
+            table {
+                height: -webkit-fill-available !important;
+                width: -webkit-fill-available !important;
+                background-color: white;
+                border-radius: 12px;
+                border-style: solid;
+                border-color: white;
+                border-width: medium;
+                border-spacing: 0px;
+                padding: 4px;
+            }
+
+            td {
+                width: -webkit-fill-available;
+                height: -webkit-fill-available;
+                border-color: white;
+                border-style: solid;
+                border-width: medium;
+                padding: 0px;
+                border: 0px;
+            }
+
+            td img {
+                width: 96%;
+                height: 96%;
+            }
+
+            @media only screen 
+                and (max-device-width: 400px) {
+
+                    #treasure_hunt_game_page .game_name {
+                        position: absolute;
+                        top: 11vh;
+                    }
+
+                    .game_content {
+                        align-content: flex-end;
+                    }
+
+                    .game_content #game_info {
+                        height: 62vw !important;
+                    }
+
+                }
             
             @media only screen 
                 and (min-device-width: 700px) {
@@ -137,14 +118,22 @@
                         grid-template-columns: auto auto;
                     }
 
+                    #treasure_hunt_game_page .game_name {
+                        margin-top: -10px;
+                    }
+
                     .game_content #game_area, #game_info {
                         width: 36vw;
-                        height: 32vw;
+                        height: 36vw;
                     }
 
                     #game_area div {
                         width:36vw;
-                        height: 32vw;
+                        height: 36vw;
+                    }
+
+                    #game_info h1 {
+                        margin-top: 20px !important;
                     }
                 }
 
@@ -165,71 +154,45 @@
 	<body>
 		<div data-role="page" id="treasure_hunt_game_page">
 			<!-- Header -->
+            <!-- <div style="height: 30px"></div> -->
+            <!-- <div>
+                <img class="game_name" src="images/game/gameHeading.png">
+            </div> -->
 			<div role="main" class="game_content">
-                <div style="height: 30px"></div>
-                <div>
-                    <img class="game_name" src="images/game/gameHeading.png">
-                </div>
                 <div id="game_area">
-                    <div style="display:inline-block; margin:auto; width:100%; vertical-align:top;">
-                        <ul id="sortable" class="sortable"></ul>
-                        <!-- <table style="height: 100%; width: 100%; text-align: center; color: white;">
-                            <tr>
-                                <td></td><td></td><td></td>
-                            </tr>
-                            <tr>
-                                <td></td><td></td><td></td>
-                            </tr>
-                            <tr>
-                                <td></td><td></td><td></td>
-                            </tr>
-                            <tr>
-                                <td></td><td></td><td></td>
-                            </tr>
-                        </table> -->
+                    <!-- <div> -->
+                        <!-- <ul id="sortable" class="sortable"></ul> -->
+                    <table cellpadding=0 cellspacing=0 style="height: fit-content; width: fit-content; text-align: center; color: white;">
+                        <tr>
+                            <td class="img_box" id="box1" onclick="boxClick(this.id)"></td>
+                            <td class="img_box" id="box2" onclick="boxClick(this.id)"></td>
+                            <td class="img_box" id="box3" onclick="boxClick(this.id)"></td>
+                        </tr>
+                        <tr>
+                            <td class="img_box" id="box4" onclick="boxClick(this.id)"></td>
+                            <td class="img_box" id="box5" onclick="boxClick(this.id)"></td>
+                            <td class="img_box" id="box6" onclick="boxClick(this.id)"></td>
+                        </tr>
+                        <tr>
+                            <td class="img_box" id="box7" onclick="boxClick(this.id)"></td>
+                            <td class="img_box" id="box8" onclick="boxClick(this.id)"></td>
+                            <td class="img_box" id="box9" onclick="boxClick(this.id)"></td>
+                        </tr>
+                    </table>
                         <!-- <img src="images/destinations/Big%20Ben.jpg" alt="game"  style="width: 100%; height: 100%;"> -->
-                    </div>
+                    <!-- </div> -->
                 </div>
                 <div id="game_info">
-                    <h1 style="margin-top: 8px">Did you know?</h1>
+                    <img class="game_name" src="images/game/gameHeading.png">
+                    <h1>Did you know?</h1>
                     <p>The Big Ben cracked on 1859 few months after it first rung. A new lighter hammer was fitted soon after.</p>
-                    <br>
+                    <!-- <br> -->
                     <div>
                         <button onclick="history.back()" class="game_exit_btn">Exit</button>
                     </div>
                 </div>
 			</div>
+            <?php include("success_popups.php"); ?>
 		</div>
-        <script>
-            // var l = [1, 2, 3, 4, 5, 6, 7, 8, 0];
-
-            // function drawPuzzle() {
-            //     for(i=0; i<9; i++) {
-            //         document.getElementsByTagName('td')[i].innerHTML = l[i];
-            //     }
-            // }
-
-            var images = [
-                { src: 'images/destinations/Big%20Ben.jpg', title: 'Tigers Nest Temple, Bhutan' }
-            ];
-
-            $(function () {
-                var gridSize = 3;
-                imagePuzzle.startGame(images, gridSize);
-
-                // $('#newPhoto').click(function () {
-                //     imagePuzzle.startGame(images, gridSize);
-                // });
-
-                // $('#levelPanel :radio').change(function (e) {
-                //     var gridSize = $(this).val();
-                //     imagePuzzle.startGame(images, gridSize);
-                // });
-            });
-
-            // function rules() {
-            //     alert('Rearrange the pieces so that you get a sample image. \nThe steps taken are counted');
-            // }
-        </script>
 	</body>
 </html>

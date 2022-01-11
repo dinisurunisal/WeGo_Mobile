@@ -277,12 +277,21 @@ p2 {
 
 /* Login Page 
 ---------------------------------------------------------------------------------*/
-.login_screen .form_div{
-    height: 500px;
-    width: 300px;
-    margin-top: 80%;
-    margin-left: 10%;
+.login_screen .main_cls{
+    display: grid;
+    justify-items:center;
 }
+
+.login_screen .form_div{
+    margin-top: 50%;
+    display: grid;
+    justify-items: center;
+}
+
+.login_screen .form_field{
+    width: 300px;
+}
+
 .login_screen .ui-input-text{
     color: white;
     min-height: 2.2em;
@@ -335,10 +344,8 @@ p2 {
 /* Sign Up Page
 ---------------------------------------------------------------------------------*/
 .sign_up .form_div {
-    height: 500px;
     width: 300px;
-    margin-top: 15%;
-    margin-left: 10%;
+    margin-top: 5vh;
 }
 
 .sign_up .ui-input-text {
@@ -362,7 +369,7 @@ p2 {
 .sign_up .anchor_button {
     height: 26px;
     width: 58px;
-    margin-top: 10%;
+    margin-top: 5vh;
     margin-left: 5%;
     margin-bottom: 10%;
 }
@@ -406,6 +413,7 @@ p2 {
 }
 
 .sign_up h1 {
+    margin-bottom: 1vh;
     text-align: center;
     font-family: Noto Sans;
     font-weight: 900;
@@ -428,10 +436,8 @@ p2 {
 /* Forgot Password Page
 ---------------------------------------------------------------------------------*/
 .forgot_pass .form_div {
-    height: 500px;
     width: 300px;
-    margin-top: 15%;
-    margin-left: 10%;
+    margin-top: 5vh;
 }
 
 .forgot_pass .ui-input-text {
@@ -455,7 +461,7 @@ p2 {
 .forgot_pass .anchor_button {
     height: 26px;
     width: 58px;
-    margin-top: 10%;
+    margin-top: 5vh;
     margin-left: 5%;
     margin-bottom: 10%;
 }
@@ -499,6 +505,7 @@ p2 {
 }
 
 .forgot_pass h1 {
+    margin-bottom: 1vh;
     text-align: center;
     font-family: Noto Sans;
     font-weight: 900;
