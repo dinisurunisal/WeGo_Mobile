@@ -62,7 +62,7 @@ function showFailure(message) {
 
 <div id="message_box" style="text-align:center">
     <ion-icon class="icon" id="popup_custom_icon" name="shield-checkmark" style="color:#0174cf;">shield_checkmark</ion-icon>
-    <!-- <ion-icon class="icon" id="popup_custom_icon_fail" name="alert-circle" style="color:#ff0000;">alert_warning</ion-icon> -->
+    <ion-icon class="icon" id="popup_custom_icon_fail" name="alert-circle" style="color:#ff0000;">alert_warning</ion-icon>
     <h4 id="popup_custom_message" style="color: #0174cf;">Success</h4>
 </div>
 
