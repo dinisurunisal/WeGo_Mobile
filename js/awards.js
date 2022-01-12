@@ -1,6 +1,6 @@
 var currentlySignedInUser;
 
-$(document).on("pageinit",function(){
+$(function initialization(){
     currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
     UpdatePoints();
 });

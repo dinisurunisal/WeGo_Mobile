@@ -1,5 +1,5 @@
 // var booking = [];
-// $(document).on("pageinit", function () {
+// $(function initialization(){
 //     initJsonFiles();
 // });
 // function initJsonFiles() {
@@ -14,7 +14,7 @@
 // function loadData() {
 // }
 
-$(document).on("pageinit", function () {
+$(function initialization(){
   routeType = "One Way"
   initPage();
 });

@@ -5,7 +5,7 @@ var pastHunts = JSON.parse(localStorage.getItem('pastHunts'));
 var currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
 const starList = ['tour_star_rating_one', 'tour_star_rating_two', 'tour_star_rating_three', 'tour_star_rating_four', 'tour_star_rating_five'];
 
-$(document).on("pageinit", function () {
+$(function initialization(){
     initPage();
     populatePastHunts();
 });
@@ -94,10 +94,6 @@ function selectUpcomingHunts() {
     document.getElementById("past-hunts-btn").style.background = "white";
     document.getElementById("past-hunts-btn").style.color = "#c4c4c4";
 }
-
-//function setOrder(orderId) {
-//    selectedOrder = orderId
-//}
 
 function populatePastHunts() {
 
