@@ -1,7 +1,7 @@
 
 var hunts;
-// var destination;
-var pastHunts = JSON.parse(localStorage.getItem('pastHunts'));
+
+var destinationList = JSON.parse(localStorage.getItem("destinations"));
 var currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
 const starList = ['tour_star_rating_one', 'tour_star_rating_two', 'tour_star_rating_three', 'tour_star_rating_four', 'tour_star_rating_five'];
 
@@ -21,7 +21,7 @@ function initPage() {
 
    currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
    hunts = currentlySignedInUser.bookings;
-   console.log(hunts);
+   console.log(currentlySignedInUser);
 
 //    if (hunts.isFeedbackGiven == true) {
 //     hunts.isFeedbackGiven == false;
@@ -97,31 +97,32 @@ function selectUpcomingHunts() {
 
 function populatePastHunts() {
 
-    console.log(pastHunts)
+    console.log(destinationList)
 
-    for (var i = 0; i < pastHunts.length; i++) {
-        document.getElementById("past_hunt_card_image").src = pastHunts[i].imageUrl;
-        document.getElementById("past_my_hunts_location_name").innerHTML = pastHunts[i].destName;
-        document.getElementById("past_my_hunts_tour_date").innerHTML = pastHunts[i].tourDate;
-        document.getElementById("past_my_hunts_tour_details").innerHTML = pastHunts[i].tourDetails;
-
-        if ( pastHunts[i].tourRating == null) {
-            document.getElementById("tour_star_holder").style.display = "none";
-            document.getElementById("tour_review").style.display = "none";
-        } else {
-            document.getElementById("button_space").style.display = "none"
-            document.getElementById("tour_star_holder").style.display = "block"
-            document.getElementById("tour_review").style.display = "block"
-            document.getElementById("tour_rating").innerHTML = pastHunts[i].tourRating + ' Stars';
-            document.getElementById("tour_review").innerHTML = pastHunts[i].tourComment;
-
-            for (let j = 0; j < pastHunts[i].tourRating; j++) {
-                document.getElementById(starList[j]).innerHTML = 'star';
+    for (var i = 0; i < destinationList.length; i++) {
+        if (destinationList.isPastHunt) {
+            document.getElementById("past_hunt_card_image").src = destinationList[i].destinationImage;
+            document.getElementById("past_my_hunts_location_name").innerHTML = destinationList[i].destinationName;
+            document.getElementById("past_my_hunts_tour_date").innerHTML = destinationList[i].tourDate;
+            document.getElementById("past_my_hunts_tour_details").innerHTML = destinationList[i].tourDetails;
+    
+            if ( destinationList[i].tourRating == null) {
+                document.getElementById("tour_star_holder").style.display = "none";
+                document.getElementById("tour_review").style.display = "none";
+            } else {
+                document.getElementById("button_space").style.display = "none"
+                document.getElementById("tour_star_holder").style.display = "block"
+                document.getElementById("tour_review").style.display = "block"
+                document.getElementById("tour_rating").innerHTML = destinationList[i].tourRating + ' Stars';
+                document.getElementById("tour_review").innerHTML = destinationList[i].tourComment;
+    
+                for (let j = 0; j < destinationList[i].tourRating; j++) {
+                    document.getElementById(starList[j]).innerHTML = 'star';
+                }
             }
+    
+            $("#past_my_hunts_list").clone().appendTo("#past_my_hunts_list_2");
         }
-
-
-        $("#past_my_hunts_list").clone().appendTo("#past_my_hunts_list_2");
     }
 
     deleteDuplicateCards("past_my_hunts_list"); 
@@ -185,7 +186,7 @@ function submitFeedback() {
 //         reviewReplies : ''
 //     };
 
-   $.each(pastHunts, function (key, hunt) {
+   $.each(destinationList, function (key, hunt) {
        if (hunt.huntId == 'mh1') {
             // destination = destinations.find(obj => obj.destinationId === hunt.destinationId);
             
@@ -208,7 +209,7 @@ function submitFeedback() {
 //    localStorage.setItem("users", JSON.stringify(users));
 //    currentlySignedInUser.bookings = hunts;
 //    console.log(hunts);
-   localStorage.setItem('pastHunts', JSON.stringify(pastHunts));
+   localStorage.setItem('destinationList', JSON.stringify(destinationList));
 //    showSuccess("Feedback saved.");
    UpdatePoints();
    $("#popupBasic").popup("close")
@@ -227,7 +228,7 @@ function UpdatePoints(){
 }
 
 function pushReview(destID, starValue, commentValue) {
-    destination = destinations.find(obj => obj.destinationId === destID);
+    destination = destinationList.find(obj => obj.destinationId === destID);
     reviewNo = destination.destinationReviews.length + 1;
 
     var date = Intl.DateTimeFormat(navigator.language, {
@@ -254,5 +255,5 @@ function pushReview(destID, starValue, commentValue) {
 
     destination.destinationReviews.push(review);
     console.log(destination.destinationReviews);
-    localStorage.setItem("destinations", JSON.stringify(destinations));
+    localStorage.setItem("destinations", JSON.stringify(destinationList));
 }

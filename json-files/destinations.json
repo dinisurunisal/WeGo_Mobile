@@ -9,6 +9,7 @@
     "destinationRating": 4.5,
     "destinationFavId": "destinationId1_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -31,6 +32,8 @@
         "rating": 3,
         "reviewDate": "1/1/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -48,6 +51,8 @@
         "rating": 4,
         "reviewDate": "1/8/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -64,6 +69,9 @@
       "type": "VISA",
       "CVC": "123",
       "exiprationDate": "12/23"
+    },
+    "pastHuntDetails": {
+
     }
   },
   {
@@ -76,6 +84,7 @@
     "destinationRating": 4.9,
     "destinationFavId": "destinationId2_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -98,6 +107,8 @@
         "rating": 3,
         "reviewDate": "1/2/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -115,6 +126,8 @@
         "rating": 4,
         "reviewDate": "1/9/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -143,6 +156,7 @@
     "destinationRating": 4.6,
     "destinationFavId": "destinationId3_favourite",
     "isFavourite": false,
+    "isPastHunt": true,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -165,6 +179,8 @@
         "rating": 3,
         "reviewDate": "1/3/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -182,6 +198,8 @@
         "rating": 4,
         "reviewDate": "1/5/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -210,6 +228,7 @@
     "destinationRating": 3.5,
     "destinationFavId": "destinationId4_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -232,6 +251,8 @@
         "rating": 3,
         "reviewDate": "1/4/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -249,6 +270,8 @@
         "rating": 4,
         "reviewDate": "1/6/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -277,6 +300,7 @@
     "destinationRating": 4.5,
     "destinationFavId": "destinationId5_favourite",
     "isFavourite": false,
+    "isPastHunt": true,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -299,6 +323,8 @@
         "rating": 3,
         "reviewDate": "1/7/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -316,6 +342,8 @@
         "rating": 4,
         "reviewDate": "1/8/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -344,6 +372,7 @@
     "destinationRating": 4.5,
     "destinationFavId": "destinationId6_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -366,6 +395,8 @@
         "rating": 3,
         "reviewDate": "1/10/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -383,6 +414,8 @@
         "rating": 4,
         "reviewDate": "1/11/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -411,6 +444,7 @@
     "destinationRating": 4.5,
     "destinationFavId": "destinationId7_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -433,6 +467,8 @@
         "rating": 3,
         "reviewDate": "1/04/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -450,6 +486,8 @@
         "rating": 4,
         "reviewDate": "1/10/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -478,6 +516,7 @@
     "destinationRating": 4.9,
     "destinationFavId": "destinationId8_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -500,6 +539,8 @@
         "rating": 3,
         "reviewDate": "1/5/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -517,6 +558,8 @@
         "rating": 4,
         "reviewDate": "1/6/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
