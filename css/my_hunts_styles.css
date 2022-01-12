@@ -57,9 +57,10 @@
 	border-top-right-radius: 12px;
 	border-bottom-right-radius: 12px;
 	display: grid;
-	padding: 0 0 0 8px;
+	align-items: center;
+	padding: 4px 0 4px 8px;
 	text-align: left;
-	height: 200px;
+	height: 192px;
 }
 
 #my-hunts-page .my_hunts_card_content h3, p2 {
