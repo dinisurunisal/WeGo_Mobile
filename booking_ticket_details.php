@@ -247,6 +247,16 @@
 			color: red;
 		}
 
+		.paypal-card1 {
+			display: grid;
+			justify-content: center;
+		}
+
+		.paypal-card2 {
+			display: grid;
+			justify-content: center;
+		}
+
 		@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
 			.tickets .booking_card {
 				background-image: url("images/bookBackground.png");
@@ -413,8 +423,8 @@
 					</div>
 					<button id="placeOrder" onclick="placeOrder('approved')" style="text-shadow:none; background-color: #0174CF; color: #ffffff; margin-left: auto; margin-right: auto; margin-top: 6%; width: 180px;">Place Order </button>
 					<a href="#popupDialog" id="placeOrderLink" data-transition="pop" data-position-to="window" data-rel="popup" style="color: white;pointer-events: none;"></a>
-					<div id="paypal-button-container" style="display: none;"></div>
-					<div id="paypal-card-container" style="display: none;"></div>
+					<div id="paypal-button-container" style="display: none;" class="paypal-card1"></div>
+					<div id="paypal-card-container" style="display: none;" class="paypal-card2"></div>
 					<button onclick="cancel()" style="text-shadow:none; background-color: #ffffff; color: #0174CF; margin-left: auto; margin-right: auto; margin-top: 2%; width: 180px; border-color: #ddd;"> Cancel </button>
 				</div>
 			</div>
