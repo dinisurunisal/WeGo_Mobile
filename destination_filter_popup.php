@@ -1,9 +1,5 @@
-<style>
-    <?php
-    include_once("css/mb_styles_set_1.css");
-    include_once("css/destination_filter_popup.css");
-    ?>
-</style>
+
+<link rel="stylesheet" href="css/destination_filter_popup.css">
 
 <script src="js/destination_filter_popup.js"></script>
 
@@ -32,9 +28,8 @@
         </fieldset>
     </form>
 
-    <div class="center-item">
-        <button class="ui-btn custom-update-btn mb-style-set-1-button" id="browse_kitchen_filter_popup-update-button" onclick="browseKitchenFilterPopupUpdateButtonFunction()">
-            Update
-        </button>
-    </div>
+    <div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
+						<button id="cancelBtn" onclick="closeFeedbackPopup();"  class="button_popup" data-role="none">Cancel</button>
+						<button id="sendBtn" type="submit" class="button_popup" data-role="none">Send</button>
+	</div>
 </div>

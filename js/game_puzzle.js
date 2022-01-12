@@ -125,5 +125,5 @@ function UpdatePoints(){
     console.log(2);
     localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser))
     console.log(3);
-    showSuccess("Game Completed.");
+    showSuccess("Game Completed.<br>You earned 10 points.");
 }
