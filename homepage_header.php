@@ -2,7 +2,7 @@
     <?php include_once("jquery-theme/themes/theme.css"); include_once("css/style.css");?>
 </style>
 
-<script src="js/header_script.js"></script>
+<!-- <script src="js/header_script.js"></script> -->
 
 <div id="home_header">
     <div data-role="collapsible" class="ui-nodisc-icon ui-alt-icon" id="header_collapsible"
