@@ -204,6 +204,13 @@
     margin: 0px !important;
 }
 
+.review_card_section #reply_button {
+    padding: 0px 4px !important;
+    margin: 0px !important;
+    box-shadow: none !important;
+    color: #404040 !important;
+}
+
 .review_card_section .dest_review_card #des_reply {
     margin-left: 24px;
     display: none;
@@ -318,6 +325,7 @@ and (max-device-width: 667px) {
 
     .dest_sel_content_block .review_card_section h2 {
         margin-left: 20px;
+        margin-bottom: 8px;
     }
 }
 

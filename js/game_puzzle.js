@@ -113,7 +113,7 @@ function chkWin() {
     if(a==1) {
         won = true;
         document.getElementsByTagName('td')[8].innerHTML = '<img src="images/game/bigben/missing.jpg">';
-        showSuccess('Game Completed')
+        // showSuccess('Game Completed')
         UpdatePoints();
     }
 }

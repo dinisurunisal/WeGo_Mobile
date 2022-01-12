@@ -25,6 +25,7 @@ function signup() {
     password: password,
     signupDate: date,
     favouritesList: [],
+    reviewCount: 1,
     bookings: [
       {
         id: 1,
