@@ -4,22 +4,17 @@ var destinationId;
 var destination;
 var destinations;
 
-
-$(document).on("pageinit", function () {
-    initialize();
+$(function initialization(){
+  destinationId = localStorage.getItem("clickedDestinationId");
+  console.log(destinationId);
+  destinations = JSON.parse(localStorage.getItem("destinations"));
+  destination = destinations.find(obj => obj.destinationId === destinationId);
+  console.log(destinations);
+  loadData();
+  // renderList();
+  // setHeight();
+  // document.getElementById("#nav_bar_search").classList.add("ui-btn-active");
 });
-
-function initialize() {
-    destinationId = localStorage.getItem("clickedDestinationId");
-    console.log(destinationId);
-    destinations = JSON.parse(localStorage.getItem("destinations"));
-    destination = destinations.find(obj => obj.destinationId === destinationId);
-    console.log(destinations);
-    loadData();
-    // renderList();
-    // setHeight();
-    // document.getElementById("#nav_bar_search").classList.add("ui-btn-active");
-}
 
 function loadData(){
     $('.sel-dest-image').attr('src', destination.destinationImage);
