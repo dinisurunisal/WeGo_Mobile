@@ -304,6 +304,7 @@
     "destinationFavId": "destinationId5_favourite",
     "isFavourite": false,
     "isPastHunt": true,
+    "isReviewed": true,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -323,11 +324,11 @@
         "reviewerId": "destinationId5_rev1",
         "reviewerImage": "images/reviewer1.jpg",
         "reviewCount": "133",
-        "rating": 3,
+        "rating": 4,
         "reviewDate": "1/7/2022, 3:43 AM",
-        "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
-        "tourDate":"Tour completed on 20-12-2021", 
-        "tourDetails":"MEL - DEL | 3h 11m | One Way",
+        "reviewDescription": "You must visit here to see what a glamorous place it is !!!",
+        "tourDate":"Tour completed on 25-12-2021", 
+        "tourDetails":"EUS - DEL | 1h 11m | Two Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
@@ -342,9 +343,9 @@
         "reviewerId": "destinationId5_rev2",
         "reviewerImage": "images/reviewer2.jpg",
         "reviewCount": "120",
-        "rating": 4,
+        "rating": 5,
         "reviewDate": "1/8/2022, 3:43 AM",
-        "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "reviewDescription": "One of the best destinations which admires the history of UK",
         "tourDate":"Tour completed on 20-12-2021", 
         "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
