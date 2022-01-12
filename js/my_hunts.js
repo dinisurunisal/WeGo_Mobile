@@ -101,8 +101,8 @@ function populatePastHunts() {
             document.getElementById("past_hunt_card_image").src = destinationList[i].destinationImage;
             document.getElementById("past_my_hunts_location_name").innerHTML = destinationList[i].destinationName;
 
-            document.getElementById("past_my_hunts_tour_date").innerHTML = destinationList[i].destinationReviews[0].tourDate;
-            document.getElementById("past_my_hunts_tour_details").innerHTML = destinationList[i].destinationReviews[0].tourDetails;
+            document.getElementById("past_my_hunts_tour_date").innerHTML = destinationList[i].destinationReviews[1].tourDate;
+            document.getElementById("past_my_hunts_tour_details").innerHTML = destinationList[i].destinationReviews[1].tourDetails;
     
             if (!destinationList[i].isReviewed) {
                 document.getElementById("tour_star_holder").style.display = "none";

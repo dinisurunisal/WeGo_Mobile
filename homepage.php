@@ -290,7 +290,7 @@
 
                 <div class="home_thumbnail_card">
                         <div class="row_one">
-                            <h3>Destination</h3>
+                            <h3>Famous Destinations</h3>
                             <button onclick="window.location.href='destination_list.php'" id="see_all_btn" class="hp_button">See all</button>
                         </div>
                         <div id="thumbnail_list_small">
