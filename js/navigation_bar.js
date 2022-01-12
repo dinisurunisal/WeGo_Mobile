@@ -1,8 +1,4 @@
-$(document).on("pageinit", function () {
-    initialize();
-});
-
-function initialize() {
+$(function initialization(){
     if(window.location.pathname.endsWith("homepage.php")){
         selectHome();
     } else if (window.location.pathname.endsWith("my_hunts.php")) {
@@ -17,7 +13,7 @@ function initialize() {
         document.getElementById("nav_game").style.color = "#c4c4c4";
         document.getElementById("nav_awards").style.color = "#c4c4c4";
     }
-};
+});
 
 function selectHome() {
     document.getElementById("home_img").src = "images/icons/homeIconSelected.png";

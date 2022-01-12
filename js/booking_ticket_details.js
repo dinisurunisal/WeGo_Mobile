@@ -1,4 +1,4 @@
-$(document).on("pageinit", function () {
+$(function initialization(){
   initPage();
 });
 

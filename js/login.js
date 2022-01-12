@@ -1,6 +1,6 @@
 var destinations = [];
 
-$(document).on("pageinit", function () {
+$(function initialization(){
     initJsonFiles();
 });
 

@@ -1,20 +1,16 @@
-$(document).on("pageinit", function () {
+$(function initialization(){
   carouselImages = document.querySelector(".carousel_images");
   carouselButtons = document.querySelectorAll(".carousel_button");
   numberOfImages = document.querySelectorAll(".carousel_images img").length;
   imageIndex = 1;
   translateX = 0;
 
-  init();
-});
-
-function init(){
   var destinations = JSON.parse(localStorage.getItem("destinations"));
   defaultDestinationDB = destinations;
   console.log(defaultDestinationDB)
 
   loadPOI()
-}
+});
 
 function carouselMove(id){
   if (id === "c_previous") {
