@@ -10,6 +10,7 @@
     "destinationFavId": "destinationId1_favourite",
     "isFavourite": false,
     "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -85,6 +86,7 @@
     "destinationFavId": "destinationId2_favourite",
     "isFavourite": false,
     "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -229,6 +231,7 @@
     "destinationFavId": "destinationId4_favourite",
     "isFavourite": false,
     "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -373,6 +376,7 @@
     "destinationFavId": "destinationId6_favourite",
     "isFavourite": false,
     "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -445,6 +449,7 @@
     "destinationFavId": "destinationId7_favourite",
     "isFavourite": false,
     "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -517,6 +522,7 @@
     "destinationFavId": "destinationId8_favourite",
     "isFavourite": false,
     "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
