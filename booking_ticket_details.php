@@ -61,43 +61,39 @@
 		.tickets .booking_card {
 			margin-top: 10%;
 			background-image: url("images/bookBackground.png");
-			display: block;
+			display: grid;
 			background-size: contain;
 			background-repeat: no-repeat;
 			height: 138px;
-			width: 334px;
 		}
 
 		.tk_depature {
 			padding-top: 2.5%;
-			margin-left: 12%;
-
+			display: grid;
+			grid-template-columns: 30vw 30vw 30vw;
+			align-items: start;
 		}
 
 		.tk_depature h4 {
 			line-height: 0;
-			margin-right: 10%;
 		}
 
 		.tk_depature p {
 			font-size: 14px;
 			line-height: 0;
-			margin-right: 10%;
 		}
 
 		.depature {
-			float: left;
+			padding-left: 6vw;
 		}
 
 		.arrival {
-			margin-right: 2%;
-			float: right;
+			padding-left: 6vw;
 		}
 
 		.duration {
-			margin-top: 22%;
+			margin-top: 14vw;
 			text-align: center;
-			margin-right: 4%;
 		}
 
 		.duration p {
@@ -105,93 +101,83 @@
 		}
 
 		.booking_card_two {
-			padding-bottom: 1%;
+			display: grid;
+			padding: 20px;
 			background-color: #ffffff;
 			box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
 			transition: 0.3s;
 			border-radius: 15px;
 			margin: 5%;
-			margin-top: 10%;
-			height: 226px;
-			width: 334px;
 		}
 
 		.tk_details_one {
-			margin-left: 6%;
-			padding-top: 1%;
+			display: grid;
+			grid-template-columns: 45vw auto;
+			align-items: baseline;
 		}
 
 		.tk_details_one p {
 			font-size: 15px;
 		}
 
-		.tk_details_one h4 {
-			margin-top: 5%;
-			margin-right: 24%;
-		}
-
 		.tk_details_two {
-			margin-left: 6%;
-			padding-top: 17%;
+			display: grid;
+			grid-template-columns: 45vw auto;
+			align-items: baseline;
 		}
 
 		.tk_details_two p {
 			font-size: 15px;
 		}
 
-		.tk_details_two h4 {
-			margin-top: 5%;
-			margin-right: 24%;
-		}
-
 		.tk_details_three {
-			margin-left: 6%;
-			padding-top: 17%;
+			display: grid;
+			grid-template-columns: 45vw auto;
+			align-items: baseline;
 		}
 
 		.tk_details_three p {
 			font-size: 15px;
 		}
 
-		.tk_details_three h4 {
-			margin-top: 5%;
-			margin-right: 24%;
-		}
-
 		.tk_details_four {
-			margin-left: 6%;
-			padding-top: 17%;
+			display: grid;
+			grid-template-columns: 45vw auto;
+			align-items: baseline;
 		}
 
 		.tk_details_four p {
 			font-size: 15px;
 		}
 
-		.tk_details_four h4 {
-			margin-top: 5%;
-			margin-right: 24%;
-		}
-
 		.booking_card_three {
-			padding-bottom: 1%;
 			background-color: #ffffff;
 			box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
 			transition: 0.3s;
 			border-radius: 15px;
 			margin: 5%;
-			margin-top: 10%;
-			height: 560px;
-			width: 334px;
+			display: grid;
+			padding: 5px;
 		}
 
-		.left-panel {
-			width: 47%;
-			float: left;
+		.booking_card_three h4 {
+			font-size: 20px;
+			padding-left: 4vw;
+		}
+
+		.panels {
+			display: grid;
+		}
+
+		.pricesPanels{
+			padding: 1rem;
+			display: grid;
+			grid-template-columns: auto auto;
+			align-items: baseline;
 		}
 
 		.right-panel {
-			width: 47%;
-			float: right;
+			text-align: right;
 		}
 
 		.custom-content {
@@ -261,30 +247,79 @@
 			color: red;
 		}
 
-		.booking_card_three h4 {
-			font-size: 20px;
-			padding-top: 5%;
-			margin-left: 5%;
-			margin-bottom: 1%;
+		.paypal-card1 {
+			display: grid;
+			justify-content: center;
 		}
 
-		@media only screen and (max-width: 600px) {
-			h1 {
-				margin-top: 0;
+		.paypal-card2 {
+			display: grid;
+			justify-content: center;
+		}
+
+		@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+			.tickets .booking_card {
+				background-image: url("images/bookBackground.png");
 			}
 
-			.right-panel {
-				width: 100%;
-				float: left;
+			.tk_depature {
+				justify-items: center;
+			}
+		}
+
+		@media only screen and (min-device-width: 768px) and (max-device-width: 850px) {
+			.tickets .tk_heading {
+				margin-top: 14%;
 			}
 
-			.left-panel {
-				width: 100%;
-				float: left;
+			.tickets .booking_card {
+				margin-top: 6%;
+				background-image: url("images/bookBackground2.png");
+				height: 150px;
 			}
 
-			.scrollingContainer {
-				margin-bottom: 25px;
+			.tk_depature {
+				padding-top: 0.5%;
+			}
+
+			.depature {
+				padding-left: 9vw;
+			}	
+			
+			.duration {
+				margin-top: 9vw;
+			}
+
+			.arrival {
+				padding-left: 14vw;
+			}
+		}
+
+		@media only screen and (min-device-width: 1024px) {
+			.tickets .tk_heading {
+				margin-top: 10%;
+			}
+
+			.tickets .booking_card {
+				margin-top: 4%;
+			}
+
+			.tickets .booking_card {
+				margin-top: 6%;
+				background-image: url("images/bookBackground3.png");
+				height: 138px;
+			}
+
+			.tk_depature {
+				padding-top: 0.5%;
+			}
+
+			.depature {
+				padding-left: 19vw;
+			}	
+			
+			.duration {
+				margin-top: 6vw;
 			}
 		}
 	</style>
@@ -316,14 +351,6 @@
 						</p>
 					</div>
 
-					<div class="arrival">
-						<h4 id="route_finish_ID">
-							BHM
-						</h4>
-						<p id="route_finish_name">
-							Birmingham
-						</p>
-					</div>
 					<div class="duration">
 						<p id="route_duration">
 							02:00hr
@@ -332,25 +359,34 @@
 							500km
 						</p>
 					</div>
+
+					<div class="arrival">
+						<h4 id="route_finish_ID">
+							BHM
+						</h4>
+						<p id="route_finish_name">
+							Birmingham
+						</p>
+					</div>
 				</div>
 			</div>
 			<div class="booking_card_two" style="margin-top: 2%;">
 				<div class="tk_details_one">
-					<p style="float: left;">Ticket Type</p>
-					<h4 style="float: right;" id="ticket_type">One Way</h4>
+					<p>Ticket Type</p>
+					<h4 id="ticket_type">One Way</h4>
 				</div>
 				<div class="tk_details_two">
-					<p style="float: left;">Chosen Destination</p>
-					<h4 style="float: right;" id="poi_destination">Big Ben</h4>
-					<h4 style="float: right;" id="poi_destination_2"></h4>
+					<p>Chosen Destination</p>
+					<h4 id="poi_destination">Big Ben</h4>
+					<h4 id="poi_destination_2"></h4>
 				</div>
 				<div class="tk_details_three">
-					<p style="float: left;">Date</p>
-					<h4 style="float: right;" id="date_book">12-12-2020</h4>
+					<p>Date</p>
+					<h4 id="date_book">12-12-2020</h4>
 				</div>
 				<div class="tk_details_four">
-					<p style="float: left;">Passengers</p>
-					<h4 style="float: right;" id="number_passengers">2</h4>
+					<p>Passengers</p>
+					<h4 id="number_passengers">2</h4>
 				</div>
 			</div>
 
@@ -358,14 +394,14 @@
 				<h4>
 					Payment
 				</h4>
-				<div class="right-panel">
+				<div class="panels">
 					<ul class="buttonGroup" id="paymentMethod">
 						<li class="selected" data-value="cash">Cash</li>
 						<li data-value="credit-card">Credit Card</li>
 						<li data-value="paypal">PayPal</li>
 					</ul>
-					<div data-role="content">
-						<div class="left-panel" style="width: 40%; float:left;">
+					<div data-role="content" class="pricesPanels">
+						<div class="left-panel">
 							<h1 class="heading-four" style="font-size: 20px;">Sub-Total</h1>
 							<h1 class="paragraph" style="font-size: 15px;">Service Charges</h1>
 							<h1 class="heading-three" style="font-size: 25px;">Total</h1>
@@ -374,7 +410,7 @@
 							<h1 id="total-w-discount-text" class="heading-three" style="margin-top:15px; opacity: 0; font-size: 20px;">
 								Total w/ Discount</h1>
 						</div>
-						<div class="right-panel" style="width: 60%; float:right; text-align:right;">
+						<div class="right-panel">
 							<h1 id="sub-total" class="heading-four" style="font-size: 20px;">LKR 0</h1>
 							<h1 id="service-charges" class="paragraph" style="font-size: 15px;">LKR 0</h1>
 							<h1 id="total-price" class="heading-three" style="font-size: 25px;">LKR 0</h1>
@@ -387,8 +423,8 @@
 					</div>
 					<button id="placeOrder" onclick="placeOrder('approved')" style="text-shadow:none; background-color: #0174CF; color: #ffffff; margin-left: auto; margin-right: auto; margin-top: 6%; width: 180px;">Place Order </button>
 					<a href="#popupDialog" id="placeOrderLink" data-transition="pop" data-position-to="window" data-rel="popup" style="color: white;pointer-events: none;"></a>
-					<div id="paypal-button-container" style="display: none;"></div>
-					<div id="paypal-card-container" style="display: none;"></div>
+					<div id="paypal-button-container" style="display: none;" class="paypal-card1"></div>
+					<div id="paypal-card-container" style="display: none;" class="paypal-card2"></div>
 					<button onclick="cancel()" style="text-shadow:none; background-color: #ffffff; color: #0174CF; margin-left: auto; margin-right: auto; margin-top: 2%; width: 180px; border-color: #ddd;"> Cancel </button>
 				</div>
 			</div>

@@ -19,12 +19,72 @@
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script type="text/javascript" src="js/my_hunts.js"></script>
         
+        <style>
+            #scan_qr_section {
+                width: -webkit-fill-available;
+                background-color: white;
+                border-radius: 12px;
+                display: grid;
+                grid-template-columns: auto auto;
+                height: fit-content;
+                position: fixed;
+                bottom: 68px;
+                box-shadow: #c4c4c4 0px 1px 12px;
+                padding: 12px;
+                align-items: flex-end;
+                justify-content: space-between;
+                margin: 0px 12px;
+                z-index: 199;
+            }
+
+            #scan_qr_section .scan_instructions {
+                padding: 12px;
+            }
+
+            #scan_qr_section p {
+                margin: 0px 0px 8px 0px !important;
+                font-weight: bold;
+            }
+
+            #scan_qr_section p2{
+                margin: 0px !important;
+            }
+
+            #scan_qr_section button{
+                margin: 0px !important;
+                width: 98px;
+                color: white;
+                background-color: #0174cf;
+                text-shadow: none;
+            }
+
+            @media only screen 
+                    and (max-device-height: 570px) {
+                        #scan_qr_section .scan_instructions p2{
+                            display: none !important;
+                        }
+
+                        #scan_qr_section {
+                            width: fit-content !important;
+                            top: 68px !important;
+                            right: 10px !important;
+                            padding: 8px 12px 8px 0px !important;
+                            align-items: center !important;
+                        }
+
+                        
+                        #scan_qr_section p {
+                            margin: 0px !important;
+                        }
+                    }
+
+        </style>
     </head>
 
     <body>
         <div data-role="page" id="my-hunts-page">
             <?php include("header.php"); ?>
-            <div style="margin-top: 60px; height: 800px; padding: 16px; text-align: center;">
+            <div id="my_hunts_content" style="margin-top: 60px; padding: 16px; text-align: center; display: flow-root; margin-bottom: 32vh;">
                 <h2 style="margin-top: 6px; margin-bottom:2px">My Hunts</h2>
                 <p style="margin-top:2px; margin-bottom:24px">Find your past and upcoming hunts</p>
                 <div data-role="navbar" class="toggle">
@@ -39,7 +99,7 @@
                         <div class="my_hunts_list" id="upcoming_my_hunts_list">
                             <div id="my_hunt_resolution_breakdown">
                                 <li>
-                                    <div class="my_hunts_card">
+                                    <div class="my_hunts_card" onclick="onDestinationSelect(this.id)">
                                         <div class="card_image_section">
                                             <img src="images/destinations/Big Ben.jpg" id="upcoming_hunt_card_image">
                                         </div>
@@ -81,13 +141,17 @@
                                             <hr>
                                             <p2 class="my_hunts_tour_details" id="past_my_hunts_tour_details">EUS - DEL | 1h 11m | One Way</p2>
                                             <div class="button_space" id="button_space">
-                                            <a href="#my_hunts_feedback" data-rel="popup" data-transition="pop" data-position-to="window">
-                                                <button class="feedback_btn">Leave feedback</button>
-                                            </a>  
+                                                <a href="#my_hunts_feedback" data-rel="popup" data-transition="pop" data-position-to="window">
+                                                    <button class="feedback_btn">Leave feedback</button>
+                                                </a>  
                                             </div>
-                                            <div class="rating" id="rating">
-                                                <img src="images/fourStars.png">
-                                                <p2>4 Stars</p2>
+                                            <div id="tour_star_holder" class="tour_star_holder">
+                                                <i id="tour_star_rating_one" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+                                                <i id="tour_star_rating_two" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+                                                <i id="tour_star_rating_three" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+                                                <i id="tour_star_rating_four" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+                                                <i id="tour_star_rating_five" class="material-icons" style="font-size: 22px; color:red">star_border</i>
+                                                <p2 id="tour_rating">4 Stars</p2>
                                             </div>
                                             <p2 class="tour_review" id="tour_review">
                                                 One of the best destinations which admires the history of UK
@@ -103,28 +167,15 @@
     <!--                <h4 style="text-align: center; ">No locations hunted yet.</h4>-->
                 </div>
                 <!-- <a href="#my_hunts_feedback" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-position-to="window">Feedback</a> -->
-
-                <div data-role="popup" data-transition="pop" style="padding: 20px;" id="my_hunts_feedback" class="ui-content">
-                    <form id="form" onsubmit="event.preventDefault(); submitFeedback()">
-                        <h2>How was your experience?</h2>
-                        <p2>Let us know what you think</p2>
-    <!--                    <label class="labelform grey heading-five" for="password"> Rating </label>-->
-    
-                        <div id="star_rating_holder">
-                            <i id="star_rating_one" class="material-icons" style="font-size: 40px; color:red">star_border</i>
-                            <i id="star_rating_two" class="material-icons" style="font-size: 40px; color:red">star_border</i>
-                            <i id="star_rating_three" class="material-icons" style="font-size: 40px; color:red">star_border</i>
-                            <i id="star_rating_four" class="material-icons" style="font-size: 40px; color:red">star_border</i>
-                            <i id="star_rating_five" class="material-icons" style="font-size: 40px; color:red">star_border</i>
-                        </div>
-   
-                        <!-- <img src="images/fourStars.png" style="width: 70%; padding: 8px 0 8px 0;"> -->
-                        <textarea type="text" required name="comment" id="form_comment" class="formField" placeholder="Enter your comment here"></textarea>
-                        <div class="form_button_container">
-                            <a data-rel="back"><button class="cancel_btn">Cancel</button></a>
-                            <button type="submit" class="submit_btn" data-role="button">Submit</button>
-                        </div>
-                    </form>
+                <?php include("my_hunts_feedback.php")?>
+            </div>
+            <div id="scan_qr_section">
+                <div class="scan_instructions">
+                    <p>Add New Hunt</p>
+                    <p2>Found a hunt not in upcoming list? add the hunt to your hunts list</p2>
+                </div>
+                <div>
+                    <button onclick="window.location.href='my_hunts_scan.php'">Scan QR</button>
                 </div>
             </div>
             <?php include("footer.php"); ?>

@@ -47,6 +47,12 @@ p2 {
     z-index: 100;
 }
 
+#home_header #profile_link {
+    position: absolute;
+    right: 24px;
+    top: 15px;
+}
+
 #header_collapsible .ui-collapsible-heading{
 	background: white;
 	border-bottom-color: #c4c4c4;
@@ -158,13 +164,14 @@ p2 {
 	background-color: #404040 !important;
 	margin-top: 24px;
 	height: 280px;
-	padding-bottom: 60px;
+    padding-top: 12px;
+	padding-bottom: 130px;
 }
 
 #to_top_button {
-	float: right;
-	margin-right: 16px;
 	cursor: pointer;
+    position: absolute;
+    right: 24px;
 }
 
 #to_top_button:hover {
@@ -270,12 +277,21 @@ p2 {
 
 /* Login Page 
 ---------------------------------------------------------------------------------*/
-.login_screen .form_div{
-    height: 500px;
-    width: 300px;
-    margin-top: 80%;
-    margin-left: 10%;
+.login_screen .main_cls{
+    display: grid;
+    justify-items:center;
 }
+
+.login_screen .form_div{
+    margin-top: 50%;
+    display: grid;
+    justify-items: center;
+}
+
+.login_screen .form_field{
+    width: 300px;
+}
+
 .login_screen .ui-input-text{
     color: white;
     min-height: 2.2em;
@@ -328,10 +344,8 @@ p2 {
 /* Sign Up Page
 ---------------------------------------------------------------------------------*/
 .sign_up .form_div {
-    height: 500px;
     width: 300px;
-    margin-top: 15%;
-    margin-left: 10%;
+    margin-top: 5vh;
 }
 
 .sign_up .ui-input-text {
@@ -355,7 +369,7 @@ p2 {
 .sign_up .anchor_button {
     height: 26px;
     width: 58px;
-    margin-top: 10%;
+    margin-top: 5vh;
     margin-left: 5%;
     margin-bottom: 10%;
 }
@@ -399,6 +413,7 @@ p2 {
 }
 
 .sign_up h1 {
+    margin-bottom: 1vh;
     text-align: center;
     font-family: Noto Sans;
     font-weight: 900;
@@ -421,10 +436,8 @@ p2 {
 /* Forgot Password Page
 ---------------------------------------------------------------------------------*/
 .forgot_pass .form_div {
-    height: 500px;
     width: 300px;
-    margin-top: 15%;
-    margin-left: 10%;
+    margin-top: 5vh;
 }
 
 .forgot_pass .ui-input-text {
@@ -448,7 +461,7 @@ p2 {
 .forgot_pass .anchor_button {
     height: 26px;
     width: 58px;
-    margin-top: 10%;
+    margin-top: 5vh;
     margin-left: 5%;
     margin-bottom: 10%;
 }
@@ -492,6 +505,7 @@ p2 {
 }
 
 .forgot_pass h1 {
+    margin-bottom: 1vh;
     text-align: center;
     font-family: Noto Sans;
     font-weight: 900;
@@ -514,6 +528,47 @@ p2 {
 /* Destination Page
 ---------------------------------------------------------------------------------*/
 
+/* My Hunts Feedback Popup
+---------------------------------------------------------------------------------*/
+#my_hunts_feedback .form_button_container {
+	display: grid !important;
+	grid-auto-flow: column;
+	justify-content: space-around;
+}
+
+#my_hunts_feedback #form_comment {
+	height: 80px !important;
+	min-width: 240px;
+	background-color: #c4c4c4;
+}
+
+#my_hunts_feedback h2{
+    color: #404040 !important;
+}
+
+.ui-popup-screen.in {
+	background-color: #404040;
+}
+
+#my_hunts_feedback-popup {
+	min-width: 280px;
+}
+
+#my_hunts_feedback {
+	background-color: white;
+	text-align: center;
+	padding: 16px !important;
+}
+
+#my_hunts_feedback .submit_btn {
+	background-color: #0174cf;
+	color: white;
+}
+
+#my_hunts_feedback .cancel_btn {
+	color: #0174cf;
+}
+
 /* My Hunts Page
 ---------------------------------------------------------------------------------*/
 
@@ -524,6 +579,7 @@ p2 {
     display: grid;
     grid-template-columns: auto;
     align-content: flex-start;
+    position: fixed;
 }
 
 #scan_qr_page .scan_instructions {
@@ -546,8 +602,8 @@ p2 {
 #scan_qr_page .scan_box {
     border-radius: 8px;
     text-align:center;
-    width:65vw;
-    height:65vw;
+    width:30vh;
+    height:30vh;
     margin-top: 50%;
     margin-bottom: 50%;
     padding-top: 6px;
@@ -654,6 +710,20 @@ p2 {
     text-align: center;
 }
 
+.book .toggle_book {
+    border-radius: 12px !important;
+    background-color: #ffffff !important;
+    margin: 16px;
+    padding: 5px 8px 5px 4px;
+    box-shadow: 2px 4px 6px #c4c4c4;
+}
+
+.book .toggle_book-buttons {
+    margin-left: none !important;
+    margin-right: none !important;
+    border-radius: 8px !important;
+}
+
 /* Booking Ticket
 ---------------------------------------------------------------------------------*/
 
@@ -665,6 +735,8 @@ p2 {
     height: auto;
     padding: 0px;
     text-align: center;
+    position: fixed;
+    width: -webkit-fill-available;
 }
 
 #treasure_hunt_content #search_section {
@@ -805,5 +877,5 @@ and (max-device-width: 1024px) {
 /* Media Query for Macs */
 
 @media only screen and (min-width: 1300px) {
-
+    
 }

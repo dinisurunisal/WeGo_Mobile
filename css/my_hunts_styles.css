@@ -18,6 +18,7 @@
 	height: 200px;
 	max-width: 100%;
 	margin: 8px 4px 8px 4px;
+	box-shadow: 0px 0px 6px #c4c4c4 !important;
 }
 
 #my-hunts-page .my_hunts_card img {
@@ -48,6 +49,7 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	max-width: 97%;
+	color: #777676;
 }
 
 #my-hunts-page .my_hunts_card_content {
@@ -55,9 +57,10 @@
 	border-top-right-radius: 12px;
 	border-bottom-right-radius: 12px;
 	display: grid;
-	padding: 0 0 0 8px;
+	align-items: center;
+	padding: 4px 0 4px 8px;
 	text-align: left;
-	height: 200px;
+	height: 192px;
 }
 
 #my-hunts-page .my_hunts_card_content h3, p2 {
@@ -66,8 +69,8 @@
 	margin-bottom: 4px;
 }
 
-#my-hunts-page .my_hunts_tour_date, .tour_review {
-	color: #c4c4c4;
+#my-hunts-page .my_hunts_tour_date {
+	color: #a7a7a7;
 }
 
 #my-hunts-page .my_hunts_upcoming_details {
@@ -85,13 +88,17 @@
 	text-shadow: none !important;
 }
 
-#my-hunts-page .rating p2 {
-    	vertical-align: text-top;
+#my-hunts-page .my_hunts_card_content .tour_star_holder {
+    margin-right: 8px;
 }
 
-#my-hunts-page .rating img {
-	width: 110px;
-	height: auto;
+#my-hunts-page .my_hunts_card_content .tour_star_holder p2 {
+    vertical-align: top;
+	margin-left: 10px !important;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	width: 100% !important;
+	font-size: 16px;
 }
 
 #my-hunts-page .button_space {
@@ -104,7 +111,7 @@
 	float: right;
 }
 
-#my-hunts-page .form_button_container {
+/* #my-hunts-page .form_button_container {
 	display: grid !important;
 	grid-auto-flow: column;
 	justify-content: space-around;
@@ -113,6 +120,7 @@
 #my-hunts-page #my_hunts_feedback #form_comment {
 	height: 80px !important;
 	min-width: 240px;
+	background-color: #c4c4c4;
 }
 
 #my-hunts-page .ui-popup-screen.in {
@@ -136,7 +144,7 @@
 
 #my-hunts-page #my_hunts_feedback .cancel_btn {
 	color: #0174cf;
-}
+} */
 
 
 @media only screen
