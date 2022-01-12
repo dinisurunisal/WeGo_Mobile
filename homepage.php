@@ -222,11 +222,15 @@
             }
 
             .home .hp_heading {
-                margin-top: 6%;
+                margin-top: 3%;
             }
 
             #thumbnail_list_small {
                 grid-template-columns: 20vw 20vw 20vw 20vw !important;
+            }
+
+            .carousel {
+                height: 45vh;
             }
         }
 
@@ -249,6 +253,10 @@
 
             #thumbnail_list_small {
                 grid-template-columns: 20vw 20vw 20vw 20vw !important;
+            }
+
+            .carousel {
+                height: 40vh;
             }
 
         }

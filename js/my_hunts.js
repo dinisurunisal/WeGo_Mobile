@@ -93,10 +93,6 @@ function selectUpcomingHunts() {
     document.getElementById("past-hunts-btn").style.color = "#c4c4c4";
 }
 
-//function setOrder(orderId) {
-//    selectedOrder = orderId
-//}
-
 function populatePastHunts() {
 
     console.log(pastHunts)
