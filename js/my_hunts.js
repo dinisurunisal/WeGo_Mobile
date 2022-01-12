@@ -1,6 +1,8 @@
 
 var hunts;
+// var destination;
 var pastHunts = JSON.parse(localStorage.getItem('pastHunts'));
+var currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
 const starList = ['tour_star_rating_one', 'tour_star_rating_two', 'tour_star_rating_three', 'tour_star_rating_four', 'tour_star_rating_five'];
 
 $(document).on("pageinit", function () {
@@ -151,6 +153,10 @@ function populateUpcomingHunts() {
 
 
 function submitFeedback() {
+    // destinationId = localStorage.getItem("clickedDestinationId");
+    // console.log(destinationId);
+    destinations = JSON.parse(localStorage.getItem("destinations"));
+
    var comment = $("#form_comment").val();
    var starCount = 0;
    $('#star_rating_holder').children('i').each(function () {
@@ -160,11 +166,36 @@ function submitFeedback() {
        }
    });
 
+//    var date = Intl.DateTimeFormat(navigator.language, {
+//         day: 'numeric',
+//         month: 'numeric',
+//         year: 'numeric',
+//         hour: 'numeric',
+//         minute: 'numeric',
+//     }).format(new Date());
+
+//    var review = {
+//         name : currentlySignedInUser.username,
+//         reviewerId : "destinationId1_rev4",
+//         reviewerImage : "images/reviewer1.jpg",
+//         reviewCount : "2",
+//         rating : starCount,
+//         reviewDate : date,
+//         reviewDescription : comment,
+//         reviewReplies : ''
+//     };
+
    $.each(pastHunts, function (key, hunt) {
        if (hunt.huntId == 'mh1') {
-            hunt.tourRating = starCount;
-            hunt.tourComment = comment;
-            console.log("Saved");
+            // destination = destinations.find(obj => obj.destinationId === hunt.destinationId);
+            
+            // destination.destinationReviews.push(review);
+            // console.log(destination.destinationReviews);
+            // localStorage.setItem("destinations", JSON.stringify(destinations));
+            pushReview(hunt.destinationId, starCount, comment);
+            // hunt.tourRating = starCount;
+            // hunt.tourComment = comment;
+            console.log('Feedback Saved');
        }
    });
 
@@ -193,5 +224,35 @@ function UpdatePoints(){
     currentlySignedInUser.currentPoints = currentlySignedInUser.currentPoints + 10;
     localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser))
     showSuccess("Feedback saved.");
+}
 
+function pushReview(destID, starValue, commentValue) {
+    destination = destinations.find(obj => obj.destinationId === destID);
+    reviewNo = destination.destinationReviews.length + 1;
+
+    var date = Intl.DateTimeFormat(navigator.language, {
+        day: 'numeric',
+        month: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+    }).format(new Date());
+
+    var review = {
+        name : currentlySignedInUser.username,
+        reviewerId : destination.destinationId + "_rev" + reviewNo,
+        reviewerImage : "images/reviewer1.jpg",
+        reviewCount : (currentlySignedInUser.reviewCount + 1),
+        rating : starValue,
+        reviewDate : date,
+        reviewDescription : commentValue,
+        reviewReplies : ''
+    };
+
+    currentlySignedInUser.reviewCount = currentlySignedInUser.reviewCount + 1;
+    localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser))
+
+    destination.destinationReviews.push(review);
+    console.log(destination.destinationReviews);
+    localStorage.setItem("destinations", JSON.stringify(destinations));
 }

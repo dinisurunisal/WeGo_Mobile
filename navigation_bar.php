@@ -1,60 +1,59 @@
 <style>
 <?php
-    include_once("css/style.css");
-    include_once("jquery-theme/themes/theme.css");
-?>
+    include_once("css/style.css"); include_once("jquery-theme/themes/theme.css");?>
 </style>
 
 <script>
-    window.onload = function() {
-        if(window.location.pathname.endsWith("homepage.php")){
-            selectHome();
-        } else if (window.location.pathname.endsWith("my_hunts.php")) {
-            selectHunts();
-        } else if (window.location.pathname.endsWith("treasure_hunt.php")) {
-            selectGame();
-        } else if (window.location.pathname.endsWith("awards.php")){
-            selectAwards();
-        } else {
-            document.getElementById("nav_home").style.color = "#c4c4c4";
-            document.getElementById("nav_hunts").style.color = "#c4c4c4";
-            document.getElementById("nav_game").style.color = "#c4c4c4";
-            document.getElementById("nav_awards").style.color = "#c4c4c4";
-        }
-    };
+    // window.onload = function() {
+    //     if(window.location.pathname.endsWith("homepage.php")){
+    //         selectHome();
+    //     } else if (window.location.pathname.endsWith("my_hunts.php")) {
+    //         selectHunts();
+    //     } else if (window.location.pathname.endsWith("treasure_hunt.php")) {
+    //         selectGame();
+    //     } else if (window.location.pathname.endsWith("awards.php")){
+    //         selectAwards();
+    //     } else {
+    //         document.getElementById("nav_home").style.color = "#c4c4c4";
+    //         document.getElementById("nav_hunts").style.color = "#c4c4c4";
+    //         document.getElementById("nav_game").style.color = "#c4c4c4";
+    //         document.getElementById("nav_awards").style.color = "#c4c4c4";
+    //     }
+    // };
     
-    function selectHome() {
-      document.getElementById("home_img").src = "images/icons/homeIconSelected.png";
-      document.getElementById("nav_home").style.color = "#0174cf";
-        document.getElementById("nav_hunts").style.color = "#c4c4c4";
-        document.getElementById("nav_game").style.color = "#c4c4c4";
-        document.getElementById("nav_awards").style.color = "#c4c4c4";
-    }
+    // function selectHome() {
+    //   document.getElementById("home_img").src = "images/icons/homeIconSelected.png";
+    //   document.getElementById("nav_home").style.color = "#0174cf";
+    //     document.getElementById("nav_hunts").style.color = "#c4c4c4";
+    //     document.getElementById("nav_game").style.color = "#c4c4c4";
+    //     document.getElementById("nav_awards").style.color = "#c4c4c4";
+    // }
 
-    function selectHunts() {
-      document.getElementById("hunts_img").src = "images/icons/huntsIconSelected.png";
-        document.getElementById("nav_home").style.color = "#c4c4c4";
-        document.getElementById("nav_hunts").style.color = "#0174cf";
-        document.getElementById("nav_game").style.color = "#c4c4c4";
-        document.getElementById("nav_awards").style.color = "#c4c4c4";
-    }
+    // function selectHunts() {
+    //   document.getElementById("hunts_img").src = "images/icons/huntsIconSelected.png";
+    //     document.getElementById("nav_home").style.color = "#c4c4c4";
+    //     document.getElementById("nav_hunts").style.color = "#0174cf";
+    //     document.getElementById("nav_game").style.color = "#c4c4c4";
+    //     document.getElementById("nav_awards").style.color = "#c4c4c4";
+    // }
 
-    function selectGame() {
-      document.getElementById("game_img").src = "images/icons/gameIconSelected.png";
-        document.getElementById("nav_home").style.color = "#c4c4c4";
-        document.getElementById("nav_hunts").style.color = "#c4c4c4";
-        document.getElementById("nav_game").style.color = "#0174cf";
-        document.getElementById("nav_awards").style.color = "#c4c4c4";
-    }
+    // function selectGame() {
+    //   document.getElementById("game_img").src = "images/icons/gameIconSelected.png";
+    //     document.getElementById("nav_home").style.color = "#c4c4c4";
+    //     document.getElementById("nav_hunts").style.color = "#c4c4c4";
+    //     document.getElementById("nav_game").style.color = "#0174cf";
+    //     document.getElementById("nav_awards").style.color = "#c4c4c4";
+    // }
 
-    function selectAwards() {
-      document.getElementById("awards_img").src = "images/icons/awardsIconSelected.png";
-        document.getElementById("nav_home").style.color = "#c4c4c4";
-        document.getElementById("nav_hunts").style.color = "#c4c4c4";
-        document.getElementById("nav_game").style.color = "#c4c4c4";
-        document.getElementById("nav_awards").style.color = "#0174cf";
-    }
+    // function selectAwards() {
+    //   document.getElementById("awards_img").src = "images/icons/awardsIconSelected.png";
+    //     document.getElementById("nav_home").style.color = "#c4c4c4";
+    //     document.getElementById("nav_hunts").style.color = "#c4c4c4";
+    //     document.getElementById("nav_game").style.color = "#c4c4c4";
+    //     document.getElementById("nav_awards").style.color = "#0174cf";
+    // }
 </script>
+<script src="js/navigation_bar.js"></script>
 
 <div id="nav_bar" data-role="footer" data-tap-toggle="false">
     <div data-role='navbar' data-tap-toggle="false" class="nav-bar" style="overflow: hidden;">

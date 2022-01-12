@@ -7,7 +7,7 @@
 <script src="js/header_script.js"></script>
 
 <div id="common_header">
-    <div onclick="history.back()" id="back_btn">
+    <div onclick="window.history.back()" id="back_btn">
         <img id="btn_icon_image" src="images/icons/backButton.png" alt="back"/>
     </div>
     <div id="common_header_logo">
