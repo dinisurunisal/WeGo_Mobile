@@ -41,6 +41,10 @@ p2 {
 
 /* Header
 --------------------------------------------------------------------------------*/
+#logo_image {
+    height: 18px;
+}
+
 #home_header {
 	width: -webkit-fill-available;
 	position: fixed;
