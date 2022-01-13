@@ -23,18 +23,29 @@
 
 #common_header_profile_icon {
 	margin-right: -62px;
-	padding-top: 3px;
+	padding-top: 2px;
 	padding-bottom: 3px;
-	display: inline-block;
 	float: right;
+	width: 32px;
+	height: 32px;
+}
+
+#common_header #profile_image {
+	width: -webkit-fill-available;
+	border-radius: 50%;
 }
 
 #back_btn {
 	margin-left: -62px;
-	padding-top: 6px;
+	padding-top: 10px;
 	padding-bottom: 6px;
 	float: left;
 	cursor: pointer;
+}
+
+#back_btn_img {
+	width: 52px;
+	height: 17px;
 }
 
 #back_btn:hover {
