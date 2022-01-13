@@ -5,10 +5,14 @@ var pastHunts;
 var today = new Date();
 
 $(function initialization(){
+    document.getElementById("back_btn_img").style.fill = "white";
+
     currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
     destinations = JSON.parse(localStorage.getItem("destinations"));
     pastHunts = JSON.parse(localStorage.getItem('pastHunts'));
+
     let scanner = new Instascan.Scanner({video: document.getElementById('qr_scan')});
+
     Instascan.Camera.getCameras().then(function(cameras){
         if(cameras.length > 0) {
             scanner.start(cameras[0]);

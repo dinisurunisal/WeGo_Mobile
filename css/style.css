@@ -624,6 +624,11 @@ p2 {
     position: fixed;
 }
 
+#scan_qr_page #back_btn_img {
+    width: 52px;
+    height: 18px;
+}
+
 #scan_qr_page .scan_instructions {
     padding: 24px;
     background-color: #0174CF;
