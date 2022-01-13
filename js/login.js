@@ -1,6 +1,6 @@
 var destinations = [];
 
-$(document).on("pageinit", function () {
+$(function initialization(){
     initJsonFiles();
 });
 
@@ -41,8 +41,8 @@ function init() {
     ]
 
     var pastHunts = [
-        { 'huntId': 'mh1', 'destName': 'Big Ben', 'imageUrl': 'images/destinations/Big Ben.jpg', 'tourDate':'Tour completed on 20-12-2021', 'tourDetails':'MEL - DEL | 3h 11m | One Way', 'tourRating': null, 'tourComment': null},
-        { 'huntId': 'mh2', 'destName': 'Cotswolds', 'imageUrl': 'images/destinations/Cotswolds.jpg', 'tourDate':'Tour completed on 25-12-2021', 'tourDetails':'EUS - DEL | 1h 11m | Two Way', 'tourRating': 5, 'tourComment': 'One of the best destinations which admires the history of UK'}
+        { 'huntId': 'mh1', 'destName': 'Big Ben', 'imageUrl': 'images/destinations/Big Ben.jpg', 'tourDate':'Tour completed on 20-12-2021', 'tourDetails':'MEL - DEL | 3h 11m | One Way', 'tourRating': null, 'tourComment': null, 'destinationId': 'destinationId1'},
+        { 'huntId': 'mh2', 'destName': 'Cotswolds', 'imageUrl': 'images/destinations/Cotswolds.jpg', 'tourDate':'Tour completed on 25-12-2021', 'tourDetails':'EUS - DEL | 1h 11m | Two Way', 'tourRating': 5, 'tourComment': 'One of the best destinations which admires the history of UK', 'destinationId': 'destinationId5'}
     ]
 
     var upcomingHunts = [

@@ -8,7 +8,6 @@
     <title>Home</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/themes/my-custom-theme.css" />
     <link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
     <link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
 
@@ -222,11 +221,15 @@
             }
 
             .home .hp_heading {
-                margin-top: 6%;
+                margin-top: 3%;
             }
 
             #thumbnail_list_small {
                 grid-template-columns: 20vw 20vw 20vw 20vw !important;
+            }
+
+            .carousel {
+                height: 45vh;
             }
         }
 
@@ -249,6 +252,10 @@
 
             #thumbnail_list_small {
                 grid-template-columns: 20vw 20vw 20vw 20vw !important;
+            }
+
+            .carousel {
+                height: 40vh;
             }
 
         }

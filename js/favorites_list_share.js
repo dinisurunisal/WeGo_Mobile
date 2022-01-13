@@ -1,16 +1,12 @@
-$(document).on("pageinit", function () {
-    init();
-});
-
 let dests;
 let newFavouriteList = [];
 
-function init() {
+$(function initialization(){
     dests = JSON.parse(localStorage.getItem("destinations"));
     console.log(dests);
 
     createFavouritesList();
-}
+});
 
 function createFavouritesList() {
     for (var i = 0; i < dests.length; i++) {

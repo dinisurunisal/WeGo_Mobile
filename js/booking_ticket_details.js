@@ -1,4 +1,4 @@
-$(document).on("pageinit", function () {
+$(function initialization(){
   document.getElementById("back_btn").style.display = "none";
   initPage();
 });
