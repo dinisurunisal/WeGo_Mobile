@@ -8,12 +8,15 @@
 
 <div id="common_header">
     <div id="back_btn">
-        <img id="btn_icon_image" src="images/icons/backButton.png" alt="back"/>
+        <svg id="back_btn_img">
+            <use href="images/icons/backButton.svg#back_btn_img"></use>
+        </svg>
+        <!-- <img id="btn_icon_image" src="images/icons/backButton.png" alt="back"/> -->
     </div>
     <div id="common_header_logo">
         <img id="logo_image" src="images/HeaderLogo.png" alt="WeGo logo"/>
     </div>
-    <div id="common_header_profile_icon" onclick="window.location.href='profile.php'">
-        <img id="profile_image" src="images/user.png" alt="profile"/>
+    <div id="common_header_profile_icon">
+        <img id="profile_image" src="images/profile_page/profile_image.jpeg" alt="profile"/>
     </div>
 </div>

@@ -12,7 +12,7 @@
                 <img id="logo_image" src="images/HeaderLogo.png" alt="WeGo logo"/>
             </div>
             <div id="home_header_profile_icon">
-                <img id="profile_image" src="images/user.png" alt="profile"/>
+                <!-- <img class="profile_image" src="images/profile_page/profile_image.jpeg" alt="profile"/> -->
             </div>
         </legend>
         <div class="header_search">
@@ -26,7 +26,7 @@
     </div>
     <div>
         <div id="profile_link" onclick="window.location.href='profile.php'">
-            <img id="profile_image" src="images/user.png" alt="profile"/>
+            <img id="profile_image" src="images/profile_page/profile_image.jpeg" alt="profile"/>
         </div>
     </div> 
 </div>
