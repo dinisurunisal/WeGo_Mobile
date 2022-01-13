@@ -99,7 +99,7 @@
                         <div class="my_hunts_list" id="upcoming_my_hunts_list">
                             <div id="my_hunt_resolution_breakdown">
                                 <li>
-                                    <div class="my_hunts_card" onclick="onDestinationSelect(this.id)">
+                                    <div class="my_hunts_card">
                                         <div class="card_image_section">
                                             <img src="images/destinations/Big Ben.jpg" id="upcoming_hunt_card_image">
                                         </div>
