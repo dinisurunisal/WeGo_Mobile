@@ -299,7 +299,7 @@
 						Choose Route *
 					</p>
 					<div>
-						<div class="ui-field-contain">
+						<div class="ui-field-contain ui-alt-icon">
 							<select required name="select-native-1" id="select-native-1">
 								<option value="0">None</option>
 								<option value="1">Lodon to Birmingham</option>
