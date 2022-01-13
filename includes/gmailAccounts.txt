@@ -7,3 +7,21 @@ account 2
 
 tproject529@gmail.com
 testprojectwego123
+
+paypal
+tproject529@gmail.com
+harindukevin123
+
+paypal sandbox seller account
+testproject@personal.example.com
+1*.AND1e
+AYImqnFyv8Ed8f1Q2yxi8OU9pZcsU2YigmWEvZN2VYHP39Bog3XpOaZ6ErmMzkEOZnlsziDFfO2uuc71
+
+paypal sandbox customer account
+WEGOcustomer@personal.example.com
+iR7g)eV$
+
+stripe testing
+card - 4242 4242 4242 4242
+expiry - 12/27
+CVC - 123

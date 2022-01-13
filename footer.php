@@ -6,7 +6,9 @@
 
 <div id="page_footer">
     <div onclick="topFunction()" title="Go to top" id="to_top_button">
-        <img src="images/icons/toTop.png" alt="scrollUp"/>
+        <svg id="to_top_icon" alt="scrollUp">
+            <use href="images/icons/toTop.svg#to_top_icon"></use>
+        </svg>
     </div>
     <div class="footer_content">
         <div><a class="footer_links">About Us</a></div>
@@ -15,9 +17,15 @@
         <div><a class="footer_links">FAQ</a></div>
         <br>
         <div class="social_media">
-            <img class="social_media_icon" src="images/icons/facebook.png" alt="facebook"/>
-            <img class="social_media_icon" src="images/icons/instagram.png" alt="instagram"/>
-            <img class="social_media_icon" src="images/icons/twitter.png" alt="twitter"/>
+            <svg id="fb_icon" class="social_media_icon" alt="facebook">
+                <use href="images/icons/facebook.svg#fb_icon"></use>
+            </svg>
+            <svg id="instagram_icon" class="social_media_icon" alt="instagram">
+                <use href="images/icons/instagram.svg#instagram_icon"></use>
+            </svg>
+            <svg id="twitter_icon" class="social_media_icon" alt="twitter">
+                <use href="images/icons/twitter.svg#twitter_icon"></use>
+            </svg>
         </div>
         <p>Copyright WeGo Inc. All Rights Reserved</p>
     </div>
