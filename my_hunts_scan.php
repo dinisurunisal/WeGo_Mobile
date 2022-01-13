@@ -69,6 +69,7 @@
                 </div>
             </div>
             <?php include("my_hunts_feedback.php")?>
+            <?php include("success_popups.php"); ?>
         </div>
     </body>
 

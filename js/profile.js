@@ -1,7 +1,7 @@
 var currentlySignedInUser;
 var users;
 
-$(document).on("pageinit",function(){
+$(function initialization(){
     currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
     populateUserFields();
 });

@@ -222,3 +222,20 @@
 .custom-responsive-grid-style {
     min-width: 210px;
 }
+
+.button_popup{
+    height:30px;
+    width:100px;
+    border: none;
+    border-radius:12px;
+}
+
+#sendBtn{
+    color:white;
+    background-color: #0174cf;
+}
+
+#cancelBtn{
+    color:#0174cf;
+    background-color: white;
+}
