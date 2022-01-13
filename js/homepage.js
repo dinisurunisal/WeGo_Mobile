@@ -6,6 +6,10 @@ $(function initialization(){
   translateX = 0;
 
   var destinations = JSON.parse(localStorage.getItem("destinations"));
+  var currentlySignedInUser = JSON.parse(localStorage.getItem("currentlySignedInUser"));
+  
+  document.getElementById("profile_image").src = currentlySignedInUser.profileImage;
+  
   defaultDestinationDB = destinations;
   console.log(defaultDestinationDB)
 

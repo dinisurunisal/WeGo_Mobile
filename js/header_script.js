@@ -1,4 +1,7 @@
 $(function initialize(){
+    var currentlySignedInUser = JSON.parse(localStorage.getItem("currentlySignedInUser"));
+  
+    document.getElementById("profile_image").src = currentlySignedInUser.profileImage;
     document.getElementById("back_btn_img").style.fill = "#404040";
 
     document.getElementById("back_btn").addEventListener("click", function(){

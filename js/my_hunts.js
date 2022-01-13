@@ -193,8 +193,8 @@ function submitFeedback() {
             // console.log(destination.destinationReviews);
             // localStorage.setItem("destinations", JSON.stringify(destinations));
             pushReview(hunt.destinationId, starCount, comment);
-            // hunt.tourRating = starCount;
-            // hunt.tourComment = comment;
+            hunt.tourRating = starCount;
+            hunt.tourComment = comment;
             console.log('Feedback Saved');
        }
    });
@@ -241,7 +241,7 @@ function pushReview(destID, starValue, commentValue) {
     var review = {
         name : currentlySignedInUser.username,
         reviewerId : destination.destinationId + "_rev" + reviewNo,
-        reviewerImage : "images/reviewer1.jpg",
+        reviewerImage : currentlySignedInUser.profileImage,
         reviewCount : (currentlySignedInUser.reviewCount + 1),
         rating : starValue,
         reviewDate : date,

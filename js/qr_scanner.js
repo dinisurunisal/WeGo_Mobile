@@ -128,7 +128,7 @@ function pushReview(destID, starValue, commentValue) {
     var review = {
         name : currentlySignedInUser.username,
         reviewerId : destination.destinationId + "_rev" + reviewNo,
-        reviewerImage : "images/reviewer1.jpg",
+        reviewerImage : currentlySignedInUser.profileImage,
         reviewCount : (currentlySignedInUser.reviewCount + 1),
         rating : starValue,
         reviewDate : date,
