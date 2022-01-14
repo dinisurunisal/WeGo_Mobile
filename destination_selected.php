@@ -142,12 +142,12 @@
 						</div>
 
 						<div class="review_card_section">
-							<h2>Top Reviews</h2>
+							<h2>Reviews</h2>
 							<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0; display: inline-block;">
 								<div id="card_script_1">
 									<div id="review-card-resolution-breakpoint">
 										<li>
-											<div class="dest_review_card" onclick="onReplyClick(this.id)">
+											<div class="dest_review_card" id="destReviewId" onclick="onReplyClick(this.id)">
 												<div class="dest_reviewer">
 													<img src="images/reviewer1.jpg" id="review_thumb_image">
 													<div class="dest_reviewer_info">
@@ -170,24 +170,23 @@
 													<!-- <div class="reply_btn" id="destReviewId" onclick="onReplyClick(this.id)">
 														<p>Reply</p>
 													</div> -->
-													<div class="reply_btn" id="destReviewId">
+													<div class="reply_btn">
 														<a href="#destination_reply" data-rel="popup" data-transition="pop" data-position-to="window">
 															<button id="reply_button"><p>Reply</p></button>
 														</a>  
 													</div>
 													<div id="des_reply">
 														<div class="dest_replier">
-															<img src="images/reviewer1.jpg" id="review_thumb_image">
+															<img src="images/reviewer1.jpg" id="replier_image">
 															<div class="dest_replier_info">
-																<p>Sherlock Holmes</p>
-																<p2>133 Reviews</p2>
+																<p id="replier_name">Name</p>
+																<p2 id="replier_reviews">Reviews</p2>
 															</div>
+															<p2 id="replier_time">Time</p2>
 														</div>
-														<!-- <p>Sherlock Holmes</p>
-														<p2>133 Reviews</p2> -->
-														<p2>Just now</p2>
-														<p class="dest_review_reply">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
+														<p id="dest_review_reply">Reply</p>
 													</div>
+													<div id="reply_space"></div>
 												</div>
 											</div>
 										</li>

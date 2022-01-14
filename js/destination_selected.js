@@ -3,9 +3,12 @@ const starList = ['star_rating_one', 'star_rating_two', 'star_rating_three', 'st
 var destinationId;
 var destination;
 var destinations;
+var currentlySignedInUser;
+var replyId;
 
 $(function initialization(){
   destinationId = localStorage.getItem("clickedDestinationId");
+  currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
   console.log(destinationId);
   destinations = JSON.parse(localStorage.getItem("destinations"));
   destination = destinations.find(obj => obj.destinationId === destinationId);
@@ -39,9 +42,7 @@ function loadData(){
       let timePassed = Math.trunc((new Date() - new Date(date)) / 1000);
     
       //seconds
-      // if (timePassed === 0) return 'Just now';
       if (timePassed < 60)
-        // return `${timePassed} second${timePassed === 1 ? '' : 's'} ago`;
         return 'Just now';
     
       //minutes
@@ -75,15 +76,26 @@ function loadData(){
       $("#dest_reviewer_count").text(destination.destinationReviews[i].reviewCount + ' Reviews');
       $("#dest_review_comment").text(destination.destinationReviews[i].reviewDescription);
       $("#dest_reviewer_date").text(calDate(destination.destinationReviews[i].reviewDate));
-      // document.getElementById("review_thumb_image").src = destination.destinationReviews[i].reviewerImage;
-      // document.getElementById("dest_reviewer_name").innerHTML = destination.destinationReviews[i].name;
-      // document.getElementById("dest_reviewer_count").innerHTML = destination.destinationReviews[i].reviewCount + ' Reviews';
-      // document.getElementById("dest_review_comment").innerHTML = destination.destinationReviews[i].reviewDescription;
-      // document.getElementById("dest_reviewer_date").innerHTML = calDate(destination.destinationReviews[i].reviewDate);
   
       for (let j = 0; j <  destination.destinationReviews[i].rating; j++) {
         document.getElementById(starList[j]).innerHTML = 'star';
       }
+
+      var replyList = destination.destinationReviews[i].reviewReplies;
+
+      for (let j = 0; j < replyList.length; j++) {
+        // $("#review_thumb_image").attr("src", replyList[j].replierImage);
+        $("#replier_name").text(replyList[j].name);
+        $("#replier_reviews").text(replyList[j].reviewCount + ' Reviews');
+        $("#dest_review_reply").text(replyList[j].replyDescription);
+        $("#replier_time").text((replyList[j].replyDate));
+
+        $("#des_reply").clone().appendTo("#reply_space");
+
+      }
+
+      var id2 = document.getElementById("des_reply");
+      id2.parentNode.removeChild(id2);
 
       $("#card_script_1").clone().appendTo("#card_script_2");
     }
@@ -140,46 +152,32 @@ function addToFavourites(id) {
 
 function onReplyClick(id) {
   console.log(id)
-  var repliesSection = $("#des_reply");
+  var repliesSection = $("#"+id).find("#des_reply");
   if(repliesSection.css("display") == "block") {
     repliesSection.css("display", "none");
   } else {
     repliesSection.css("display", "block");
   }
-  // if (typeof (Storage) !== "undefined") {
-  //   localStorage.setItem("clickedDestinationId", id);
-  //   window.location = "destination_selected.php";
-  // } else {
-  //     showFailure("Unable to load")
-  // }
 }
 
-function submitReply() {
-  var comment = $("#form_comment").val();
+function submitReply(id) {
+  var replyMessage = $("#form_reply").val();
+  var count = destination.destinationReviews[1].reviewReplies.length;
+  destination.destinationReviews[1].reviewReplies[count] = {
+      name: currentlySignedInUser.username,
+      reviewCount: currentlySignedInUser.reviewCount,
+      replierImage: currentlySignedInUser.profileImage,
+      replyDescription: replyMessage,
+  };
 
-  // $.each(hunts, function (key, hunt) {
-  //     if (hunt.id == 1) {
-  //         hunt.ratingStars = starCount;
-  //         hunt.ratingComment = comment;
-  //         console.log("Saved");
-  //     }
-  // });
+  console.log(destination.destinationReviews[1].reviewReplies);
+  localStorage.setItem("destinations", JSON.stringify(destinations));
 
-  // var users = JSON.parse(localStorage.getItem('users'));
-  // $.each(users, function (key, user) {
-  //     if (user.contactNumber === currentlySignedInUser.contactNumber) {
-  //         users[key] = currentlySignedInUser;
-  //     }
-  // });
-  // localStorage.setItem("users", JSON.stringify(users));
-  // currentlySignedInUser.bookings = hunts;
-  // console.log(hunts);
-  // localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
   showSuccess("Reply saved.");
   $("#popupBasic").popup("close")
 
-  setTimeout(function () {
-      location.reload();
+  // setTimeout(function () {
+  //     location.reload();
 
-  }, 2000);
+  // }, 2000);
 }
