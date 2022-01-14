@@ -11,9 +11,6 @@ $(function initialization(){
   destination = destinations.find(obj => obj.destinationId === destinationId);
   console.log(destinations);
   loadData();
-  // renderList();
-  // setHeight();
-  // document.getElementById("#nav_bar_search").classList.add("ui-btn-active");
 });
 
 function loadData(){
@@ -93,15 +90,6 @@ function loadData(){
     for (var i = 0; i < destination.destinationReviews.length; i++) {
       document.getElementById("destReviewId").id = destination.destinationId + '_rev' + (i+1);
     }
-
-    // if ( pastHunts[i].huntId === 'mh2') {
-    //   document.getElementById("button_space").style.display = "none"
-    //   document.getElementById("rating").style.display = "block"
-    //   document.getElementById("tour_review").style.display = "block"
-    // } else {
-    //     document.getElementById("rating").style.display = "none"
-    //     document.getElementById("tour_review").style.display = "none"
-    // }
 }
 
 // Delete 'card_script_1'

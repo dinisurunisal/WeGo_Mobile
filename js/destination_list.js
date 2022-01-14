@@ -98,3 +98,20 @@ function addToFavourites(id) {
 function goToDestinationMap() {
     window.location = "destination_map.php";
 }
+
+function onSearchBtnClick() {
+  var userInputValueInHeaderSearch = document.getElementById("destination-search-input").value;
+
+  if (userInputValueInHeaderSearch == "") {
+      showFailure("Enter a destination name!");
+  } else {
+      localStorage.setItem("filterDB", null);
+      if (typeof (Storage) !== "undefined") {
+          localStorage.setItem("userSearchValue", JSON.stringify({ "type": "search", "value": userInputValueInHeaderSearch }));
+          console.log(localStorage)
+          // window.location = "browse_kitchen.php";
+      } else {
+          showFailure("Your browser does not support Frese");
+      }
+  }
+}

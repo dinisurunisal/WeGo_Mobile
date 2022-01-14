@@ -8,7 +8,6 @@
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-		<!-- <link rel="stylesheet" href="css/themes/my-custom-theme.css" /> -->
 		<link rel="stylesheet" href="css/destination_list.css" /> 
 		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
 		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
@@ -50,14 +49,14 @@
 
 					<!-- Destination Filter Popup -->
 					<?php include("destination_filter_popup.php"); ?>
-					<!-- <div class="wrap">
-						<div class="search">
-							<input type="text" class="searchTerm" placeholder="What are you looking for?">
-							<button data-theme="none" type="submit" class="searchButton">
-								<i class="fa fa-search"></i>
-							</button>
-						</div>
-					</div> -->
+
+                    <div class="destination_search" >
+                        <div class="destination_search_box">
+                            <input type="text" data-clear-btn="false" name="destination-search-input" id="destination-search-input">
+                            <a class="ui-alt-icon ui-btn ui-btn-icon-right ui-icon-search" onclick="onSearchBtnClick()"></a>
+                        </div>
+                    </div>
+
 					<div class="dest_map_button">
 						<a onclick="goToDestinationMap()">
 							Map
