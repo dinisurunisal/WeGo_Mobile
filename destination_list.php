@@ -50,13 +50,13 @@
 					<!-- Destination Filter Popup -->
 					<?php include("destination_filter_popup.php"); ?>
 
-                    <div class="game_search" >
-                        <div class="game_search_box">
+                    <div class="destination_search" >
+                        <div class="destination_search_box">
                             <input type="text" data-clear-btn="false" name="game-search-box">
                             <a class="ui-alt-icon ui-btn ui-btn-icon-right ui-icon-search"></a>
                         </div>
                     </div>
-					
+
 					<div class="dest_map_button">
 						<a onclick="goToDestinationMap()">
 							Map

@@ -61,7 +61,7 @@
 }
 
 /* Destination List - Search Bar */
-#destination_page .game_search {
+#destination_page .destination_search {
     top: -20px;
     width: 75%;
     padding: 0px;
@@ -69,12 +69,12 @@
     position: absolute;
 }
 
-#destination_page .game_search_box {
+#destination_page .destination_search_box {
     /* margin-top: 12px !important;
     margin-bottom: 4px !important; */
 }
 
-#destination_page .game_search_box {
+#destination_page .destination_search_box {
     display: inline-grid;
 	width: 100% !important;
     grid-template-columns: auto 40px;
@@ -89,26 +89,26 @@
     border-color: black;
 }
 
-#destination_page .game_search_box a{
+#destination_page .destination_search_box a{
     width: 40px;
     padding: 0px;
     margin: 0px !important; 
     border-radius: 12px !important;
 }
 
-#destination_page .game_search_box .ui-input-search {
+#destination_page .destination_search_box .ui-input-search {
     height: 26px !important;
     margin-top: 14px !important;
     margin-bottom: 4px !important;
 }
 
-#destination_page .game_search_box input {
+#destination_page .destination_search_box input {
     min-height: 26px !important;
     padding: 1px 8px 1px 14px !important;
     border-radius: 4px !important;
 }
 
-#destination_page .game_search_box .ui-input-text {
+#destination_page .destination_search_box .ui-input-text {
     border: none !important;
     box-shadow: none !important;
     margin: 0px;
@@ -264,19 +264,19 @@ and (max-device-width: 667px) {
         margin-top: -5px;
     }
 
-    #destination_page .game_search {
+    #destination_page .destination_search {
         left: 16%;
         width: 66% !important;
     }
 
-    #destination_page .game_search_box {
+    #destination_page .destination_search_box {
         margin-top: 21px !important;
         border-style: solid;
         border-radius: 6px;
         border-width: thin;
     }
 
-    #destination_page .game_search_box input {
+    #destination_page .destination_search_box input {
         height: -100px !important;
     }
     
@@ -336,7 +336,7 @@ and (max-device-width: 850px) {
         height: 40px;
     }
 
-    #destination_page .game_search {
+    #destination_page .destination_search {
         width: 77% !important;
     }
 
