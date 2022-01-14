@@ -53,7 +53,7 @@
                     <div class="destination_search" >
                         <div class="destination_search_box">
                             <input type="text" data-clear-btn="false" name="game-search-box">
-                            <a class="ui-alt-icon ui-btn ui-btn-icon-right ui-icon-search"></a>
+                            <a class="ui-alt-icon ui-btn ui-btn-icon-right ui-icon-search" onclick="onSearchBtnClick()"></a>
                         </div>
                     </div>
 

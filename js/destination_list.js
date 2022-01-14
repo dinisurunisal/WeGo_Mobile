@@ -98,3 +98,7 @@ function addToFavourites(id) {
 function goToDestinationMap() {
     window.location = "destination_map.php";
 }
+
+function onSearchBtnClick() {
+  console.log("btn works")
+}
