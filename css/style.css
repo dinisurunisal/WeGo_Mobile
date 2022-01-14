@@ -41,6 +41,10 @@ p2 {
 
 /* Header
 --------------------------------------------------------------------------------*/
+#logo_image {
+    height: 18px;
+}
+
 #home_header {
 	width: -webkit-fill-available;
 	position: fixed;
@@ -618,6 +622,11 @@ p2 {
     grid-template-columns: auto;
     align-content: flex-start;
     position: fixed;
+}
+
+#scan_qr_page #back_btn_img {
+    width: 52px;
+    height: 18px;
 }
 
 #scan_qr_page .scan_instructions {

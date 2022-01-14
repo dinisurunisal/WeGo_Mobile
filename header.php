@@ -17,6 +17,6 @@
         <img id="logo_image" src="images/HeaderLogo.png" alt="WeGo logo"/>
     </div>
     <div id="common_header_profile_icon">
-        <img id="profile_image" src="images/profile_page/profile_image.jpeg" alt="profile"/>
+        <img id="profile_image" alt="profile"/>
     </div>
 </div>

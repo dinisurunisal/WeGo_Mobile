@@ -24,7 +24,7 @@
                     and (max-device-height: 600px) {
 
                         #scan_qr_page {
-                            grid-template-columns: auto 28%;
+                            grid-template-columns: auto 28% !important;
                             align-content: flex-start;
                             justify-items: self-end;
                             
@@ -57,7 +57,9 @@
         <div data-role="page" id="scan_qr_page">
             <div class="scan_instructions">
                 <div onclick="history.back()" id="back_btn">
-                    <img id="btn_icon_image" src="images/icons/backButton2.png" alt="back"/>
+                    <svg id="back_btn_img">
+                        <use href="images/icons/backButton.svg#back_btn_img"></use>
+                    </svg>
                 </div>
                 <h2>Add New Hunt</h2>
                 <p>To confirm your hunt scan the QR located in the site</p>

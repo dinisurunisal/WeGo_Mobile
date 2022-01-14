@@ -12,10 +12,10 @@ $(function initialization(){
 
 function initPage() {
     $("#my-hunts-toggle").addClass("ui-btn-active");
-    document.getElementById("past-hunts-btn").style.background = "#0174CF";
-    document.getElementById("past-hunts-btn").style.color = "white";
-    document.getElementById("upcoming-hunts-btn").style.background = "white";
-    document.getElementById("upcoming-hunts-btn").style.color = "#c4c4c4";
+    $("#past-hunts-btn").css("background", "#0174CF");
+    $("#past-hunts-btn").css("color", "white");
+    $("#upcoming-hunts-btn").css("background", "white");
+    $("#upcoming-hunts-btn").css("color", "#c4c4c4");
     $("#past-empty").show();
     $("#upcoming-empty").hide();
 
@@ -76,19 +76,19 @@ function setupStars() {
 function selectPastHunts() {
     $("#upcoming-empty").hide();
     $("#past-empty").show();
-    document.getElementById("past-hunts-btn").style.background = "#0174CF";
-    document.getElementById("past-hunts-btn").style.color = "white";
-    document.getElementById("upcoming-hunts-btn").style.background = "white";
-    document.getElementById("upcoming-hunts-btn").style.color = "#c4c4c4";
+    $("#past-hunts-btn").css("background", "#0174CF");
+    $("#past-hunts-btn").css("color", "white");
+    $("#upcoming-hunts-btn").css("background", "white");
+    $("#upcoming-hunts-btn").css("color", "#c4c4c4");
 }
 
 function selectUpcomingHunts() {
     $("#past-empty").hide();
     $("#upcoming-empty").show();
-    document.getElementById("upcoming-hunts-btn").style.background = "#0174CF";
-    document.getElementById("upcoming-hunts-btn").style.color = "white";
-    document.getElementById("past-hunts-btn").style.background = "white";
-    document.getElementById("past-hunts-btn").style.color = "#c4c4c4";
+    $("#past-hunts-btn").css("background", "white");
+    $("#past-hunts-btn").css("color", "#c4c4c4");
+    $("#upcoming-hunts-btn").css("background", "#0174CF");
+    $("#upcoming-hunts-btn").css("color", "white");
 }
 
 function populatePastHunts() {
@@ -165,6 +165,9 @@ function submitFeedback() {
    $.each(destinationList, function (key, hunt) {
        if (hunt.destinationId == "destinationId3") {
             pushReview(hunt.destinationId, starCount, comment);
+
+            hunt.tourRating = starCount;
+            hunt.tourComment = comment;
             console.log('Feedback Saved');
        }
    });
@@ -202,8 +205,8 @@ function pushReview(destID, starValue, commentValue) {
 
     destination.destinationReviews[1] = {
         name : currentlySignedInUser.username,
-        reviewerId : "destinationId3_rev1",
-        reviewerImage : "images/reviewer1.jpg",
+        reviewerId : destination.destinationId + "_rev" + reviewNo,
+        reviewerImage : currentlySignedInUser.profileImage,
         reviewCount : (currentlySignedInUser.reviewCount + 1),
         rating : starValue,
         reviewDate : date,

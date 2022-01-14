@@ -5,10 +5,14 @@ var pastHunts;
 var today = new Date();
 
 $(function initialization(){
+    $("#back_btn_img").css("fill", "white");
+
     currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
     destinations = JSON.parse(localStorage.getItem("destinations"));
     pastHunts = JSON.parse(localStorage.getItem('pastHunts'));
+
     let scanner = new Instascan.Scanner({video: document.getElementById('qr_scan')});
+
     Instascan.Camera.getCameras().then(function(cameras){
         if(cameras.length > 0) {
             scanner.start(cameras[0]);
@@ -20,9 +24,7 @@ $(function initialization(){
     });
     
     scanner.addListener('scan', function(c) {
-        let feedbackLink = document.getElementById("feedback_link");
-
-        feedbackLink.click();
+        $("#feedback_link").click();
         destination = destinations.find(obj => obj.destinationId === c);
         console.log(c)
         setupStars() 
@@ -118,7 +120,7 @@ function pushReview(destID, starValue, commentValue) {
     destination.destinationReviews[1] = {
         name : currentlySignedInUser.username,
         reviewerId : destination.destinationId + "_rev" + reviewNo,
-        reviewerImage : "images/reviewer1.jpg",
+        reviewerImage : currentlySignedInUser.profileImage,
         reviewCount : (currentlySignedInUser.reviewCount + 1),
         rating : starValue,
         reviewDate : date,
