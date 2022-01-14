@@ -8,7 +8,8 @@ $(function initialization(){
   var destinations = JSON.parse(localStorage.getItem("destinations"));
   var currentlySignedInUser = JSON.parse(localStorage.getItem("currentlySignedInUser"));
   
-  document.getElementById("profile_image").src = currentlySignedInUser.profileImage;
+  // document.getElementById("profile_image").src = currentlySignedInUser.profileImage;
+  $("#profile_image").attr("src", currentlySignedInUser.profileImage);
   
   defaultDestinationDB = destinations;
   console.log(defaultDestinationDB)

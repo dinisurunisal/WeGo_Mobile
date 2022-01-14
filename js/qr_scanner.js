@@ -5,7 +5,7 @@ var pastHunts;
 var today = new Date();
 
 $(function initialization(){
-    document.getElementById("back_btn_img").style.fill = "white";
+    $("#back_btn_img").css("fill", "white");
 
     currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
     destinations = JSON.parse(localStorage.getItem("destinations"));
@@ -24,9 +24,7 @@ $(function initialization(){
     });
     
     scanner.addListener('scan', function(c) {
-        let feedbackLink = document.getElementById("feedback_link");
-
-        feedbackLink.click();
+        $("#feedback_link").click();
         destination = destinations.find(obj => obj.destinationId === c);
         console.log(c)
         setupStars() 
