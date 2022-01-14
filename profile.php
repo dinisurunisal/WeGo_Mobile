@@ -49,26 +49,26 @@
 				<div class="edit_profile_btn" id="flex_child" style="padding-left:10px;">
 					<a onclick="showProfileMethod();" >EDIT</a>
 				</div>
-				<div class="logout_btn"  id="flex_child" style="text-align: right; padding-right:10px;">
+				<div class="logout_btn"  id="flex_child" style="text-align: right; padding-right:15px;">
 					<a onclick="alert('Hello world!')" >LOGOUT</a>
 				</div>
 
 			</div>
 
-			<div class="user_data">
+			<div class="user_data" style="margin: 20px 0px 20px 0px;">
 				<div class="user_data_r1">
 					<div class="data">
 						<div class="data_child" id="data_name">First Name</div>
 						<div class="data_child" id="username_field">John watson</div>
 					</div>
 					<div class="data">
-						<div class="data_child" id="data_name">member since</div>
+						<div class="data_child" id="data_name">Member Since</div>
 						<div class="data_child" id="member_since_field">4th july 1998</div>
 					</div>
 				</div>
 				<div class="user_data_r2">
 					<div class="data">
-						<div class="data_child" id="data_name">contact no</div>
+						<div class="data_child" id="data_name">Contact No.</div>
 						<div class="data_child" id="contant_number_field">5846545</div>
 					</div>
 					<div class="data">
@@ -82,9 +82,9 @@
 				<div class="center">
 					<button class="button" data-role="none" onclick="location.href='favourites.php'" >
 						<span class="button_icon">
-						<ion-icon name="heart-outline"></ion-icon>
+						<ion-icon name="heart-outline" size="large"></ion-icon>
 						</span>
-						<span class="button_text">
+						<span class="button_text" style="position:relative; top: -11px;">
 							Favourite List
 						</span>
 					</button>
@@ -92,9 +92,9 @@
 				<div class="center">
 					<button class="button" data-role="none" onclick="showFeedbackPopup();" data-ajax="false">
 						<span class="button_icon">
-						<ion-icon name="chatbox-outline"></ion-icon>
+						<ion-icon name="chatbox-outline" size="large"></ion-icon>
 						</span>
-						<span class="button_text">
+						<span class="button_text" style="position:relative; top: -11px;">
 							Send Feedback
 						</span>
 					</button>
@@ -138,7 +138,9 @@
             </form>
         </div>
 
-			<div class="profile_video">
+			<div class="profile_video" style="margin-top: 50px;">
+				<h3>Want to check how the app functions?</h3>
+
 				<iframe src="https://www.youtube.com/embed/9g8sfVsl2GU" frameborder="0" allowfullscreen></iframe>
 			</div>
 
