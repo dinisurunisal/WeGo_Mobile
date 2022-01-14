@@ -31,6 +31,7 @@ function showSuccess(message) {
     $("#message_box").fadeIn();
     $("#popup_custom_message").html(message)
     $("#popup_custom_icon").html("shield_checkmark")
+    document.getElementById("popup_custom_icon_fail").style.display = "none";
     $("#message_box").css("background", "#ffffff")
     setTimeout(function() {
         $("#message_box").fadeOut();
@@ -41,6 +42,7 @@ function showFailure(message) {
     $("#message_box").fadeIn();
     $("#popup_custom_message").html(message)
     $("#popup_custom_icon_fail").html("alert_warning")
+    document.getElementById("popup_custom_icon").style.display = "none";
     $("#message_box").css("background", "#ffffff")
     setTimeout(function() {
         $("#message_box").fadeOut();
@@ -70,3 +72,5 @@ function showFailure(message) {
     <ion-icon class="icon" id="popup_custom_icon_fail" name="alert-circle" style="color:#ff0000;">alert_warning</ion-icon>
     <h4 id="popup_custom_message_fail" style="color: #ff0000;">Success</h4>
 </div> -->
+
+<!-- document.getElementById("popup_custom_icon_fail").style.display = "none"; -->
