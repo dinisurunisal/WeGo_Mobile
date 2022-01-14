@@ -81,7 +81,7 @@
             <?php include("navigation_bar.php"); ?>
 			<?php include("header.php"); ?>
 			<div id="treasure_hunt_content">
-                <div id="search_section">
+                <div id="search_section"> 
                     <h2>Treasure Hunt</h2>
                     <p2>Find locations to hunt and learn more</p2>
                     <div class="game_search">
