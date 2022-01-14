@@ -185,7 +185,8 @@ function UpdatePoints(){
     currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
     currentlySignedInUser.currentPoints = currentlySignedInUser.currentPoints + 10;
     localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser))
-    showSuccess("Feedback saved.");
+
+    showSuccess("Feedback saved. <br> you earned 10 points");
 }
 
 function pushReview(destID, starValue, commentValue) {
