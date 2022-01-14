@@ -41,6 +41,10 @@ p2 {
 
 /* Header
 --------------------------------------------------------------------------------*/
+#logo_image {
+    height: 18px;
+}
+
 #home_header {
 	width: -webkit-fill-available;
 	position: fixed;
@@ -50,7 +54,9 @@ p2 {
 #home_header #profile_link {
     position: absolute;
     right: 24px;
-    top: 15px;
+    top: 14px;
+    width: 32px;
+    height: 32px;
 }
 
 #header_collapsible .ui-collapsible-heading{
@@ -91,6 +97,13 @@ p2 {
 	margin-right: 8px;
 	margin-top: 3px;
 	margin-bottom: 3px;
+    width: 30px;
+    height: 30px;
+}
+
+#home_header #profile_image{
+    width: -webkit-fill-available;
+    border-radius: 50%;
 }
 
 #header_collapsible {
@@ -168,19 +181,25 @@ p2 {
 	padding-bottom: 130px;
 }
 
+#to_top_icon {
+    fill: #FF5252;
+    width: 17px;
+    height: 26px;
+}
+
 #to_top_button {
 	cursor: pointer;
     position: absolute;
     right: 24px;
 }
 
-#to_top_button:hover {
+/* #to_top_button:hover {
   filter: brightness(150%);
 }
 
 #to_top_button:onclick {
   filter: brightness(100%);
-}
+} */
 
 .footer_content {
 	width: -webkit-fill-available;
@@ -191,6 +210,8 @@ p2 {
 
 .footer_content .social_media_icon {
 	padding: 8px;	
+    width: 26px;
+    height: 23px;
 }
 
 /* Nav bar
@@ -204,8 +225,29 @@ p2 {
 	width: 100%;
 }
 
+#nav_bar a {
+    display: flex;
+    justify-content: center;
+}
+
 .nav_bar_icon {
 	padding-top: 2px;
+}
+
+#nav_bar #home_icon{
+    width: 48px;
+}
+
+#nav_bar #hunts_icon{
+    width: 52px;
+}
+
+#nav_bar #game_icon{
+    width: 44px;
+}
+
+#nav_bar #awards_icon{
+    width: 64px;
 }
 
 .nav_bar_item_option {
@@ -580,6 +622,11 @@ p2 {
     grid-template-columns: auto;
     align-content: flex-start;
     position: fixed;
+}
+
+#scan_qr_page #back_btn_img {
+    width: 52px;
+    height: 18px;
 }
 
 #scan_qr_page .scan_instructions {

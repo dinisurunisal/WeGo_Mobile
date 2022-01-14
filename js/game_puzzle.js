@@ -4,12 +4,8 @@ var boxNames = ["box1", "box2", "box3", "box4", "box5", "box6", "box7", "box8", 
 var n = 0;
 var won = false;
 
-$(document).on("pageinit", function () {
-    initialize();
-});
-
-function initialize(){
-    // do {
+$(function initialization(){
+        // do {
     //     ri = Math.floor(Math.random()*(g.length));
     //     r = g[ri];
 
@@ -23,8 +19,7 @@ function initialize(){
     l = [1,2,3,4,0,6,7,5,8];
 
     drawPuzzle();
-}
-
+});
 
 function drawPuzzle() {
     // imagesrc = "images/destinations/Big%20Ben.jpg";
@@ -113,7 +108,7 @@ function chkWin() {
     if(a==1) {
         won = true;
         document.getElementsByTagName('td')[8].innerHTML = '<img src="images/game/bigben/missing.jpg">';
-        showSuccess('Game Completed')
+        // showSuccess('Game Completed')
         UpdatePoints();
     }
 }

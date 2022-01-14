@@ -9,7 +9,6 @@
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
 	<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
 	<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
 
@@ -19,9 +18,8 @@
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 	<!-- Custom -->
-	<script
-        src="https://www.paypal.com/sdk/js?client-id=AbH_Jnmi7kSr89TNkVxzUkiIc8L1J22tBdqSqmOtsff7Fv3R0cDjX_ceL9CUWYf8biaqDu_2hQK1_D1T">
-    </script>
+	<script src="https://www.paypal.com/sdk/js?client-id=AYImqnFyv8Ed8f1Q2yxi8OU9pZcsU2YigmWEvZN2VYHP39Bog3XpOaZ6ErmMzkEOZnlsziDFfO2uuc71"></script>
+	<script src="https://checkout.stripe.com/checkout.js"></script>
 
 	<script src="js/booking_ticket_details.js"></script>
 
@@ -169,7 +167,7 @@
 			display: grid;
 		}
 
-		.pricesPanels{
+		.pricesPanels {
 			padding: 1rem;
 			display: grid;
 			grid-template-columns: auto auto;
@@ -249,7 +247,8 @@
 
 		.paypal-card1 {
 			display: grid;
-			justify-content: center;
+			width: 54vw;
+			margin-bottom: 1vh;
 		}
 
 		.paypal-card2 {
@@ -284,8 +283,8 @@
 
 			.depature {
 				padding-left: 9vw;
-			}	
-			
+			}
+
 			.duration {
 				margin-top: 9vw;
 			}
@@ -316,8 +315,8 @@
 
 			.depature {
 				padding-left: 19vw;
-			}	
-			
+			}
+
 			.duration {
 				margin-top: 6vw;
 			}
@@ -421,17 +420,24 @@
 							</h1>
 						</div>
 					</div>
-					<button id="placeOrder" onclick="placeOrder('approved')" style="text-shadow:none; background-color: #0174CF; color: #ffffff; margin-left: auto; margin-right: auto; margin-top: 6%; width: 180px;">Place Order </button>
-					<a href="#popupDialog" id="placeOrderLink" data-transition="pop" data-position-to="window" data-rel="popup" style="color: white;pointer-events: none;"></a>
-					<div id="paypal-button-container" style="display: none;" class="paypal-card1"></div>
-					<div id="paypal-card-container" style="display: none;" class="paypal-card2"></div>
-					<button onclick="cancel()" style="text-shadow:none; background-color: #ffffff; color: #0174CF; margin-left: auto; margin-right: auto; margin-top: 2%; width: 180px; border-color: #ddd;"> Cancel </button>
+					<div style="display: grid; justify-items:center;">
+						<button id="placeOrder" onclick="placeOrder('approved')" style="text-shadow:none; background-color: #0174CF; color: #ffffff; margin-left: auto; margin-right: auto; margin-top: 6%; width: 180px;">Place Order </button>
+						<!-- <a href="#popupDialog" id="placeOrderLink" data-transition="pop" data-position-to="window" data-rel="popup" style="color: white;pointer-events: none;"></a> -->
+						<div id="paypal-button-container" style="display: none;" class="paypal-card1"></div>
+						<div id="card-payment-btn" style="display: none;" class="paypal-card2">
+							<button id="cardPaymentButton" style="text-shadow:none; background-color: #0174CF; color: #ffffff; margin-left: auto; margin-right: auto; margin-top: 6%; width: 180px;">Pay <span id="totNumberDisplay"></span></button>
+						</div>
+						<!-- <div id="paypal-card-container" style="display: none;" class="paypal-card2"></div> -->
+
+						<button onclick="cancel()" style="text-shadow:none; background-color: #ffffff; color: #0174CF; margin-left: auto; margin-right: auto; margin-top: 2%; width: 180px; border-color: #ddd;"> Cancel </button>
+
+					</div>
 				</div>
 			</div>
 		</div>
 		<?php
-            include("success_popups.php");
-        ?>
+		include("success_popups.php");
+		?>
 
 		<?php include("footer.php"); ?>
 		<?php include("navigation_bar.php"); ?>

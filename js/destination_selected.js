@@ -4,22 +4,17 @@ var destinationId;
 var destination;
 var destinations;
 
-
-$(document).on("pageinit", function () {
-    initialize();
+$(function initialization(){
+  destinationId = localStorage.getItem("clickedDestinationId");
+  console.log(destinationId);
+  destinations = JSON.parse(localStorage.getItem("destinations"));
+  destination = destinations.find(obj => obj.destinationId === destinationId);
+  console.log(destinations);
+  loadData();
+  // renderList();
+  // setHeight();
+  // document.getElementById("#nav_bar_search").classList.add("ui-btn-active");
 });
-
-function initialize() {
-    destinationId = localStorage.getItem("clickedDestinationId");
-    console.log(destinationId);
-    destinations = JSON.parse(localStorage.getItem("destinations"));
-    destination = destinations.find(obj => obj.destinationId === destinationId);
-    console.log(destinations);
-    loadData();
-    // renderList();
-    // setHeight();
-    // document.getElementById("#nav_bar_search").classList.add("ui-btn-active");
-}
 
 function loadData(){
     $('.sel-dest-image').attr('src', destination.destinationImage);
@@ -39,12 +34,52 @@ function loadData(){
         document.getElementById(destination.destinationFavId).innerHTML = "favorite_border";
     }
 
+    const calDate = function (date = new Date()) {
+
+      let timePassed = Math.trunc((new Date() - new Date(date)) / 1000);
+    
+      //seconds
+      // if (timePassed === 0) return 'Just now';
+      if (timePassed < 60)
+        // return `${timePassed} second${timePassed === 1 ? '' : 's'} ago`;
+        return 'Just now';
+    
+      //minutes
+      timePassed = Math.trunc(timePassed / 60);
+      if (timePassed < 60)
+        return `${timePassed} minute${timePassed === 1 ? '' : 's'} ago`;
+    
+      //hours
+      timePassed = Math.trunc(timePassed / 60);
+      if (timePassed < 24)
+        return `${timePassed} hour${timePassed === 1 ? '' : 's'} ago`;
+    
+      //Days
+      timePassed = Math.trunc(timePassed / 24);
+      
+      if (timePassed === 1) return 'Yesteday';
+      if (timePassed < 7) return `${timePassed} days ago`;
+      if (timePassed <= 28)
+        return `${Math.trunc(timePassed / 7)} week${
+          timePassed < 14 ? '' : 's'
+        } ago`;
+    
+      const curDate = new Date(date);
+      const convDate = new Intl.DateTimeFormat(navigator.language).format(curDate);
+      return convDate;
+    };
+
     for (var i = 0; i < destination.destinationReviews.length; i++) {
-      document.getElementById("review_thumb_image").src = destination.destinationReviews[i].reviewerImage;
-      document.getElementById("dest_reviewer_name").innerHTML = destination.destinationReviews[i].name;
-      document.getElementById("dest_reviewer_count").innerHTML = destination.destinationReviews[i].reviewCount + ' Reviews';
-      document.getElementById("dest_review_comment").innerHTML = destination.destinationReviews[i].reviewDescription;
-      document.getElementById("dest_reviewer_date").innerHTML = destination.destinationReviews[i].reviewDate;
+      $("#review_thumb_image").attr("src", destination.destinationReviews[i].reviewerImage);
+      $("#dest_reviewer_name").text(destination.destinationReviews[i].name);
+      $("#dest_reviewer_count").text(destination.destinationReviews[i].reviewCount + ' Reviews');
+      $("#dest_review_comment").text(destination.destinationReviews[i].reviewDescription);
+      $("#dest_reviewer_date").text(calDate(destination.destinationReviews[i].reviewDate));
+      // document.getElementById("review_thumb_image").src = destination.destinationReviews[i].reviewerImage;
+      // document.getElementById("dest_reviewer_name").innerHTML = destination.destinationReviews[i].name;
+      // document.getElementById("dest_reviewer_count").innerHTML = destination.destinationReviews[i].reviewCount + ' Reviews';
+      // document.getElementById("dest_review_comment").innerHTML = destination.destinationReviews[i].reviewDescription;
+      // document.getElementById("dest_reviewer_date").innerHTML = calDate(destination.destinationReviews[i].reviewDate);
   
       for (let j = 0; j <  destination.destinationReviews[i].rating; j++) {
         document.getElementById(starList[j]).innerHTML = 'star';
@@ -105,7 +140,12 @@ function addToFavourites(id) {
 
 function onReplyClick(id) {
   console.log(id)
-  document.getElementById("des_reply").style.display = "block"
+  var repliesSection = $("#des_reply");
+  if(repliesSection.css("display") == "block") {
+    repliesSection.css("display", "none");
+  } else {
+    repliesSection.css("display", "block");
+  }
   // if (typeof (Storage) !== "undefined") {
   //   localStorage.setItem("clickedDestinationId", id);
   //   window.location = "destination_selected.php";

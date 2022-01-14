@@ -1,4 +1,5 @@
-$(document).on("pageinit", function () {
+$(function initialization(){
+  document.getElementById("back_btn").style.display = "none";
   initPage();
 });
 
@@ -25,25 +26,42 @@ function initPage() {
   getData();
   calculatePrice();
 
-  paypal
-    .Buttons({
+  paypal.Buttons({
       onInit: function (data, actions) {
-        // Disable the buttons
         actions.enable();
       },
       createOrder: function (data, actions) {
         return actions.order.create({
+          intent : 'CAPTURE',
+          payer : {
+            name : {
+              given_name: currentUser.username,
+              surname : "Doe"
+            },
+            address : {
+              address_line_1 : "123A Oxford Street",
+              address_line_2 : "By way",
+              admin_area_2 : "London",
+              admin_area_1 : "London",
+              postal_code : "SW1A 2AA",
+              country_code : "UK"
+            },
+            email_address: "WEGOcustomer@personal.example.com",
+            phone : {
+              phone_type : "MOBILE",
+              phone_number : {
+                national_number : currentUser.contactNumber
+              }
+            }
+          },
           purchase_units: [
             {
               amount: {
                 value: totalPrice,
                 currency: "GBP",
-              },
-              payee: {
-                email_address: sellerEmail,
-              },
-            },
-          ],
+              }
+            }
+          ]
         });
       },
       onApprove: function (data, actions) {
@@ -59,24 +77,42 @@ function initPage() {
         color: "gold",
         shape: "pill",
         label: "paypal",
-        tagline: "false",
+        tagline: "false"
       },
     })
     .render("#paypal-button-container");
-  paypal
-    .Buttons({
-      onInit: function (data, actions) {
-        // Disable the buttons
-        actions.enable();
-      },
-      style: {
-        layout: "vertical",
-        color: "gold",
-        shape: "pill",
-        label: "paypal",
-      },
-    })
-    .render("#paypal-card-container");
+
+    jQuery(function($) {
+      // var $form = $('#frmBooking');
+      var handler = StripeCheckout.configure({
+        key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
+        token: function(token) {
+          if(token.id){
+            placeOrder("approved");
+          }else{
+            placeOrder("cancel");
+          }
+        }
+      });
+	  
+
+      $('#cardPaymentButton').on('click', function(e) {
+        // Code Section B  Open Checkout with further options
+        handler.open({
+          name: 'WeGo',
+          currency: 'gbp',
+          description: "Book train tickets using Stripe",
+          amount: totalPrice * 100
+        });
+        e.preventDefault();
+      });
+
+      // Code Section C  Close Checkout on page navigation
+      $(window).on('popstate', function() {
+        handler.close();
+      });
+      });
+
 }
 
 $(document)
@@ -97,16 +133,16 @@ function changePaymentMethod() {
   if (paymentMethod === "paypal") {
     $("#paypal-button-container").show();
     $("#placeOrder").hide();
-    $("#paypal-card-container").hide();
+    $("#card-payment-btn").hide();
   }
   if (paymentMethod === "cash") {
     $("#paypal-button-container").hide();
-    $("#paypal-card-container").hide();
+    $("#card-payment-btn").hide();
     $("#placeOrder").show();
   }
   if (paymentMethod === "credit-card") {
     $("#paypal-button-container").hide();
-    $("#paypal-card-container").show();
+    $("#card-payment-btn").show();
     $("#placeOrder").hide();
   }
 }
@@ -215,6 +251,7 @@ function calculatePrice() {
   document.getElementById("sub-total").innerHTML = "£" + subTotal;
   document.getElementById("service-charges").innerHTML = "£" + serviceCharge;
   document.getElementById("total-price").innerHTML = "£" + totalPrice;
+  document.getElementById("totNumberDisplay").innerHTML = "£" + totalPrice;
 }
 
 function placeOrder(status) {

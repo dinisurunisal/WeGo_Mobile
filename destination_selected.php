@@ -147,7 +147,7 @@
 								<div id="card_script_1">
 									<div id="review-card-resolution-breakpoint">
 										<li>
-											<div class="dest_review_card">
+											<div class="dest_review_card" onclick="onReplyClick(this.id)">
 												<div class="dest_reviewer">
 													<img src="images/reviewer1.jpg" id="review_thumb_image">
 													<div class="dest_reviewer_info">
@@ -170,9 +170,9 @@
 													<!-- <div class="reply_btn" id="destReviewId" onclick="onReplyClick(this.id)">
 														<p>Reply</p>
 													</div> -->
-													<div class="reply_btn" id="destReviewId" onclick="onReplyClick(this.id)">
+													<div class="reply_btn" id="destReviewId">
 														<a href="#destination_reply" data-rel="popup" data-transition="pop" data-position-to="window">
-															<button class="feedback_btn"><p>Reply</p></button>
+															<button id="reply_button"><p>Reply</p></button>
 														</a>  
 													</div>
 													<div id="des_reply">

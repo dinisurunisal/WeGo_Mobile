@@ -25,6 +25,8 @@ function signup() {
     password: password,
     signupDate: date,
     favouritesList: [],
+    profileImage:"images/profile_page/profile_image.jpeg",
+    reviewCount: 1,
     bookings: [
       {
         id: 1,

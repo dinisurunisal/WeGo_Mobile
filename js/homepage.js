@@ -1,20 +1,21 @@
-$(document).on("pageinit", function () {
+$(function initialization(){
   carouselImages = document.querySelector(".carousel_images");
   carouselButtons = document.querySelectorAll(".carousel_button");
   numberOfImages = document.querySelectorAll(".carousel_images img").length;
   imageIndex = 1;
   translateX = 0;
 
-  init();
-});
-
-function init(){
   var destinations = JSON.parse(localStorage.getItem("destinations"));
+  var currentlySignedInUser = JSON.parse(localStorage.getItem("currentlySignedInUser"));
+  
+  // document.getElementById("profile_image").src = currentlySignedInUser.profileImage;
+  $("#profile_image").attr("src", currentlySignedInUser.profileImage);
+  
   defaultDestinationDB = destinations;
   console.log(defaultDestinationDB)
 
   loadPOI()
-}
+});
 
 function carouselMove(id){
   if (id === "c_previous") {
