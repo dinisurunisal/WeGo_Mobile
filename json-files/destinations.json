@@ -40,7 +40,9 @@
             "name": "Joe Stockton",
             "reviewCount": "133",
             "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDescription": "Reply to a comment!",
+            "replierImage": "images/reviewer1.jpg",
+            "replyId":"destinationId1_rev1_rep1"
           }
         ]
       },

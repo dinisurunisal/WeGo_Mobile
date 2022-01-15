@@ -217,12 +217,18 @@
 }
 
 .review_card_section .dest_review_card .dest_replier {
-    display: inline-flex;
-    margin-bottom: 12px;
+    display: inline-grid;
+    margin-bottom: 0px;
+    margin-top: 8px;
+    grid-template-columns: 38px auto 90px;
     min-inline-size: -webkit-fill-available;
 }
 
-.review_card_section .dest_review_card .dest_review_reply {
+.review_card_section .dest_review_card .dest_replier #replier_time {
+    margin-top: 4px;
+}
+
+.review_card_section .dest_review_card #dest_review_reply {
     margin: 12px 0px;
 }
 
