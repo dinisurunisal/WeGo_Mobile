@@ -404,7 +404,7 @@
 							<h1 class="heading-four" style="font-size: 20px;">Sub-Total</h1>
 							<h1 class="paragraph" style="font-size: 15px;">Service Charges</h1>
 							<h1 class="heading-three" style="font-size: 25px;">Total</h1>
-							<h1 class="paragraph" id="pointsContainer" style="margin-top:30px; font-size: 13px;">0 points available</h1>
+							<h1 class="paragraph" id="pointsContainer" style="margin-top:30px; font-size: 13px;"><span id="totPointsAvailable"></span> points available</h1>
 							<br>
 							<h1 id="total-w-discount-text" class="heading-three" style="margin-top:15px; opacity: 0; font-size: 20px;">
 								Total w/ Discount</h1>
@@ -416,8 +416,7 @@
 							<input id="pointsChecked" type="checkbox" name="points" style="margin-top:10px; position: relative; float:right; z-index: 0 !important;" value="Points" onclick="usePoints()">
 							<h1 class="paragraph" style="margin-top:30px; font-size: 13px;">Use Points</h1>
 							<br>
-							<h1 id="total-w-discount" class="heading-three" style="margin-top: 15px; opacity: 0; font-size: 20px;">LKR 0
-							</h1>
+							<h1 id="total-w-discount" class="heading-three" style="margin-top: 15px; opacity: 0; font-size: 20px;">LKR 0</h1>
 						</div>
 					</div>
 					<div style="display: grid; justify-items:center;">

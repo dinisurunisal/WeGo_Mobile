@@ -2,7 +2,7 @@
     <?php include_once("jquery-theme/themes/theme.css"); include_once("css/style.css");?>
 </style>
 
-<!-- <script src="js/header_script.js"></script> -->
+<script src="js/homepage_header_script.js"></script>
 
 <div id="home_header">
     <div data-role="collapsible" class="ui-nodisc-icon ui-alt-icon" id="header_collapsible"
@@ -17,7 +17,7 @@
         </legend>
         <div class="header_search">
             <div class="header_search_box" >
-                <input type="search" data-clear-btn="false" name="header-search-box">
+                <input type="search" data-clear-btn="false" name="header-search-box" id="header-search-box">
             </div>
             <div class="header_search_btn">
                 <button id="home_search_btn" onclick="headerSearchButtonFunction()">Search</button>
@@ -29,5 +29,7 @@
             <img id="profile_image" alt="profile"/>
         </div>
     </div> 
+
+    <?php include("success_popups.php"); ?>
 </div>
 

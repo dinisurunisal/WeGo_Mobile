@@ -81,13 +81,13 @@
             <?php include("navigation_bar.php"); ?>
 			<?php include("header.php"); ?>
 			<div id="treasure_hunt_content">
-                <div id="search_section">
+                <div id="search_section"> 
                     <h2>Treasure Hunt</h2>
                     <p2>Find locations to hunt and learn more</p2>
                     <div class="game_search">
                         <div class="game_search_box">
-                            <input type="text" data-clear-btn="false" name="game-search-box">
-                            <a class="ui-alt-icon ui-btn ui-btn-icon-right ui-icon-search"></a>
+                            <input type="text" data-clear-btn="false" name="game-search-box" id="game-search-box">
+                            <a class="ui-alt-icon ui-btn ui-btn-icon-right ui-icon-search" onclick="onGameSearchClick()"></a>
                         </div>
                     </div>
                 </div>
@@ -106,6 +106,7 @@
                     </div>
                 </div>
 			</div>
+            <?php include("success_popups.php"); ?>
 			<!-- <?php include("footer.php"); ?> -->
 		</div>
 	</body>
