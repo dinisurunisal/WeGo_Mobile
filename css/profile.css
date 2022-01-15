@@ -1,19 +1,19 @@
 
 /* top background banner */
-.top_banner{
+.s4_top_banner{
     margin-top:44px;
     margin-left:-16px;
     margin-right:-16px;
     position: relative;
 }
-#background{
+#s4_background{
     height:200px;
     width:100%;
     object-fit:fill;
     position: relative;
     
 }
-#profile{
+#s4_profile{
     height:px;
     width:100px;
     object-fit:fill;
@@ -31,7 +31,7 @@
 /* top background banner - end */
 
 
-.edit_logout_bar{
+.s4_edit_logout_bar{
     background-color:#0174cf;
     width:100%;
     padding: 5px 5px 5px 5px;
