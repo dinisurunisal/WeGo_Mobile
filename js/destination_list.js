@@ -13,12 +13,11 @@ $(function initialization() {
 function loadDestinationList() {
 
     for (var i = 0; i < defaultDestinationDB.length; i++) {
-        document.getElementById("card_image").src = defaultDestinationDB[i].destinationImage;
-        document.getElementById("card_name").innerHTML = defaultDestinationDB[i].destinationName;
-        document.getElementById("card_details").innerHTML = defaultDestinationDB[i].destinationCardDetails;
-        document.getElementById("card_price").innerHTML = dollarSign + defaultDestinationDB[i].price;
-        document.getElementById("card_star_score").innerHTML = defaultDestinationDB[i].destinationRating;
-        // document.getElementById("kitchen-rating-script").innerHTML = (defaultDestinationDB[i].kitchenRatingTotal / defaultDestinationDB[i].kitchenRatingUserNumber).toFixed(1);
+        $("#card_image").attr("src", defaultDestinationDB[i].destinationImage);
+        $("#card_name").text(defaultDestinationDB[i].destinationName);
+        $("#card_details").text(defaultDestinationDB[i].destinationCardDetails);
+        $("#card_price").text(dollarSign + defaultDestinationDB[i].price);
+        $("#card_star_score").text(defaultDestinationDB[i].destinationRating);
     
         $("#card_script_1").clone().appendTo("#card_script_2");
     }

@@ -186,7 +186,7 @@
 													<div id="reply_space"></div>
 												</div>
 											</div>
-										</li>
+										</li> 
 									</div>
 								</div>
 
