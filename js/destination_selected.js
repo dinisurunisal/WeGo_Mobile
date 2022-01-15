@@ -9,11 +9,12 @@ var replyButtonId;
 $(function initialization(){
   destinationId = localStorage.getItem("clickedDestinationId");
   currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
-  console.log(destinationId);
+
   destinations = JSON.parse(localStorage.getItem("destinations"));
   destination = destinations.find(obj => obj.destinationId === destinationId);
-  console.log(destinations);
+
   $("#reply_space").css("display", "none");
+  $("#review_card").css("display", "none");
   loadData();
 });
 
@@ -68,20 +69,23 @@ function loadData(){
       return convDate;
     };
 
-    for (var i = 0; i < destination.destinationReviews.length; i++) {
-      $("#review_thumb_image").attr("src", destination.destinationReviews[i].reviewerImage);
-      $("#dest_reviewer_name").text(destination.destinationReviews[i].name);
-      $("#dest_reviewer_count").text(destination.destinationReviews[i].reviewCount + ' Reviews');
-      $("#dest_review_comment").text(destination.destinationReviews[i].reviewDescription);
-      $("#dest_reviewer_date").text(calDate(destination.destinationReviews[i].reviewDate));
+    let reviewList = destination.destinationReviews;
+
+    for (var i = 0; i < reviewList.length; i++) {
+      //show review details
+      $("#review_thumb_image").attr("src", reviewList[i].reviewerImage);
+      $("#dest_reviewer_name").text(reviewList[i].name);
+      $("#dest_reviewer_count").text(reviewList[i].reviewCount + ' Reviews');
+      $("#dest_review_comment").text(reviewList[i].reviewDescription);
+      $("#dest_reviewer_date").text(calDate(reviewList[i].reviewDate));
   
-      for (let j = 0; j <  destination.destinationReviews[i].rating; j++) {
+      for (let j = 0; j <  reviewList[i].rating; j++) {
         document.getElementById(starList[j]).innerHTML = 'star';
       }
 
-      var replyList = destination.destinationReviews[i].reviewReplies;
-      console.log(replyList);
+      let replyList = reviewList[i].reviewReplies;
 
+      //show replies
       for (let k = 0; k < replyList.length; k++) {
         // $("#review_thumb_image").attr("src", replyList[j].replierImage);
         $("#des_reply").find("#replier_name").text(replyList[k].name);
@@ -89,30 +93,37 @@ function loadData(){
         $("#des_reply").find("#dest_review_reply").text(replyList[k].replyDescription);
         $("#des_reply").find("#replier_time").text((replyList[k].replyDate));
 
+        //clone and update reply id
         $("#des_reply").clone().appendTo("#reply_space");
-        $("#reply_space").find("#des_reply").attr("id", 'des_reply' + (i+1));
+        $("#reply_space").find("#des_reply").attr("id", 'review' + (i+1) + "_reply" + (k+1));
       }
-
-      // var id2 = document.getElementById("des_reply");
-      // id2.parentNode.removeChild(id2);
-
-      $("#card_script_1").clone().appendTo("#card_script_2");
-    }
-
-    deleteDuplicateCards(); 
-
-    for (var i = 0; i < destination.destinationReviews.length; i++) {
-      // document.getElementById("temp_review_id").id = destination.destinationId + '_rev' + (i+1);
-      $("#temp_review_id").attr("id", destination.destinationId + '_rev' + (i+1));
+      
+      //clone and update card ids
+      $("#review_card").clone().appendTo("#review_space");
+      $("#review_space").find("#review_card").attr("id", 'review_card' + (i+1));
+      $("#"+ 'review_card' + (i+1)).find("#temp_review_id").attr("id", destination.destinationId + '_rev' + (i+1));
       $("#"+destination.destinationId + '_rev' + (i+1)).find("#temp_reply_btn_id").attr("id", "reply_btn" + (i+1));
+
+      //clean original card
+      $("#review_card").find("#reply_space").empty();
+
+      $("#"+'review_card' + (i+1)).css("display", "block");
     }
+
+    // deleteDuplicateCards(); 
+
+    // for (var i = 0; i < destination.destinationReviews.length; i++) {
+    //   // document.getElementById("temp_review_id").id = destination.destinationId + '_rev' + (i+1);
+    //   // $("#temp_review_id").attr("id", destination.destinationId + '_rev' + (i+1));
+    //   // $("#"+destination.destinationId + '_rev' + (i+1)).find("#temp_reply_btn_id").attr("id", "reply_btn" + (i+1));
+    // }
 }
 
-// Delete 'card_script_1'
-function deleteDuplicateCards() {
-  var id = document.getElementById("card_script_1");
-  id.parentNode.removeChild(id);
-}
+// // Delete 'card_script_1'
+// function deleteDuplicateCards() {
+//   var id = document.getElementById("card_script_1");
+//   id.parentNode.removeChild(id);
+// }
 
 function addToFavourites(id) {
 
@@ -178,10 +189,9 @@ function submitReply() {
   $("#destination_reply").popup("close")
   $("#popupBasic").popup("close")
   
-  loadData();
 
-  // setTimeout(function () {
-  //     location.reload();
+  setTimeout(function () {
+      location.reload();
 
-  // }, 2000);
+  }, 2000);
 }

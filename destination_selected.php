@@ -144,7 +144,7 @@
 						<div class="review_card_section">
 							<h2>Reviews</h2>
 							<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0; display: inline-block;">
-								<div id="card_script_1">
+								<div id="review_card">
 									<div id="review-card-resolution-breakpoint">
 										<li>
 											<div class="dest_review_card" id="temp_review_id" onclick="onCardClick(this.id)">
@@ -190,7 +190,7 @@
 									</div>
 								</div>
 
-								<div id="card_script_2"></div>
+								<div id="review_space"></div>
 							</ul>
 						</div>
 
