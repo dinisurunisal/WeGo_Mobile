@@ -56,6 +56,7 @@ function showFailure(message) {
     $("#popup_custom_message").html(message)
     $("#popup_custom_icon_fail").html("alert_warning")
     $("#popup_custom_icon").css("display", "none");
+    $("#popup_custom_icon_game").css("display", "none");
     $("#message_box").css("background", "#ffffff")
     setTimeout(function() {
         $("#message_box").fadeOut();

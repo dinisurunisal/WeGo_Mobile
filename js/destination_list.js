@@ -1,9 +1,10 @@
 const dollarSign = "$ "
 var defaultDestinationDB = [];
-var sortParameters = {};
+
 
 $(function initialization() {
-    var destinations = JSON.parse(localStorage.getItem("destinations"));
+    // var destinations = JSON.parse(localStorage.getItem("destinations"));
+    var destinations = JSON.parse(localStorage.getItem("sortedDestinations"));
     defaultDestinationDB = destinations;
     console.log(defaultDestinationDB)
     if (defaultDestinationDB) {
@@ -11,11 +12,36 @@ $(function initialization() {
     }
 });
 
-function sortedView(){
+// function destinationsFilterInit() {
+//   var defaultFilterDB = {
+//       sort:"ascending",
+//       parameters: [
+//           {
+//               "name": "false",
+//               "rating": "false",
+//               "price": "false"
+//           }
+//       ]
+//   }
 
-}
+//   var filterDB = JSON.parse(localStorage.getItem("filterDB"));
+
+//     if (filterDB == null) {
+//         if (typeof (Storage) !== "undefined") {
+//             localStorage.setItem("filterDB", JSON.stringify(defaultFilterDB));
+
+//             filterDB = defaultFilterDB;
+//         } else {
+//             showFailure("Sorry, your browser does not support Frese")
+//         }
+//     }
+// }
+
+
 
 function loadDestinationList() {
+
+
 
     for (var i = 0; i < defaultDestinationDB.length; i++) {
         document.getElementById("card_image").src = defaultDestinationDB[i].destinationImage;
@@ -43,9 +69,9 @@ function loadDestinationList() {
 }
 
 
-function popupDestinationRestoreDefault() {
-  restoreDefaultFilter(); // This function can be found in "destination_filter_popup.js" file
-}
+// function popupDestinationRestoreDefault() {
+//   restoreDefaultFilter(); // This function can be found in "destination_filter_popup.js" file
+// }
 
 // Delete 'card_script_1'
 function deleteDuplicateCards() {
@@ -104,27 +130,3 @@ function goToDestinationMap() {
     window.location = "destination_map.php";
 }
 
-function sortByAccending(property){
-  return function(a,b){  
-
-      let comparison = 0;
-    if(a[property] > b[property])  
-      comparison = 1;  
-    else if(a[property] < b[property])  
-       comparison = -1;  
-
-    return comparison;  
- }
-}
-function sortByDesending(property){
-  return function(a,b){  
-
-      let comparison = 0;
-    if(a[property] > b[property])  
-      comparison = 1;  
-    else if(a[property] < b[property])  
-       comparison = -1;  
-
-    return comparison * -1;  
- }
-}

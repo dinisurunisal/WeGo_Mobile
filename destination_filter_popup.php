@@ -11,8 +11,8 @@
 
     <div data-role="navbar" class="toggle">
                     <ul>
-                        <li><a id="past-hunts-btn" href="#" class="toggle-buttons ui-btn-active" onclick="selectPastHunts()">Assending</a></li>
-                        <li><a id="upcoming-hunts-btn" class="toggle-buttons" href="#" onclick="selectUpcomingHunts()">Desending</a></li>
+                        <li><a id="past-hunts-btn" href="#" class="toggle-buttons ui-btn-active" onclick="sortToggle('ascending')">Ascending</a></li>
+                        <li><a id="upcoming-hunts-btn" class="toggle-buttons" href="#" onclick="sortToggle('descending')">Descending</a></li>
                     </ul>
     </div><!-- /navbar -->
 
@@ -32,6 +32,6 @@
 
     <div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
 						<button id="cancelBtn" onclick="closeFeedbackPopup();"  class="button_popup" data-role="none">Cancel</button>
-						<button id="sendBtn" type="submit" class="button_popup" data-role="none">Send</button>
+						<button id="sendBtn" type="submit" class="button_popup" data-role="none" onclick="destinationFilterButton()">Send</button>
 	</div>
 </div>
