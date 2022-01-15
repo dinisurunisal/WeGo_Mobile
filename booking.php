@@ -299,10 +299,10 @@
 						Choose Route *
 					</p>
 					<div>
-						<div class="ui-field-contain">
+						<div class="ui-field-contain ui-alt-icon">
 							<select required name="select-native-1" id="select-native-1">
 								<option value="0">None</option>
-								<option value="1">Lodon to Birmingham</option>
+								<option value="1">London to Birmingham</option>
 								<option value="2">London to Manchester</option>
 								<option value="3">London to Cardiff</option>
 								<option value="4">London to Rugby</option>
@@ -321,27 +321,27 @@
 						<fieldset data-role="controlgroup">
 							<div style="display: none;" id="check_1">
 								<input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
-								<label for="checkbox-v-2b">one</label>
+								<label for="checkbox-v-2b">Warwick Castle</label>
 							</div>
 
 							<div style="display: none;" id="check_2">
 								<input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
-								<label for="checkbox-v-2c">two</label>
+								<label for="checkbox-v-2c">Stonehenge</label>
 							</div>
 
 							<div style="display: none;" id="check_3">
 								<input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
-								<label for="checkbox-v-2d">three</label>
+								<label for="checkbox-v-2d">The Roman Baths</label>
 							</div>
 
 							<div style="display: none;" id="check_4">
 								<input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
-								<label for="checkbox-v-2e">four</label>
+								<label for="checkbox-v-2e">Leeds Castle</label>
 							</div>
 
 							<div style="display: none;" id="check_5">
 								<input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
-								<label for="checkbox-v-2f">five</label>
+								<label for="checkbox-v-2f">York Minster</label>
 							</div>
 
 						</fieldset>
@@ -354,7 +354,7 @@
 						Choose Date *
 					</p>
 					<div class="bk_datepick">
-						<input required type="date" data-role="date" id="datePicker">
+						<input required type="date" data-role="date" id="datePicker" min="2022-01-15">
 					</div>
 				</div>
 
@@ -363,7 +363,7 @@
 						Choose Passengers *
 					</p>
 					<div>
-						<div class="ui-field-contain">
+						<div class="ui-field-contain ui-alt-icon">
 							<select required name="select-native-2" id="select-native-2">
 								<option value="1">One Adult</option>
 								<option value="2">Two Adults</option>

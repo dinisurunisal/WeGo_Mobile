@@ -6,7 +6,20 @@ $(function initialization(){
     console.log(dests);
 
     createFavouritesList();
+    showHide();
 });
+
+function showHide() {
+    var faButton = document.getElementById("fa-share-btn");
+    var faMessage = document.getElementById("display-message");
+    if (newFavouriteList.length == 0) {
+        faButton.style.display = "none";
+        faMessage.style.display = "block";
+    } else {
+        faButton.style.display = "block";
+        faMessage.style.display = "none";
+    }
+}
 
 function createFavouritesList() {
     for (var i = 0; i < dests.length; i++) {
