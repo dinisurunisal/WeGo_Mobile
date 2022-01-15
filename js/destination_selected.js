@@ -67,7 +67,7 @@ function loadData(){
       const curDate = new Date(date);
       const convDate = new Intl.DateTimeFormat(navigator.language).format(curDate);
       return convDate;
-    };
+    }; 
 
     let reviewList = destination.destinationReviews;
 
@@ -166,6 +166,12 @@ function onCardClick(id) {
 function onReplyClick(id) {
   replyButtonId = id;
   console.log(replyButtonId);
+
+  // To make the card full width
+  $('.dest_sel_content_block .review_card_section #review-card-resolution-breakpoint').css({
+    'width': '100%',
+    'float': 'left',
+  });
   // $("#reply_popup_link").click();
 }
 
