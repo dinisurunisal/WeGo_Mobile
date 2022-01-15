@@ -1,4 +1,6 @@
 
+
+
 <link rel="stylesheet" href="css/destination_filter_popup.css">
 
 <script src="js/destination_filter_popup.js"></script>
@@ -17,13 +19,13 @@
     <form>
         <fieldset data-role="controlgroup" id="browse_kitchen_filter_popup_checkbox_group-2">
             
-            <input type="checkbox" name="browse-kitchen-filter-popup-vegetarian" id="browse-kitchen-filter-popup-vegetarian">
+            <input type="radio" name="browse-kitchen-filter-popup-vegetarian" id="browse-kitchen-filter-popup-vegetarian">
             <label for="browse-kitchen-filter-popup-vegetarian" class="checkbox-style">Name</label>
 
-            <input type="checkbox" name="browse-kitchen-filter-popup-gluten-free" id="browse-kitchen-filter-popup-gluten-free">
+            <input type="radio" name="browse-kitchen-filter-popup-gluten-free" id="browse-kitchen-filter-popup-gluten-free">
             <label for="browse-kitchen-filter-popup-gluten-free" class="checkbox-style">Rating</label>
 
-            <input type="checkbox" name="browse-kitchen-filter-popup-vegan" id="browse-kitchen-filter-popup-vegan">
+            <input type="radio" name="browse-kitchen-filter-popup-vegan" id="browse-kitchen-filter-popup-vegan">
             <label for="browse-kitchen-filter-popup-vegan" class="checkbox-style">Price Range</label>
         </fieldset>
     </form>

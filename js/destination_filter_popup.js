@@ -1,4 +1,5 @@
 var filterDB;
+var tempdb;
 
 var browseKitchenFilterPopupLabelDollarCount = 3; // Default value
 var browseKitchenFilterPopupLabelStarCount = 1; // Default value
@@ -73,7 +74,7 @@ function browseKitchenFilterPopupUpdateButtonFunction() {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-function browseKitchenFilterPopupLabelDollarFunction1() {
+/* function browseKitchenFilterPopupLabelDollarFunction1() {
     browseKitchenFilterPopupLabelDollarCount = 1;
 
     checkDollarIcon(1, 2, 3);
@@ -163,4 +164,4 @@ function removeStarIcons(id) {
     $("#browse-kitchen-filter-popup-checkbox-star-" + id).prop('checked', false).checkboxradio('refresh');
 
     document.getElementById("browse-kitchen-filter-popup-label-star-" + id).innerHTML = '<img src="images/empty-middle-star-icon.png" alt="Empty star icon" class="star-icon-size" id="browse-kitchen-filter-popup-img-star-' + id + '" />';
-}
+} */

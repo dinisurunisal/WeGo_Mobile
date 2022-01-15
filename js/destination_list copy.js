@@ -1,6 +1,5 @@
 const dollarSign = "$ "
 var defaultDestinationDB = [];
-var sortParameters = {};
 
 $(function initialization() {
     var destinations = JSON.parse(localStorage.getItem("destinations"));
@@ -10,10 +9,6 @@ $(function initialization() {
         loadDestinationList();
     }
 });
-
-function sortedView(){
-
-}
 
 function loadDestinationList() {
 
@@ -102,29 +97,4 @@ function addToFavourites(id) {
 
 function goToDestinationMap() {
     window.location = "destination_map.php";
-}
-
-function sortByAccending(property){
-  return function(a,b){  
-
-      let comparison = 0;
-    if(a[property] > b[property])  
-      comparison = 1;  
-    else if(a[property] < b[property])  
-       comparison = -1;  
-
-    return comparison;  
- }
-}
-function sortByDesending(property){
-  return function(a,b){  
-
-      let comparison = 0;
-    if(a[property] > b[property])  
-      comparison = 1;  
-    else if(a[property] < b[property])  
-       comparison = -1;  
-
-    return comparison * -1;  
- }
 }

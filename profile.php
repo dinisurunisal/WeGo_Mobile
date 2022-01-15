@@ -37,14 +37,14 @@
 
 			<!-- main banner -->
 			<div role="main" class="ui-content">
-				<div class="top_banner">
-					<img id="background" src="images/profile_page/background.jpg" alt="">
-					<img id="profile" src="images/profile_page/profile_image.jpeg" alt="">
+				<div class="s4_top_banner">
+					<img id="s4_background" src="images/profile_page/background.jpg" alt="">
+					<img id="s4_profile" src="images/profile_page/profile_image.jpeg" alt="">
 				</div>
 			</div>
 
 			<!-- bar with edit logout buttons -->
-			<div class="edit_logout_bar" id="flex_container">
+			<div class="s4_edit_logout_bar" id="flex_container">
 
 				<div class="edit_profile_btn" id="flex_child" style="padding-left:10px;">
 					<a onclick="showProfileMethod();" >EDIT</a>
@@ -111,7 +111,7 @@
 					<div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
 						<button id="cancelBtn" onclick="closeFeedbackPopup();"  class="button_popup" data-role="none">Cancel</button>
 						<button id="sendBtn" type="submit" class="button_popup" data-role="none">Send</button>
-					</div>
+			</div>
 
             </form>
         	</div>
