@@ -216,12 +216,19 @@
     display: none;
 }
 
+.review_card_section .dest_review_card #reply_space {
+    padding-left: 24px;
+}
+
 .review_card_section .dest_review_card .dest_replier {
     display: inline-grid;
-    margin-bottom: 0px;
     margin-top: 8px;
+    padding-top: 8px;
     grid-template-columns: 38px auto 90px;
     min-inline-size: -webkit-fill-available;
+    border-top-style: solid;
+    border-top-color: #f6f6f6;
+    border-top-width: thick;
 }
 
 .review_card_section .dest_review_card .dest_replier #replier_time {
