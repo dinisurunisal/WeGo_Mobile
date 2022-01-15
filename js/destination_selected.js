@@ -4,7 +4,7 @@ var destinationId;
 var destination;
 var destinations;
 var currentlySignedInUser;
-var replyId;
+var replyButtonId;
 
 $(function initialization(){
   destinationId = localStorage.getItem("clickedDestinationId");
@@ -13,6 +13,7 @@ $(function initialization(){
   destinations = JSON.parse(localStorage.getItem("destinations"));
   destination = destinations.find(obj => obj.destinationId === destinationId);
   console.log(destinations);
+  $("#reply_space").css("display", "none");
   loadData();
   // renderList();
   // setHeight();
@@ -82,20 +83,21 @@ function loadData(){
       }
 
       var replyList = destination.destinationReviews[i].reviewReplies;
+      console.log(replyList);
 
-      for (let j = 0; j < replyList.length; j++) {
+      for (let k = 0; k < replyList.length; k++) {
         // $("#review_thumb_image").attr("src", replyList[j].replierImage);
-        $("#replier_name").text(replyList[j].name);
-        $("#replier_reviews").text(replyList[j].reviewCount + ' Reviews');
-        $("#dest_review_reply").text(replyList[j].replyDescription);
-        $("#replier_time").text((replyList[j].replyDate));
+        $("#des_reply").find("#replier_name").text(replyList[k].name);
+        $("#des_reply").find("#replier_reviews").text(replyList[k].reviewCount + ' Reviews');
+        $("#des_reply").find("#dest_review_reply").text(replyList[k].replyDescription);
+        $("#des_reply").find("#replier_time").text((replyList[k].replyDate));
 
         $("#des_reply").clone().appendTo("#reply_space");
-
+        $("#reply_space").find("#des_reply").attr("id", 'des_reply' + (i+1));
       }
 
-      var id2 = document.getElementById("des_reply");
-      id2.parentNode.removeChild(id2);
+      // var id2 = document.getElementById("des_reply");
+      // id2.parentNode.removeChild(id2);
 
       $("#card_script_1").clone().appendTo("#card_script_2");
     }
@@ -103,7 +105,9 @@ function loadData(){
     deleteDuplicateCards(); 
 
     for (var i = 0; i < destination.destinationReviews.length; i++) {
-      document.getElementById("destReviewId").id = destination.destinationId + '_rev' + (i+1);
+      // document.getElementById("temp_review_id").id = destination.destinationId + '_rev' + (i+1);
+      $("#temp_review_id").attr("id", destination.destinationId + '_rev' + (i+1));
+      $("#"+destination.destinationId + '_rev' + (i+1)).find("#temp_reply_btn_id").attr("id", "reply_btn" + (i+1));
     }
 
     // if ( pastHunts[i].huntId === 'mh2') {
@@ -150,9 +154,9 @@ function addToFavourites(id) {
 
 }
 
-function onReplyClick(id) {
+function onCardClick(id) {
   console.log(id)
-  var repliesSection = $("#"+id).find("#des_reply");
+  var repliesSection = $("#"+id).find("#reply_space");
   if(repliesSection.css("display") == "block") {
     repliesSection.css("display", "none");
   } else {
@@ -160,21 +164,33 @@ function onReplyClick(id) {
   }
 }
 
-function submitReply(id) {
+function onReplyClick(id) {
+  replyButtonId = id;
+  console.log(replyButtonId);
+  // $("#reply_popup_link").click();
+}
+
+function submitReply() {
   var replyMessage = $("#form_reply").val();
-  var count = destination.destinationReviews[1].reviewReplies.length;
-  destination.destinationReviews[1].reviewReplies[count] = {
+
+  let reviewNo = parseInt(replyButtonId.slice(9))-1;
+  console.log(parseInt(reviewNo));
+  let count = destination.destinationReviews[reviewNo].reviewReplies.length;
+  destination.destinationReviews[reviewNo].reviewReplies[count] = {
       name: currentlySignedInUser.username,
       reviewCount: currentlySignedInUser.reviewCount,
       replierImage: currentlySignedInUser.profileImage,
       replyDescription: replyMessage,
   };
 
-  console.log(destination.destinationReviews[1].reviewReplies);
+  console.log(destination.destinationReviews[reviewNo].reviewReplies);
   localStorage.setItem("destinations", JSON.stringify(destinations));
 
-  showSuccess("Reply saved.");
+  // showSuccess("Reply saved.");
+  $("#destination_reply").popup("close")
   $("#popupBasic").popup("close")
+  
+  loadData();
 
   // setTimeout(function () {
   //     location.reload();
