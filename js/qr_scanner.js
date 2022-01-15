@@ -2,12 +2,17 @@ var destinations;
 var hunts;
 var destination;
 var pastHunts;
+var today = new Date();
 
 $(function initialization(){
+    $("#back_btn_img").css("fill", "white");
+
     currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
     destinations = JSON.parse(localStorage.getItem("destinations"));
     pastHunts = JSON.parse(localStorage.getItem('pastHunts'));
+
     let scanner = new Instascan.Scanner({video: document.getElementById('qr_scan')});
+
     Instascan.Camera.getCameras().then(function(cameras){
         if(cameras.length > 0) {
             scanner.start(cameras[0]);
@@ -19,9 +24,7 @@ $(function initialization(){
     });
     
     scanner.addListener('scan', function(c) {
-        let feedbackLink = document.getElementById("feedback_link");
-
-        feedbackLink.click();
+        $("#feedback_link").click();
         destination = destinations.find(obj => obj.destinationId === c);
         console.log(c)
         setupStars() 
@@ -79,22 +82,7 @@ function submitFeedback() {
        }
    });
 
-   var today = new Date();
-
-   var hunt = {
-        huntId: 'mh' + (pastHunts.length + 1), 
-        destName: destination.destinationName, 
-        imageUrl: destination.destinationImage, 
-        tourDate:'Tour completed on ' + today.getDate() + "-" + today.getMonth() + "-" + today.getFullYear(), 
-        tourDetails:'Scanned Hunt', 
-        tourRating: starCount, 
-        tourComment: comment, 
-        destinationId: destination.destinationId
-   }
-
    pushReview(destination.destinationId, starCount, comment);
-   pastHunts.push(hunt);
-   localStorage.setItem('pastHunts', JSON.stringify(pastHunts));
 
    UpdatePoints();
    $("#popupBasic").popup("close")
@@ -114,6 +102,8 @@ function UpdatePoints(){
 }
 
 function pushReview(destID, starValue, commentValue) {
+    const month = ["01","02","03","04","05","06","07","08","09","10","11","12"];
+
     destination = destinations.find(obj => obj.destinationId === destID);
     reviewNo = destination.destinationReviews.length + 1;
 
@@ -125,21 +115,25 @@ function pushReview(destID, starValue, commentValue) {
         minute: 'numeric',
     }).format(new Date());
 
-    var review = {
+    destination.isPastHunt = true;
+
+    destination.destinationReviews[1] = {
         name : currentlySignedInUser.username,
         reviewerId : destination.destinationId + "_rev" + reviewNo,
-        reviewerImage : "images/reviewer1.jpg",
+        reviewerImage : currentlySignedInUser.profileImage,
         reviewCount : (currentlySignedInUser.reviewCount + 1),
         rating : starValue,
         reviewDate : date,
         reviewDescription : commentValue,
-        reviewReplies : ''
+        tourDate : 'Tour completed on ' + today.getDate() + "-" + month[today.getMonth()] + "-" + today.getFullYear(), 
+        tourDetails : 'Scanned Hunt', 
+        reviewReplies : []
     };
 
     currentlySignedInUser.reviewCount = currentlySignedInUser.reviewCount + 1;
     localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser))
 
-    destination.destinationReviews.push(review);
+    destination.isReviewed = true;
     console.log(destination.destinationReviews);
     localStorage.setItem("destinations", JSON.stringify(destinations));
 }

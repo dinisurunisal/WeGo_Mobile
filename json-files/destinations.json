@@ -9,6 +9,8 @@
     "destinationRating": 4.5,
     "destinationFavId": "destinationId1_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -31,12 +33,15 @@
         "rating": 3,
         "reviewDate": "1/1/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       },
@@ -48,12 +53,15 @@
         "rating": 4,
         "reviewDate": "1/8/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       }
@@ -64,6 +72,9 @@
       "type": "VISA",
       "CVC": "123",
       "exiprationDate": "12/23"
+    },
+    "pastHuntDetails": {
+
     }
   },
   {
@@ -76,6 +87,8 @@
     "destinationRating": 4.9,
     "destinationFavId": "destinationId2_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -98,12 +111,15 @@
         "rating": 3,
         "reviewDate": "1/2/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       },
@@ -115,12 +131,15 @@
         "rating": 4,
         "reviewDate": "1/9/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       }
@@ -143,6 +162,7 @@
     "destinationRating": 4.6,
     "destinationFavId": "destinationId3_favourite",
     "isFavourite": false,
+    "isPastHunt": true,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -165,12 +185,15 @@
         "rating": 3,
         "reviewDate": "1/3/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       },
@@ -182,12 +205,15 @@
         "rating": 4,
         "reviewDate": "1/5/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       }
@@ -210,6 +236,8 @@
     "destinationRating": 3.5,
     "destinationFavId": "destinationId4_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -232,12 +260,15 @@
         "rating": 3,
         "reviewDate": "1/4/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       },
@@ -249,12 +280,15 @@
         "rating": 4,
         "reviewDate": "1/6/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       }
@@ -277,6 +311,8 @@
     "destinationRating": 4.5,
     "destinationFavId": "destinationId5_favourite",
     "isFavourite": false,
+    "isPastHunt": true,
+    "isReviewed": true,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -296,15 +332,18 @@
         "reviewerId": "destinationId5_rev1",
         "reviewerImage": "images/reviewer1.jpg",
         "reviewCount": "133",
-        "rating": 3,
+        "rating": 4,
         "reviewDate": "1/7/2022, 3:43 AM",
-        "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "reviewDescription": "You must visit here to see what a glamorous place it is !!!",
+        "tourDate":"Tour completed on 25-12-2021", 
+        "tourDetails":"EUS - DEL | 1h 11m | Two Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       },
@@ -313,15 +352,18 @@
         "reviewerId": "destinationId5_rev2",
         "reviewerImage": "images/reviewer2.jpg",
         "reviewCount": "120",
-        "rating": 4,
+        "rating": 5,
         "reviewDate": "1/8/2022, 3:43 AM",
-        "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "reviewDescription": "One of the best destinations which admires the history of UK",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       }
@@ -344,6 +386,8 @@
     "destinationRating": 4.5,
     "destinationFavId": "destinationId6_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -366,12 +410,15 @@
         "rating": 3,
         "reviewDate": "1/10/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       },
@@ -383,12 +430,15 @@
         "rating": 4,
         "reviewDate": "1/11/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       }
@@ -411,6 +461,8 @@
     "destinationRating": 4.5,
     "destinationFavId": "destinationId7_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -433,12 +485,15 @@
         "rating": 3,
         "reviewDate": "1/04/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       },
@@ -450,12 +505,15 @@
         "rating": 4,
         "reviewDate": "1/10/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       }
@@ -478,6 +536,8 @@
     "destinationRating": 4.9,
     "destinationFavId": "destinationId8_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -500,12 +560,15 @@
         "rating": 3,
         "reviewDate": "1/5/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       },
@@ -517,12 +580,15 @@
         "rating": 4,
         "reviewDate": "1/6/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
-            "name": "Joe Stockton",
+            "name": "Tracy Stark",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       }
