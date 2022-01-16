@@ -20,12 +20,6 @@
 
     <style>
         @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-            /* .posters img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            } */
-
             .posters .carousel_button {
                 border-radius: 50%;
                 padding-left: 3%;
@@ -43,12 +37,6 @@
         }
 
         @media only screen and (min-device-width: 768px) and (max-device-width: 850px) {
-            /* .posters img {
-                height: 380px;
-                width: 100%;
-                object-fit: cover;
-            } */
-
             .posters .carousel_button {
                 border-radius: 50%;
                 padding-left: 3%;
@@ -69,12 +57,6 @@
         }
 
         @media only screen and (min-device-width: 1024px) {
-            /* .posters img {
-                height: 450px;
-                width: 100%;
-                object-fit: cover;
-            } */
-
             .posters .carousel_button {
                 border-radius: 50%;
                 padding-left: 2%;
