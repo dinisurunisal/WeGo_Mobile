@@ -112,7 +112,7 @@ function loadData(){
 
       //open reply button
       if(replyList.length > 0) {
-        message = `${replyList.length} ${ replyList.length < 1 ? 'Reply' : 'Replies'}`;
+        let message = `${replyList.length} ${ replyList.length < 2 ? 'Reply' : 'Replies'}`;
         $("#" + destination.destinationId + '_count' + (i+1)).text(message)
       } else {
         $("#" + destination.destinationId + '_count' + (i+1)).css("display", "none");
