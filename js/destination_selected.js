@@ -13,7 +13,6 @@ $(function initialization(){
 
   destinations = JSON.parse(localStorage.getItem("destinations"));
   destination = destinations.find(obj => obj.destinationId === destinationId);
-  document.getElementById("favouriteId").id = destination.destinationFavId;
 
   $("#reply_space").css("display", "none");
   $("#review_card").css("display", "none");
@@ -32,7 +31,7 @@ function loadData(){
     $('#dest_sel_crowd').text(destination.crowdRange);
     $('#dest_sel_price').text(dollarSign + ' ' + destination.price);
 
-    // document.getElementById("favouriteId").id = destination.destinationFavId;
+    document.getElementById("favouriteId").id = destination.destinationFavId;
 
     if (destination.isFavourite == true) {
         document.getElementById(destination.destinationFavId).innerHTML = "favorite";
