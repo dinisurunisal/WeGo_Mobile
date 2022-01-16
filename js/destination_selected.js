@@ -107,7 +107,16 @@ function loadData(){
       $("#review_card").clone().appendTo("#review_space");
       $("#review_space").find("#review_card").attr("id", 'review_card' + (i+1));
       $("#"+ 'review_card' + (i+1)).find("#temp_review_id").attr("id", destination.destinationId + '_rev' + (i+1));
+      $("#"+ 'review_card' + (i+1)).find("#temp_count").attr("id", destination.destinationId + '_count' + (i+1));
       $("#"+destination.destinationId + '_rev' + (i+1)).find("#temp_reply_btn_id").attr("id", "reply_" + destination.destinationId + '_rev' + (i+1));
+
+      //open reply button
+      if(replyList.length > 0) {
+        message = `${replyList.length} ${ replyList.length < 1 ? 'Reply' : 'Replies'}`;
+        $("#" + destination.destinationId + '_count' + (i+1)).text(message)
+      } else {
+        $("#" + destination.destinationId + '_count' + (i+1)).css("display", "none");
+      }
 
       //clean original card
       $("#review_card").find("#reply_space").empty();
@@ -160,7 +169,9 @@ function addToFavourites(id) {
 
 function onCardClick(id) {
   console.log(id)
-  var repliesSection = $("#"+id).find("#reply_space");
+  cardId = $("#"+ id).parents(".dest_review_card").attr("id");
+  
+  var repliesSection = $("#"+cardId).find("#reply_space");
   if(repliesSection.css("display") == "block") {
     repliesSection.css("display", "none");
   } else {
