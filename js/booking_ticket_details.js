@@ -148,8 +148,6 @@ function changePaymentMethod() {
 }
 
 function getData() {
-  // for(var i = 0; i < tempBooking.length; i++)
-
   lastRecord = tempBooking.at(-1);
 
   POIs = lastRecord.bbPOI;

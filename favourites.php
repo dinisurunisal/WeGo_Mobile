@@ -96,17 +96,6 @@
 			margin: 0 auto;
 		}
 
-		/* .favourites .dest_card .dest_favourite i:before {
-			font-family: fontawesome;
-			content: '\f004';
-			font-style: normal;
-		}
-
-		.favourites .dest_card .dest_favourite i.press {
-			animation: size .4s;
-			color: #e23b3b;
-		} */
-
 		.favourites .favourite_buttons {
 			margin-top: 12%;
 			text-align: center;
