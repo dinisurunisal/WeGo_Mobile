@@ -120,7 +120,7 @@ function loadData(){
 
       //clean original card
       $("#review_card").find("#reply_space").empty();
-
+      $("#review_card").find(".material-icons").text("star_border");
       $("#"+'review_card' + (i+1)).css("display", "block");
     }
 
