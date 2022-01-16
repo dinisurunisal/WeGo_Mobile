@@ -128,11 +128,11 @@
                 </div>
                 <div id="past-empty">
                     <ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0">
-                        <div class="my_hunts_list" id="past_my_hunts_list">
+                        <div class="my_hunts_list" id="past_hunt_card">
                             <div id="my_hunt_resolution_breakdown">
                                 <li>
                                     <div class="my_hunts_card">
-                                        <div class="card_image_section">
+                                        <div class="card_image_section" onclick="goToDestination(this.id)">
                                             <img src="images/destinations/Big Ben.jpg" id="past_hunt_card_image">
                                         </div>
                                         <div class="my_hunts_card_content">
@@ -162,7 +162,7 @@
                             </div>
                         </div>
 
-                        <div id="past_my_hunts_list_2"></div>
+                        <div id="past_hunts_space"></div>
                     </ul>
     <!--                <h4 style="text-align: center; ">No locations hunted yet.</h4>-->
                 </div>
