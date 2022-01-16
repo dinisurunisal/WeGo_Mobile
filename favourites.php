@@ -96,17 +96,6 @@
 			margin: 0 auto;
 		}
 
-		.favourites .dest_card .dest_favourite i {
-			cursor: pointer;
-			padding: 10px 12px 8px;
-			background: #fff;
-			border-radius: 50%;
-			display: inline-block;
-			margin: 0 0 15px;
-			color: #aaa;
-			transition: .2s;
-		}
-
 		/* .favourites .dest_card .dest_favourite i:before {
 			font-family: fontawesome;
 			content: '\f004';
@@ -121,6 +110,17 @@
 		.favourites .favourite_buttons {
 			margin-top: 12%;
 			text-align: center;
+		}
+
+		.favourites .dest_card .dest_favourite i {
+    		cursor:pointer;
+    		padding:10px 12px 8px;
+    		background:#fff;
+    		border-radius:50%;
+    		display:inline-block;
+    		margin:0 0 15px;
+		    color:rgb(238, 8, 8);
+    		transition:.2s;
 		}
 
 
@@ -176,6 +176,9 @@
 				<p>
 					Find your favorite destinations
 				</p>
+				<h2 id="display-message" style="display: none; margin-top: 30vh; margin-bottom: 30vh;">
+					No favorites selected.
+				</h2>
 			</div>
 			<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0">
 				<div id="card_script_1">
@@ -205,7 +208,7 @@
 			</ul>
 
 			<div class="favourite_buttons">
-				<button onclick="showEmailPopup();" class="fa_button">Share</button>
+				<button onclick="showEmailPopup();" id="fa-share-btn" class="fa_button" style="display: none;">Share</button>
 			</div>
 
 			<div data-role="popup" data-position-to="window" data-transition="pop" class="popup" style="padding: 20px;" id="emailPopup">
