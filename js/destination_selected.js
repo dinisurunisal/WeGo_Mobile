@@ -5,7 +5,6 @@ var destination;
 var destinations;
 var currentlySignedInUser;
 var replyButtonId;
-var openReviewCardId;
 
 $(function initialization(){
   destinationId = localStorage.getItem("clickedDestinationId");
@@ -17,7 +16,6 @@ $(function initialization(){
   $("#reply_space").css("display", "none");
   $("#review_card").css("display", "none");
 
-  openReviewCard();
   loadData();
 });
 
@@ -167,52 +165,36 @@ function addToFavourites(id) {
 
 }
 
-function onCardClick(id) {
+function onReplyClick(id) {
   console.log(id)
   cardId = $("#"+ id).parents(".dest_review_card").attr("id");
   
+  replyButtonId = cardId;
   var repliesSection = $("#"+cardId).find("#reply_space");
   if(repliesSection.css("display") == "block") {
     repliesSection.css("display", "none");
+    changeWidthForTablets(false);
   } else {
     repliesSection.css("display", "block");
-    openReviewCardId = id;
+    changeWidthForTablets(true);
   }
 }
 
-function openReviewCard() {
-  if(document.cookie != null) {
-    var reviewCookie = "#destinationId" + document.cookie.split("openReviewCardId=destinationId")[1];
+// function onReplyClick(id) {
+//   replyButtonId = id;
+//   console.log(replyButtonId);
 
-    openReviewCardId = reviewCookie.split("_END")[0];
-    console.log("final" + openReviewCardId);
-  }
-
-  if(openReviewCardId != null) {
-    console.log("open"+ openReviewCardId);
-    $("destinationId1_rev2").find("#reply_space").css("display", "block");
-  }
-}
-
-function onReplyClick(id) {
-  replyButtonId = id;
-  console.log(replyButtonId);
-
-  // To make the card full width
-  $('.dest_sel_content_block .review_card_section #review-card-resolution-breakpoint').css({
-    'width': '100%',
-    'float': 'left',
-  });
-  // $("#reply_popup_link").click();
-}
+//   // To make the card full width
+//   changeWidthForTablets(true);
+//   // $('.dest_sel_content_block .review_card_section #review-card-resolution-breakpoint').css({
+//   //   'width': '100%',
+//   //   'float': 'left',
+//   // });
+//   // $("#reply_popup_link").click();
+// }
 
 function submitReply() {
   var replyMessage = $("#form_reply").val();
-
-  openReviewCardId = replyButtonId.split("reply_")[1];
-  document.cookie = "openReviewCardId="+openReviewCardId + "_END";
-
-  console.log("reply time" + openReviewCardId);
 
   let reviewNo = parseInt(replyButtonId.split("rev")[1])-1;
   let count = destination.destinationReviews[reviewNo].reviewReplies.length;
@@ -243,6 +225,23 @@ function submitReply() {
 
   setTimeout(function () {
       location.reload();
+  }, 500);
+}
 
-  }, 2000);
+function changeWidthForTablets(openState) {
+  var x = window.matchMedia("(min-width: 700px)")
+  var y = window.matchMedia("(min-height: 750px)")
+  if(x.matches) {
+    if (y.matches & openState) { // If media query matches
+      $('.dest_sel_content_block .review_card_section #review-card-resolution-breakpoint').css({
+        'width': '100%',
+        'float': 'left',
+      });
+    } else if ((y.matches & !openState)) {
+      $('.dest_sel_content_block .review_card_section #review-card-resolution-breakpoint').css({
+        'width': '50%',
+        'float': 'left',
+      });
+    }
+  }
 }
