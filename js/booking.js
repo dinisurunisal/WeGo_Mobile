@@ -1,18 +1,3 @@
-// var booking = [];
-// $(function initialization(){
-//     initJsonFiles();
-// });
-// function initJsonFiles() {
-//     // localStorage.clear();
-//     $.getJSON("json-files/booking.json", function (jsonFile) {
-//         booking = jsonFile;
-//         console.log(booking);
-//         console.log(booking[0]);
-//         loadData();
-//     });
-// }
-// function loadData() {
-// }
 
 $(function initialization(){
   routeType = "One Way"

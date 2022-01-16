@@ -89,11 +89,11 @@ function loadData(){
 
       //show replies
       for (let k = 0; k < replyList.length; k++) {
-        // $("#review_thumb_image").attr("src", replyList[j].replierImage);
+        $("#des_reply").find("#replier_image").attr("src", replyList[k].replierImage);
         $("#des_reply").find("#replier_name").text(replyList[k].name);
         $("#des_reply").find("#replier_reviews").text(replyList[k].reviewCount + ' Reviews');
         $("#des_reply").find("#dest_review_reply").text(replyList[k].replyDescription);
-        $("#des_reply").find("#replier_time").text((replyList[k].replyDate));
+        $("#des_reply").find("#replier_time").text(calDate(replyList[k].replyDate));
 
         //clone and update reply id
         $("#des_reply").clone().appendTo("#reply_space");
