@@ -163,6 +163,7 @@
     "destinationFavId": "destinationId3_favourite",
     "isFavourite": false,
     "isPastHunt": true,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
