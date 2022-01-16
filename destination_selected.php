@@ -167,7 +167,7 @@
 												</div>
 												<p class="dest_review_comment" id="dest_review_comment">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
 												<div id="reply_count_id" class="dest_review_reply">
-													<p2 id="temp_count" onclick="onCardClick(this.id)">Reply count</p2>
+													<p2 id="temp_count" onclick="onReplyClick(this.id)">Reply count</p2>
 													<div class="reply_btn" id="temp_reply_btn_id" onclick="onReplyClick(this.id)">
 														<a id="reply_popup_link" href="#destination_reply" data-rel="popup" data-transition="pop" data-position-to="window">
 															<button id="reply_button"><p>Reply</p></button>
