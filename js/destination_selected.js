@@ -27,6 +27,8 @@ function loadData(){
     $('#dest_sel_address').text(destination.location.addressName);
     $('#dest_sel_crowd').text(destination.crowdRange);
     $('#dest_sel_price').text(dollarSign + ' ' + destination.price);
+    $('#dest_sel_description1').text(destination.destinationDescription1);
+    $('#dest_sel_description2').text(destination.destinationDescription2);
 
     document.getElementById("favouriteId").id = destination.destinationFavId;
 
