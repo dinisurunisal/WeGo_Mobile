@@ -104,9 +104,11 @@ function populatePastHunts() {
             document.getElementById("past_my_hunts_tour_date").innerHTML = destinationList[i].destinationReviews[1].tourDate;
             document.getElementById("past_my_hunts_tour_details").innerHTML = destinationList[i].destinationReviews[1].tourDetails;
     
+            console.log(destinationList[i].destinationName + !destinationList[i].isReviewed);
             if (!destinationList[i].isReviewed) {
                 document.getElementById("tour_star_holder").style.display = "none";
                 document.getElementById("tour_review").style.display = "none";
+                document.getElementById("button_space").style.display = "block";
             } else {
                 document.getElementById("button_space").style.display = "none"
                 document.getElementById("tour_star_holder").style.display = "block"
