@@ -115,10 +115,7 @@ function chkWin() {
 
 function UpdatePoints(){
     currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
-    console.log(1);
-    currentlySignedInUser.currentPoints = currentlySignedInUser.currentPoints + 10;
-    console.log(2);
+    currentlySignedInUser.currentPoints = currentlySignedInUser.currentPoints + 5;
     localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser))
-    console.log(3);
-    showSuccessGame("Game Completed.<br>You earned 10 points.");
+    showSuccessGame("Game Completed.<br>You earned 5 points.");
 }
