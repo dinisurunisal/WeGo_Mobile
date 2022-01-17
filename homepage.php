@@ -88,8 +88,8 @@
                 <div class="carousel">
                     <button class="carousel_button previous" id="c_previous" onclick="carouselMove(this.id)"> < </button>
                             <div class="carousel_images" style="transform: translateX(0vw);">
-                                <img src="images/homepage/Iphone1.jpg" alt="">
                                 <img src="images/homepage/Iphone2.jpg" alt="">
+                                <img src="images/homepage/Iphone1.jpg" alt="">
                             </div>
                     <button class="carousel_button next" id="c_next" onclick="carouselMove(this.id)"> > </button>
                 </div>
