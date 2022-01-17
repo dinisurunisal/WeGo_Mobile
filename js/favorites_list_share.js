@@ -37,7 +37,6 @@ function loadNewFavouriteList() {
         document.getElementById("card_image").src = newFavouriteList[i].destinationImage;
         document.getElementById("card_name").innerHTML = newFavouriteList[i].destinationName;
         document.getElementById("card_details").innerHTML = newFavouriteList[i].destinationCardDetails;
-        // document.getElementById("kitchen-rating-script").innerHTML = (defaultDestinationDB[i].kitchenRatingTotal / defaultDestinationDB[i].kitchenRatingUserNumber).toFixed(1);
     
         $("#card_script_1").clone().appendTo("#card_script_2");
     }
@@ -96,13 +95,6 @@ function addToFavourites(id) {
     setTimeout(function () {
         location.reload();
     }, 500);
-    
-    // for (var i = 0; i < newFavouriteList.length; i++) {
-    //     if (destination.destinationId == newFavouriteList[i].destinationId) {
-    //         newFavouriteList.splice(i, 1);
-    //     }
-    // }
-    // console.log(newFavouriteList);
 
     localStorage.setItem("destinations", JSON.stringify(dests));
 }

@@ -1,5 +1,6 @@
 var filterDB;
 var tempdb;
+var checkSorted;
 var defaultFilterDB = {
     sort:"ascending",
     parameters: [
@@ -19,6 +20,9 @@ $(document).on("popupafteropen", "#popup_destination_filter", function (event, u
 
 
 function destinationFilterButton() {
+    var checkSorted = JSON.parse(localStorage.getItem("checkSorted"));
+    
+
     var browseKitchenFilterPopupVegetarian = document.getElementById("browse-kitchen-filter-popup-vegetarian").checked;
     var browseKitchenFilterPopupGlutenFree = document.getElementById("browse-kitchen-filter-popup-gluten-free").checked;
     var browseKitchenFilterPopupVegan = document.getElementById("browse-kitchen-filter-popup-vegan").checked;
@@ -32,11 +36,12 @@ function destinationFilterButton() {
         console.log(filterDB);
         localStorage.setItem("filterDB", JSON.stringify(filterDB));
         filtering();
+        checkSorted = true;
         $.mobile.back(); // Close popup
     } else {
         showFailure("Your browser does not support Frese");
     }
-
+    localStorage.setItem("checkSorted", JSON.stringify(checkSorted));
      window.location = "destination_list.php";
 }
 
@@ -103,3 +108,9 @@ function sortByAccending(property){
       return comparison * -1;  
    }
   }
+
+  function closeFilterPopup() {
+    // showFailure("Canceled")
+    $("#popup_destination_filter").popup("close");
+
+}

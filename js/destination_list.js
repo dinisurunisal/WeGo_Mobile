@@ -3,13 +3,46 @@ var defaultDestinationDB = [];
 
 
 $(function initialization() {
-    var destinations = JSON.parse(localStorage.getItem("destinations"));
-    // var destinations = JSON.parse(localStorage.getItem("sortedDestinations"));
-    defaultDestinationDB = destinations;
-    console.log(defaultDestinationDB)
-    if (defaultDestinationDB) {
-        loadDestinationList();
+    // var destinations = JSON.parse(localStorage.getItem("destinations"));
+
+
+    var checkSorted = JSON.parse(localStorage.getItem("checkSorted"));
+
+
+    if (checkSorted) {
+
+      var filterBtn = document.getElementById("dest_filter_icon");
+      var refreshBtn = document.getElementById("restore_filter_icon");
+
+      filterBtn.style.display = "none";
+      refreshBtn.style.display = "block";
+
+      var destinations = JSON.parse(localStorage.getItem("sortedDestinations"));
+
+      defaultDestinationDB = destinations;
+      console.log(defaultDestinationDB)
+      if (defaultDestinationDB) {
+          loadDestinationList();
+      }
+
+    }else{
+
+      var filterBtn = document.getElementById("dest_filter_icon");
+      var refreshBtn = document.getElementById("restore_filter_icon");
+
+      filterBtn.style.display = "block";
+      refreshBtn.style.display = "none";
+
+       var destinations = JSON.parse(localStorage.getItem("destinations"));
+
+      defaultDestinationDB = destinations;
+      console.log(defaultDestinationDB)
+      if (defaultDestinationDB) {
+          loadDestinationList();
+      }
+      
     }
+
 });
 
 function loadDestinationList() {
@@ -96,20 +129,33 @@ function goToDestinationMap() {
 }
 
 
-function onSearchBtnClick() {
-  var userInputValueInHeaderSearch = document.getElementById("destination-search-input").value;
+// function onSearchBtnClick() {
+//   var userInputValueInHeaderSearch = document.getElementById("destination-search-input").value;
 
-  if (userInputValueInHeaderSearch == "") {
-      showFailure("Enter a destination name!");
-  } else {
-      localStorage.setItem("filterDB", null);
-      if (typeof (Storage) !== "undefined") {
-          localStorage.setItem("userSearchValue", JSON.stringify({ "type": "search", "value": userInputValueInHeaderSearch }));
-          console.log(localStorage)
-          // window.location = "browse_kitchen.php";
-      } else {
-          showFailure("Your browser does not support Frese");
-      }
-  }
+//   if (userInputValueInHeaderSearch == "") {
+//       showFailure("Enter a destination name!");
+//   } else {
+//       localStorage.setItem("filterDB", null);
+//       if (typeof (Storage) !== "undefined") {
+//           localStorage.setItem("userSearchValue", JSON.stringify({ "type": "search", "value": userInputValueInHeaderSearch }));
+//           console.log(localStorage)
+//           // window.location = "browse_kitchen.php";
+//       } else {
+//           showFailure("Your browser does not support Frese");
+//       }
+//   }
+
+
+// }
+
+function restoreDefaultDb(){
+  // console.log("working");
+  var checkSorted = JSON.parse(localStorage.getItem("checkSorted"));
+  checkSorted = false;
+  localStorage.setItem("checkSorted", JSON.stringify(checkSorted));
+
+  setTimeout(function () {
+    location.reload();
+  }, 500);
 }
 

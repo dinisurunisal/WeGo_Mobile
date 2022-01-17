@@ -21,7 +21,7 @@ function showProfileMethod() {
 }
 
 function closeEditPopup() {
-    // showFailure("Canceled")
+    showFailure("Canceled")
     $("#popupBasic").popup("close");
 
 }
@@ -67,26 +67,29 @@ function saveProfileInformation() {
         location.reload()
     }, 2000);
 
-}
+};
 
 // open feedback popup
 function showFeedbackPopup() {
     $("#feedbackPopup").popup("open");
 
-}
+};
 
 function sendFeedback() {
-    showSuccess("Thank you for the Feedback");
+    $('#formProfile')[0].reset();
     $("#feedbackPopup").popup("close");
+    showSuccess("Thank you for the Feedback");
 
-}
+
+
+};
 
 // close feedback popup
 function closeFeedbackPopup() {
     showFailure("Canceled")
     $("#feedbackPopup").popup("close");
 
-}
+};
 
 
 
