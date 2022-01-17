@@ -65,14 +65,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId2",
@@ -140,14 +133,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId3",
@@ -215,14 +201,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId4",
@@ -290,14 +269,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId5",
@@ -365,14 +337,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId6",
@@ -440,14 +405,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId7",
@@ -515,14 +473,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId8",
@@ -590,14 +541,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId9",
@@ -665,14 +609,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId10",
@@ -740,14 +677,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId11",
@@ -815,14 +745,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId12",
@@ -890,13 +813,6 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   }
 ]

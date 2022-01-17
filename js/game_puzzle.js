@@ -5,7 +5,8 @@ var n = 0;
 var won = false;
 
 $(function initialization(){
-        // do {
+    // Code to arrange the images randomly.
+    // do {
     //     ri = Math.floor(Math.random()*(g.length));
     //     r = g[ri];
 
@@ -16,23 +17,14 @@ $(function initialization(){
     //     }
 
     // } while(n<9);
+
+    //Temperory list for presentation.
     l = [1,2,3,4,0,6,7,5,8];
 
     drawPuzzle();
 });
 
 function drawPuzzle() {
-    // imagesrc = "images/destinations/Big%20Ben.jpg";
-    // var percentage = 100 / (3 - 1);
-    // for (var i = 0; i < 3 * 3; i++) {
-    //     var xpos = (percentage * (i % 3)) + '%';
-    //     var ypos = (percentage * Math.floor(i / 3)) + '%';
-        
-    //     document.getElementsByTagName('td')[i].innerHTML = '<div class="switch_img" style="background-image: url(' + imagesrc +'); background-size: 300%; background-position: ' + xpos + ' ' + ypos +'; width: ' + 400 / 3  + '; height: ' + 400 / 3 + ';"></div>';
-    // }
-
-    // document.getElementsByTagName('td')[l.indexOf(0)].innerHTML = '<div class="switch_img" style="background-color: white; width: ' + 400 / 3  + '; height: ' + 400 / 3 + ';"></div>';
-    
     for(i=0;i<9;i++) {
         document.getElementsByTagName('td')[i].innerHTML = '<img src="images/game/bigben/'+l[i]+'.jpg">';
     }
@@ -108,7 +100,6 @@ function chkWin() {
     if(a==1) {
         won = true;
         document.getElementsByTagName('td')[8].innerHTML = '<img src="images/game/bigben/missing.jpg">';
-        // showSuccess('Game Completed')
         UpdatePoints();
     }
 }
