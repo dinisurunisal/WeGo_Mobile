@@ -148,8 +148,6 @@ function changePaymentMethod() {
 }
 
 function getData() {
-  // for(var i = 0; i < tempBooking.length; i++)
-
   lastRecord = tempBooking.at(-1);
 
   POIs = lastRecord.bbPOI;
@@ -398,7 +396,7 @@ function placeOrder(status) {
     showSuccess("Order placed, see it in upcoming hunts.");
     setTimeout(function () {
       window.location.replace("my_hunts.php");
-    }, 1000);
+    }, 1500);
   }
   if (status === "cancel") {
     showFailure("Payment Failed");

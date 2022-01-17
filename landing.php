@@ -39,7 +39,6 @@
 			<div id="landing" style="display:block;">
 				<div class="one">
 					<img id="human" src="images/Group.png" alt="human" width="978" height="1456">
-					<!--<img id="back" src="images/landingBackground.png" alt="back" style="width:400; height:580">-->
 				</div>
 				<div style="margin-bottom: 20%">
 					<h1>

@@ -65,7 +65,7 @@ function saveProfileInformation() {
     showSuccess("Updated your info.")
     setTimeout(function () {
         location.reload()
-    }, 2000);
+    }, 1000);
 
 };
 
@@ -76,13 +76,11 @@ function showFeedbackPopup() {
 };
 
 function sendFeedback() {
+    $('#form_feedback_Profile')[0].reset();
     $('#formProfile')[0].reset();
     $("#feedbackPopup").popup("close");
     showSuccess("Thank you for the Feedback");
-
-
-
-};
+}; 
 
 // close feedback popup
 function closeFeedbackPopup() {
@@ -90,9 +88,3 @@ function closeFeedbackPopup() {
     $("#feedbackPopup").popup("close");
 
 };
-
-function logOut() {
-    currentlySignedInUser = null;
-    localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
-    window.location = "login.php";
-}
