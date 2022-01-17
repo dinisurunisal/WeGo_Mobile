@@ -1,10 +1,8 @@
 const dollarSign = "$ "
 var defaultDestinationDB = [];
 
-
 $(function initialization() {
-    // var destinations = JSON.parse(localStorage.getItem("destinations"));
-    var destinations = JSON.parse(localStorage.getItem("sortedDestinations"));
+    var destinations = JSON.parse(localStorage.getItem("destinations"));
     defaultDestinationDB = destinations;
     console.log(defaultDestinationDB)
     if (defaultDestinationDB) {
@@ -15,11 +13,12 @@ $(function initialization() {
 function loadDestinationList() {
 
     for (var i = 0; i < defaultDestinationDB.length; i++) {
-        $("#card_image").attr("src", defaultDestinationDB[i].destinationImage);
-        $("#card_name").text(defaultDestinationDB[i].destinationName);
-        $("#card_details").text(defaultDestinationDB[i].destinationCardDetails);
-        $("#card_price").text(dollarSign + defaultDestinationDB[i].price);
-        $("#card_star_score").text(defaultDestinationDB[i].destinationRating);
+        document.getElementById("card_image").src = defaultDestinationDB[i].destinationImage;
+        document.getElementById("card_name").innerHTML = defaultDestinationDB[i].destinationName;
+        document.getElementById("card_details").innerHTML = defaultDestinationDB[i].destinationCardDetails;
+        document.getElementById("card_price").innerHTML = dollarSign + defaultDestinationDB[i].price;
+        document.getElementById("card_star_score").innerHTML = defaultDestinationDB[i].destinationRating;
+        // document.getElementById("kitchen-rating-script").innerHTML = (defaultDestinationDB[i].kitchenRatingTotal / defaultDestinationDB[i].kitchenRatingUserNumber).toFixed(1);
     
         $("#card_script_1").clone().appendTo("#card_script_2");
     }
@@ -36,6 +35,11 @@ function loadDestinationList() {
             document.getElementById(defaultDestinationDB[i].destinationFavId).innerHTML = "favorite_border";
           }
     }
+}
+
+
+function popupDestinationRestoreDefault() {
+  restoreDefaultFilter(); // This function can be found in "destination_filter_popup.js" file
 }
 
 // Delete 'card_script_1'
@@ -94,22 +98,3 @@ function addToFavourites(id) {
 function goToDestinationMap() {
     window.location = "destination_map.php";
 }
-
-
-function onSearchBtnClick() {
-  var userInputValueInHeaderSearch = document.getElementById("destination-search-input").value;
-
-  if (userInputValueInHeaderSearch == "") {
-      showFailure("Enter a destination name!");
-  } else {
-      localStorage.setItem("filterDB", null);
-      if (typeof (Storage) !== "undefined") {
-          localStorage.setItem("userSearchValue", JSON.stringify({ "type": "search", "value": userInputValueInHeaderSearch }));
-          console.log(localStorage)
-          // window.location = "browse_kitchen.php";
-      } else {
-          showFailure("Your browser does not support Frese");
-      }
-  }
-}
-

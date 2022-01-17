@@ -37,6 +37,17 @@
 			<h2>Points</h2>
 			</div>
 
+			<div class="mainBox" id="mainBox">
+				<div class="challengesbox" id="challengesbox">
+					<h4>Challenges</h4>
+				</div>
+				<div class="awardsBox" id="awardsBox">
+					<h4>Awards</h4>
+				</div>
+			</div>
+			<button onclick="setdest()">sort</button>
+			<button onclick="setdestprice()">sort</button>
+
 
 
 			<?php include("footer.php"); ?>

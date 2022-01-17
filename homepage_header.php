@@ -3,6 +3,7 @@
 </style>
 
 <script src="js/homepage_header_script.js"></script>
+<script src="js/destination_search.js"></script>
 
 <div id="home_header">
     <div data-role="collapsible" class="ui-nodisc-icon ui-alt-icon" id="header_collapsible"
@@ -17,10 +18,10 @@
         </legend>
         <div class="header_search">
             <div class="header_search_box" >
-                <input type="search" data-clear-btn="false" name="header-search-box" id="header-search-box">
+                <input type="search" data-clear-btn="false" name="header-search-box" id="destination-search-input">
             </div>
             <div class="header_search_btn">
-                <button id="home_search_btn" onclick="headerSearchButtonFunction()">Search</button>
+                <button id="home_search_btn" onclick="onSearchBtnClick()">Search</button>
             </div>
         </div>
     </div>
