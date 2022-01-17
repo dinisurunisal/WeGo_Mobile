@@ -21,7 +21,7 @@ function showProfileMethod() {
 }
 
 function closeEditPopup() {
-    // showFailure("Canceled")
+    showFailure("Canceled")
     $("#popupBasic").popup("close");
 
 }
@@ -65,35 +65,26 @@ function saveProfileInformation() {
     showSuccess("Updated your info.")
     setTimeout(function () {
         location.reload()
-    }, 2000);
+    }, 1000);
 
-}
+};
 
 // open feedback popup
 function showFeedbackPopup() {
     $("#feedbackPopup").popup("open");
 
-}
+};
 
 function sendFeedback() {
-    showSuccess("Thank you for the Feedback");
+    $('#form_feedback_Profile')[0].reset();
+    $('#formProfile')[0].reset();
     $("#feedbackPopup").popup("close");
-
-}
+    showSuccess("Thank you for the Feedback");
+}; 
 
 // close feedback popup
 function closeFeedbackPopup() {
     showFailure("Canceled")
     $("#feedbackPopup").popup("close");
 
-}
-
-
-
-
-
-// document.getElementById("sendBtn").addEventListener("click", myFunction);
-
-// function myFunction(){
-//     alert('Hello world!');
-// }
+};

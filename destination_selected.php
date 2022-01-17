@@ -9,7 +9,7 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<!-- <link rel="stylesheet" href="css/themes/my-custom-theme.css" /> -->
-		<link rel="stylesheet" href="css/destination_selected.css" /> 
+		<link rel="stylesheet" href="css/style.css" /> 
 		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
 		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
 
@@ -32,7 +32,7 @@
 
 	<body>
 
-		<div data-role="page" id="destination_page" class="destination_page">
+		<div data-role="page" id="destination_selected_page" class="destination_selected_page">
 			<!-- Header -->
 			<?php include("header.php"); ?>
 
@@ -128,7 +128,7 @@
 							<p id="dest_sel_description1"> The Houses of Parliament and Elizabeth Tower, commonly called Big Ben, are among London's most iconic landmarks and must-see London attractions. Technically, Big Ben is the name given to the massive bell inside the clock tower, which weighs more than 13 tons (13,760 kg). 
 								The clock tower looks spectacular at night when the four clock faces are illuminated. 
 							</p>
-							<p id="dest_sel_description1">
+							<p id="dest_sel_description2">
 								Big Ben first rang across Westminster on 31 May 1859. A short time later, in September 1859, 
 								Big Ben cracked. A lighter hammer was fitted and the bell rotated to present an undamaged section 
 								to the hammer. This is the bell as we hear it today.

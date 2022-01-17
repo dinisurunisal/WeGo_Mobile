@@ -20,8 +20,8 @@
 }
 
 .icon{
-    height:73px;
-    width:58px;
+    height:80px;
+    width:65px;
 }
 </style>
 
@@ -30,22 +30,24 @@
 function showSuccess(message) {
     $("#message_box").fadeIn();
     $("#popup_custom_message").html(message)
-    $("#popup_custom_icon").html("shield_checkmark")
+    $("#popup_custom_message").css("color", "#0174cf");
+    $("#popup_custom_icon").html("shield_checkmark");
     $("#popup_custom_icon_fail").css("display", "none");
     $("#popup_custom_icon_game").css("display", "none");
-    $("#message_box").css("background", "#ffffff")
+    $("#message_box").css("background", "#ffffff");
     setTimeout(function() {
         $("#message_box").fadeOut();
     }, 2000);
-}
+};
 
 function showSuccessGame(message) {
     $("#message_box").fadeIn();
     $("#popup_custom_message").html(message)
-    $("#popup_custom_icon_game").html("game_complete")
+    $("#popup_custom_message").css("color", "#0174cf");
+    $("#popup_custom_icon_game").html("game_complete");
     $("#popup_custom_icon_fail").css("display", "none");
     $("#popup_custom_icon").css("display", "none");
-    $("#message_box").css("background", "#ffffff")
+    $("#message_box").css("background", "#ffffff");
     setTimeout(function() {
         $("#message_box").fadeOut();
     }, 2000);
@@ -53,11 +55,12 @@ function showSuccessGame(message) {
 
 function showFailure(message) {
     $("#message_box").fadeIn();
-    $("#popup_custom_message").html(message)
-    $("#popup_custom_icon_fail").html("alert_warning")
+    $("#popup_custom_message").html(message);
+    $("#popup_custom_message").css("color", "#ff0000");
+    $("#popup_custom_icon_fail").html("alert_warning");
     $("#popup_custom_icon").css("display", "none");
     $("#popup_custom_icon_game").css("display", "none");
-    $("#message_box").css("background", "#ffffff")
+    $("#message_box").css("background", "#ffffff");
     setTimeout(function() {
         $("#message_box").fadeOut();
     }, 2000);

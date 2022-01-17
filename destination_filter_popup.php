@@ -31,7 +31,7 @@
     </form>
 
     <div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
-						<button id="cancelBtn" onclick="closeFeedbackPopup();"  class="button_popup" data-role="none">Cancel</button>
-						<button id="sendBtn" type="submit" class="button_popup" data-role="none" onclick="destinationFilterButton()">Send</button>
+						<button id="cancelBtn" onclick="closeFilterPopup();"  class="button_popup" data-role="none">Cancel</button>
+						<button id="sendBtn" type="submit" class="button_popup" data-role="none" onclick="destinationFilterButton()">Update</button>
 	</div>
 </div>

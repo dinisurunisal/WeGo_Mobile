@@ -6,9 +6,6 @@
 		<title>Profile page</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> -->
-		<!-- <link rel="stylesheet" href="css/themes/my-custom-theme.css" /> -->
 		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
 		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
 
@@ -20,13 +17,7 @@
 		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-		<!-- Custom -->
-		<!-- <script src="js/destination.js"></script> -->
-
-		
 		<link rel="stylesheet" href="css/profile.css">
-
-
 
 	</head>
 
@@ -103,40 +94,39 @@
 
 			<div data-role="popup" data-position-to="window" data-transition="pop" class="popup" style="padding: 20px;"
             id="feedbackPopup">
-            <form id="formProfile" onsubmit="event.preventDefault(); sendFeedback()">
-                <h3 class="heading-three" style="text-align:center;">Give Us your Feedback</h3>
-                <label class="labelform grey heading-five" for="feedbackForm"> Feedback</label>
-                <input type="text" required name="name" id="feedbackForm" class="formField" />
+				<form id="form_feedback_Profile" onsubmit="event.preventDefault(); sendFeedback();">
+					<h3 class="heading-three" style="text-align:center;">Give Us your Feedback</h3>
+					<label class="labelform grey heading-five" for="feedbackForm" id="#inputFeedback"> Feedback</label>
+					<input type="text" required name="name" id="feedbackForm" class="formField" />
 
-					<div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
-						<button id="cancelBtn" onclick="closeFeedbackPopup();"  class="button_popup" data-role="none">Cancel</button>
-						<button id="sendBtn" type="submit" class="button_popup" data-role="none">Send</button>
-			</div>
-
-            </form>
-        	</div>
+						<div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
+							<button id="profile_feedback_cancel_btn" onclick="closeFeedbackPopup();"  class="button_popup" data-role="none">Cancel</button>
+							<button id="profile_feedback_send_btn" type="submit" class="button_popup" data-role="none">Send</button>
+						</div>
+				</form>
+        	</div> 
 
 			<div data-role="popup" data-position-to="window" data-transition="pop" class="popup" style="padding: 20px;"
             id="popupBasic">
-            <form id="formProfile" onsubmit="event.preventDefault(); saveProfileInformation()">
-                <h3 class="heading-three" style="text-align:center;">Edit Profile Information</h3>
-                <label class="labelform grey heading-five" for="nameForm"> Name</label>
-                <input type="text" name="name" id="nameForm" placeholder="John Doe" class="formField" />
-                <label class="labelform grey heading-five" for="contactNumberForm"> Contact Number </label>
-                <input type="text" name="contactNumber" id="contactNumberForm" placeholder="0768XXXXXX"
-                    class="formField" />
-                <label class="labelform grey heading-five" for="passwordForm"> Password</label>
-                <input type="password" name="password" id="passwordForm" class="formField" />
-                <label class="labelform grey heading-five" for="confirmPasswordForm"> Confirm Password</label>
-                <input type="password" name="confirmPassword" id="confirmPasswordForm" class="formField" />
-                <!-- <button type="submit" class="button-custom" data-role="button">Save</button> -->
+				<form id="formProfile" onsubmit="event.preventDefault(); saveProfileInformation()">
+					<h3 class="heading-three" style="text-align:center;">Edit Profile Information</h3>
+					<label class="labelform grey heading-five" for="nameForm"> Name</label>
+					<input type="text" name="name" id="nameForm" placeholder="John Doe" class="formField" />
+					<label class="labelform grey heading-five" for="contactNumberForm"> Contact Number </label>
+					<input type="text" name="contactNumber" id="contactNumberForm" placeholder="0768XXXXXX"class="formField" />
+					<label class="labelform grey heading-five" for="passwordForm"> Password</label>
+					<input type="password" name="password" id="passwordForm" class="formField" />
+					<label class="labelform grey heading-five" for="confirmPasswordForm"> Confirm Password</label>
+					<input type="password" name="confirmPassword" id="confirmPasswordForm" class="formField" />
+					<!-- <button type="submit" class="button-custom" data-role="button">Save</button> -->
 
-				<div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
-						<button id="cancelBtn" onclick="closeEditPopup();"  class="button_popup" data-role="none">Cancel</button>
-						<button id="sendBtn" type="submit" class="button_popup" data-role="none">Save</button>
-				</div>
-            </form>
-        </div>
+					<div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
+							<button id="profile_edit_cancel_btn" onclick="closeEditPopup();"  class="button_popup" data-role="none">Cancel</button>
+							<button id="profile_edit_send_btn" type="submit" class="button_popup" data-role="none">Save</button>
+					</div>
+				</form>
+			</div>
+
 
 			<div class="profile_video" style="margin-top: 50px;">
 				<h3>Want to check how the app functions?</h3>
