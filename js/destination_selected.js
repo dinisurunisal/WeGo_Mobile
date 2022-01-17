@@ -151,8 +151,7 @@ function addToFavourites(id) {
 
 }
 
-function onReplyClick(id) {
-  console.log(id)
+function openReplies(id) {
   cardId = $("#"+ id).parents(".dest_review_card").attr("id");
   
   replyButtonId = cardId;
@@ -164,6 +163,11 @@ function onReplyClick(id) {
     repliesSection.css("display", "block");
     changeWidthForTablets(true);
   }
+}
+
+function onReplyClick(id) {
+  cardId = $("#"+ id).parents(".dest_review_card").attr("id");
+  replyButtonId = cardId;
 }
 
 function submitReply() {
