@@ -1,19 +1,19 @@
 
 /* top background banner */
-.top_banner{
+#profile_page .s4_top_banner{
     margin-top:44px;
     margin-left:-16px;
     margin-right:-16px;
     position: relative;
 }
-#background{
+#profile_page #s4_background{
     height:200px;
     width:100%;
     object-fit:fill;
     position: relative;
     
 }
-#profile{
+#profile_page #s4_profile{
     height:px;
     width:100px;
     object-fit:fill;
@@ -31,37 +31,37 @@
 /* top background banner - end */
 
 
-.edit_logout_bar{
+#profile_page .s4_edit_logout_bar{
     background-color:#0174cf;
     width:100%;
     padding: 5px 5px 5px 5px;
     margin-top:-22px;
 }
-#flex_container{
+#profile_page #flex_container{
     display: flex;
 }
-#flex_child{
+#profile_page #flex_child{
     flex:1;
 }
-.user_data_r1{
+#profile_page .user_data_r1{
     text-align:center;
     display: flex;
     /* flex-direction: row; */
     flex-direction: row;
 }
-.user_data_r2{
+#profile_page .user_data_r2{
     text-align:center;
     display: flex;
     /* flex-direction: row; */
     flex-direction: row;
 }
-.button_container{
+#profile_page .button_container{
     display:flex;
     justify-content: space-around;
     /* flex-direction:row; */
     flex-direction: row;
 }
-.button{
+#profile_page .button{
     /* display:flex; */
     width:341px;
     height:85px;
@@ -73,59 +73,63 @@
 
 }
 
-.button__text,
-.button__icon {
+#profile_page .button__text,.button__icon {
       display: inline-flex;
     align-items: center;
     height: 100%;
     padding: 0 24px;
-    /* font-size: 160px;
-      font-weight: 500; */
-    /* padding: 0 24px;
-    color: #fff;
-    height: 100%; */
 }
 
-.button_popup{
+#profile_page .button_popup{
     height:30px;
     width:100px;
     border: none;
     border-radius:12px;
 }
 
-#sendBtn{
+#profile_page #profile_feedback_send_btn {
     color:white;
     background-color: #0174cf;
 }
 
-#cancelBtn{
+#profile_page #profile_edit_send_btn {
+    color:white;
+    background-color: #0174cf;
+}
+
+#profile_page #profile_feedback_cancel_btn{
+    color:#0174cf;
+    background-color: white;
+}
+
+#profile_page #profile_edit_cancel_btn{
     color:#0174cf;
     background-color: white;
 }
 
 @media only screen and (max-device-width: 375px) {
-    .button_container{
+    #profile_page .button_container{
         flex-direction: column;
     }
-    .user_data_r1{
+    #profile_page .user_data_r1{
         flex-direction: column;
     }
-    .user_data_r2{
+    #profile_page .user_data_r2{
         flex-direction: column;
     }
 
 }
-.data{
+#profile_page .data{
     display:flex;
     flex: 1;
 }
-.data_child{
+#profile_page .data_child{
     flex:1;
     margin: 10px;
     padding-left: 20px;
     text-align: left;
 }
-#data_name{
+#profile_page #data_name{
     font-weight: bold;
 }
 
@@ -169,7 +173,7 @@ and (max-device-width: 850px) {
     }
 }
 
-.center{
+#profile_page .center{
     display: flex;
       justify-content: center;
       align-items: center;

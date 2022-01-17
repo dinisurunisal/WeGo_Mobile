@@ -4,7 +4,7 @@ function signup() {
   var email = document.getElementById("email_reg").value;
 
   var today = new Date();
-  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
 
   var password = document.getElementById("password_reg").value;
   var conPassword = document.getElementById("confirm_password_reg").value;
@@ -20,11 +20,12 @@ function signup() {
   var currentUser = {
     username: name,
     email: email,
-    currentPoints: 150,
+    currentPoints: 50,
     contactNumber: contactNumber,
     password: password,
     signupDate: date,
     favouritesList: [],
+    profileImage:"images/profile_page/profile_image.jpeg",
     reviewCount: 1,
     bookings: [
       {

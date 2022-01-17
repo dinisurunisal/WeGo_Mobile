@@ -2,23 +2,17 @@ const dollarSign = "$ "
 var defaultDestinationDB = [];
 
 $(function initialization() {
-    var destinations = JSON.parse(localStorage.getItem("destinations"));
-    defaultDestinationDB = destinations;
-    console.log(defaultDestinationDB)
-    if (defaultDestinationDB) {
-        loadDestinationList();
-    }
+    checkForSort();
 });
 
 function loadDestinationList() {
 
     for (var i = 0; i < defaultDestinationDB.length; i++) {
-        document.getElementById("card_image").src = defaultDestinationDB[i].destinationImage;
-        document.getElementById("card_name").innerHTML = defaultDestinationDB[i].destinationName;
-        document.getElementById("card_details").innerHTML = defaultDestinationDB[i].destinationCardDetails;
-        document.getElementById("card_price").innerHTML = dollarSign + defaultDestinationDB[i].price;
-        document.getElementById("card_star_score").innerHTML = defaultDestinationDB[i].destinationRating;
-        // document.getElementById("kitchen-rating-script").innerHTML = (defaultDestinationDB[i].kitchenRatingTotal / defaultDestinationDB[i].kitchenRatingUserNumber).toFixed(1);
+        $("#card_image").attr("src", defaultDestinationDB[i].destinationImage);
+        $("#card_name").text(defaultDestinationDB[i].destinationName);
+        $("#card_details").text(defaultDestinationDB[i].destinationCardDetails);
+        $("#card_price").text(dollarSign + defaultDestinationDB[i].price);
+        $("#card_star_score").text(defaultDestinationDB[i].destinationRating);
     
         $("#card_script_1").clone().appendTo("#card_script_2");
     }
@@ -37,9 +31,40 @@ function loadDestinationList() {
     }
 }
 
+function checkForSort() {
 
-function popupDestinationRestoreDefault() {
-  restoreDefaultFilter(); // This function can be found in "destination_filter_popup.js" file
+  var checkSorted = JSON.parse(localStorage.getItem("checkSorted"));
+
+  if (checkSorted) {
+
+    var filterBtn = document.getElementById("dest_filter_icon");
+    var refreshBtn = document.getElementById("restore_filter_icon");
+
+    filterBtn.style.display = "none";
+    refreshBtn.style.display = "block";
+    filter_anchor_first.style.display = "none";
+    filter_anchor_second.style.display = "block";
+
+    var destinations = JSON.parse(localStorage.getItem("sortedDestinations"));
+
+  } else {
+
+    var filterBtn = document.getElementById("dest_filter_icon");
+    var refreshBtn = document.getElementById("restore_filter_icon");
+
+    filterBtn.style.display = "block";
+    refreshBtn.style.display = "none";
+    filter_anchor_first.style.display = "block";
+    filter_anchor_second.style.display = "none";
+
+    var destinations = JSON.parse(localStorage.getItem("destinations"));
+  }
+
+  defaultDestinationDB = destinations;
+  console.log(defaultDestinationDB);
+  if (defaultDestinationDB) {
+      loadDestinationList();
+  }
 }
 
 // Delete 'card_script_1'
@@ -98,3 +123,35 @@ function addToFavourites(id) {
 function goToDestinationMap() {
     window.location = "destination_map.php";
 }
+
+
+// function onSearchBtnClick() {
+//   var userInputValueInHeaderSearch = document.getElementById("destination-search-input").value;
+
+//   if (userInputValueInHeaderSearch == "") {
+//       showFailure("Enter a destination name!");
+//   } else {
+//       localStorage.setItem("filterDB", null);
+//       if (typeof (Storage) !== "undefined") {
+//           localStorage.setItem("userSearchValue", JSON.stringify({ "type": "search", "value": userInputValueInHeaderSearch }));
+//           console.log(localStorage)
+//           // window.location = "browse_kitchen.php";
+//       } else {
+//           showFailure("Your browser does not support Frese");
+//       }
+//   }
+
+
+// }
+
+function restoreDefaultDb(){
+  // console.log("working");
+  var checkSorted = JSON.parse(localStorage.getItem("checkSorted"));
+  checkSorted = false;
+  localStorage.setItem("checkSorted", JSON.stringify(checkSorted));
+
+  setTimeout(function () {
+    location.reload();
+  }, 500);
+}
+

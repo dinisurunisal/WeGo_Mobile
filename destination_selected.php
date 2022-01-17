@@ -9,16 +9,12 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<!-- <link rel="stylesheet" href="css/themes/my-custom-theme.css" /> -->
-		<link rel="stylesheet" href="css/destination_selected.css" /> 
+		<link rel="stylesheet" href="css/style.css" /> 
 		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
 		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
 
 		<!-- font awesome link -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-		<!-- bootstrap -->
-		<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
 
 		<!-- The three things that jQuery Mobile needs to work -->
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -32,7 +28,7 @@
 
 	<body>
 
-		<div data-role="page" id="destination_page" class="destination_page">
+		<div data-role="page" id="destination_selected_page" class="destination_selected_page">
 			<!-- Header -->
 			<?php include("header.php"); ?>
 
@@ -125,10 +121,10 @@
 						</div>
 
 						<div class="dest_sel_description">
-							<p> The Houses of Parliament and Elizabeth Tower, commonly called Big Ben, are among London's most iconic landmarks and must-see London attractions. Technically, Big Ben is the name given to the massive bell inside the clock tower, which weighs more than 13 tons (13,760 kg). 
+							<p id="dest_sel_description1"> The Houses of Parliament and Elizabeth Tower, commonly called Big Ben, are among London's most iconic landmarks and must-see London attractions. Technically, Big Ben is the name given to the massive bell inside the clock tower, which weighs more than 13 tons (13,760 kg). 
 								The clock tower looks spectacular at night when the four clock faces are illuminated. 
 							</p>
-							<p>
+							<p id="dest_sel_description2">
 								Big Ben first rang across Westminster on 31 May 1859. A short time later, in September 1859, 
 								Big Ben cracked. A lighter hammer was fitted and the bell rotated to present an undamaged section 
 								to the hammer. This is the bell as we hear it today.
@@ -142,12 +138,12 @@
 						</div>
 
 						<div class="review_card_section">
-							<h2>Top Reviews</h2>
+							<h2>Reviews</h2>
 							<ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0; display: inline-block;">
-								<div id="card_script_1">
+								<div id="review_card">
 									<div id="review-card-resolution-breakpoint">
 										<li>
-											<div class="dest_review_card" onclick="onReplyClick(this.id)">
+											<div class="dest_review_card" id="temp_review_id">
 												<div class="dest_reviewer">
 													<img src="images/reviewer1.jpg" id="review_thumb_image">
 													<div class="dest_reviewer_info">
@@ -166,41 +162,36 @@
 													<p2 id="dest_reviewer_date">3 days ago</p2>
 												</div>
 												<p class="dest_review_comment" id="dest_review_comment">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
-												<div class="dest_review_reply">
-													<!-- <div class="reply_btn" id="destReviewId" onclick="onReplyClick(this.id)">
-														<p>Reply</p>
-													</div> -->
-													<div class="reply_btn" id="destReviewId">
-														<a href="#destination_reply" data-rel="popup" data-transition="pop" data-position-to="window">
+												<div id="reply_count_id" class="dest_review_reply">
+													<p2 class="review_count" id="temp_count" onclick="openReplies(this.id)">Reply count</p2>
+													<div class="reply_btn" id="temp_reply_btn_id" onclick="onReplyClick(this.id)">
+														<a id="reply_popup_link" href="#destination_reply" data-rel="popup" data-transition="pop" data-position-to="window">
 															<button id="reply_button"><p>Reply</p></button>
 														</a>  
 													</div>
 													<div id="des_reply">
 														<div class="dest_replier">
-															<img src="images/reviewer1.jpg" id="review_thumb_image">
+															<img src="images/reviewer1.jpg" id="replier_image">
 															<div class="dest_replier_info">
-																<p>Sherlock Holmes</p>
-																<p2>133 Reviews</p2>
+																<p id="replier_name">Name</p>
+																<p2 id="replier_reviews">Reviews</p2>
 															</div>
+															<p2 id="replier_time">Time</p2>
 														</div>
-														<!-- <p>Sherlock Holmes</p>
-														<p2>133 Reviews</p2> -->
-														<p2>Just now</p2>
-														<p class="dest_review_reply">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
+														<p id="dest_review_reply">Reply</p>
 													</div>
+													<div id="reply_space"></div>
 												</div>
 											</div>
-										</li>
+										</li> 
 									</div>
 								</div>
-
-								<div id="card_script_2"></div>
+								<div id="review_space"></div>
 							</ul>
 						</div>
 
 					</div>
 				</div>
-
 				<?php include("destination_reply.php")?>
 			</div>
 
@@ -209,8 +200,6 @@
 			</div> -->
 
 			<?php include("success_popups.php"); ?>
-
-
 			<?php include("footer.php"); ?>
 			<?php include("navigation_bar.php"); ?>
 		</div>

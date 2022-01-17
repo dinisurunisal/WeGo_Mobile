@@ -60,26 +60,38 @@
         <ul>
             <li>
                 <a onclick="selectHome()" href="homepage.php" data-ajax="false" id="nav_home" class="nav_bar_item">
-                    <img id="home_img" class="nav_bar_icon" src="images/icons/homeIcon.png" alt="home"/>
-                    <h4 class="nav_bar_item_option">HOME</h4>
+                    <svg id="home_icon" class="nav_bar_icon">
+                        <use href="images/icons/homeIcon.svg#home_icon"></use>
+                    </svg>
+                    <!-- <img id="home_img" class="nav_bar_icon" src="images/icons/homeIcon.svg" alt="home"/>
+                    <h4 class="nav_bar_item_option">HOME</h4> -->
                 </a>
             </li>
             <li>
                 <a onclick="selectHunts()" href="my_hunts.php" data-ajax="false" id="nav_hunts" rel="dialog" class="nav_bar_item">
-                    <img id="hunts_img" class="nav_bar_icon" src="images/icons/huntsIcon.png" alt="hunts"/>
-                    <h4 class="nav_bar_item_option">HUNTS</h4>
+                    <svg id="hunts_icon" class="nav_bar_icon">
+                        <use href="images/icons/huntsIcon.svg#hunts_icon"></use>
+                    </svg>
+                    <!-- <img id="hunts_img" class="nav_bar_icon" src="images/icons/huntsIcon.png" alt="hunts"/>
+                    <h4 class="nav_bar_item_option">HUNTS</h4> -->
                 </a>
             </li>
             <li>
                 <a onclick="selectGame()" href="treasure_hunt.php" data-ajax="false" id="nav_game" class="nav_bar_item">
-                    <img id="game_img" class="nav_bar_icon" src="images/icons/gameIcon.png" alt="game"/>
-                    <h4 class="nav_bar_item_option">GAME</h4>
+                    <svg id="game_icon" class="nav_bar_icon">
+                        <use href="images/icons/gameIcon.svg#game_icon"></use>
+                    </svg>
+                    <!-- <img id="game_img" class="nav_bar_icon" src="images/icons/gameIcon.png" alt="game"/>
+                    <h4 class="nav_bar_item_option">GAME</h4> -->
                 </a>
             </li>
             <li>
                 <a onclick="selectAwards()" id="nav_awards" href="awards.php" data-ajax="false" class="nav_bar_item">
-                    <img id="awards_img" class="nav_bar_icon" src="images/icons/awardsIcon.png" alt="awards"/>
-                    <h4 class="nav_bar_item_option">AWARDS</h4>
+                    <svg id="awards_icon" class="nav_bar_icon">
+                        <use href="images/icons/awardsIcon.svg#awards_icon"></use>
+                    </svg>
+                    <!-- <img id="awards_img" class="nav_bar_icon" src="images/icons/awardsIcon.png" alt="awards"/>
+                    <h4 class="nav_bar_item_option">AWARDS</h4> -->
                 </a>
             </li>
         </ul>

@@ -9,7 +9,7 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 		<!-- <link rel="stylesheet" href="css/themes/my-custom-theme.css" /> -->
-		<link rel="stylesheet" href="css/destination_list.css" /> 
+		<link rel="stylesheet" href="css/style.css" /> 
 		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
 		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
 
@@ -52,9 +52,6 @@
 				<img src="images/background_find.jpg" id="london_bg" alt="london_bg" width="100%">
 
 				<div class="dest_nav_bar">
-					<a href="#popup-browse-kitchen-filter" data-rel="popup" data-transition="pop" onclick="popupBrowseKitchenFilterRestoreDefault()">
-						<img src="images/icons/filterIcon.png" alt="Filter Icon" class="grey-text" id="dest_filter_icon">
-					</a>
 					<div class="dest_map_button">
 						<a onclick="goToDestinationList()">
 							List

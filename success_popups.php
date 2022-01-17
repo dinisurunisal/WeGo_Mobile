@@ -20,8 +20,8 @@
 }
 
 .icon{
-    height:73px;
-    width:58px;
+    height:80px;
+    width:65px;
 }
 </style>
 
@@ -30,8 +30,24 @@
 function showSuccess(message) {
     $("#message_box").fadeIn();
     $("#popup_custom_message").html(message)
-    $("#popup_custom_icon").html("shield_checkmark")
-    $("#message_box").css("background", "#ffffff")
+    $("#popup_custom_message").css("color", "#0174cf");
+    $("#popup_custom_icon").html("shield_checkmark");
+    $("#popup_custom_icon_fail").css("display", "none");
+    $("#popup_custom_icon_game").css("display", "none");
+    $("#message_box").css("background", "#ffffff");
+    setTimeout(function() {
+        $("#message_box").fadeOut();
+    }, 2000);
+};
+
+function showSuccessGame(message) {
+    $("#message_box").fadeIn();
+    $("#popup_custom_message").html(message)
+    $("#popup_custom_message").css("color", "#0174cf");
+    $("#popup_custom_icon_game").html("game_complete");
+    $("#popup_custom_icon_fail").css("display", "none");
+    $("#popup_custom_icon").css("display", "none");
+    $("#message_box").css("background", "#ffffff");
     setTimeout(function() {
         $("#message_box").fadeOut();
     }, 2000);
@@ -39,30 +55,25 @@ function showSuccess(message) {
 
 function showFailure(message) {
     $("#message_box").fadeIn();
-    $("#popup_custom_message").html(message)
-    $("#popup_custom_icon_fail").html("alert_warning")
-    $("#message_box").css("background", "#ffffff")
+    $("#popup_custom_message").html(message);
+    $("#popup_custom_message").css("color", "#ff0000");
+    $("#popup_custom_icon_fail").html("alert_warning");
+    $("#popup_custom_icon").css("display", "none");
+    $("#popup_custom_icon_game").css("display", "none");
+    $("#message_box").css("background", "#ffffff");
     setTimeout(function() {
         $("#message_box").fadeOut();
     }, 2000);
 
 }
 
-// function showFailure(message) {
-//     $("#message_box_fail").fadeIn();
-//     $("#popup_custom_message_fail").html(message)
-//     $("#popup_custom_icon_fail").html("alert_warning")
-//     $("#message_box_fail").css("background", "#ffffff")
-//     setTimeout(function() {
-//         $("#message_box_fail").fadeOut();
-//     }, 2000);
 
-// }
 </script>
 
 <div id="message_box" style="text-align:center">
     <ion-icon class="icon" id="popup_custom_icon" name="shield-checkmark" style="color:#0174cf;">shield_checkmark</ion-icon>
     <ion-icon class="icon" id="popup_custom_icon_fail" name="alert-circle" style="color:#ff0000;">alert_warning</ion-icon>
+    <ion-icon class="icon" id="popup_custom_icon_game" name="medal" style="color:#0174cf">game_complete</ion-icon>
     <h4 id="popup_custom_message" style="color: #0174cf;">Success</h4>
 </div>
 
@@ -70,3 +81,5 @@ function showFailure(message) {
     <ion-icon class="icon" id="popup_custom_icon_fail" name="alert-circle" style="color:#ff0000;">alert_warning</ion-icon>
     <h4 id="popup_custom_message_fail" style="color: #ff0000;">Success</h4>
 </div> -->
+
+<!-- document.getElementById("popup_custom_icon_fail").style.display = "none"; -->

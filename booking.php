@@ -7,18 +7,21 @@
 	<title>Destination</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
 	<!-- The three things that jQuery Mobile needs to work -->
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
-	<!--bootstrap-->
-	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
-
 	<!-- Custom -->
 	<link rel="stylesheet" href="css/style.css" />
 	<script type="text/javascript" src="js/booking.js"></script>
+	<script src="js/destination_map.js"></script>
+
+	<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTaSledUuIuOU0iipt8JzdHB2J-ZJayr4&callback=initMap" ></script>
 
 	<script>
 		$(document).ready(function() {
@@ -62,17 +65,18 @@
 		$(document).ready(function() {
 			$('#checkbtn').click(function() {
 				checked = $("input[type=checkbox]:checked").length;
-
 				if (!checked) {
-					alert("You must check at least one destination checkbox.");
+					showFailure("You must check at least one destination checkbox.");
 					return false;
 				}
-
 			});
 		});
 	</script>
 
 	<style>
+		#map {
+				height: 300px;
+		}
 
 		@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
 			.book .booking_details {
@@ -299,10 +303,10 @@
 						Choose Route *
 					</p>
 					<div>
-						<div class="ui-field-contain">
+						<div class="ui-field-contain ui-alt-icon">
 							<select required name="select-native-1" id="select-native-1">
 								<option value="0">None</option>
-								<option value="1">Lodon to Birmingham</option>
+								<option value="1">London to Birmingham</option>
 								<option value="2">London to Manchester</option>
 								<option value="3">London to Cardiff</option>
 								<option value="4">London to Rugby</option>
@@ -321,27 +325,27 @@
 						<fieldset data-role="controlgroup">
 							<div style="display: none;" id="check_1">
 								<input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
-								<label for="checkbox-v-2b">one</label>
+								<label for="checkbox-v-2b">Warwick Castle</label>
 							</div>
 
 							<div style="display: none;" id="check_2">
 								<input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
-								<label for="checkbox-v-2c">two</label>
+								<label for="checkbox-v-2c">Stonehenge</label>
 							</div>
 
 							<div style="display: none;" id="check_3">
 								<input type="checkbox" name="checkbox-v-2d" id="checkbox-v-2d">
-								<label for="checkbox-v-2d">three</label>
+								<label for="checkbox-v-2d">The Roman Baths</label>
 							</div>
 
 							<div style="display: none;" id="check_4">
 								<input type="checkbox" name="checkbox-v-2e" id="checkbox-v-2e">
-								<label for="checkbox-v-2e">four</label>
+								<label for="checkbox-v-2e">Leeds Castle</label>
 							</div>
 
 							<div style="display: none;" id="check_5">
 								<input type="checkbox" name="checkbox-v-2f" id="checkbox-v-2f">
-								<label for="checkbox-v-2f">five</label>
+								<label for="checkbox-v-2f">York Minster</label>
 							</div>
 
 						</fieldset>
@@ -354,7 +358,7 @@
 						Choose Date *
 					</p>
 					<div class="bk_datepick">
-						<input required type="date" data-role="date" id="datePicker">
+						<input required type="date" data-role="date" id="datePicker" min="2022-01-15">
 					</div>
 				</div>
 
@@ -363,7 +367,7 @@
 						Choose Passengers *
 					</p>
 					<div>
-						<div class="ui-field-contain">
+						<div class="ui-field-contain ui-alt-icon">
 							<select required name="select-native-2" id="select-native-2">
 								<option value="1">One Adult</option>
 								<option value="2">Two Adults</option>
@@ -375,12 +379,21 @@
 					</div>
 				</div>
 
+				<div role="main" class="ui-content" style="height: 300px;">
+				<div id="map">
+				</div>
+				</div>
+
 				<div class="booking_buttons">
 					<button type="submit" class="bk_button" style="background:#0174cf; color: white; border-color: transparent; font-size: 15px;" id="checkbtn">Continue</button>
 					<!-- onclick="window.location.href='booking_ticket_details.php'" -->
 				</div>
 			</form>
 		</div>
+
+		<?php
+		include("success_popups.php");
+		?>
 
 		<?php include("footer.php"); ?>
 		<?php include("navigation_bar.php"); ?>

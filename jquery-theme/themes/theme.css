@@ -299,7 +299,7 @@ html body .ui-group-theme-a .ui-btn:visited,
 html head + body .ui-btn.ui-btn-a:visited {
 	background-color: #ffffff /*{a-bup-background-color}*/;
 	border: none /*{a-bup-border}*/;
-	color: #c4c4c4 /*{a-bup-color}*/;
+	color: #404040 /*{a-bup-color}*/;
 }
 /* Button hover */
 .ui-page-theme-a .ui-btn:hover,

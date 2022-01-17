@@ -2,7 +2,7 @@
     color: #a7a7a7;
 }
 
-#browse-kitchen-filter-popup-close-icon {
+/* #browse-kitchen-filter-popup-close-icon {
     width: 17px;
     height: 17px;
 }
@@ -17,13 +17,13 @@
     width: 17px;
     height: 17px;
     padding: unset;
-}
+} */
 
 #browse_kitchen_filter_popup_checkbox_group-2 .ui-checkbox-on:after {
     background-color: #00a99d !important;
 }
 
-#browse-kitchen-filter-popup-label-star-1 {
+/* #browse-kitchen-filter-popup-label-star-1 {
     border: none;
     padding: unset;
     padding-right: 2px;
@@ -111,7 +111,7 @@
     width: 35px;
     height: 35px;
     padding: unset;
-}
+} */
 
 #browse-kitchen-filter-popup-label-dollar-all .ui-btn.ui-radio-on {
     background-color: #e6e6e6;
@@ -156,7 +156,7 @@
     max-width: 54%;
 }
 
-.custom-update-btn {
+/* .custom-update-btn {
     background-color: #00a99d !important;
     color: #ffffff !important;
     border-radius: 50px;
@@ -166,7 +166,7 @@
     width: 65% !important;
     margin: auto;
     margin-top: 20px;
-}
+} */
 
 .text-input-padding-a {
     padding-right: 10px;
@@ -186,7 +186,7 @@
     padding-left: 17px;
 }
 
-.close-image {
+/* .close-image {
     float: right;
     margin-top: 19.8px;
 }
@@ -198,7 +198,7 @@
 
 .dollar-icon-size {
     width: 35px;
-}
+} */
 
 .checkbox-style {
     color: #757575 !important;

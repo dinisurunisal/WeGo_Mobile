@@ -8,17 +8,12 @@
 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-		<!-- <link rel="stylesheet" href="css/themes/my-custom-theme.css" /> -->
-		<link rel="stylesheet" href="css/destination_list.css" /> 
+		<link rel="stylesheet" href="css/style.css" /> 
 		<link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
 		<link rel="stylesheet" href="jquery-theme/themes/jquery.mobile.icons.min.css" />
 
 		<!-- font awesome link -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-		<!-- bootstrap -->
-		<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
 
 		<!-- The three things that jQuery Mobile needs to work -->
 		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
@@ -27,7 +22,8 @@
 
 		<!-- Custom -->
 		<script src="js/destination_list.js"></script>
-
+		<script src="js/destination_search.js"></script>
+		
 	</head>
 
 	<body>
@@ -44,20 +40,23 @@
 				<img src="images/background_find.jpg" id="london_bg" alt="london_bg" width="100%">
 
 				<div class="dest_nav_bar">
-					<a href="#popup_destination_filter" data-rel="popup" data-transition="pop" onclick="popupDestinationRestoreDefault()">
-						<img src="images/icons/filterIcon.png" alt="Filter Icon" class="grey-text" id="dest_filter_icon">
+					<a href="#popup_destination_filter" data-rel="popup" data-transition="pop" id="filter_anchor_first">
+						<img style="display: none;" src="images/icons/filterIcon.png" alt="Filter Icon" class="grey-text" id="dest_filter_icon">
+					</a>
+					<a onclick="restoreDefaultDb()" id="filter_anchor_second">
+						<img style="display: none;" src="images/icons/ResetDestinations.png" alt="Filter Icon" class="grey-text" id="restore_filter_icon">
 					</a>
 
 					<!-- Destination Filter Popup -->
 					<?php include("destination_filter_popup.php"); ?>
-					<!-- <div class="wrap">
-						<div class="search">
-							<input type="text" class="searchTerm" placeholder="What are you looking for?">
-							<button data-theme="none" type="submit" class="searchButton">
-								<i class="fa fa-search"></i>
-							</button>
-						</div>
-					</div> -->
+
+                    <div class="destination_search" >
+                        <div class="destination_search_box">
+                            <input type="text" data-clear-btn="false" name="destination-search-input" id="destination-search-input">
+                            <a class="ui-alt-icon ui-btn ui-btn-icon-right ui-icon-search" onclick="onSearchBtnClick()"></a>
+                        </div>
+                    </div>
+
 					<div class="dest_map_button">
 						<a onclick="goToDestinationMap()">
 							Map

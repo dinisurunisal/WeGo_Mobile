@@ -21,34 +21,56 @@
 
         <style>
             @media only screen 
-                    and (max-device-height: 600px) {
+                and (max-device-height: 600px) {
 
-                        #scan_qr_page {
-                            grid-template-columns: auto 28%;
-                            align-content: flex-start;
-                            justify-items: self-end;
-                            
-                        }
-
-                        .scan_instructions {
-                            height: -webkit-fill-available !important;
-                            order: 2;
-                        }
-
-                        .scan_bg {
-                            order: 1;
-                        } 
-
-                        #back_btn {
-                            text-align: end !important;
-                        }
-
-                        .scan_box {
-                            width:32vw !important;
-                            height:32vw !important;
-                            margin-top: 9% !important;
-                        }
+                    #scan_qr_page {
+                        grid-template-columns: auto 28% !important;
+                        align-content: flex-start;
+                        justify-items: self-end;
+                        
                     }
+
+                    .scan_instructions {
+                        height: -webkit-fill-available !important;
+                        order: 2;
+                    }
+
+                    .scan_bg {
+                        order: 1;
+                    } 
+
+                    #back_btn {
+                        text-align: end !important;
+                    }
+
+                    .scan_box {
+                        width:32vw !important;
+                        height:32vw !important;
+                        margin-top: 9% !important;
+                    }
+                }
+
+            @media only screen 
+                and (min-device-width: 700px) and (min-device-height: 850px){
+
+                    #scan_qr_page .scan_box {
+                        width: 40vh !important;
+                        height: 40vh !important;
+                        margin-top: 28% !important;
+                        margin-bottom: 28% !important;           
+                    }
+            }
+
+            @media only screen 
+                and (min-device-width: 900px) and (max-device-height: 800px){
+
+                    #scan_qr_page .scan_box {
+                        width: 40vh !important;
+                        height: 40vh !important;
+                        margin-top: 14% !important;
+                        margin-bottom: 14% !important;           
+                    }
+            }
 
         </style>
     </head>
@@ -57,7 +79,9 @@
         <div data-role="page" id="scan_qr_page">
             <div class="scan_instructions">
                 <div onclick="history.back()" id="back_btn">
-                    <img id="btn_icon_image" src="images/icons/backButton2.png" alt="back"/>
+                    <svg id="back_btn_img">
+                        <use href="images/icons/backButton.svg#back_btn_img"></use>
+                    </svg>
                 </div>
                 <h2>Add New Hunt</h2>
                 <p>To confirm your hunt scan the QR located in the site</p>

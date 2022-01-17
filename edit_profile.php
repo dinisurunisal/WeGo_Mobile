@@ -31,7 +31,7 @@ body {
 					You can find the best destinations in London to West England
 				</p>
 				
-				<button data-role="none" id="next0" style="margin:50px; height:100px; width:500px; box-shadow: 4px 3px #DCDCDC; font-family: Noto Sans; font-size: 40px; font-color:white; border-radius:45px; color:white; background-color:#0174CF; border:none;">Get Started</button>
+				<button data-role="none" id="next0" style="margin:50px; height:100px; width:500px; box-shadow: 4px 3px #DCDCDC; font-family: Noto Sans; font-size: 40px; color:white; border-radius:45px; color:white; background-color:#0174CF; border:none;">Get Started</button>
 			</center>
 		</div>
 	</div>

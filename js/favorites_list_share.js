@@ -1,15 +1,24 @@
-$(document).on("pageinit", function () {
-    init();
-});
-
 let dests;
 let newFavouriteList = [];
 
-function init() {
+$(function initialization(){
     dests = JSON.parse(localStorage.getItem("destinations"));
     console.log(dests);
 
     createFavouritesList();
+    showHide();
+});
+
+function showHide() {
+    var faButton = document.getElementById("fa-share-btn");
+    var faMessage = document.getElementById("display-message");
+    if (newFavouriteList.length == 0) {
+        faButton.style.display = "none";
+        faMessage.style.display = "block";
+    } else {
+        faButton.style.display = "block";
+        faMessage.style.display = "none";
+    }
 }
 
 function createFavouritesList() {
@@ -28,7 +37,6 @@ function loadNewFavouriteList() {
         document.getElementById("card_image").src = newFavouriteList[i].destinationImage;
         document.getElementById("card_name").innerHTML = newFavouriteList[i].destinationName;
         document.getElementById("card_details").innerHTML = newFavouriteList[i].destinationCardDetails;
-        // document.getElementById("kitchen-rating-script").innerHTML = (defaultDestinationDB[i].kitchenRatingTotal / defaultDestinationDB[i].kitchenRatingUserNumber).toFixed(1);
     
         $("#card_script_1").clone().appendTo("#card_script_2");
     }
@@ -87,13 +95,6 @@ function addToFavourites(id) {
     setTimeout(function () {
         location.reload();
     }, 500);
-    
-    // for (var i = 0; i < newFavouriteList.length; i++) {
-    //     if (destination.destinationId == newFavouriteList[i].destinationId) {
-    //         newFavouriteList.splice(i, 1);
-    //     }
-    // }
-    // console.log(newFavouriteList);
 
     localStorage.setItem("destinations", JSON.stringify(dests));
 }

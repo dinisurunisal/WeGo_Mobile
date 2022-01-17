@@ -1,4 +1,5 @@
-$(document).on("pageinit", function () {
+$(function initialization(){
+  document.getElementById("back_btn").style.display = "none";
   initPage();
 });
 
@@ -6,13 +7,13 @@ var tempBooking;
 let subTotal = 0;
 let serviceCharge = 20;
 let totalPrice = 0;
-let sellerEmail = "pasinduekanayake123@gmail.com";
+let totalWithDis = 0;
 let images = [
-  "images/destinations/Big Ben.jpg",
-  "images/destinations/Cotswolds.jpg",
+  "images/destinations/Warwick Castle.jpg",
+  "images/destinations/Stonehenge.jpg",
+  "images/destinations/The Roman Baths.jpg",
+  "images/destinations/Leeds Castle.jpg",
   "images/destinations/York Minster.jpg",
-  "images/destinations/The British Museum.jpg",
-  "images/destinations/Big Ben.jpg",
 ];
 let poiName;
 let poiImage;
@@ -25,25 +26,42 @@ function initPage() {
   getData();
   calculatePrice();
 
-  paypal
-    .Buttons({
+  paypal.Buttons({
       onInit: function (data, actions) {
-        // Disable the buttons
         actions.enable();
       },
       createOrder: function (data, actions) {
         return actions.order.create({
+          intent : 'CAPTURE',
+          payer : {
+            name : {
+              given_name: currentUser.username,
+              surname : "Doe"
+            },
+            address : {
+              address_line_1 : "123A Oxford Street",
+              address_line_2 : "By way",
+              admin_area_2 : "London",
+              admin_area_1 : "London",
+              postal_code : "SW1A 2AA",
+              country_code : "UK"
+            },
+            email_address: "WEGOcustomer@personal.example.com",
+            phone : {
+              phone_type : "MOBILE",
+              phone_number : {
+                national_number : currentUser.contactNumber
+              }
+            }
+          },
           purchase_units: [
             {
               amount: {
-                value: totalPrice,
+                value: totalWithDis,
                 currency: "GBP",
-              },
-              payee: {
-                email_address: sellerEmail,
-              },
-            },
-          ],
+              }
+            }
+          ]
         });
       },
       onApprove: function (data, actions) {
@@ -59,24 +77,42 @@ function initPage() {
         color: "gold",
         shape: "pill",
         label: "paypal",
-        tagline: "false",
+        tagline: "false"
       },
     })
     .render("#paypal-button-container");
-  paypal
-    .Buttons({
-      onInit: function (data, actions) {
-        // Disable the buttons
-        actions.enable();
-      },
-      style: {
-        layout: "vertical",
-        color: "gold",
-        shape: "pill",
-        label: "paypal",
-      },
-    })
-    .render("#paypal-card-container");
+
+    jQuery(function($) {
+      // var $form = $('#frmBooking');
+      var handler = StripeCheckout.configure({
+        key: 'pk_test_cp21BcECf4kMMUbSlRlZlsMo',
+        token: function(token) {
+          if(token.id){
+            placeOrder("approved");
+          }else{
+            placeOrder("cancel");
+          }
+        }
+      });
+	  
+
+      $('#cardPaymentButton').on('click', function(e) {
+        // Code Section B  Open Checkout with further options
+        handler.open({
+          name: 'WeGo',
+          currency: 'gbp',
+          description: "Book train tickets using Stripe",
+          amount: totalWithDis * 100
+        });
+        e.preventDefault();
+      });
+
+      // Code Section C  Close Checkout on page navigation
+      $(window).on('popstate', function() {
+        handler.close();
+      });
+      });
+
 }
 
 $(document)
@@ -97,23 +133,21 @@ function changePaymentMethod() {
   if (paymentMethod === "paypal") {
     $("#paypal-button-container").show();
     $("#placeOrder").hide();
-    $("#paypal-card-container").hide();
+    $("#card-payment-btn").hide();
   }
   if (paymentMethod === "cash") {
     $("#paypal-button-container").hide();
-    $("#paypal-card-container").hide();
+    $("#card-payment-btn").hide();
     $("#placeOrder").show();
   }
   if (paymentMethod === "credit-card") {
     $("#paypal-button-container").hide();
-    $("#paypal-card-container").show();
+    $("#card-payment-btn").show();
     $("#placeOrder").hide();
   }
 }
 
 function getData() {
-  // for(var i = 0; i < tempBooking.length; i++)
-
   lastRecord = tempBooking.at(-1);
 
   POIs = lastRecord.bbPOI;
@@ -132,6 +166,12 @@ function getData() {
 
   routeDuration = durationHours + ":" + durationMin + "0hr";
 
+  avlPoints = currentUser.currentPoints;
+  avlPointsDuplicate = currentUser.currentPoints;
+
+  //third card
+  document.getElementById("totPointsAvailable").innerHTML = avlPoints;
+
   //first card
   document.getElementById("route_start_ID").innerHTML = routeStartID;
   document.getElementById("route_start_name").innerHTML = routeStartName;
@@ -146,15 +186,15 @@ function getData() {
   document.getElementById("number_passengers").innerHTML = passengers;
   for (var i = 0; i < POIs.length; i++) {
     if (POIs[i] == 1) {
-      document.getElementById("poi_destination").innerHTML = "one";
+      document.getElementById("poi_destination").innerHTML = "Warwick Castle";
     } else if (POIs[i] == 2) {
-      document.getElementById("poi_destination").innerHTML = "two";
+      document.getElementById("poi_destination").innerHTML = "Stonehenge";
     } else if (POIs[i] == 3) {
-      document.getElementById("poi_destination").innerHTML = "three";
+      document.getElementById("poi_destination").innerHTML = "The Roman Baths";
     } else if (POIs[i] == 4) {
-      document.getElementById("poi_destination").innerHTML = "four";
+      document.getElementById("poi_destination").innerHTML = "Leeds Castle";
     } else {
-      document.getElementById("poi_destination").innerHTML = "five";
+      document.getElementById("poi_destination").innerHTML = "York Minster";
     }
 
     $("#poi_destination").clone().appendTo("#poi_destination_2");
@@ -211,10 +251,12 @@ function calculatePrice() {
   }
 
   totalPrice = subTotal + serviceCharge;
+  totalWithDis = totalPrice;
 
   document.getElementById("sub-total").innerHTML = "£" + subTotal;
   document.getElementById("service-charges").innerHTML = "£" + serviceCharge;
   document.getElementById("total-price").innerHTML = "£" + totalPrice;
+  document.getElementById("totNumberDisplay").innerHTML = "£" + totalPrice;
 }
 
 function placeOrder(status) {
@@ -231,7 +273,7 @@ function placeOrder(status) {
     }
     for (var i = 0; i < POIs.length; i++) {
       if (POIs[i] == 1) {
-        poiName = "one";
+        poiName = "Warwick Castle";
         poiImage = images[0];
         let newBooking = {
           id: lastBookingId + 1,
@@ -250,7 +292,7 @@ function placeOrder(status) {
         };
         bookings.push(newBooking);
       } else if (POIs[i] == 2) {
-        poiName = "two";
+        poiName = "Stonehenge";
         poiImage = images[1];
         let newBooking = {
           id: lastBookingId + 1,
@@ -269,7 +311,7 @@ function placeOrder(status) {
         };
         bookings.push(newBooking);
       } else if (POIs[i] == 3) {
-        poiName = "three";
+        poiName = "The Roman Baths";
         poiImage = images[2];
         let newBooking = {
           id: lastBookingId + 1,
@@ -288,7 +330,7 @@ function placeOrder(status) {
         };
         bookings.push(newBooking);
       } else if (POIs[i] == 4) {
-        poiName = "four";
+        poiName = "Leeds Castle";
         poiImage = images[3];
         let newBooking = {
           id: lastBookingId + 1,
@@ -307,7 +349,7 @@ function placeOrder(status) {
         };
         bookings.push(newBooking);
       } else {
-        poiName = "five";
+        poiName = "York Minster";
         poiImage = images[4];
         let newBooking = {
           id: lastBookingId + 1,
@@ -334,6 +376,7 @@ function placeOrder(status) {
 
     // currentUser.currentPoints = userPoints + orderPoints;
     // currentUser.orders = orders;
+    currentUser.currentPoints = avlPoints;
 
     var users = JSON.parse(localStorage.getItem("users"));
     $.each(users, function (key, user) {
@@ -345,26 +388,6 @@ function placeOrder(status) {
     localStorage.setItem("currentlySignedInUser", JSON.stringify(currentUser));
     localStorage.setItem("users", JSON.stringify(users));
 
-    // $.each(sellerOrders, function (key, value) {
-    //   if (value.sellerId === mainOrder.sellerId) {
-    //     let sellerOrder;
-    //     $.each(cartItems, function (key, item) {
-    //       sellerOrder = {
-    //         foodId: cartItems[key].foodId,
-    //         foodTitle: cartItems[key].foodTitle,
-    //         orderStatus: "Pending",
-    //         foodQuantity: cartItems[key].foodQuantity,
-    //         portionSize: cartItems[key].portionSize,
-    //         specialInstructions: cartItems[key].specialInstructions,
-    //         comments: cartItems[key].comments,
-    //         totalPrice: cartItems[key].totalPrice,
-    //       };
-    //       value.outstandingOrders.push(sellerOrder);
-    //     });
-    //   }
-    // });
-    // localStorage.setItem("sellerOrders", JSON.stringify(sellerOrders));
-
     localStorage.removeItem("tempBooking");
 
     var tempBooking = [];
@@ -373,7 +396,7 @@ function placeOrder(status) {
     showSuccess("Order placed, see it in upcoming hunts.");
     setTimeout(function () {
       window.location.replace("my_hunts.php");
-    }, 3000);
+    }, 1500);
   }
   if (status === "cancel") {
     showFailure("Payment Failed");
@@ -390,4 +413,35 @@ function cancel() {
   setTimeout(function () {
     window.location.replace("booking.php");
   }, 3000);
+}
+
+function usePoints() {
+  var disLabel = document.getElementById("total-w-discount-text");
+  var disPrice = document.getElementById("total-w-discount");
+  if (document.getElementById("pointsChecked").checked) {
+    document.getElementById("total-price").style.textDecoration = 'line-through';
+    if(totalPrice >= avlPoints){
+      totalWithDis = totalPrice - avlPoints;
+      avlPoints = 0;
+      document.getElementById("total-w-discount").innerHTML = "£" + totalWithDis;
+      document.getElementById("totNumberDisplay").innerHTML = "£" + totalWithDis;
+      document.getElementById("totPointsAvailable").innerHTML = avlPoints;
+    }else {
+      totalWithDis = 0;
+      avlPoints = avlPoints - totalPrice;
+      document.getElementById("total-w-discount").innerHTML = "£" + totalWithDis;
+      document.getElementById("totNumberDisplay").innerHTML = "£" + totalWithDis;
+      document.getElementById("totPointsAvailable").innerHTML = avlPoints;
+    }
+    disLabel.style.opacity = 1;
+    disPrice.style.opacity = 1;
+  } else {
+    document.getElementById("total-price").style.textDecoration = 'none';
+    totalWithDis = totalPrice;
+    avlPoints = avlPointsDuplicate;
+    disLabel.style.opacity = 0;
+    disPrice.style.opacity = 0;
+    document.getElementById("totNumberDisplay").innerHTML = "£" + totalPrice;
+    document.getElementById("totPointsAvailable").innerHTML = avlPoints;
+  }
 }

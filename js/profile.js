@@ -1,7 +1,7 @@
 var currentlySignedInUser;
 var users;
 
-$(document).on("pageinit",function(){
+$(function initialization(){
     currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
     populateUserFields();
 });
@@ -9,7 +9,7 @@ $(document).on("pageinit",function(){
 function populateUserFields(){
     $('#username_field').html(currentlySignedInUser.username);
     $('#member_since_field').html(currentlySignedInUser.signupDate);
-    $('#contant_number_field').html(currentlySignedInUser.contant_number_field);
+    $('#contact_Number_field').html(currentlySignedInUser.contactNumber);
     $('#email_field').html(currentlySignedInUser.email)
 }
 
@@ -21,7 +21,7 @@ function showProfileMethod() {
 }
 
 function closeEditPopup() {
-    // showFailure("Canceled")
+    showFailure("Canceled")
     $("#popupBasic").popup("close");
 
 }
@@ -65,35 +65,31 @@ function saveProfileInformation() {
     showSuccess("Updated your info.")
     setTimeout(function () {
         location.reload()
-    }, 2000);
+    }, 1000);
 
-}
+};
 
 // open feedback popup
 function showFeedbackPopup() {
     $("#feedbackPopup").popup("open");
 
-}
+};
 
 function sendFeedback() {
-    showSuccess("Thank you for the Feedback");
+    $('#form_feedback_Profile')[0].reset();
     $("#feedbackPopup").popup("close");
-
-}
+    showSuccess("Thank you for the Feedback");
+}; 
 
 // close feedback popup
 function closeFeedbackPopup() {
     showFailure("Canceled")
     $("#feedbackPopup").popup("close");
 
+};
+
+function logOut() {
+    currentlySignedInUser = null;
+    localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
+    window.location = "index.php";
 }
-
-
-
-
-
-// document.getElementById("sendBtn").addEventListener("click", myFunction);
-
-// function myFunction(){
-//     alert('Hello world!');
-// }
