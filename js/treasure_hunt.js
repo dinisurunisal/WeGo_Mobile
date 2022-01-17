@@ -11,6 +11,9 @@ const tourStops = [
   [{ lat: 52.2796, lng: -1.5852 }, "Warwick Castle", "Iconic clifftop fortress & dungeons"],
   [{ lat: 53.957162838, lng: -1.07583303 }, "York Minster", "Iconic gothic-style medieval cathedral"],
   [{ lat: 51.518757, lng: -0.126168 }, "British Museum", "A historian's treasure trove"],
+  [{ lat: 51.1739726374, lng: -1.82237671048 }, "Stonehenge", "Stonehenge is a Prehistoric monument in England"],
+  [{ lat: 51.381072, lng: -2.359619 }, "The Roman Baths", "The Roman Baths are a Well-preserved thermae"],
+  [{ lat: 51.242165698, lng: 0.623997504 }, "Leeds Castle", "Leeds Castle is a castle in Kent, England"]
 ];
 
 function initMap() {
