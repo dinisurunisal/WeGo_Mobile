@@ -3,8 +3,8 @@ var defaultDestinationDB = [];
 
 
 $(function initialization() {
-    // var destinations = JSON.parse(localStorage.getItem("destinations"));
-    var destinations = JSON.parse(localStorage.getItem("sortedDestinations"));
+    var destinations = JSON.parse(localStorage.getItem("destinations"));
+    // var destinations = JSON.parse(localStorage.getItem("sortedDestinations"));
     defaultDestinationDB = destinations;
     console.log(defaultDestinationDB)
     if (defaultDestinationDB) {
