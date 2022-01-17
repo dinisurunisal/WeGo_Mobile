@@ -259,6 +259,14 @@
             }
 
         }
+
+        @media only screen
+        and (min-device-width: 700px)
+        and (max-device-height: 400px) {
+            .posters .carousel {
+                height: 65vh;
+            }
+        }
     </style>
 
 </head>
@@ -291,7 +299,7 @@
                 <div class="home_thumbnail_card">
                         <div class="row_one">
                             <h3>Famous Destinations</h3>
-                            <button onclick="window.location.href='destination_list.php'" id="see_all_btn" class="hp_button">See all</button>
+                            <button onclick="seeAll()" id="see_all_btn" class="hp_button">See all</button>
                         </div>
                         <div id="thumbnail_list_small">
                             <div id="thumbnail_one" class="thumbnail_card">

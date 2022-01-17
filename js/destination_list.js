@@ -12,36 +12,7 @@ $(function initialization() {
     }
 });
 
-// function destinationsFilterInit() {
-//   var defaultFilterDB = {
-//       sort:"ascending",
-//       parameters: [
-//           {
-//               "name": "false",
-//               "rating": "false",
-//               "price": "false"
-//           }
-//       ]
-//   }
-
-//   var filterDB = JSON.parse(localStorage.getItem("filterDB"));
-
-//     if (filterDB == null) {
-//         if (typeof (Storage) !== "undefined") {
-//             localStorage.setItem("filterDB", JSON.stringify(defaultFilterDB));
-
-//             filterDB = defaultFilterDB;
-//         } else {
-//             showFailure("Sorry, your browser does not support Frese")
-//         }
-//     }
-// }
-
-
-
 function loadDestinationList() {
-
-
 
     for (var i = 0; i < defaultDestinationDB.length; i++) {
         $("#card_image").attr("src", defaultDestinationDB[i].destinationImage);
@@ -66,11 +37,6 @@ function loadDestinationList() {
           }
     }
 }
-
-
-// function popupDestinationRestoreDefault() {
-//   restoreDefaultFilter(); // This function can be found in "destination_filter_popup.js" file
-// }
 
 // Delete 'card_script_1'
 function deleteDuplicateCards() {
