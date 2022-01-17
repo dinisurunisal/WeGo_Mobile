@@ -88,3 +88,9 @@ function closeFeedbackPopup() {
     $("#feedbackPopup").popup("close");
 
 };
+
+function logOut() {
+    currentlySignedInUser = null;
+    localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
+    window.location = "index.php";
+}
