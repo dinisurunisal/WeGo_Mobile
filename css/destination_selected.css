@@ -144,6 +144,10 @@
     padding: 0px !important;
 }
 
+.dest_sel_content_block .review_card_section ul{
+    width: -webkit-fill-available;
+}
+
 .dest_sel_content_block .review_card_section #review-card-resolution-breakpoint {
     width: 50%;
     float: left;
@@ -156,6 +160,11 @@
     margin: 10px;
     padding: 16px;
     box-shadow: 0px 0px 6px #c4c4c4 !important;
+    width: -webkit-fill-available;
+}
+
+.dest_sel_content_block .dest_review_card .review_count{
+    color: #404040;
 }
 
 .dest_sel_content_block .review_card_section .dest_review_card .thumb_image_div {
@@ -188,6 +197,10 @@
     display: inline-flex;
     min-inline-size: -webkit-fill-available;
     align-items: center;
+}
+
+.review_card_section .dest_review_card .dest_review_comment {
+    height: 60px;
 }
 
 .review_card_section .dest_review_card .dest_reviewer_raiting #star_rating_holder {
@@ -341,6 +354,37 @@ and (max-device-width: 667px) {
         margin-left: 20px;
         margin-bottom: 8px;
     }
+
+    .review_card_section .dest_review_card .dest_review_comment {
+        height: fit-content;
+    }
+}
+
+@media only screen
+and (min-device-width: 700px)
+and (max-device-height: 400px) {
+    /* .review_card_section .dest_review_card .dest_review_comment {
+        height: fit-content;
+    }
+
+    .dest_sel_content_block .dest_sel_main_container #dest_sel_image_container img {
+        height: 290px;
+    } */
+
+    .review_card_section .dest_review_card .dest_reviewer_raiting {
+        display: block;
+        align-items: center;
+        position: absolute;
+        right: 0px;
+        top: 6px;
+        padding-top: 12px;
+        padding-right: 16px;
+        text-align: right;
+    }
+
+    .review_card_section .dest_review_card .dest_reviewer_raiting #star_rating_holder {
+        margin-right: 0px;
+    }
 }
 
 @media only screen
@@ -352,6 +396,14 @@ and (max-device-width: 850px) {
 @media only screen
 	and (min-device-width: 812px)
 	and (max-device-width: 900px) {
+
+    .review_card_section .dest_review_card .dest_review_comment {
+        height: fit-content;
+    }
+
+    .dest_sel_content_block .dest_sel_main_container #dest_sel_image_container img {
+        height: 290px;
+    }
 
 
     .ui-content .dest_sel_content_block {
@@ -374,7 +426,7 @@ and (max-device-width: 850px) {
     }
 
     .dest_sel_content_block .dest_sel_internal_block .dest_sel_heading {
-        width: 60% !important;
+        width: 58% !important;
         position: absolute;
         margin-left: 42%;
         margin-top: 8px;
