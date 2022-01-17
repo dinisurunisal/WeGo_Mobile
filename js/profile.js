@@ -9,7 +9,7 @@ $(function initialization(){
 function populateUserFields(){
     $('#username_field').html(currentlySignedInUser.username);
     $('#member_since_field').html(currentlySignedInUser.signupDate);
-    $('#contant_number_field').html(currentlySignedInUser.contant_number_field);
+    $('#contact_Number_field').html(currentlySignedInUser.contactNumber);
     $('#email_field').html(currentlySignedInUser.email)
 }
 
@@ -91,12 +91,8 @@ function closeFeedbackPopup() {
 
 };
 
-
-
-
-
-// document.getElementById("sendBtn").addEventListener("click", myFunction);
-
-// function myFunction(){
-//     alert('Hello world!');
-// }
+function logOut() {
+    currentlySignedInUser = null;
+    localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
+    window.location = "login.php";
+}

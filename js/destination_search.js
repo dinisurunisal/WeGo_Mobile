@@ -8,7 +8,8 @@ function onSearchBtnClick() {
     var searchResults =[];
 
     let searchValue = $("#destination-search-input").val();
-    let searchValueList = searchValue.split(" ");
+    let searchValueName = searchValue.toLowerCase();
+    let searchValueList = searchValueName.split(" ");
 
     for (let i = 0; i < destinations.length; i++) {
         let name = String(destinations[i].destinationName).toLowerCase(); 

@@ -801,5 +801,83 @@
       "CVC": "123",
       "exiprationDate": "12/23"
     }
+  },
+  {
+    "destinationId": "destinationId12",
+    "destinationName": "Tintagel Castel",
+    "destinationImage": "images/destinations/Tintagel Castle.jpg",
+    "destinationCardDetails": "A medieval fortification located on the peninsula of Tintagel Island",
+    "destinationDescription1": "A castle was built on the site by Richard, 1st Earl of Cornwall in the 13th century, during the High Middle Ages. It later fell into disrepair and ruin.",
+    "destinationDescription2": "The castle has a long association with legends related to King Arthur. This was first recorded in the 12th century when Geoffrey of Monmouth described Tintagel as the place of Arthur's conception in his mythological account of British history.",
+    "destinationRating": 4.4,
+    "destinationFavId": "destinationId12_favourite",
+    "isFavourite": false,
+    "isPastHunt": false,
+    "isReviewed": false,
+    "location": {
+      "addressName": "Castle Rd, Tintagel PL34 0HE, United Kingdom",
+      "latLocation": 6.840424,
+      "longLocation": 79.991114
+    },
+    "price": "105.00",
+    "priceRange": "cheap",
+    "tags": [
+      "london",
+      "england"
+    ],
+    "time": "Open 24x7",
+    "crowdRange": "Less Crowded",
+    "destinationReviews": [
+      {
+        "name": "Joe Stockton",
+        "reviewerId": "destinationId1_rev1",
+        "reviewerImage": "images/reviewer1.jpg",
+        "reviewCount": "133",
+        "rating": 3,
+        "reviewDate": "1/1/2022, 3:43 AM",
+        "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
+        "reviewReplies": [
+          {
+            "name": "Tracy Stark",
+            "reviewCount": "133",
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
+          }
+        ]
+      },
+      {
+        "name": "Mary Watson",
+        "reviewerId": "destinationId1_rev2",
+        "reviewerImage": "images/reviewer2.jpg",
+        "reviewCount": "120",
+        "rating": 4,
+        "reviewDate": "1/8/2022, 3:43 AM",
+        "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
+        "reviewReplies": [
+          {
+            "name": "Tracy Stark",
+            "reviewCount": "133",
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
+          }
+        ]
+      }
+    ],
+    "paymentMethod": {
+      "email": "frese-facilitator@gmail.com",
+      "accountNumber": "12312124123",
+      "type": "VISA",
+      "CVC": "123",
+      "exiprationDate": "12/23"
+    },
+    "pastHuntDetails": {
+
+    }
   }
 ]
