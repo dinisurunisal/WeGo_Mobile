@@ -1689,7 +1689,31 @@ and (max-device-width: 850px) {
 
 }
 
+/*Reply popup
+---------------------------------------------------------------------------------*/
+#destination_reply .form_button_container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
 
+#destination_reply .cancel_btn {
+    color: #0174cf !important;
+}
+
+#destination_reply .submit_btn {
+    background-color: #0174cf !important;
+    color: white !important;
+}
+
+#destination_reply #form_reply {
+    height: 95px !important;
+    background-color: #c4c4c4;
+}
+
+#destination_reply #form {
+	width: 62vw;
+}
 
 /* Treasure hunt
 ---------------------------------------------------------------------------------*/
