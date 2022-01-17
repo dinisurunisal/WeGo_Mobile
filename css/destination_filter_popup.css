@@ -1,6 +1,6 @@
-::placeholder {
+/* ::placeholder {
     color: #a7a7a7;
-}
+} */
 
 #destination_filter_popup_checkbox_group-2 .ui-checkbox-on:after {
     background-color: #00a99d !important;
@@ -84,14 +84,14 @@
     min-width: 210px;
 }
 
-.button_popup{
+.filter_button_popup{
     height:30px;
     width:100px;
     border: none;
     border-radius:12px;
 }
 
-#sendBtn{
+#filtersendBtn{
     color:white;
     background-color: #0174cf;
 }

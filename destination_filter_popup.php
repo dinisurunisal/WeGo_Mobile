@@ -1,7 +1,8 @@
 
 
 
-<link rel="stylesheet" href="css/destination_filter_popup.css">
+<!-- <link rel="stylesheet" href="css/destination_filter_popup.css"> -->
+<link rel="stylesheet" href="css/style.css">
 
 <script src="js/destination_filter_popup.js"></script>
 
@@ -17,7 +18,7 @@
     </div><!-- /navbar -->
 
     <form>
-        <fieldset data-role="controlgroup" id="browse_kitchen_filter_popup_checkbox_group-2">
+        <fieldset data-role="controlgroup" id="destination_filter_popup_checkbox_group-2">
             
             <input type="radio" name="radio-button-name" id="radio-button-name">
             <label for="radio-button-name" class="checkbox-style">Name</label>
@@ -31,7 +32,7 @@
     </form>
 
     <div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
-			<button id="cancelBtn" onclick="closeFilterPopup();"  class="button_popup" data-role="none">Cancel</button>
-			<button id="sendBtn" type="submit" class="button_popup" data-role="none" onclick="destinationFilterButton()">Update</button>
+			<button id="cancelBtn" onclick="closeFilterPopup();"  class="filter_button_popup" data-role="none">Cancel</button>
+			<button id="filtersendBtn" type="submit" class="filter_button_popup" data-role="none" onclick="destinationFilterButton()">Update</button>
 	</div>
 </div>
