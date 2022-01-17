@@ -1719,7 +1719,7 @@ and (max-device-width: 850px) {
 	margin-bottom: 24px;
 }
 
-#treasure_hunt_content .game_search_box {
+#treasure_hunt_content .destination_search_box {
     display: inline-grid;
 	width: 85% !important;
     grid-template-columns: auto 40px;
@@ -1732,25 +1732,25 @@ and (max-device-width: 850px) {
     background-color: white;
 }
 
-.game_search_box a{
+.destination_search_box a{
     width: 40px;
     padding: 0px;
     margin: 0px !important; 
     border-radius: 12px !important;
 }
 
-.game_search_box .ui-input-search {
+.destination_search_box .ui-input-search {
     height: 26px !important;
     margin-top: 14px !important;
     margin-bottom: 4px !important;
 }
 
-.game_search_box input {
+.destination_search_box input {
     min-height: 26px !important;
     padding: 1px 8px 1px 14px !important;
 }
 
-.game_search_box .ui-input-text {
+.destination_search_box .ui-input-text {
     border: none !important;
     box-shadow: none !important;
     margin: 0px;
