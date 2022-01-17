@@ -44,6 +44,8 @@ function init() {
 
     ]
 
+    var checkSorted = false;
+
     var pastHunts = [
         { 'huntId': 'mh1', 'destName': 'Big Ben', 'imageUrl': 'images/destinations/Big Ben.jpg', 'tourDate':'Tour completed on 20-12-2021', 'tourDetails':'MEL - DEL | 3h 11m | One Way', 'tourRating': null, 'tourComment': null, 'destinationId': 'destinationId1'},
         { 'huntId': 'mh2', 'destName': 'Cotswolds', 'imageUrl': 'images/destinations/Cotswolds.jpg', 'tourDate':'Tour completed on 25-12-2021', 'tourDetails':'EUS - DEL | 1h 11m | Two Way', 'tourRating': 5, 'tourComment': 'One of the best destinations which admires the history of UK', 'destinationId': 'destinationId5'}
@@ -61,6 +63,7 @@ function init() {
         localStorage.setItem("tempDestDb", JSON.stringify(tempDestDb));
         localStorage.setItem("pastHunts", JSON.stringify(pastHunts));
         localStorage.setItem("upcomingHunts", JSON.stringify(upcomingHunts));
+        localStorage.setItem("checkSorted", JSON.stringify(checkSorted));
         if (localStorage.getItem("users") == null) {
             localStorage.setItem("users", JSON.stringify(users));
         }

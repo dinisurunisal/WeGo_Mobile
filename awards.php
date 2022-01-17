@@ -19,10 +19,17 @@
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>		
 
+		<style>
+			.mainBox{
+				object-fit: contain;
+				padding: 10px;
+			}
+		</style>
+
 	</head>
 
 	<body>
-		<div data-role="page" id="destination_page">
+		<div data-role="page" id="destination_page" style="background-image: url(images/awards/backgroundpng1.png); object-fit: scale-down;">
 			<!-- Header -->
 			<?php include("header.php"); ?>
 
@@ -32,21 +39,15 @@
 
 			<div class="top" style="margin-top:50px; text-align: center;">
 			<h2>Awards</h2>
-			<h4>Find Your Current Points and Challenges</h4>
-			<h1 id="points">100</h1>
+			<h5>Find Your Current Points and Challenges</h5>
+			<h1 id="points" style="color:#0174cf;">100</h1>
 			<h2>Points</h2>
 			</div>
 
 			<div class="mainBox" id="mainBox">
-				<div class="challengesbox" id="challengesbox">
-					<h4>Challenges</h4>
-				</div>
-				<div class="awardsBox" id="awardsBox">
-					<h4>Awards</h4>
-				</div>
+				<img src="images/awards/background_image.png" alt="backgroung_image" width="1004" height="456.800" >
 			</div>
-			<button onclick="setdest()">sort</button>
-			<button onclick="setdestprice()">sort</button>
+			
 
 
 

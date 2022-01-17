@@ -1,6 +1,9 @@
 
 
 function onSearchBtnClick() {
+
+    var checkSorted = JSON.parse(localStorage.getItem("checkSorted"));
+
     var destinations = JSON.parse(localStorage.getItem("destinations"));
     var searchResults =[];
 
@@ -26,7 +29,18 @@ function onSearchBtnClick() {
             } 
         }   
     }
+
+    if (searchResults.length > 0) {
+        checkSorted = true;
+    }else{
+        checkSorted = false;
+        showFailure("No results.")
+    }
     localStorage.setItem("sortedDestinations", JSON.stringify(searchResults));
+    localStorage.setItem("checkSorted", JSON.stringify(checkSorted));
     
+    setTimeout(function () {
     window.location = "destination_list.php";
+  }, 2000);
+    
   }
