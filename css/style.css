@@ -39,6 +39,68 @@ p2 {
 	font-weight: normal;
 }
 
+
+/* Common Header
+--------------------------------------------------------------------------------*/
+
+#common_header {
+	background-color: #ffffff !important;
+	height: 35px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 86px;
+	padding-left: 86px;
+	width: -webkit-fill-available;
+	border-bottom-style: solid;
+	border-bottom-color: #c4c4c4;
+	border-bottom-width: thin;
+	text-align: center;
+	z-index: 100;
+	position: fixed;
+}
+
+#common_header_logo {
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+}
+
+#common_header_profile_icon {
+	margin-right: -62px;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	float: right;
+	width: 32px;
+	height: 32px;
+}
+
+#common_header #profile_image {
+	width: -webkit-fill-available;
+	border-radius: 50%;
+}
+
+#common_header #back_btn {
+	margin-left: -62px;
+	padding-top: 10px;
+	padding-bottom: 6px;
+	float: left;
+	cursor: pointer;
+}
+
+#common_header #back_btn_img {
+	width: 52px;
+	height: 17px;
+}
+
+#common_header #back_btn:hover {
+	filter: brightness(50%);
+}
+
+#common_header #back_btn:onclick {
+	filter: brightness(100%);
+}
+
 /* Header
 --------------------------------------------------------------------------------*/
 #logo_image {
@@ -299,7 +361,6 @@ p2 {
 	box-shadow: 4px 3px #DCDCDC; 
 	font-family: Noto Sans; 
 	font-size: 40px; 
-	font-color:white; 
 	border-radius:45px; 
 	color:white; 
 	background-color:#0174CF; 
@@ -370,7 +431,6 @@ p2 {
     font-family: Noto Sans; 
     font-size: 15px; 
     font-weight: 900;
-    font-color:white; 
     border-radius:45px; 
     color:#0174CF; 
     background-color:white; 
@@ -440,7 +500,6 @@ p2 {
     font-family: Noto Sans;
     font-size: 15px;
     font-weight: 900;
-    font-color: white;
     border-radius: 45px;
     color: #0174CF;
     background-color: white;
@@ -532,7 +591,6 @@ p2 {
     font-family: Noto Sans;
     font-size: 15px;
     font-weight: 900;
-    font-color: white;
     border-radius: 45px;
     color: #0174CF;
     background-color: white;
