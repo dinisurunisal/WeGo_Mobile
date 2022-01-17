@@ -811,6 +811,508 @@ p2 {
 
 /* Booking Ticket
 ---------------------------------------------------------------------------------*/
+.tickets .tk_heading {
+    text-align: center;
+    margin-top: 25%;
+}
+
+.tickets .tk_heading h1 {
+    text-align: center;
+    font-family: Noto Sans;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #404040;
+}
+
+.tickets .tk_heading p {
+    font-family: Noto Sans;
+    font-size: 14px;
+    line-height: 0;
+    letter-spacing: 0.01em;
+    color: #404040;
+}
+
+.tickets .booking_card {
+    padding-bottom: 1%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    transition: 0.3s;
+    border-radius: 15px;
+    margin: 5%;
+}
+
+.tickets .booking_card {
+    margin-top: 10%;
+    background-image: url("images/bookBackground.png");
+    display: grid;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 138px;
+}
+
+.tickets .tk_depature {
+    padding-top: 2.5%;
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    align-items: start;
+}
+
+.tickets .tk_depature h4 {
+    line-height: 0;
+}
+
+.tickets .tk_depature p {
+    font-size: 14px;
+    line-height: 0;
+}
+
+.tickets .depature {
+    padding-left: 6vw;
+}
+
+.tickets .arrival {
+    padding-left: 6vw;
+}
+
+.tickets .duration {
+    margin-top: 14vw;
+    text-align: center;
+}
+
+.tickets .duration p {
+    line-height: 6px;
+}
+
+.tickets .booking_card_two {
+    display: grid;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    transition: 0.3s;
+    border-radius: 15px;
+    margin: 5%;
+}
+
+.tickets .tk_details_one {
+    display: grid;
+    grid-template-columns: 45vw auto;
+    align-items: baseline;
+}
+
+.tickets .tk_details_one p {
+    font-size: 15px;
+}
+
+.tickets .tk_details_two {
+    display: grid;
+    grid-template-columns: 45vw auto;
+    align-items: baseline;
+}
+
+.tickets .tk_details_two p {
+    font-size: 15px;
+}
+
+.tickets .tk_details_three {
+    display: grid;
+    grid-template-columns: 45vw auto;
+    align-items: baseline;
+}
+
+.tickets .tk_details_three p {
+    font-size: 15px;
+}
+
+.tickets .tk_details_four {
+    display: grid;
+    grid-template-columns: 45vw auto;
+    align-items: baseline;
+}
+
+.tickets .tk_details_four p {
+    font-size: 15px;
+}
+
+.tickets .booking_card_three {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    transition: 0.3s;
+    border-radius: 15px;
+    margin: 5%;
+    display: grid;
+    padding: 5px;
+}
+
+.tickets .booking_card_three h4 {
+    font-size: 20px;
+    padding-left: 4vw;
+}
+
+.tickets .panels {
+    display: grid;
+}
+
+.tickets .pricesPanels {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: baseline;
+}
+
+.tickets .right-panel {
+    text-align: right;
+}
+
+.tickets .custom-content {
+    margin: 20px;
+    line-height: 25px;
+}
+
+.tickets .scrollingContainer {
+    background-color: #eeeeee;
+    width: 100%;
+    height: 250px;
+    overflow: scroll;
+}
+
+.tickets .buttonGroup {
+    margin: 4%;
+    display: -webkit-box;
+    padding-inline-start: 0px;
+}
+
+.tickets .buttonGroup>li {
+    display: block;
+    -webkit-box-flex: 1;
+    text-align: center;
+    background-image:
+        -webkit-gradient(linear, left top, left bottom,
+            from(#fff),
+            to(#fff));
+    color: #000;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px !important;
+    /*line-height: 3px;*/
+}
+
+.tickets .buttonGroup>li.selected {
+    -webkit-border-radius: 20px;
+    background-image:
+        -webkit-gradient(linear, left top, left bottom,
+            from(#0174CF),
+            to(#0174CF));
+    color: #fff;
+    text-shadow: none !important;
+}
+
+.tickets .cart-items-container {
+    list-style: none;
+    padding: 0;
+}
+
+.tickets .cart-item {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 5px;
+    /*background-color: white;*/
+}
+
+.tickets .ui-block-a.item-quantity {
+    margin-left: 5%;
+    /*background-color: transparent;*/
+    text-align: center;
+}
+
+.tickets .ui-block-c.remove-item {
+    position: relative;
+    left: 0;
+    color: red;
+}
+
+.tickets .paypal-card1 {
+    display: grid;
+    width: 54vw;
+    margin-bottom: 1vh;
+}
+
+.tickets .paypal-card2 {
+    display: grid;
+    justify-content: center;
+}
+
+
+/* Favorites list
+--------------------------------------------------------------------------------*/
+.favourites .fa_heading h1 {
+    text-align: center;
+    font-family: Noto Sans;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #404040;
+}
+
+.favourites .fa_heading p {
+    font-family: Noto Sans;
+    font-size: 14px;
+    line-height: 0;
+    letter-spacing: 0.01em;
+    color: #404040;
+}
+
+.favourites .dest_card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 15px;
+    height: 225px;
+    /* 15px rounded corners */
+    margin: 10px;
+}
+
+.favourites .dest_card img {
+    border-radius: 15px 15px 15px 15px;
+    /* Add rounded corners to the top left and the top right corner of the image */
+    height: 225px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.favourites .dest_card .sub_card {
+    position: absolute;
+    top: 0;
+    border-radius: 15px 15px 15px 15px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(102, 102, 102, 0.8));
+    color: #f1f1f1;
+    width: 38%;
+    padding: 113px;
+}
+
+.favourites .dest_card .dest_name {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    color: white;
+    font-size: 24px;
+}
+
+.favourites .dest_card .dest_discription {
+    position: absolute;
+    top: 60px;
+    width: 245px;
+    font-weight: 100;
+    left: 15px;
+    color: white;
+    font-size: 15px;
+}
+
+.favourites .dest_card .dest_favourite {
+    top: 16px;
+    right: 15px;
+    position: absolute;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.favourites .favourite_buttons {
+    margin-top: 12%;
+    text-align: center;
+}
+
+.favourites .dest_card .dest_favourite i {
+    cursor:pointer;
+    padding:10px 12px 8px;
+    background:#fff;
+    border-radius:50%;
+    display:inline-block;
+    margin:0 0 15px;
+    color:rgb(238, 8, 8);
+    transition:.2s;
+}
+
+
+.favourites .favourite_buttons .fa_button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    text-align: center;
+    background: #0174cf;
+    color: white;
+    border-color: transparent;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+
+/* Homepage
+---------------------------------------------------------------------------------*/
+#homePage .home {
+    width: 100%;
+    text-align: center;
+}
+
+#homePage .posters {
+    margin-top: 60px;
+}
+
+#homePage .carousel {
+    align-items: center;
+    display: flex;
+    /* margin: 2rem auto; */
+    overflow: hidden;
+    position: relative;
+    height: 30vh;
+}
+
+#homePage .carousel_images {
+    height: 100%;
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.25s;
+}
+
+#homePage .carousel_images img {
+    /* border-radius: 5px; */
+    height: -webkit-fill-available;
+    width: 100vw;
+    object-fit: cover;
+}
+
+#homePage .carousel_button {
+    /* background: teal; */
+    /* border: 0; */
+    border-radius: 50%;
+    /* color: white; */
+    /* cursor: pointer; */
+    /* font-size: 1.5rem; */
+    font-weight: bold;
+    opacity: 0.5;
+    position: absolute;
+    transition: opacity 0.25s;
+    width: 3rem;
+    z-index: 1;
+}
+
+#homePage .carousel_button.previous {
+    width: 30px;
+    left: 5px;
+}
+
+#homePage .carousel_button.next {
+    width: 30px;
+    right: 5px;
+}
+
+#homePage .carousel_button:hover {
+    opacity: 0.5;
+}
+
+#homePage .hp_heading h1 {
+        margin-top: 12px !important;
+        margin-bottom: 0px !important;
+    }
+
+    #homePage .hp_heading p2 {
+        margin-top: 12px !important;
+    }
+
+    #homePage .home_thumbnail_card {
+        margin: 24px;
+        background-color: #ffffff;
+        transition: 0.3s;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        padding: 24px;
+        border-radius: 12px;
+        width: -webkit-fill-available;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: auto;
+        text-align: left;
+    }
+
+    #homePage .home_thumbnail_card .row_one {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #homePage .home_thumbnail_card .row_one h3{
+        margin: 0px !important;
+    }
+
+    #homePage .home_small_card {
+        margin: 24px;
+        background-color: #ffffff;
+        transition: 0.3s;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        padding: 24px;
+        border-radius: 12px;
+        width: -webkit-fill-available;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: auto;
+        text-align: left;
+    }
+
+    #homePage .home_small_card h3{
+        margin: 0px 0px 8px 0px !important;
+    }
+
+    #homePage .home_small_card p{
+        margin: 0px 0px 20px 0px !important;
+    }
+
+    #homePage .hp_button {
+        width: 85px !important;
+        text-align: center !important;
+        background: #0174cf !important;
+        color: white !important;
+        border-color: transparent !important;
+        text-shadow: none !important;
+        margin: 0px !important;
+        float: right;
+    }
+
+    #homePage #thumbnail_list_small {
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 35vw 35vw;
+        justify-content: space-between;
+        align-content: space-between;
+        padding-top: 4px;
+    }
+
+    #homePage #thumbnail_list_small .thumbnail_card {
+        width: -webkit-fill-available;
+    }
+
+    #homePage #thumbnail_list_small .thumbnail_content {
+        height: 180px;
+        text-align: center;
+        margin-top: 12px;
+        border-radius: 12px;
+    }
+
+    #homePage #thumbnail_list_small .thumbnail_image {
+        height: 100%;
+        width: -webkit-fill-available;
+        object-fit: cover;
+        border-radius: 12px;
+        filter: brightness(0.8)
+        /* -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(40, 40, 40, 40)); */
+    }
+
+    #homePage #thumbnail_list_small .thumbnail_name {
+        color: white;
+        margin: -50px 0px 0px 0px !important;
+        text-shadow: #404040 -2px -2px 6px;
+        font-size: 16px;
+        position: relative;
+    }
 
 
 /* Treasure hunt
