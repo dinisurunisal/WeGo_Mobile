@@ -7,6 +7,10 @@
 	<title>Destination</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
 	<!-- The three things that jQuery Mobile needs to work -->
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -15,6 +19,9 @@
 	<!-- Custom -->
 	<link rel="stylesheet" href="css/style.css" />
 	<script type="text/javascript" src="js/booking.js"></script>
+	<script src="js/destination_map.js"></script>
+
+	<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTaSledUuIuOU0iipt8JzdHB2J-ZJayr4&callback=initMap" ></script>
 
 	<script>
 		$(document).ready(function() {
@@ -58,17 +65,18 @@
 		$(document).ready(function() {
 			$('#checkbtn').click(function() {
 				checked = $("input[type=checkbox]:checked").length;
-
 				if (!checked) {
-					alert("You must check at least one destination checkbox.");
+					showFailure("You must check at least one destination checkbox.");
 					return false;
 				}
-
 			});
 		});
 	</script>
 
 	<style>
+		#map {
+				height: 300px;
+		}
 
 		@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
 			.book .booking_details {
@@ -371,12 +379,21 @@
 					</div>
 				</div>
 
+				<div role="main" class="ui-content" style="height: 300px;">
+				<div id="map">
+				</div>
+				</div>
+
 				<div class="booking_buttons">
 					<button type="submit" class="bk_button" style="background:#0174cf; color: white; border-color: transparent; font-size: 15px;" id="checkbtn">Continue</button>
 					<!-- onclick="window.location.href='booking_ticket_details.php'" -->
 				</div>
 			</form>
 		</div>
+
+		<?php
+		include("success_popups.php");
+		?>
 
 		<?php include("footer.php"); ?>
 		<?php include("navigation_bar.php"); ?>
