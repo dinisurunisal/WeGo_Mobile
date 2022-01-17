@@ -37,10 +37,10 @@
     padding: 5px 5px 5px 5px;
     margin-top:-22px;
 }
-#profile_page #flex_container{
+#profile_page #s4_flex_container{
     display: flex;
 }
-#profile_page #flex_child{
+#profile_page #s4_flex_child{
     flex:1;
 }
 #profile_page .user_data_r1{

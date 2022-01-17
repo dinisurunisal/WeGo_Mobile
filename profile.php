@@ -18,6 +18,7 @@
 		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 		<link rel="stylesheet" href="css/profile.css">
+		<link rel="stylesheet" href="css/style.css">
 
 	</head>
 
@@ -35,12 +36,12 @@
 			</div>
 
 			<!-- bar with edit logout buttons -->
-			<div class="s4_edit_logout_bar" id="flex_container">
+			<div class="s4_edit_logout_bar" id="s4_flex_container">
 
-				<div class="edit_profile_btn" id="flex_child" style="padding-left:10px;">
+				<div class="edit_profile_btn" id="s4_flex_child" style="padding-left:10px;">
 					<a onclick="showProfileMethod();" >EDIT</a>
 				</div>
-				<div class="logout_btn"  id="flex_child" style="text-align: right; padding-right:15px;">
+				<div class="logout_btn"  id="s4_flex_child" style="text-align: right; padding-right:15px;">
 					<a onclick="logOut()" >LOGOUT</a>
 				</div>
 
