@@ -259,6 +259,14 @@
             }
 
         }
+
+        @media only screen
+        and (min-device-width: 700px)
+        and (max-device-height: 400px) {
+            .posters .carousel {
+                height: 65vh;
+            }
+        }
     </style>
 
 </head>
