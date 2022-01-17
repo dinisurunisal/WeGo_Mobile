@@ -2,7 +2,6 @@
     <?php include_once("jquery-theme/themes/theme.css"); include_once("css/style.css");?>
 </style>
 
-<script src="js/homepage_header_script.js"></script>
 <script src="js/destination_search.js"></script>
 
 <div id="home_header">

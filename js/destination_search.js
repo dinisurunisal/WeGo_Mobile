@@ -46,7 +46,11 @@ function onSearchBtnClick() {
     localStorage.setItem("checkSorted", JSON.stringify(checkSorted));
     
     setTimeout(function () {
-    window.location = "destination_list.php";
+
+    if (searchValue != "" && searchResults.length > 0) {
+        window.location = "destination_list.php";
+    }
+    
   }, 500);
     
   }

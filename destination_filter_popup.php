@@ -5,9 +5,9 @@
 
 <script src="js/destination_filter_popup.js"></script>
 
-<div data-role="popup" data-position-to="window" id="popup_destination_filter" class="popup-dimensions">
+<div data-role="popup" data-position-to="window" id="popup_destination_filter" class="popup-dimensions" id="filter">
 
-<h2 class="center-text" id="filter-heading-style-h1">Filter</h2>
+    <h2 class="center-text" id="filter-heading-style-h1">Filter</h2>
 
     <div data-role="navbar" class="toggle">
                     <ul>
@@ -31,7 +31,7 @@
     </form>
 
     <div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
-						<button id="cancelBtn" onclick="closeFilterPopup();"  class="button_popup" data-role="none">Cancel</button>
-						<button id="sendBtn" type="submit" class="button_popup" data-role="none" onclick="destinationFilterButton()">Update</button>
+			<button id="cancelBtn" onclick="closeFilterPopup();"  class="button_popup" data-role="none">Cancel</button>
+			<button id="sendBtn" type="submit" class="button_popup" data-role="none" onclick="destinationFilterButton()">Update</button>
 	</div>
 </div>

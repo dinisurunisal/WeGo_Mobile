@@ -16,6 +16,7 @@
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 		<script src="js/treasure_hunt.js"></script>
+        <script src="js/destination_search.js"></script>
 
         <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
         <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTaSledUuIuOU0iipt8JzdHB2J-ZJayr4&callback=initMap" ></script>
@@ -84,10 +85,11 @@
                 <div id="search_section"> 
                     <h2>Treasure Hunt</h2>
                     <p2>Find locations to hunt and learn more</p2>
-                    <div class="game_search">
-                        <div class="game_search_box">
-                            <input type="text" data-clear-btn="false" name="game-search-box" id="game-search-box">
-                            <a class="ui-alt-icon ui-btn ui-btn-icon-right ui-icon-search" onclick="onGameSearchClick()"></a>
+
+                    <div class="destination_search" >
+                        <div class="destination_search_box">
+                            <input type="text" data-clear-btn="false" name="destination-search-input" id="destination-search-input">
+                            <a class="ui-alt-icon ui-btn ui-btn-icon-right ui-icon-search" onclick="onSearchBtnClick()"></a>
                         </div>
                     </div>
                 </div>

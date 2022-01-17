@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="jquery-theme/themes/theme.css" />
         <link rel="stylesheet" href="jquery-theme/themes/theme.min.css" />
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/my_hunts_styles.css" />
         
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
