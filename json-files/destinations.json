@@ -609,6 +609,8 @@
     "destinationRating": 4.5,
     "destinationFavId": "destinationId9_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "Salisbury SP4 7DE, United Kingdom",
       "latLocation": 51.1789,
@@ -631,12 +633,15 @@
         "rating": 3,
         "reviewDate": "1/1/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+	      "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
             "reviewCount": "133",
             "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDescription": "Reply to a comment!",
+	          "replierImage": "images/replier1.jpeg"
           }
         ]
       },
@@ -648,12 +653,15 @@
         "rating": 4,
         "reviewDate": "1/8/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+	      "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
             "reviewCount": "133",
             "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDescription": "Reply to a comment!",
+	          "replierImage": "images/replier1.jpeg"
           }
         ]
       }
@@ -676,6 +684,8 @@
     "destinationRating": 4.6,
     "destinationFavId": "destinationId10_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "Abbey Churchyard, United Kingdom",
       "latLocation": 51.3811,
@@ -698,12 +708,15 @@
         "rating": 3,
         "reviewDate": "1/1/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+	      "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
             "reviewCount": "133",
             "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDescription": "Reply to a comment!",
+	          "replierImage": "images/replier1.jpeg"
           }
         ]
       },
@@ -715,12 +728,15 @@
         "rating": 4,
         "reviewDate": "1/8/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+	      "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
             "reviewCount": "133",
             "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDescription": "Reply to a comment!",
+	          "replierImage": "images/replier1.jpeg"
           }
         ]
       }
@@ -743,6 +759,8 @@
     "destinationRating": 4.7,
     "destinationFavId": "destinationId11_favourite",
     "isFavourite": false,
+    "isPastHunt": false,
+    "isReviewed": false,
     "location": {
       "addressName": "Broomfield, Maidstone, United Kingdom",
       "latLocation": 51.2487,
@@ -765,12 +783,15 @@
         "rating": 3,
         "reviewDate": "1/1/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
             "reviewCount": "133",
             "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDescription": "Reply to a comment!",
+	          "replierImage": "images/replier1.jpeg"
           }
         ]
       },
@@ -782,12 +803,15 @@
         "rating": 4,
         "reviewDate": "1/8/2022, 3:43 AM",
         "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+	      "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
         "reviewReplies": [
           {
             "name": "Joe Stockton",
             "reviewCount": "133",
             "replyDate": "3 days ago",
-            "replyDescription": "Reply to a comment!"
+            "replyDescription": "Reply to a comment!",
+	          "replierImage": "images/replier1.jpeg"
           }
         ]
       }
