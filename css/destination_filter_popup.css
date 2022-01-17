@@ -156,7 +156,7 @@
     max-width: 54%;
 }
 
-.custom-update-btn {
+/* .custom-update-btn {
     background-color: #00a99d !important;
     color: #ffffff !important;
     border-radius: 50px;
@@ -166,7 +166,7 @@
     width: 65% !important;
     margin: auto;
     margin-top: 20px;
-}
+} */
 
 .text-input-padding-a {
     padding-right: 10px;
@@ -186,7 +186,7 @@
     padding-left: 17px;
 }
 
-.close-image {
+/* .close-image {
     float: right;
     margin-top: 19.8px;
 }
@@ -198,7 +198,7 @@
 
 .dollar-icon-size {
     width: 35px;
-}
+} */
 
 .checkbox-style {
     color: #757575 !important;
