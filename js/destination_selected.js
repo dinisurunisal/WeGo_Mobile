@@ -121,21 +121,7 @@ function loadData(){
       $("#review_card").find(".material-icons").text("star_border");
       $("#"+'review_card' + (i+1)).css("display", "block");
     }
-
-    // deleteDuplicateCards(); 
-
-    // for (var i = 0; i < destination.destinationReviews.length; i++) {
-    //   // document.getElementById("temp_review_id").id = destination.destinationId + '_rev' + (i+1);
-    //   // $("#temp_review_id").attr("id", destination.destinationId + '_rev' + (i+1));
-    //   // $("#"+destination.destinationId + '_rev' + (i+1)).find("#temp_reply_btn_id").attr("id", "reply_btn" + (i+1));
-    // }
 }
-
-// // Delete 'card_script_1'
-// function deleteDuplicateCards() {
-//   var id = document.getElementById("card_script_1");
-//   id.parentNode.removeChild(id);
-// }
 
 function addToFavourites(id) {
 
@@ -179,19 +165,6 @@ function onReplyClick(id) {
     changeWidthForTablets(true);
   }
 }
-
-// function onReplyClick(id) {
-//   replyButtonId = id;
-//   console.log(replyButtonId);
-
-//   // To make the card full width
-//   changeWidthForTablets(true);
-//   // $('.dest_sel_content_block .review_card_section #review-card-resolution-breakpoint').css({
-//   //   'width': '100%',
-//   //   'float': 'left',
-//   // });
-//   // $("#reply_popup_link").click();
-// }
 
 function submitReply() {
   var replyMessage = $("#form_reply").val();
