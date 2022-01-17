@@ -27,67 +27,67 @@
 
 		@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
 			.tickets .booking_card {
-				background-image: url("images/bookBackground.png");
+				background-image: url("images/bookBackground.png") !important;
 			}
 
-			.tk_depature {
-				justify-items: center;
+			.tickets .tk_depature {
+				justify-items: center !important;
 			}
 		}
 
 		@media only screen and (min-device-width: 768px) and (max-device-width: 850px) {
 			.tickets .tk_heading {
-				margin-top: 14%;
+				margin-top: 14% !important;
 			}
 
 			.tickets .booking_card {
-				margin-top: 6%;
-				background-image: url("images/bookBackground2.png");
-				height: 150px;
+				margin-top: 6% !important;
+				background-image: url("images/bookBackground2.png") !important;
+				height: 150px !important;
 			}
 
-			.tk_depature {
-				padding-top: 0.5%;
+			.tickets .tk_depature {
+				padding-top: 0.5% !important;
 			}
 
-			.depature {
-				padding-left: 9vw;
+			.tickets .depature {
+				padding-left: 9vw !important;
 			}
 
-			.duration {
-				margin-top: 9vw;
+			.tickets .duration {
+				margin-top: 9vw !important;
 			}
 
-			.arrival {
-				padding-left: 14vw;
+			.tickets .arrival {
+				padding-left: 14vw !important;
 			}
 		}
 
 		@media only screen and (min-device-width: 1024px) {
 			.tickets .tk_heading {
-				margin-top: 10%;
+				margin-top: 10% !important;
 			}
 
 			.tickets .booking_card {
-				margin-top: 4%;
+				margin-top: 4% !important;
 			}
 
 			.tickets .booking_card {
-				margin-top: 6%;
-				background-image: url("images/bookBackground3.png");
-				height: 138px;
+				margin-top: 6% !important;
+				background-image: url("images/bookBackground3.png") !important;
+				height: 138px !important;
 			}
 
-			.tk_depature {
-				padding-top: 0.5%;
+			.tickets .tk_depature {
+				padding-top: 0.5% !important;
 			}
 
-			.depature {
-				padding-left: 19vw;
+			.tickets .depature {
+				padding-left: 19vw !important;
 			}
 
-			.duration {
-				margin-top: 6vw;
+			.tickets .duration {
+				margin-top: 6vw !important;
 			}
 		}
 	</style>
