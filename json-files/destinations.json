@@ -12,7 +12,7 @@
     "isPastHunt": false,
     "isReviewed": false,
     "location": {
-      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
+      "addressName": "London SW1A 0AA, United Kingdom",
       "latLocation": 6.840424,
       "longLocation": 79.991114
     },
@@ -72,9 +72,6 @@
       "type": "VISA",
       "CVC": "123",
       "exiprationDate": "12/23"
-    },
-    "pastHuntDetails": {
-
     }
   },
   {
@@ -90,7 +87,7 @@
     "isPastHunt": false,
     "isReviewed": false,
     "location": {
-      "addressName": "St. Paul's Churchyard, London EC4M 8AD, United Kingdom",
+      "addressName": "St. Paul's Churchyard, London EC4M 8AD, UK",
       "latLocation": 6.840424,
       "longLocation": 79.991114
     },
@@ -315,7 +312,7 @@
     "isPastHunt": true,
     "isReviewed": true,
     "location": {
-      "addressName": "Cotswolds National Landscape, Cheltenham, UK",
+      "addressName": "Cotswolds Landscape, Cheltenham, UK",
       "latLocation": 51.8330,
       "longLocation": 1.8433
     },
@@ -628,7 +625,7 @@
     "destinationReviews": [
       {
         "name": "Joe Stockton",
-        "reviewerId": "destinationId1_rev1",
+        "reviewerId": "destinationId9_rev1",
         "reviewerImage": "images/reviewer1.jpg",
         "reviewCount": "133",
         "rating": 3,
@@ -645,7 +642,7 @@
       },
       {
         "name": "Mary Watson",
-        "reviewerId": "destinationId1_rev2",
+        "reviewerId": "destinationId9_rev2",
         "reviewerImage": "images/reviewer2.jpg",
         "reviewCount": "120",
         "rating": 4,
@@ -695,7 +692,7 @@
     "destinationReviews": [
       {
         "name": "Joe Stockton",
-        "reviewerId": "destinationId1_rev1",
+        "reviewerId": "destinationId10_rev1",
         "reviewerImage": "images/reviewer1.jpg",
         "reviewCount": "133",
         "rating": 3,
@@ -712,7 +709,7 @@
       },
       {
         "name": "Mary Watson",
-        "reviewerId": "destinationId1_rev2",
+        "reviewerId": "destinationId10_rev2",
         "reviewerImage": "images/reviewer2.jpg",
         "reviewCount": "120",
         "rating": 4,
@@ -762,7 +759,7 @@
     "destinationReviews": [
       {
         "name": "Joe Stockton",
-        "reviewerId": "destinationId1_rev1",
+        "reviewerId": "destinationId11_rev1",
         "reviewerImage": "images/reviewer1.jpg",
         "reviewCount": "133",
         "rating": 3,
@@ -779,7 +776,7 @@
       },
       {
         "name": "Mary Watson",
-        "reviewerId": "destinationId1_rev2",
+        "reviewerId": "destinationId11_rev2",
         "reviewerImage": "images/reviewer2.jpg",
         "reviewCount": "120",
         "rating": 4,

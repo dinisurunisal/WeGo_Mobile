@@ -52,9 +52,6 @@
 				<img src="images/background_find.jpg" id="london_bg" alt="london_bg" width="100%">
 
 				<div class="dest_nav_bar">
-					<a href="#popup-browse-kitchen-filter" data-rel="popup" data-transition="pop" onclick="popupBrowseKitchenFilterRestoreDefault()">
-						<img src="images/icons/filterIcon.png" alt="Filter Icon" class="grey-text" id="dest_filter_icon">
-					</a>
 					<div class="dest_map_button">
 						<a onclick="goToDestinationList()">
 							List
