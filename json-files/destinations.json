@@ -613,8 +613,8 @@
     "isReviewed": false,
     "location": {
       "addressName": "Salisbury SP4 7DE, United Kingdom",
-      "latLocation": 51.1789,
-      "longLocation": 1.8262
+      "latLocation": 51.1739726374,
+      "longLocation": -1.82237671048
     },
     "price": "80.00",
     "priceRange": "Moderate",
@@ -688,8 +688,8 @@
     "isReviewed": false,
     "location": {
       "addressName": "Abbey Churchyard, United Kingdom",
-      "latLocation": 51.3811,
-      "longLocation": 2.3596
+      "latLocation": 51.381072,
+      "longLocation": -2.359619
     },
     "price": "60.00",
     "priceRange": "cheap",
@@ -763,8 +763,8 @@
     "isReviewed": false,
     "location": {
       "addressName": "Broomfield, Maidstone, United Kingdom",
-      "latLocation": 51.2487,
-      "longLocation": 0.6298
+      "latLocation": 51.242165698,
+      "longLocation": 0.623997504
     },
     "price": "90.00",
     "priceRange": "Moderate",
