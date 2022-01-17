@@ -137,7 +137,7 @@ function populateUpcomingHunts() {
     for (var i = 0; i < hunts.length; i++) {
         document.getElementById("upcoming_hunt_card_image").src = hunts[i].imageUrl;
         document.getElementById("upcoming_my_hunts_location_name").innerHTML = hunts[i].poiName;
-        document.getElementById("upcoming_my_hunts_tour_date").innerHTML = "Tour completed on " + hunts[i].bookingDate;
+        document.getElementById("upcoming_my_hunts_tour_date").innerHTML = "Tour starts on " + hunts[i].bookingDate;
         document.getElementById("upcoming_tour_route").innerHTML = hunts[i].routeStart + " - " + hunts[i].routeFinish;
         document.getElementById("upcoming_tour_duration").innerHTML = hunts[i].durationHours + "h " + hunts[i].durationMin + "m";
         document.getElementById("upcoming_tour_passengers").innerHTML = hunts[i].passengers + " Adults";
