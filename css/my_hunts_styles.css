@@ -111,41 +111,6 @@
 	float: right;
 }
 
-/* #my-hunts-page .form_button_container {
-	display: grid !important;
-	grid-auto-flow: column;
-	justify-content: space-around;
-}
-
-#my-hunts-page #my_hunts_feedback #form_comment {
-	height: 80px !important;
-	min-width: 240px;
-	background-color: #c4c4c4;
-}
-
-#my-hunts-page .ui-popup-screen.in {
-	background-color: #404040;
-}
-
-#my_hunts_feedback-popup {
-	min-width: 280px;
-}
-
-#my-hunts-page #my_hunts_feedback {
-	background-color: white;
-	text-align: center;
-	padding: 16px !important;
-}
-
-#my-hunts-page #my_hunts_feedback .submit_btn {
-	background-color: #0174cf;
-	color: white;
-}
-
-#my-hunts-page #my_hunts_feedback .cancel_btn {
-	color: #0174cf;
-} */
-
 
 @media only screen
 	and (min-device-width: 812px)
