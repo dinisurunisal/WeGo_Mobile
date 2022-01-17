@@ -2612,3 +2612,190 @@ and (max-device-width: 850px) {
 	
 }
 
+/* profile page */
+/* ######################################################################################## */
+
+
+/* top background banner */
+#profile_page .s4_top_banner{
+    margin-top:44px;
+    margin-left:-16px;
+    margin-right:-16px;
+    position: relative;
+}
+#profile_page #s4_background{
+    height:200px;
+    width:100%;
+    object-fit:fill;
+    position: relative;
+    
+}
+#profile_page #s4_profile{
+    height:px;
+    width:100px;
+    object-fit:fill;
+    position: absolute;
+
+    margin:auto;
+    display:block;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+       right: 0;
+       bottom: 0;
+}
+
+/* top background banner - end */
+
+
+#profile_page .s4_edit_logout_bar{
+    background-color:#0174cf;
+    width:100%;
+    padding: 5px 5px 5px 5px;
+    margin-top:-22px;
+}
+#profile_page #s4_flex_container{
+    display: flex;
+}
+#profile_page #s4_flex_child{
+    flex:1;
+}
+#profile_page .user_data_r1{
+    text-align:center;
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: row;
+}
+#profile_page .user_data_r2{
+    text-align:center;
+    display: flex;
+    /* flex-direction: row; */
+    flex-direction: row;
+}
+#profile_page .button_container{
+    display:flex;
+    justify-content: space-around;
+    /* flex-direction:row; */
+    flex-direction: row;
+}
+#profile_page .button{
+    /* display:flex; */
+    width:341px;
+    height:85px;
+    border-radius:6px;
+    border-color:#0174cf;
+    background-color:#0174cf;
+    margin:10px;
+    color:white;
+
+}
+
+#profile_page .button__text,.button__icon {
+      display: inline-flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 24px;
+}
+
+#profile_page .button_popup{
+    height:30px;
+    width:100px;
+    border: none;
+    border-radius:12px;
+}
+
+#profile_page #profile_feedback_send_btn {
+    color:white;
+    background-color: #0174cf;
+}
+
+#profile_page #profile_edit_send_btn {
+    color:white;
+    background-color: #0174cf;
+}
+
+#profile_page #profile_feedback_cancel_btn{
+    color:#0174cf;
+    background-color: white;
+}
+
+#profile_page #profile_edit_cancel_btn{
+    color:#0174cf;
+    background-color: white;
+}
+
+@media only screen and (max-device-width: 375px) {
+    #profile_page .button_container{
+        flex-direction: column;
+    }
+    #profile_page .user_data_r1{
+        flex-direction: column;
+    }
+    #profile_page .user_data_r2{
+        flex-direction: column;
+    }
+
+}
+#profile_page .data{
+    display:flex;
+    flex: 1;
+}
+#profile_page .data_child{
+    flex:1;
+    margin: 10px;
+    padding-left: 20px;
+    text-align: left;
+}
+#profile_page #data_name{
+    font-weight: bold;
+}
+
+#profile_page .profile_video {
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 85%; /* Need a specific value to work */
+    object-fit: cover;
+}
+
+#profile_page .profile_video iframe {
+    width: 660px;
+    height: 340px;
+}
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px) {
+    #profile_page .profile_video iframe {
+        width: 320px;
+        height: 200px;
+    }
+    
+}
+
+@media only screen
+and (min-device-width: 812px)
+and (max-device-width: 850px) {
+    #profile_page .profile_video iframe {
+        width: 690px;
+        height: 315px;
+    }
+}
+
+@media only screen and (min-device-width: 1024px) {
+    #profile_page .profile_video iframe {
+        width: 870px;
+        height: 415px;
+    }
+}
+
+#profile_page .center{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+
+
+ 
