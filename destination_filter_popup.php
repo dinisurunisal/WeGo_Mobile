@@ -20,13 +20,13 @@
     <form>
         <fieldset data-role="controlgroup" id="destination_filter_popup_checkbox_group-2">
             
-            <input type="radio" name="radio-button-name" id="radio-button-name">
+            <input type="radio" name="radio" id="radio-button-name">
             <label for="radio-button-name" class="checkbox-style">Name</label>
 
-            <input type="radio" name="radio-button-rating" id="radio-button-rating">
+            <input type="radio" name="radio" id="radio-button-rating">
             <label for="radio-button-rating" class="checkbox-style">Rating</label>
 
-            <input type="radio" name="radio-button-priceRange" id="radio-button-priceRange">
+            <input type="radio" name="radio" id="radio-button-priceRange">
             <label for="radio-button-priceRange" class="checkbox-style">Price Range</label>
         </fieldset>
     </form>
