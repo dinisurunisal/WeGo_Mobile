@@ -55,3 +55,9 @@ function onDestinationSelect(id) {
       showFailure("Unable to load")
   }
 }
+
+function seeAll(){
+   var destinations = JSON.parse(localStorage.getItem("destinations"));
+  localStorage.setItem("sortedDestinations", JSON.stringify(destinations));
+  window.location.href='destination_list.php';
+}

@@ -15,6 +15,7 @@ $(function initialization(){
 
   $("#reply_space").css("display", "none");
   $("#review_card").css("display", "none");
+
   loadData();
 });
 
@@ -27,6 +28,8 @@ function loadData(){
     $('#dest_sel_address').text(destination.location.addressName);
     $('#dest_sel_crowd').text(destination.crowdRange);
     $('#dest_sel_price').text(dollarSign + ' ' + destination.price);
+    $('#dest_sel_description1').text(destination.destinationDescription1);
+    $('#dest_sel_description2').text(destination.destinationDescription2);
 
     document.getElementById("favouriteId").id = destination.destinationFavId;
 
@@ -47,22 +50,22 @@ function loadData(){
       //minutes
       timePassed = Math.trunc(timePassed / 60);
       if (timePassed < 60)
-        return `${timePassed} minute${timePassed === 1 ? '' : 's'} ago`;
+        return `${timePassed} m`;
     
       //hours
       timePassed = Math.trunc(timePassed / 60);
       if (timePassed < 24)
-        return `${timePassed} hour${timePassed === 1 ? '' : 's'} ago`;
+        return `${timePassed} hr`;
     
       //Days
       timePassed = Math.trunc(timePassed / 24);
       
       if (timePassed === 1) return 'Yesteday';
-      if (timePassed < 7) return `${timePassed} days ago`;
+      if (timePassed < 7) return `${timePassed} days`;
       if (timePassed <= 28)
         return `${Math.trunc(timePassed / 7)} week${
           timePassed < 14 ? '' : 's'
-        } ago`;
+        }`;
     
       const curDate = new Date(date);
       const convDate = new Intl.DateTimeFormat(navigator.language).format(curDate);
@@ -102,11 +105,20 @@ function loadData(){
       $("#review_card").clone().appendTo("#review_space");
       $("#review_space").find("#review_card").attr("id", 'review_card' + (i+1));
       $("#"+ 'review_card' + (i+1)).find("#temp_review_id").attr("id", destination.destinationId + '_rev' + (i+1));
-      $("#"+destination.destinationId + '_rev' + (i+1)).find("#temp_reply_btn_id").attr("id", "reply_btn" + (i+1));
+      $("#"+ 'review_card' + (i+1)).find("#temp_count").attr("id", destination.destinationId + '_count' + (i+1));
+      $("#"+destination.destinationId + '_rev' + (i+1)).find("#temp_reply_btn_id").attr("id", "reply_" + destination.destinationId + '_rev' + (i+1));
+
+      //open reply button
+      if(replyList.length > 0) {
+        let message = `${replyList.length} ${ replyList.length < 2 ? 'Reply' : 'Replies'}`;
+        $("#" + destination.destinationId + '_count' + (i+1)).text(message)
+      } else {
+        $("#" + destination.destinationId + '_count' + (i+1)).css("display", "none");
+      }
 
       //clean original card
       $("#review_card").find("#reply_space").empty();
-
+      $("#review_card").find(".material-icons").text("star_border");
       $("#"+'review_card' + (i+1)).css("display", "block");
     }
 
@@ -153,43 +165,58 @@ function addToFavourites(id) {
 
 }
 
-function onCardClick(id) {
+function onReplyClick(id) {
   console.log(id)
-  var repliesSection = $("#"+id).find("#reply_space");
+  cardId = $("#"+ id).parents(".dest_review_card").attr("id");
+  
+  replyButtonId = cardId;
+  var repliesSection = $("#"+cardId).find("#reply_space");
   if(repliesSection.css("display") == "block") {
     repliesSection.css("display", "none");
+    changeWidthForTablets(false);
   } else {
     repliesSection.css("display", "block");
+    changeWidthForTablets(true);
   }
 }
 
-function onReplyClick(id) {
-  replyButtonId = id;
-  console.log(replyButtonId);
+// function onReplyClick(id) {
+//   replyButtonId = id;
+//   console.log(replyButtonId);
 
-  // To make the card full width
-  $('.dest_sel_content_block .review_card_section #review-card-resolution-breakpoint').css({
-    'width': '100%',
-    'float': 'left',
-  });
-  // $("#reply_popup_link").click();
-}
+//   // To make the card full width
+//   changeWidthForTablets(true);
+//   // $('.dest_sel_content_block .review_card_section #review-card-resolution-breakpoint').css({
+//   //   'width': '100%',
+//   //   'float': 'left',
+//   // });
+//   // $("#reply_popup_link").click();
+// }
 
 function submitReply() {
   var replyMessage = $("#form_reply").val();
 
-  let reviewNo = parseInt(replyButtonId.slice(9))-1;
-  console.log(parseInt(reviewNo));
+  let reviewNo = parseInt(replyButtonId.split("rev")[1])-1;
   let count = destination.destinationReviews[reviewNo].reviewReplies.length;
+
+  var date = Intl.DateTimeFormat(navigator.language, {
+      day: 'numeric',
+      month: 'numeric',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+  }).format(new Date());
+
   destination.destinationReviews[reviewNo].reviewReplies[count] = {
       name: currentlySignedInUser.username,
       reviewCount: currentlySignedInUser.reviewCount,
       replierImage: currentlySignedInUser.profileImage,
       replyDescription: replyMessage,
+      replyDate: date
   };
 
-  console.log(destination.destinationReviews[reviewNo].reviewReplies);
   localStorage.setItem("destinations", JSON.stringify(destinations));
+  destinations = JSON.parse(localStorage.getItem("destinations"));
 
   // showSuccess("Reply saved.");
   $("#destination_reply").popup("close")
@@ -198,6 +225,23 @@ function submitReply() {
 
   setTimeout(function () {
       location.reload();
+  }, 500);
+}
 
-  }, 2000);
+function changeWidthForTablets(openState) {
+  var x = window.matchMedia("(min-width: 700px)")
+  var y = window.matchMedia("(min-height: 750px)")
+  if(x.matches) {
+    if (y.matches & openState) { // If media query matches
+      $('.dest_sel_content_block .review_card_section #review-card-resolution-breakpoint').css({
+        'width': '100%',
+        'float': 'left',
+      });
+    } else if ((y.matches & !openState)) {
+      $('.dest_sel_content_block .review_card_section #review-card-resolution-breakpoint').css({
+        'width': '50%',
+        'float': 'left',
+      });
+    }
+  }
 }

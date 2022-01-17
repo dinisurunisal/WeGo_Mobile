@@ -26,7 +26,8 @@
 
 		<!-- Custom -->
 		<script src="js/destination_list.js"></script>
-
+		<script src="js/destination_search.js"></script>
+		
 	</head>
 
 	<body>

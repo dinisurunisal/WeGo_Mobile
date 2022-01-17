@@ -163,6 +163,7 @@
     "destinationFavId": "destinationId3_favourite",
     "isFavourite": false,
     "isPastHunt": true,
+    "isReviewed": false,
     "location": {
       "addressName": "123 Colombo Road, Colombo, Sri Lanka",
       "latLocation": 6.840424,
@@ -182,7 +183,7 @@
         "reviewerId": "destinationId3_rev1",
         "reviewerImage": "images/reviewer1.jpg",
         "reviewCount": "133",
-        "rating": 3,
+        "rating": 5,
         "reviewDate": "1/3/2022, 3:43 AM",
         "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
         "tourDate":"Tour completed on 20-12-2021", 
@@ -231,17 +232,17 @@
     "destinationName": "Tower of London",
     "destinationImage": "images/destinations/Tower of London.jpg",
     "destinationCardDetails": "Medieval castle housing the crown jewels",
-    "destinationDescription1": "Best sea food kitchen in Colombo",
-    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationDescription1": "The Tower of London has served as an armoury, a treasury, a menagerie, a public record office, the home of the Royal Mint, and the home of the Crown Jewels of England.",
+    "destinationDescription2": "It was founded towards the end of 1066 as part of the Norman Conquest. The White Tower, which gives the entire castle its name, was built by William the Conqueror in 1078.",
     "destinationRating": 3.5,
     "destinationFavId": "destinationId4_favourite",
     "isFavourite": false,
     "isPastHunt": false,
     "isReviewed": false,
     "location": {
-      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
-      "latLocation": 6.840424,
-      "longLocation": 79.991114
+      "addressName": "EC3N 4AB, London, UK",
+      "latLocation": 51.508530,
+      "longLocation": -0.076132
     },
     "price": "28.90",
     "priceRange": "cheap",
@@ -306,17 +307,17 @@
     "destinationName": "The Cotsworlds",
     "destinationImage": "images/destinations/Cotswolds.jpg",
     "destinationCardDetails": "Hills with medieval villages & churches",
-    "destinationDescription1": "Best sea food kitchen in Colombo",
-    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationDescription1": "The Cotswolds is located along a range of hills rising from the meadows of the upper Thames to an escarpment above the Severn Valley and Evesham Vale. It covers  787 square miles in total.",
+    "destinationDescription2": "The largest excavation of Jurassic-era echinoderm fossils occurred at a quarry in the Cotswolds. Remains of Bronze and Iron Age forts and evidence of Neolithic settlement are found here.",
     "destinationRating": 4.5,
     "destinationFavId": "destinationId5_favourite",
     "isFavourite": false,
     "isPastHunt": true,
     "isReviewed": true,
     "location": {
-      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
-      "latLocation": 6.840424,
-      "longLocation": 79.991114
+      "addressName": "Cotswolds National Landscape, Cheltenham, UK",
+      "latLocation": 51.8330,
+      "longLocation": 1.8433
     },
     "price": "40.25",
     "priceRange": "cheap",
@@ -325,7 +326,7 @@
       "england"
     ],
     "time": "10:30 to 22:30",
-    "crowdRange": "Moderately Crowded",
+    "crowdRange": "Not Crowded",
     "destinationReviews": [
       {
         "name": "Joe Stockton",
@@ -334,7 +335,7 @@
         "reviewCount": "133",
         "rating": 4,
         "reviewDate": "1/7/2022, 3:43 AM",
-        "reviewDescription": "You must visit here to see what a glamorous place it is !!!",
+        "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
         "tourDate":"Tour completed on 25-12-2021", 
         "tourDetails":"EUS - DEL | 1h 11m | Two Way",
         "reviewReplies": [
@@ -348,9 +349,9 @@
         ]
       },
       {
-        "name": "Mary Watson",
+        "name": "John Watson",
         "reviewerId": "destinationId5_rev2",
-        "reviewerImage": "images/reviewer2.jpg",
+        "reviewerImage": "images/profile_page/profile_image.jpeg",
         "reviewCount": "120",
         "rating": 5,
         "reviewDate": "1/8/2022, 3:43 AM",
@@ -381,17 +382,17 @@
     "destinationName": "Warwick Castle",
     "destinationImage": "images/destinations/Warwick Castle.jpg",
     "destinationCardDetails": "Iconic clifftop fortress & dungeons",
-    "destinationDescription1": "Best sea food kitchen in Colombo",
-    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationDescription1": "The Warwick Castle is a medieval castle developed from a wooden fort. The castle was originaly built during 1068 by William the Conqueror",
+    "destinationDescription2": "It has been a famous visiting site since the end of 17th century. In 2001 the British Tourist Authority named the castle was named as one of Britain's top 10 historic houses and monuments.",
     "destinationRating": 4.5,
     "destinationFavId": "destinationId6_favourite",
     "isFavourite": false,
     "isPastHunt": false,
     "isReviewed": false,
     "location": {
-      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
-      "latLocation": 6.840424,
-      "longLocation": 79.991114
+      "addressName": "CV34 4QU, Warwick, UK",
+      "latLocation": 52.2797,
+      "longLocation": 1.5852
     },
     "price": "70.00",
     "priceRange": "cheap",

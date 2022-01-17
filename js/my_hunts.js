@@ -104,9 +104,11 @@ function populatePastHunts() {
             document.getElementById("past_my_hunts_tour_date").innerHTML = destinationList[i].destinationReviews[1].tourDate;
             document.getElementById("past_my_hunts_tour_details").innerHTML = destinationList[i].destinationReviews[1].tourDetails;
     
+            console.log(destinationList[i].destinationName + !destinationList[i].isReviewed);
             if (!destinationList[i].isReviewed) {
                 document.getElementById("tour_star_holder").style.display = "none";
                 document.getElementById("tour_review").style.display = "none";
+                document.getElementById("button_space").style.display = "block";
             } else {
                 document.getElementById("button_space").style.display = "none"
                 document.getElementById("tour_star_holder").style.display = "block"
@@ -119,12 +121,13 @@ function populatePastHunts() {
                 }
             }
     
-            $("#past_my_hunts_list").clone().appendTo("#past_my_hunts_list_2");
+            $("#past_hunt_card").clone().appendTo("#past_hunts_space");
+            $("#past_hunts_space").find("#past_hunt_card").attr("id", 'past_hunt_card_' + destinationList[i].destinationId);
+            $("#past_hunt_card_" + destinationList[i].destinationId).find(".card_image_section").attr("id", "card_image_" + destinationList[i].destinationId);
         }
     }
 
-    deleteDuplicateCards("past_my_hunts_list"); 
-
+    deleteDuplicateCards("past_hunt_card"); 
 }
 
 // Delete duplicate cards
@@ -220,4 +223,16 @@ function pushReview(destID, starValue, commentValue) {
     destination.isReviewed = true;
     console.log(destination.destinationReviews);
     localStorage.setItem("destinations", JSON.stringify(destinationList));
+}
+
+
+function goToDestination(cardId) {
+    let id = cardId.slice(11);
+    
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem("clickedDestinationId", id);
+        window.location = "destination_selected.php";
+    } else {
+        showFailure("Unable to load");
+    }
 }

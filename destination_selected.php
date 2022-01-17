@@ -125,10 +125,10 @@
 						</div>
 
 						<div class="dest_sel_description">
-							<p> The Houses of Parliament and Elizabeth Tower, commonly called Big Ben, are among London's most iconic landmarks and must-see London attractions. Technically, Big Ben is the name given to the massive bell inside the clock tower, which weighs more than 13 tons (13,760 kg). 
+							<p id="dest_sel_description1"> The Houses of Parliament and Elizabeth Tower, commonly called Big Ben, are among London's most iconic landmarks and must-see London attractions. Technically, Big Ben is the name given to the massive bell inside the clock tower, which weighs more than 13 tons (13,760 kg). 
 								The clock tower looks spectacular at night when the four clock faces are illuminated. 
 							</p>
-							<p>
+							<p id="dest_sel_description1">
 								Big Ben first rang across Westminster on 31 May 1859. A short time later, in September 1859, 
 								Big Ben cracked. A lighter hammer was fitted and the bell rotated to present an undamaged section 
 								to the hammer. This is the bell as we hear it today.
@@ -147,7 +147,7 @@
 								<div id="review_card">
 									<div id="review-card-resolution-breakpoint">
 										<li>
-											<div class="dest_review_card" id="temp_review_id" onclick="onCardClick(this.id)">
+											<div class="dest_review_card" id="temp_review_id">
 												<div class="dest_reviewer">
 													<img src="images/reviewer1.jpg" id="review_thumb_image">
 													<div class="dest_reviewer_info">
@@ -166,7 +166,8 @@
 													<p2 id="dest_reviewer_date">3 days ago</p2>
 												</div>
 												<p class="dest_review_comment" id="dest_review_comment">One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!</p>
-												<div class="dest_review_reply">
+												<div id="reply_count_id" class="dest_review_reply">
+													<p2 class="review_count" id="temp_count" onclick="onReplyClick(this.id)">Reply count</p2>
 													<div class="reply_btn" id="temp_reply_btn_id" onclick="onReplyClick(this.id)">
 														<a id="reply_popup_link" href="#destination_reply" data-rel="popup" data-transition="pop" data-position-to="window">
 															<button id="reply_button"><p>Reply</p></button>
@@ -189,14 +190,12 @@
 										</li> 
 									</div>
 								</div>
-
 								<div id="review_space"></div>
 							</ul>
 						</div>
 
 					</div>
 				</div>
-
 				<?php include("destination_reply.php")?>
 			</div>
 
@@ -205,8 +204,6 @@
 			</div> -->
 
 			<?php include("success_popups.php"); ?>
-
-
 			<?php include("footer.php"); ?>
 			<?php include("navigation_bar.php"); ?>
 		</div>
