@@ -929,6 +929,82 @@ p2 {
     color: white;
 }
 
+/* Treasure hunt game page
+----------------------------------------------------------------------------------- */
+#treasure_hunt_game_page {
+    background-image:url(../images/game/gameBackground.png);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    text-align: center;
+}
+
+#treasure_hunt_game_page .game_name {
+    width: 164px;
+}
+
+#treasure_hunt_game_page .game_content {
+    height: -webkit-fill-available;
+    display: grid; 
+    grid-template-columns: auto;
+    padding: 24px 24px 24px 24px;
+    align-content: center;
+}
+
+#treasure_hunt_game_page .game_content #game_area, #game_info {
+    text-align: -webkit-center;
+    padding: 24px 24px 24px 24px;
+    width: 75vw;
+    height: 75vw;
+}
+
+#treasure_hunt_game_page #game_info {
+    display: grid;
+    align-items: end;
+    justify-items: center;
+}
+
+#treasure_hunt_game_page #game_info h1, #treasure_hunt_game_page #game_info p {
+    color: white;
+    max-width: 280px;
+}
+
+#treasure_hunt_game_page #game_info h1 {
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+#treasure_hunt_game_page .game_exit_btn {
+    width: 70px !important;
+}
+
+#treasure_hunt_game_page table {
+    height: -webkit-fill-available !important;
+    width: -webkit-fill-available !important;
+    background-color: white;
+    border-radius: 12px;
+    border-style: solid;
+    border-color: white;
+    border-width: medium;
+    border-spacing: 0px;
+    padding: 4px;
+}
+
+#treasure_hunt_game_page td {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    border-color: white;
+    border-style: solid;
+    border-width: medium;
+    padding: 0px;
+    border: 0px;
+}
+
+#treasure_hunt_game_page td img {
+    width: 96%;
+    height: 96%;
+}
+
 .toggle {
 	border-radius: 12px !important;
 	background-color: #ffffff !important;
