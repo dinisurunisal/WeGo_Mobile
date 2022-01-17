@@ -20,64 +20,26 @@
         <script type="text/javascript" src="js/my_hunts.js"></script>
         
         <style>
-            #scan_qr_section {
-                width: -webkit-fill-available;
-                background-color: white;
-                border-radius: 12px;
-                display: grid;
-                grid-template-columns: auto auto;
-                height: fit-content;
-                position: fixed;
-                bottom: 68px;
-                box-shadow: #c4c4c4 0px 1px 12px;
-                padding: 12px;
-                align-items: flex-end;
-                justify-content: space-between;
-                margin: 0px 12px;
-                z-index: 199;
-            }
-
-            #scan_qr_section .scan_instructions {
-                padding: 12px;
-            }
-
-            #scan_qr_section p {
-                margin: 0px 0px 8px 0px !important;
-                font-weight: bold;
-            }
-
-            #scan_qr_section p2{
-                margin: 0px !important;
-            }
-
-            #scan_qr_section button{
-                margin: 0px !important;
-                width: 98px;
-                color: white;
-                background-color: #0174cf;
-                text-shadow: none;
-            }
-
             @media only screen 
-                    and (max-device-height: 570px) {
-                        #scan_qr_section .scan_instructions p2{
-                            display: none !important;
-                        }
-
-                        #scan_qr_section {
-                            width: fit-content !important;
-                            top: 68px !important;
-                            right: 10px !important;
-                            padding: 8px 12px 8px 0px !important;
-                            align-items: center !important;
-                        }
-
-                        
-                        #scan_qr_section p {
-                            margin: 0px !important;
-                        }
+                and (max-device-height: 570px) {
+                    #scan_qr_section .scan_instructions p2{
+                        display: none !important;
                     }
 
+                    #scan_qr_section {
+                        width: fit-content !important;
+                        top: 68px !important;
+                        right: 10px !important;
+                        padding: 8px 12px 8px 0px !important;
+                        align-items: center !important;
+                        margin: 0px 1vw !important;
+                    }
+
+                    
+                    #scan_qr_section p {
+                        margin: 0px !important;
+                    }
+                }
         </style>
     </head>
 
