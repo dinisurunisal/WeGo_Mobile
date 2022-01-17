@@ -1719,7 +1719,7 @@ and (max-device-width: 850px) {
 	margin-bottom: 24px;
 }
 
-#treasure_hunt_content .game_search_box {
+#treasure_hunt_content .destination_search_box {
     display: inline-grid;
 	width: 85% !important;
     grid-template-columns: auto 40px;
@@ -1732,25 +1732,25 @@ and (max-device-width: 850px) {
     background-color: white;
 }
 
-.game_search_box a{
+.destination_search_box a{
     width: 40px;
     padding: 0px;
     margin: 0px !important; 
     border-radius: 12px !important;
 }
 
-.game_search_box .ui-input-search {
+.destination_search_box .ui-input-search {
     height: 26px !important;
     margin-top: 14px !important;
     margin-bottom: 4px !important;
 }
 
-.game_search_box input {
+.destination_search_box input {
     min-height: 26px !important;
     padding: 1px 8px 1px 14px !important;
 }
 
-.game_search_box .ui-input-text {
+.destination_search_box .ui-input-text {
     border: none !important;
     box-shadow: none !important;
     margin: 0px;
@@ -2401,3 +2401,134 @@ and (max-device-width: 850px) {
         object-fit: cover;
     }
 }
+
+
+/* My Hunts page
+----------------------------------------------------------------------------------- */
+
+#my-hunts-page .toggle {
+	border-radius: 12px !important;
+	background-color: #ffffff !important;
+	margin: 16px;
+	padding: 5px 8px 5px 4px;
+	box-shadow: 2px 4px 6px #c4c4c4;
+}
+
+#my-hunts-page .toggle-buttons {
+	margin-left: none !important;
+	margin-right: none !important;
+	border-radius: 8px !important;
+	/* box-shadow: 2px 4px 6px #c4c4c4; */
+}
+
+#my-hunts-page .my_hunts_card {
+	border-radius: 12px;
+	height: 200px;
+	max-width: 100%;
+	margin: 8px 4px 8px 4px;
+	box-shadow: 0px 0px 6px #c4c4c4 !important;
+}
+
+#my-hunts-page .my_hunts_card img {
+	border-radius: 12px 0px 0px 12px; /* Add rounded corners to the top left and the top right corner of the image */
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+}
+
+#my-hunts-page #my_hunt_resolution_breakdown {
+	width: 100%;
+}
+
+#my-hunts-page .card_image_section {
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+	width: 35%;
+	display: grid;
+	float: left;
+}
+
+#my-hunts-page .card_image_section p, .button_space p2 {
+	opacity: 0;
+}
+
+#my-hunts-page .tour_review {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 97%;
+	color: #777676;
+}
+
+#my-hunts-page .my_hunts_card_content {
+	background-color: white;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+	display: grid;
+	align-items: center;
+	padding: 4px 0 4px 8px;
+	text-align: left;
+	height: 192px;
+}
+
+#my-hunts-page .my_hunts_card_content h3, p2 {
+	width: fit-content;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+#my-hunts-page .my_hunts_tour_date {
+	color: #a7a7a7;
+}
+
+#my-hunts-page .my_hunts_upcoming_details {
+	padding-top: 8px;
+	display: grid;
+	height: fit-content;
+	grid-template-columns: auto auto;
+	grid-column-gap: 4px;
+}
+
+#my-hunts-page .feedback_btn {
+	width: 158px !important;
+	background-color: #0174cf !important;
+	color: white !important;
+	text-shadow: none !important;
+}
+
+#my-hunts-page .my_hunts_card_content .tour_star_holder {
+    margin-right: 8px;
+}
+
+#my-hunts-page .my_hunts_card_content .tour_star_holder p2 {
+    vertical-align: top;
+	margin-left: 10px !important;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+	width: 100% !important;
+	font-size: 16px;
+}
+
+#my-hunts-page .button_space {
+	padding-top: 8px;
+	display:inline-block;
+	width: 95%;
+}
+
+#my-hunts-page .button_space .feedback_btn {
+	float: right;
+}
+
+
+@media only screen
+	and (min-device-width: 812px)
+	and (max-device-width: 900px) {
+	#my-hunts-page #my_hunt_resolution_breakdown {
+		width: 50%;
+		float: left;
+	}
+	
+}
+
+
+ 
