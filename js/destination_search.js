@@ -10,26 +10,31 @@ function onSearchBtnClick() {
     let searchValue = $("#destination-search-input").val();
     let searchValueList = searchValue.split(" ");
 
-    for (let i = 0; i < destinations.length; i++) {
-        let name = String(destinations[i].destinationName).toLowerCase(); 
-        for (let j = 0; j < searchValueList.length; j++) {
+    console.log(searchValue)
 
-            if (name.includes(searchValueList[j])) {
-                let found = false;
-                searchResults.forEach(element => {
-                    if (element.destinationId == destinations[i].destinationId) {
-                        found = true;
-                    } 
-                });
-
-                if (found == false) {
-                    searchResults.push(destinations[i]);
-                }
-                      
-            } 
-        }   
+    if (searchValue != "") {
+        for (let i = 0; i < destinations.length; i++) {
+            let name = String(destinations[i].destinationName).toLowerCase(); 
+            for (let j = 0; j < searchValueList.length; j++) {
+    
+                if (name.includes(searchValueList[j])) {
+                    let found = false;
+                    searchResults.forEach(element => {
+                        if (element.destinationId == destinations[i].destinationId) {
+                            found = true;
+                        } 
+                    });
+    
+                    if (found == false) {
+                        searchResults.push(destinations[i]);
+                    }
+                          
+                } 
+            }   
+        }
     }
 
+    console.log(searchResults.length);
     if (searchResults.length > 0) {
         checkSorted = true;
     }else{
