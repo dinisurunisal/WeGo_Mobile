@@ -17,7 +17,7 @@ $(function initialization(){
         if(cameras.length > 0) {
             scanner.start(cameras[0]);
         } else {
-            alert ('No camera found');
+            showFailure("Camera Not Found");
         }
     }).catch(function(e) {
         console.error(e);
@@ -26,7 +26,6 @@ $(function initialization(){
     scanner.addListener('scan', function(c) {
         $("#feedback_link").click();
         destination = destinations.find(obj => obj.destinationId === c);
-        console.log(c)
         setupStars() 
     });
 });
@@ -73,25 +72,24 @@ function setupStars() {
 
 function submitFeedback() {
 
-   var comment = $("#form_comment").val();
-   var starCount = 0;
-   $('#star_rating_holder').children('i').each(function () {
-       if ($(this).html() == "star") {
-           starCount++;
-           console.log(starCount)
-       }
-   });
+    //get values from feedback popup
+    var comment = $("#form_comment").val();
+    var starCount = 0;
+    $('#star_rating_holder').children('i').each(function () {
+        if ($(this).html() == "star") {
+            starCount++;
+        }
+    });
 
-   pushReview(destination.destinationId, starCount, comment);
+    pushReview(destination.destinationId, starCount, comment);
 
-   UpdatePoints();
-   $("#popupBasic").popup("close")
+    UpdatePoints();
+    $("#popupBasic").popup("close")
 
-   setTimeout(function () {
-       location.reload();
-
-   }, 2000);
-   window.location.href='my_hunts.php'
+    setTimeout(function () {
+        location.reload();
+    }, 2000);
+    window.location.href='my_hunts.php'
 }
 
 function UpdatePoints(){
@@ -101,6 +99,7 @@ function UpdatePoints(){
     showSuccess("Feedback saved.");
 }
 
+//push the review to list of destinations
 function pushReview(destID, starValue, commentValue) {
     const month = ["01","02","03","04","05","06","07","08","09","10","11","12"];
 
@@ -134,6 +133,5 @@ function pushReview(destID, starValue, commentValue) {
     localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser))
 
     destination.isReviewed = true;
-    console.log(destination.destinationReviews);
     localStorage.setItem("destinations", JSON.stringify(destinations));
 }
