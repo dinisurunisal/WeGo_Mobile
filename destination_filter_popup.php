@@ -19,14 +19,14 @@
     <form>
         <fieldset data-role="controlgroup" id="browse_kitchen_filter_popup_checkbox_group-2">
             
-            <input type="radio" name="browse-kitchen-filter-popup-vegetarian" id="browse-kitchen-filter-popup-vegetarian">
-            <label for="browse-kitchen-filter-popup-vegetarian" class="checkbox-style">Name</label>
+            <input type="radio" name="radio-button-name" id="radio-button-name">
+            <label for="radio-button-name" class="checkbox-style">Name</label>
 
-            <input type="radio" name="browse-kitchen-filter-popup-gluten-free" id="browse-kitchen-filter-popup-gluten-free">
-            <label for="browse-kitchen-filter-popup-gluten-free" class="checkbox-style">Rating</label>
+            <input type="radio" name="radio-button-rating" id="radio-button-rating">
+            <label for="radio-button-rating" class="checkbox-style">Rating</label>
 
-            <input type="radio" name="browse-kitchen-filter-popup-vegan" id="browse-kitchen-filter-popup-vegan">
-            <label for="browse-kitchen-filter-popup-vegan" class="checkbox-style">Price Range</label>
+            <input type="radio" name="radio-button-priceRange" id="radio-button-priceRange">
+            <label for="radio-button-priceRange" class="checkbox-style">Price Range</label>
         </fieldset>
     </form>
 

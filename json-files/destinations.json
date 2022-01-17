@@ -454,8 +454,8 @@
     "destinationName": "York Minster",
     "destinationImage": "images/destinations/York Minster.jpg",
     "destinationCardDetails": "Iconic gothic-style medieval cathedral",
-    "destinationDescription1": "Best sea food kitchen in Colombo",
-    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationDescription1": "The Cathedral and Metropolitical Church of Saint Peter in York, commonly known as York Minster, is the cathedral of York, England, and is one of the largest of its kind in Northern Europe. The minster is the seat of the Archbishop of York, the third-highest office of the Church of England (after the monarch as Supreme Governor and the Archbishop of Canterbury), and is the mother church for the Diocese of York and the Province of York. ",
+    "destinationDescription2": "Since the 7th century, the Minster has been at the centre of Christianity in the north of England and today remains a thriving church rooted in the daily offering of worship and prayer. The Minster was built for the glory of God. Every aspect of this ancient building - from the exquisite, handcrafted stone through to the unrivalled collection of medieval stained glass.",
     "destinationRating": 4.5,
     "destinationFavId": "destinationId7_favourite",
     "isFavourite": false,
@@ -529,8 +529,8 @@
     "destinationName": "The British Museum",
     "destinationImage": "images/destinations/The British Museum.jpg",
     "destinationCardDetails": "A historian's treasure trove",
-    "destinationDescription1": "Best sea food kitchen in Colombo",
-    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationDescription1": "The British Museum is a public museum dedicated to human history, art and culture located in the Bloomsbury area of London. Its permanent collection of eight million works is among the largest and most comprehensive in existence. It documents the story of human culture from its beginnings to the present. The British Museum was the first public national museum in the world.",
+    "destinationDescription2": "The Museum was established in 1753, largely based on the collections of the Anglo-Irish physician and scientist Sir Hans Sloane. It first opened to the public in 1759, in Montagu House, on the site of the current building. The museum's expansion over the following 250 years was largely a result of British colonisation and has resulted in the creation of several branch institutions, or independent spin-offs, the first being the Natural History Museum in 1881.",
     "destinationRating": 4.9,
     "destinationFavId": "destinationId8_favourite",
     "isFavourite": false,
@@ -639,7 +639,7 @@
           {
             "name": "Joe Stockton",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
+            "replyDate": "1/12/2022, 3:00 PM",
             "replyDescription": "Reply to a comment!",
 	          "replierImage": "images/replier1.jpeg"
           }
@@ -659,7 +659,7 @@
           {
             "name": "Joe Stockton",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
+            "replyDate": "1/12/2022, 3:00 PM",
             "replyDescription": "Reply to a comment!",
 	          "replierImage": "images/replier1.jpeg"
           }
@@ -714,7 +714,7 @@
           {
             "name": "Joe Stockton",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
+            "replyDate": "1/12/2022, 3:00 PM",
             "replyDescription": "Reply to a comment!",
 	          "replierImage": "images/replier1.jpeg"
           }
@@ -734,7 +734,7 @@
           {
             "name": "Joe Stockton",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
+            "replyDate": "1/12/2022, 3:00 PM",
             "replyDescription": "Reply to a comment!",
 	          "replierImage": "images/replier1.jpeg"
           }
@@ -789,7 +789,7 @@
           {
             "name": "Joe Stockton",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
+            "replyDate": "1/12/2022, 3:00 PM",
             "replyDescription": "Reply to a comment!",
 	          "replierImage": "images/replier1.jpeg"
           }
@@ -809,9 +809,84 @@
           {
             "name": "Joe Stockton",
             "reviewCount": "133",
-            "replyDate": "3 days ago",
+            "replyDate": "1/12/2022, 3:00 PM",
             "replyDescription": "Reply to a comment!",
 	          "replierImage": "images/replier1.jpeg"
+          }
+        ]
+      }
+    ],
+    "paymentMethod": {
+      "email": "frese-facilitator@gmail.com",
+      "accountNumber": "12312124123",
+      "type": "VISA",
+      "CVC": "123",
+      "exiprationDate": "12/23"
+    }
+  },
+  {
+    "destinationId": "destinationId12",
+    "destinationName": "Tintagel Castel",
+    "destinationImage": "images/destinations/Tintagel Castle.jpg",
+    "destinationCardDetails": "A medieval fortification located on the peninsula of Tintagel Island",
+    "destinationDescription1": "A castle was built on the site by Richard, 1st Earl of Cornwall in the 13th century, during the High Middle Ages. It later fell into disrepair and ruin.",
+    "destinationDescription2": "The castle has a long association with legends related to King Arthur. This was first recorded in the 12th century when Geoffrey of Monmouth described Tintagel as the place of Arthur's conception in his mythological account of British history.",
+    "destinationRating": 4.4,
+    "destinationFavId": "destinationId12_favourite",
+    "isFavourite": false,
+    "isPastHunt": false,
+    "isReviewed": false,
+    "location": {
+      "addressName": "Castle Rd, Tintagel PL34 0HE, United Kingdom",
+      "latLocation": 50.667341,
+      "longLocation": -4.758479
+    },
+    "price": "95.00",
+    "priceRange": "cheap",
+    "tags": [
+      "london",
+      "england"
+    ],
+    "time": "Open 24x7",
+    "crowdRange": "Less Crowded",
+    "destinationReviews": [
+      {
+        "name": "Joe Stockton",
+        "reviewerId": "destinationId1_rev1",
+        "reviewerImage": "images/reviewer1.jpg",
+        "reviewCount": "133",
+        "rating": 3,
+        "reviewDate": "1/1/2022, 3:43 AM",
+        "reviewDescription": "One of the most beautiful and iconic site in London. It's amazing to see the architecture in person!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
+        "reviewReplies": [
+          {
+            "name": "Tracy Stark",
+            "reviewCount": "133",
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
+          }
+        ]
+      },
+      {
+        "name": "Mary Watson",
+        "reviewerId": "destinationId1_rev2",
+        "reviewerImage": "images/reviewer2.jpg",
+        "reviewCount": "120",
+        "rating": 4,
+        "reviewDate": "1/8/2022, 3:43 AM",
+        "reviewDescription": "Beautiful. Absolutely beautiful I must say it's the most spectacular looking at night. Recommended!",
+        "tourDate":"Tour completed on 20-12-2021", 
+        "tourDetails":"MEL - DEL | 3h 11m | One Way",
+        "reviewReplies": [
+          {
+            "name": "Tracy Stark",
+            "reviewCount": "133",
+            "replyDate": "1/12/2022, 3:00 PM",
+            "replyDescription": "Couldn't agree more, I must say it's most spectacular during the night!",
+            "replierImage": "images/replier1.jpeg"
           }
         ]
       }

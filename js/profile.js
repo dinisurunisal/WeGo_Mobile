@@ -9,7 +9,7 @@ $(function initialization(){
 function populateUserFields(){
     $('#username_field').html(currentlySignedInUser.username);
     $('#member_since_field').html(currentlySignedInUser.signupDate);
-    $('#contant_number_field').html(currentlySignedInUser.contant_number_field);
+    $('#contact_Number_field').html(currentlySignedInUser.contactNumber);
     $('#email_field').html(currentlySignedInUser.email)
 }
 
@@ -77,7 +77,6 @@ function showFeedbackPopup() {
 
 function sendFeedback() {
     $('#form_feedback_Profile')[0].reset();
-    $('#formProfile')[0].reset();
     $("#feedbackPopup").popup("close");
     showSuccess("Thank you for the Feedback");
 }; 
@@ -88,3 +87,9 @@ function closeFeedbackPopup() {
     $("#feedbackPopup").popup("close");
 
 };
+
+function logOut() {
+    currentlySignedInUser = null;
+    localStorage.setItem("currentlySignedInUser", JSON.stringify(currentlySignedInUser));
+    window.location = "index.php";
+}

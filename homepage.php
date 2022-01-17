@@ -20,58 +20,58 @@
 
     <style>
         @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-            .posters .carousel_button {
+            #homePage .posters .carousel_button {
                 border-radius: 50%;
                 padding-left: 3%;
                 padding-right: 6%;
             }
 
-            .home .hp_heading {
+            #homePage .home .hp_heading {
                 margin-top: 10%;
             }
 
-            #thumbnail_list_small .thumbnail_content {
+            #homePage #thumbnail_list_small .thumbnail_content {
                 height: 200px;
             }
 
         }
 
         @media only screen and (min-device-width: 768px) and (max-device-width: 850px) {
-            .posters .carousel_button {
+            #homePage .posters .carousel_button {
                 border-radius: 50%;
                 padding-left: 3%;
                 padding-right: 5%;
             }
 
-            .home .hp_heading {
+            #homePage .home .hp_heading {
                 margin-top: 3%;
             }
 
-            #thumbnail_list_small {
+            #homePage #thumbnail_list_small {
                 grid-template-columns: 20vw 20vw 20vw 20vw !important;
             }
 
-            .carousel {
+            #homePage .posters .carousel {
                 height: 45vh;
             }
         }
 
         @media only screen and (min-device-width: 1024px) {
-            .posters .carousel_button {
+            #homePage .posters .carousel_button {
                 border-radius: 50%;
                 padding-left: 2%;
                 padding-right: 3%;
             }
 
-            .home .hp_heading {
+            #homePage .home .hp_heading {
                 margin-top: 5%;
             }
 
-            #thumbnail_list_small {
+            #homePage #thumbnail_list_small {
                 grid-template-columns: 20vw 20vw 20vw 20vw !important;
             }
 
-            .carousel {
+            #homePage .posters .carousel {
                 height: 40vh;
             }
 
@@ -80,8 +80,8 @@
         @media only screen
         and (min-device-width: 700px)
         and (max-device-height: 400px) {
-            .posters .carousel {
-                height: 65vh;
+            #homePage .posters .carousel {
+                height: 60vh;
             }
         }
     </style>

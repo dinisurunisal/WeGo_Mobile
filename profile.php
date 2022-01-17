@@ -41,7 +41,7 @@
 					<a onclick="showProfileMethod();" >EDIT</a>
 				</div>
 				<div class="logout_btn"  id="flex_child" style="text-align: right; padding-right:15px;">
-					<a onclick="alert('Hello world!')" >LOGOUT</a>
+					<a onclick="logOut()" >LOGOUT</a>
 				</div>
 
 			</div>
@@ -60,7 +60,7 @@
 				<div class="user_data_r2">
 					<div class="data">
 						<div class="data_child" id="data_name">Contact No.</div>
-						<div class="data_child" id="contant_number_field">5846545</div>
+						<div class="data_child" id="contact_Number_field">5846545</div>
 					</div>
 					<div class="data">
 						<div class="data_child" id="data_name">E-mail</div>
