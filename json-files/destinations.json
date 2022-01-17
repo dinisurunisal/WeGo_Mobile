@@ -65,14 +65,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId2",
@@ -140,14 +133,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId3",
@@ -215,14 +201,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId4",
@@ -290,14 +269,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId5",
@@ -365,14 +337,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId6",
@@ -440,14 +405,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId7",
@@ -462,7 +420,7 @@
     "isPastHunt": false,
     "isReviewed": false,
     "location": {
-      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
+      "addressName": "Deangate, York YO1 7HH, UK",
       "latLocation": 6.840424,
       "longLocation": 79.991114
     },
@@ -515,14 +473,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId8",
@@ -537,7 +488,7 @@
     "isPastHunt": false,
     "isReviewed": false,
     "location": {
-      "addressName": "123 Colombo Road, Colombo, Sri Lanka",
+      "addressName": "Great Russell St, London WC1B, UK",
       "latLocation": 6.840424,
       "longLocation": 79.991114
     },
@@ -590,20 +541,13 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId9",
     "destinationName": "Stonehenge",
     "destinationImage": "images/destinations/Stonehenge.jpg",
-    "destinationCardDetails": "Stonehenge is a Prehistoric monument in England",
+    "destinationCardDetails": "A Prehistoric monument in England",
     "destinationDescription1": "Stonehenge is a prehistoric monument on Salisbury Plain in Wiltshire, England, two miles west of Amesbury. It consists of an outer ring of vertical sarsen standing stones, each around 13 feet high, seven feet wide, and weighing around 25 tons, topped by connecting horizontal lintel stones.",
     "destinationDescription2": "Inside is a ring of smaller bluestones. Inside these are free-standing trilithons, two bulkier vertical Sarsens joined by one lintel. The whole monument, now ruinous, is orientated towards the sunrise on the summer solstice.",
     "destinationRating": 4.5,
@@ -665,22 +609,15 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId10",
     "destinationName": "The Roman Baths",
     "destinationImage": "images/destinations/The Roman Baths.jpg",
-    "destinationCardDetails": "The Roman Baths are a Well-preserved thermae",
+    "destinationCardDetails": "A Well-preserved thermae",
     "destinationDescription1": "The Roman Baths are a well-preserved thermae in the city of Bath, Somerset, England. A temple was constructed on the site between 60-70AD in the first few decades of Roman Britain. Its presence led to the development of the small Roman urban settlement known as Aquae Sulis around the site.",
-    "destinationDescription2": "The Roman baths—designed for public bathing—were used until the end of Roman rule in Britain in the 5th Century AD. According to the Anglo-Saxon Chronicle, the original Roman baths were in ruins a century later.",
+    "destinationDescription2": "The Roman baths designed for public bathing were used until the end of Roman rule in Britain in the 5th Century AD. According to the Anglo-Saxon Chronicle, the original Roman baths were in ruins a century later.",
     "destinationRating": 4.6,
     "destinationFavId": "destinationId10_favourite",
     "isFavourite": false,
@@ -740,14 +677,7 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId11",
@@ -762,7 +692,7 @@
     "isPastHunt": false,
     "isReviewed": false,
     "location": {
-      "addressName": "Broomfield, Maidstone, United Kingdom",
+      "addressName": "Broomfield, Maidstone, UK",
       "latLocation": 51.242165698,
       "longLocation": 0.623997504
     },
@@ -815,21 +745,14 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   },
   {
     "destinationId": "destinationId12",
     "destinationName": "Tintagel Castel",
     "destinationImage": "images/destinations/Tintagel Castle.jpg",
-    "destinationCardDetails": "A castel located on the peninsula of Tintagel Island",
-    "destinationDescription1": "A castle was built on the site by Richard, 1st Earl of Cornwall in the 13th century, during the High Middle Ages. It later fell into disrepair and ruin.",
+    "destinationCardDetails": "A medieval fortification of Tintagel Island",
+    "destinationDescription1": "The castle was built on the site by Richard, 1st Earl of Cornwall in the 13th century, during the High Middle Ages. It later fell into disrepair and ruin.",
     "destinationDescription2": "The castle has a long association with legends related to King Arthur. This was first recorded in the 12th century when Geoffrey of Monmouth described Tintagel as the place of Arthur's conception in his mythological account of British history.",
     "destinationRating": 4.4,
     "destinationFavId": "destinationId12_favourite",
@@ -837,7 +760,7 @@
     "isPastHunt": false,
     "isReviewed": false,
     "location": {
-      "addressName": "Castle Rd, Tintagel PL34 0HE, United Kingdom",
+      "addressName": "Castle Rd, Tintagel PL34 0HE, UK",
       "latLocation": 50.667341,
       "longLocation": -4.758479
     },
@@ -890,13 +813,6 @@
           }
         ]
       }
-    ],
-    "paymentMethod": {
-      "email": "frese-facilitator@gmail.com",
-      "accountNumber": "12312124123",
-      "type": "VISA",
-      "CVC": "123",
-      "exiprationDate": "12/23"
-    }
+    ]
   }
 ]
