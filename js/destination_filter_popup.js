@@ -23,14 +23,14 @@ function destinationFilterButton() {
     var checkSorted = JSON.parse(localStorage.getItem("checkSorted"));
     
 
-    var browseKitchenFilterPopupVegetarian = document.getElementById("browse-kitchen-filter-popup-vegetarian").checked;
-    var browseKitchenFilterPopupGlutenFree = document.getElementById("browse-kitchen-filter-popup-gluten-free").checked;
-    var browseKitchenFilterPopupVegan = document.getElementById("browse-kitchen-filter-popup-vegan").checked;
+    var destinationFilterPopupName = document.getElementById("radio-button-name").checked;
+    var destinationFilterPopupRating = document.getElementById("radio-button-rating").checked;
+    var destinationFilterPopupPrice = document.getElementById("radio-button-priceRange").checked;
 
     // filterDB.sort = browseKitchenFilterPopupLabelDollarCount;
-    filterDB.parameters[0].name = browseKitchenFilterPopupVegetarian;
-    filterDB.parameters[0].rating = browseKitchenFilterPopupGlutenFree;
-    filterDB.parameters[0].price = browseKitchenFilterPopupVegan;
+    filterDB.parameters[0].name = destinationFilterPopupName;
+    filterDB.parameters[0].rating = destinationFilterPopupRating;
+    filterDB.parameters[0].price = destinationFilterPopupPrice;
 
     if (typeof (Storage) !== "undefined") {
         console.log(filterDB);

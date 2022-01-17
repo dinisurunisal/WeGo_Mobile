@@ -8,7 +8,8 @@ function onSearchBtnClick() {
     var searchResults =[];
 
     let searchValue = $("#destination-search-input").val();
-    let searchValueList = searchValue.split(" ");
+    let searchValueName = searchValue.toLowerCase();
+    let searchValueList = searchValueName.split(" ");
 
     console.log(searchValue)
 
@@ -46,6 +47,6 @@ function onSearchBtnClick() {
     
     setTimeout(function () {
     window.location = "destination_list.php";
-  }, 2000);
+  }, 500);
     
   }
