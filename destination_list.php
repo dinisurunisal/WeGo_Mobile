@@ -44,10 +44,10 @@
 				<img src="images/background_find.jpg" id="london_bg" alt="london_bg" width="100%">
 
 				<div class="dest_nav_bar">
-					<a href="#popup_destination_filter" data-rel="popup" data-transition="pop" onclick="popupDestinationRestoreDefault()">
+					<a href="#popup_destination_filter" data-rel="popup" data-transition="pop" id="filter_anchor_first">
 						<img style="display: none;" src="images/icons/filterIcon.png" alt="Filter Icon" class="grey-text" id="dest_filter_icon">
 					</a>
-					<a onclick="restoreDefaultDb()">
+					<a onclick="restoreDefaultDb()" id="filter_anchor_second">
 						<img style="display: none;" src="images/icons/ResetDestinations.png" alt="Filter Icon" class="grey-text" id="restore_filter_icon">
 					</a>
 

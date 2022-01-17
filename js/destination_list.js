@@ -1,48 +1,8 @@
 const dollarSign = "$ "
 var defaultDestinationDB = [];
 
-
 $(function initialization() {
-    // var destinations = JSON.parse(localStorage.getItem("destinations"));
-
-
-    var checkSorted = JSON.parse(localStorage.getItem("checkSorted"));
-
-
-    if (checkSorted) {
-
-      var filterBtn = document.getElementById("dest_filter_icon");
-      var refreshBtn = document.getElementById("restore_filter_icon");
-
-      filterBtn.style.display = "none";
-      refreshBtn.style.display = "block";
-
-      var destinations = JSON.parse(localStorage.getItem("sortedDestinations"));
-
-      defaultDestinationDB = destinations;
-      console.log(defaultDestinationDB)
-      if (defaultDestinationDB) {
-          loadDestinationList();
-      }
-
-    }else{
-
-      var filterBtn = document.getElementById("dest_filter_icon");
-      var refreshBtn = document.getElementById("restore_filter_icon");
-
-      filterBtn.style.display = "block";
-      refreshBtn.style.display = "none";
-
-       var destinations = JSON.parse(localStorage.getItem("destinations"));
-
-      defaultDestinationDB = destinations;
-      console.log(defaultDestinationDB)
-      if (defaultDestinationDB) {
-          loadDestinationList();
-      }
-      
-    }
-
+    checkForSort();
 });
 
 function loadDestinationList() {
@@ -69,6 +29,42 @@ function loadDestinationList() {
             document.getElementById(defaultDestinationDB[i].destinationFavId).innerHTML = "favorite_border";
           }
     }
+}
+
+function checkForSort() {
+
+  var checkSorted = JSON.parse(localStorage.getItem("checkSorted"));
+
+  if (checkSorted) {
+
+    var filterBtn = document.getElementById("dest_filter_icon");
+    var refreshBtn = document.getElementById("restore_filter_icon");
+
+    filterBtn.style.display = "none";
+    refreshBtn.style.display = "block";
+    filter_anchor_first.style.display = "none";
+    filter_anchor_second.style.display = "block";
+
+    var destinations = JSON.parse(localStorage.getItem("sortedDestinations"));
+
+  } else {
+
+    var filterBtn = document.getElementById("dest_filter_icon");
+    var refreshBtn = document.getElementById("restore_filter_icon");
+
+    filterBtn.style.display = "block";
+    refreshBtn.style.display = "none";
+    filter_anchor_first.style.display = "block";
+    filter_anchor_second.style.display = "none";
+
+    var destinations = JSON.parse(localStorage.getItem("destinations"));
+  }
+
+  defaultDestinationDB = destinations;
+  console.log(defaultDestinationDB);
+  if (defaultDestinationDB) {
+      loadDestinationList();
+  }
 }
 
 // Delete 'card_script_1'
