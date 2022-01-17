@@ -77,7 +77,6 @@ function showFeedbackPopup() {
 
 function sendFeedback() {
     $('#form_feedback_Profile')[0].reset();
-    $('#formProfile')[0].reset();
     $("#feedbackPopup").popup("close");
     showSuccess("Thank you for the Feedback");
 }; 

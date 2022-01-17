@@ -42,6 +42,6 @@ function onSearchBtnClick() {
     
     setTimeout(function () {
     window.location = "destination_list.php";
-  }, 2000);
+  }, 500);
     
   }

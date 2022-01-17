@@ -457,8 +457,8 @@
     "destinationName": "York Minster",
     "destinationImage": "images/destinations/York Minster.jpg",
     "destinationCardDetails": "Iconic gothic-style medieval cathedral",
-    "destinationDescription1": "Best sea food kitchen in Colombo",
-    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationDescription1": "The Cathedral and Metropolitical Church of Saint Peter in York, commonly known as York Minster, is the cathedral of York, England, and is one of the largest of its kind in Northern Europe. The minster is the seat of the Archbishop of York, the third-highest office of the Church of England (after the monarch as Supreme Governor and the Archbishop of Canterbury), and is the mother church for the Diocese of York and the Province of York. ",
+    "destinationDescription2": "Since the 7th century, the Minster has been at the centre of Christianity in the north of England and today remains a thriving church rooted in the daily offering of worship and prayer. The Minster was built for the glory of God. Every aspect of this ancient building - from the exquisite, handcrafted stone through to the unrivalled collection of medieval stained glass.",
     "destinationRating": 4.5,
     "destinationFavId": "destinationId7_favourite",
     "isFavourite": false,
@@ -532,8 +532,8 @@
     "destinationName": "The British Museum",
     "destinationImage": "images/destinations/The British Museum.jpg",
     "destinationCardDetails": "A historian's treasure trove",
-    "destinationDescription1": "Best sea food kitchen in Colombo",
-    "destinationDescription2": "Best sea food kitchen in Colombo",
+    "destinationDescription1": "The British Museum is a public museum dedicated to human history, art and culture located in the Bloomsbury area of London. Its permanent collection of eight million works is among the largest and most comprehensive in existence. It documents the story of human culture from its beginnings to the present. The British Museum was the first public national museum in the world.",
+    "destinationDescription2": "The Museum was established in 1753, largely based on the collections of the Anglo-Irish physician and scientist Sir Hans Sloane. It first opened to the public in 1759, in Montagu House, on the site of the current building. The museum's expansion over the following 250 years was largely a result of British colonisation and has resulted in the creation of several branch institutions, or independent spin-offs, the first being the Natural History Museum in 1881.",
     "destinationRating": 4.9,
     "destinationFavId": "destinationId8_favourite",
     "isFavourite": false,
@@ -817,10 +817,10 @@
     "isReviewed": false,
     "location": {
       "addressName": "Castle Rd, Tintagel PL34 0HE, United Kingdom",
-      "latLocation": 6.840424,
-      "longLocation": 79.991114
+      "latLocation": 50.667341,
+      "longLocation": -4.758479
     },
-    "price": "105.00",
+    "price": "95.00",
     "priceRange": "cheap",
     "tags": [
       "london",
@@ -876,9 +876,6 @@
       "type": "VISA",
       "CVC": "123",
       "exiprationDate": "12/23"
-    },
-    "pastHuntDetails": {
-
     }
   }
 ]
