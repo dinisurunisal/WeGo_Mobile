@@ -93,8 +93,7 @@
 				</div>	
 			</div>
 
-			<div data-role="popup" data-position-to="window" data-transition="pop" class="popup" style="padding: 20px;"
-            id="feedbackPopup">
+			<div data-role="popup" data-position-to="window" data-transition="pop" class="popup" style="padding: 20px;" id="feedbackPopup">
 				<form id="form_feedback_Profile" onsubmit="event.preventDefault(); sendFeedback();">
 					<h3 class="heading-three" style="text-align:center;">Give Us your Feedback</h3>
 					<label class="labelform grey heading-five" for="feedbackForm" id="#inputFeedback"> Feedback</label>
@@ -102,13 +101,12 @@
 
 						<div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
 							<button id="profile_feedback_cancel_btn" onclick="closeFeedbackPopup();"  class="button_popup" data-role="none">Cancel</button>
-							<button id="profile_feedback_send_btn" type="submit" class="button_popup" data-role="none">Send</button>
+							<button id="profile_feedback_send_btn" type="submit" value="Submit" class="button_popup" data-role="none">Send</button>
 						</div>
 				</form>
         	</div> 
 
-			<div data-role="popup" data-position-to="window" data-transition="pop" class="popup" style="padding: 20px;"
-            id="popupBasic">
+			<div data-role="popup" data-position-to="window" data-transition="pop" class="popup" style="padding: 20px;" id="popupBasic">
 				<form id="formProfile" onsubmit="event.preventDefault(); saveProfileInformation()">
 					<h3 class="heading-three" style="text-align:center;">Edit Profile Information</h3>
 					<label class="labelform grey heading-five" for="nameForm"> Name</label>
@@ -119,11 +117,10 @@
 					<input type="password" name="password" id="passwordForm" class="formField" />
 					<label class="labelform grey heading-five" for="confirmPasswordForm"> Confirm Password</label>
 					<input type="password" name="confirmPassword" id="confirmPasswordForm" class="formField" />
-					<!-- <button type="submit" class="button-custom" data-role="button">Save</button> -->
 
 					<div class="popup_btn_container" style="display:flex; justify-content:space-evenly;">
 							<button id="profile_edit_cancel_btn" onclick="closeEditPopup();"  class="button_popup" data-role="none">Cancel</button>
-							<button id="profile_edit_send_btn" type="submit" class="button_popup" data-role="none">Save</button>
+							<button id="profile_edit_send_btn" type="submit" value="Submit" class="button_popup" data-role="none">Save</button>
 					</div>
 				</form>
 			</div>

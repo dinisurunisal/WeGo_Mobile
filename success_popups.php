@@ -76,10 +76,3 @@ function showFailure(message) {
     <ion-icon class="icon" id="popup_custom_icon_game" name="medal" style="color:#0174cf">game_complete</ion-icon>
     <h4 id="popup_custom_message" style="color: #0174cf;">Success</h4>
 </div>
-
-<!-- <div id="message_box_fail" style="text-align:center">
-    <ion-icon class="icon" id="popup_custom_icon_fail" name="alert-circle" style="color:#ff0000;">alert_warning</ion-icon>
-    <h4 id="popup_custom_message_fail" style="color: #ff0000;">Success</h4>
-</div> -->
-
-<!-- document.getElementById("popup_custom_icon_fail").style.display = "none"; -->
