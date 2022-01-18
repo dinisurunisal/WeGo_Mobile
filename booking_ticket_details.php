@@ -20,7 +20,7 @@
 	<!-- Custom -->
 	<script src="https://www.paypal.com/sdk/js?client-id=AYImqnFyv8Ed8f1Q2yxi8OU9pZcsU2YigmWEvZN2VYHP39Bog3XpOaZ6ErmMzkEOZnlsziDFfO2uuc71"></script>
 	<script src="https://checkout.stripe.com/checkout.js"></script>
-
+	<link rel="stylesheet" href="css/style.css" />
 	<script src="js/booking_ticket_details.js"></script>
 
 	<style>
