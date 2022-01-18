@@ -2,9 +2,109 @@
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<link rel="stylesheet" href="css/style.css">
+<!-- <link rel="stylesheet" href="css/style.css"> -->
 
 <script src="js/destination_filter_popup.js"></script>
+
+<style>
+    ::placeholder {
+        color: #a7a7a7;
+    }
+
+    #destination_filter_popup_checkbox_group-2 .ui-checkbox-on:after {
+        background-color: #0174cf !important;
+    }
+
+    #filter-heading-style-h1 {
+        font-size: 1.3em;
+    }
+
+    .ui-page-theme-a .ui-checkbox-on:after {
+        background-color: #0174cf;
+    }
+
+    .ui-popup-screen {
+        background-color: #000000 !important;
+        opacity: 0.75 !important;
+    }
+
+    .ui-controlgroup-controls .ui-btn-corner-all, .ui-controlgroup-controls .ui-btn.ui-corner-all {
+        background-color: #ffffff;
+    }
+
+    .custom-heading-style {
+        color: #757575;
+        padding-top: 7px;
+    }
+
+    .custom-ui-block-small {
+        min-width: 46%;
+        max-width: 46%;
+    }
+
+    .custom-ui-block-large {
+        min-width: 54%;
+        max-width: 54%;
+    }
+
+    .text-input-padding-a {
+        padding-right: 10px;
+    }
+
+    .text-input-padding-b {
+        padding-left: 10px;
+    }
+
+    .text-input-style {
+        background-color: #eeeeee !important;
+    }
+
+    .center-text {
+        text-align: center;
+        margin-top: 14px !important;
+        padding-left: 17px;
+    }
+
+    .checkbox-style {
+        color: #757575 !important;
+        font-weight: normal !important;
+    }
+
+    .popup-dimensions {
+        margin-top: 20px;
+        border-radius: 15px;
+        padding-top: 5px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        overflow: hidden;
+    }
+
+    .center-item-custom {
+        text-align: center;
+    }
+
+    .custom-responsive-grid-style {
+        min-width: 210px;
+    }
+
+    .filter_button_popup{
+        height:30px;
+        width:100px;
+        border: none;
+        border-radius:12px;
+    }
+
+    #filtersendBtn{
+        color:white;
+        background-color: #0174cf;
+    }
+
+    #cancelBtn{
+        color:#0174cf;
+        background-color: white;
+    }
+</style>
 
 <div data-role="popup" data-position-to="window" id="popup_destination_filter" class="popup-dimensions" >
 
