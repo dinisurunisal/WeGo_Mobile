@@ -204,7 +204,7 @@ function pushReview(destID, starValue, commentValue) {
         name : currentlySignedInUser.username,
         reviewerId : destination.destinationId + "_rev" + reviewNo,
         reviewerImage : currentlySignedInUser.profileImage,
-        reviewCount : (currentlySignedInUser.reviewCount + 1),
+        reviewCount : (currentlySignedInUser.reviewCount),
         rating : starValue,
         reviewDate : date,
         reviewDescription : commentValue,
