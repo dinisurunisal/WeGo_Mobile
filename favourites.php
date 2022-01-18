@@ -30,7 +30,7 @@
 			text-align: center;
 			margin-top: 25%;
 			margin-bottom: 10%;
-		}
+			}
 		}
 
 		@media only screen and (min-device-width: 768px) and (max-device-width: 850px) {
@@ -38,7 +38,11 @@
 			text-align: center;
 			margin-top: 12%;
 			margin-bottom: 5%;
-		}
+			}
+
+			.favourites #card_script_2 {
+				grid-template-columns: 50vw 50vw;
+			}
 		}
 
 		@media only screen and (min-device-width: 1024px) {
@@ -46,7 +50,11 @@
 			text-align: center;
 			margin-top: 10%;
 			margin-bottom: 4%;
-		}
+			}
+
+			.favourites #card_script_2 {
+				grid-template-columns: 50vw 50vw;
+			}
 		}
 	</style>
 
@@ -93,7 +101,7 @@
 					</div>
 				</div>
 
-				<div id="card_script_2"></div>
+				<div id="card_script_2" style="display: grid;"></div>
 			</ul>
 
 			<div class="favourite_buttons">
