@@ -2612,9 +2612,6 @@ and (max-device-width: 850px) {
 	
 }
 
-/* profile page */
-/* ######################################################################################## */
-
 
 /* top background banner */
 #profile_page .s4_top_banner{
@@ -2796,6 +2793,36 @@ and (max-device-width: 850px) {
       align-items: center;
 }
 
+/* ########################################################################################################### */
 
 
+/* Awards page */
+
+#awards_page .mainBox{
+    /* object-fit: fit; */
+    padding: 10px;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#awards_page #mainBoxItem{
+    object-fit: scale-down;
+    width: 380px;
+    height: 330px;
+    /* padding-left: -10px; */
+    padding: none;
+    display: flex;
+     justify-content: space-around;
+     align-items: center;
+    border-width: 5px;
+    border-color: black;
+}
+
+@media only screen and (max-device-width: 375px) {
+    #awards_page .mainBox{
+        flex-direction: column;
+    }
+}
  

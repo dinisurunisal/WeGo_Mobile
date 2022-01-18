@@ -358,7 +358,7 @@
 						Choose Date *
 					</p>
 					<div class="bk_datepick">
-						<input required type="date" data-role="date" id="datePicker" min="2022-01-15">
+						<input required type="date" data-role="date" id="datePicker" min="2022-01-21">
 					</div>
 				</div>
 

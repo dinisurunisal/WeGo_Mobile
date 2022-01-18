@@ -21,11 +21,11 @@
         <style>
             @media only screen 
                 and (max-device-height: 570px) {
-                    #scan_qr_section .scan_instructions p2{
+                    #my-hunts-page #scan_qr_section .scan_instructions p2{
                         display: none !important;
                     }
 
-                    #scan_qr_section {
+                    #my-hunts-page #scan_qr_section {
                         width: fit-content !important;
                         top: 68px !important;
                         right: 10px !important;
@@ -35,7 +35,7 @@
                     }
 
                     
-                    #scan_qr_section p {
+                    #my-hunts-page #scan_qr_section p {
                         margin: 0px !important;
                     }
                 }
@@ -53,7 +53,7 @@
                         <li><a id="past-hunts-btn" href="#" class="toggle-buttons ui-btn-active" onclick="selectPastHunts()">Past Hunts</a></li>
                         <li><a id="upcoming-hunts-btn" class="toggle-buttons" href="#" onclick="selectUpcomingHunts()">Upcoming Hunts</a></li>
                     </ul>
-                </div><!-- /navbar -->
+                </div>
  
                 <div id="upcoming-empty">
                     <ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0">
@@ -84,8 +84,6 @@
 
                         <div id="upcoming_my_hunts_list_2"></div>
                     </ul>
-
-    <!--                <h4 style="text-align: center;">Book locations to add them to your upcoming hunts.</h4>-->
                 </div>
                 <div id="past-empty">
                     <ul id="temp" data-icon="false" style="list-style-type: none; margin: 0; padding: 0">
@@ -125,9 +123,7 @@
 
                         <div id="past_hunts_space"></div>
                     </ul>
-    <!--                <h4 style="text-align: center; ">No locations hunted yet.</h4>-->
                 </div>
-                <!-- <a href="#my_hunts_feedback" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-position-to="window">Feedback</a> -->
                 <?php include("my_hunts_feedback.php")?>
             </div>
             <div id="scan_qr_section">
