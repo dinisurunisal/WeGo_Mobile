@@ -16,8 +16,9 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     
-    <script type="text/javascript" src="js/homepage.js"></script>
+    <!-- custom -->
     <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/homepage.js"></script>
 
     <style>
         @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
