@@ -116,11 +116,13 @@ function pushReview(destID, starValue, commentValue) {
 
     destination.isPastHunt = true;
 
+    currentlySignedInUser.reviewCount = currentlySignedInUser.reviewCount + 1;
+
     destination.destinationReviews[1] = {
         name : currentlySignedInUser.username,
         reviewerId : destination.destinationId + "_rev" + reviewNo,
         reviewerImage : currentlySignedInUser.profileImage,
-        reviewCount : (currentlySignedInUser.reviewCount + 1),
+        reviewCount : (currentlySignedInUser.reviewCount),
         rating : starValue,
         reviewDate : date,
         reviewDescription : commentValue,
@@ -129,7 +131,6 @@ function pushReview(destID, starValue, commentValue) {
         reviewReplies : []
     };
 
-    currentlySignedInUser.reviewCount = currentlySignedInUser.reviewCount + 1;
     localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser))
 
     destination.isReviewed = true;
