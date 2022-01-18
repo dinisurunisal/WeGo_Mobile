@@ -87,16 +87,16 @@ function submitFeedback() {
     $("#popupBasic").popup("close")
 
     setTimeout(function () {
-        location.reload();
+        window.location.href='my_hunts.php';
     }, 2000);
-    window.location.href='my_hunts.php'
+    
 }
 
 function UpdatePoints(){
     currentlySignedInUser = JSON.parse(localStorage.getItem('currentlySignedInUser'));
     currentlySignedInUser.currentPoints = currentlySignedInUser.currentPoints + 10;
-    localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser))
-    showSuccess("Feedback saved.");
+    localStorage.setItem('currentlySignedInUser',JSON.stringify(currentlySignedInUser));
+    showSuccess("Review Added. <br> you earned 10 points");
 }
 
 //push the review to list of destinations

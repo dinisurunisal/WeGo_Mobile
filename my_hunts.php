@@ -21,11 +21,11 @@
         <style>
             @media only screen 
                 and (max-device-height: 570px) {
-                    #scan_qr_section .scan_instructions p2{
+                    #my-hunts-page #scan_qr_section .scan_instructions p2{
                         display: none !important;
                     }
 
-                    #scan_qr_section {
+                    #my-hunts-page #scan_qr_section {
                         width: fit-content !important;
                         top: 68px !important;
                         right: 10px !important;
@@ -35,7 +35,7 @@
                     }
 
                     
-                    #scan_qr_section p {
+                    #my-hunts-page #scan_qr_section p {
                         margin: 0px !important;
                     }
                 }
