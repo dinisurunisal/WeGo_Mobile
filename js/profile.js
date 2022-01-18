@@ -21,9 +21,9 @@ function showProfileMethod() {
 }
 
 function closeEditPopup() {
-    showFailure("Canceled")
+    // $('#formProfile')[0].reset();
     $("#popupBasic").popup("close");
-
+    // showFailure("Canceled");
 }
 
 function saveProfileInformation() {
@@ -83,8 +83,9 @@ function sendFeedback() {
 
 // close feedback popup
 function closeFeedbackPopup() {
-    showFailure("Canceled")
+    $('#form_feedback_Profile')[0].reset();
     $("#feedbackPopup").popup("close");
+    // showFailure("Canceled")
 
 };
 
