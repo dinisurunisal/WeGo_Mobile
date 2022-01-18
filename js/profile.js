@@ -85,7 +85,7 @@ function sendFeedback() {
 function closeFeedbackPopup() {
     $('#form_feedback_Profile')[0].reset();
     $("#feedbackPopup").popup("close");
-    // showFailure("Canceled")
+    showFailure("Canceled")
 
 };
 
