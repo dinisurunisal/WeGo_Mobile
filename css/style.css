@@ -2799,12 +2799,12 @@ and (max-device-width: 850px) {
 /* filter popup */
 /* ########################################################################################################### */
 
-/* ::placeholder {
+::placeholder {
     color: #a7a7a7;
-} */
+}
 
 #destination_filter_popup_checkbox_group-2 .ui-checkbox-on:after {
-    background-color: #00a99d !important;
+    background-color: #0174cf !important;
 }
 
 #filter-heading-style-h1 {
@@ -2812,17 +2812,12 @@ and (max-device-width: 850px) {
 }
 
 .ui-page-theme-a .ui-checkbox-on:after {
-    background-color: #00A99D;
+    background-color: #0174cf;
 }
 
 .ui-popup-screen {
     background-color: #000000 !important;
     opacity: 0.75 !important;
-}
-
-.ui-popup-container {
-    width: 80%;
-    max-width: 500px !important;
 }
 
 .ui-controlgroup-controls .ui-btn-corner-all, .ui-controlgroup-controls .ui-btn.ui-corner-all {
@@ -2900,5 +2895,35 @@ and (max-device-width: 850px) {
 #cancelBtn{
     color:#0174cf;
     background-color: white;
+}
+
+/* Awards page */
+
+#awards_page .mainBox{
+    /* object-fit: fit; */
+    padding: 10px;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#awards_page #mainBoxItem{
+    object-fit: scale-down;
+    width: 380px;
+    height: 330px;
+    /* padding-left: -10px; */
+    padding: none;
+    display: flex;
+     justify-content: space-around;
+     align-items: center;
+    border-width: 5px;
+    border-color: black;
+}
+
+@media only screen and (max-device-width: 375px) {
+    #awards_page .mainBox{
+        flex-direction: column;
+    }
 }
  

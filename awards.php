@@ -20,16 +20,13 @@
 		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>		
 
 		<style>
-			.mainBox{
-				object-fit: contain;
-				padding: 10px;
-			}
+			
 		</style>
 
 	</head>
 
 	<body>
-		<div data-role="page" id="destination_page" style="background-image: url(images/awards/backgroundpng1.png); object-fit: scale-down;">
+		<div data-role="page" id="awards_page" style="background-image: url(images/awards/backgroundpng1.png); object-fit: scale-down;">
 			<!-- Header -->
 			<?php include("header.php"); ?>
 
@@ -39,15 +36,22 @@
 
 			<div class="top" style="margin-top:50px; text-align: center;">
 			<h2>Awards</h2>
-			<h5>Find Your Current Points and Challenges</h5>
-			<h1 id="points" style="color:#0174cf;">100</h1>
+			<h4>Find Your Current Points and Challenges</h4>
+			<h1 id="points" style="color:#0174cf; font-size:60px; margin-top:-10px; margin-bottom:-10px;">100</h1>
 			<h2>Points</h2>
 			</div>
 
-			<div class="mainBox" id="mainBox">
+			<!-- <div class="mainBox" id="mainBox">
 				<img src="images/awards/background_image.png" alt="backgroung_image" width="1004" height="456.800" >
+			</div> -->
+			<div class="mainBox" id="mainBox">
+				<div class="challenges" id="mainBoxItem">
+					<img src="images/awards/challenges.png" alt="" width = "393px" height = "350px" >
+				</div>
+				<div class="badges" id="mainBoxItem">
+					<img src="images/awards/badges.png" alt="" width = "393px" height = "350px">
+				</div>
 			</div>
-			
 
 
 
