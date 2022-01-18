@@ -12,8 +12,8 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
+	<!-- custom -->
 	<link rel="stylesheet" href="css/style.css" />
-
 	<script type="text/javascript" src="js/forget_password.js"></script>
 
 </head>
